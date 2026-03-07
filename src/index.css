@@ -1,0 +1,86 @@
+/* --- MANAGED FONT IMPORTS START (do not edit manually) --- */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=DM+Sans:wght@400;500;700;900&family=Lato:wght@400&display=swap');
+
+/* --- MANAGED FONT IMPORTS END --- */
+
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+:root {
+  --color-primitive-blue: #37A2BF;
+  --color-primitive-navy: #294050;
+  --color-primitive-coral: #DE6952;
+  --color-primitive-magenta: #C83D5D;
+  --color-primitive-red: #D94D59;
+  --color-primitive-cream: #EFE4CC;
+  --color-primitive-gold: #C4A35A;
+  --color-bg-canvas: #F2F4F6;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-subtle: #E8EAED;
+  --color-bg-invert: #294050;
+  --color-text-primary: #294050;
+  --color-text-secondary: #5A6F7E;
+  --color-text-link: #37A2BF;
+  --color-text-on-dark: #C4A35A;
+  --color-interactive-primary: #37A2BF;
+  --color-interactive-primary-hover: #2A8CA8;
+  --color-interactive-accent: #DE6952;
+  --color-interactive-accent-hover: #C83D5D;
+  --color-border-default: #D5D9DE;
+  --color-border-strong: #294050;
+  --color-border-accent: #DE6952;
+  --color-decor-highlight: #DE6952;
+  --color-decor-emphasis: #C83D5D;
+  --color-status-error: #D94D59;
+}
+body {
+  background-color: #2C7A9B;
+  background-image: none;
+  color: #F5E6D3;
+  font-family: 'Lato', sans-serif;
+  min-height: 100%;
+}
+/* Film Grain Overlay */
+.film-grain {
+  position: relative;
+  min-height: 100vh;
+}
+.film-grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  animation: grain 1.5s steps(6) infinite;
+}
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+/* Typography Utilities */
+.text-glow-peach {
+  text-shadow: 0 0 40px rgba(212,149,107,0.6), 0 0 80px rgba(212,149,107,0.3), 0 0 120px rgba(212,149,107,0.15);
+}
+/* Image Filters */
+.duotone-filter {
+  filter: sepia(0.5) saturate(1.1) hue-rotate(5deg) brightness(0.9) contrast(1.1);
+}
