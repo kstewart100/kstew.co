@@ -26,7 +26,7 @@ export function Footer({ variant = 'case-study' }: FooterProps) {
             •
           </span>
           <a
-            href="https://linkedin.com/in/kylestewart"
+            href="https://linkedin.com/in/kstewart100/"
             target="_blank"
             rel="noopener noreferrer"
             className={`transition-colors text-sm md:text-base ${isHome ? 'text-[#F5E6D3]/80 hover:text-[#D4956B]' : 'text-gray-600 hover:text-[#1a1a1a]'}`}>
