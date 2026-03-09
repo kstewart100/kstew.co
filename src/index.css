@@ -41,11 +41,13 @@
   --color-status-error: #D94D59;
 }
 body {
-  background-color: #2C7A9B;
+  background-color: #5AAEE8;
   background-image: none;
   color: #F5E6D3;
   font-family: 'Lato', sans-serif;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* Film Grain Overlay */
 .film-grain {
@@ -79,6 +81,12 @@ body {
 /* Typography Utilities */
 .text-glow-peach {
   text-shadow: 0 0 40px rgba(212,149,107,0.6), 0 0 80px rgba(212,149,107,0.3), 0 0 120px rgba(212,149,107,0.15);
+}
+.text-glow-soft {
+  text-shadow: 0 0 40px rgba(245,230,211,0.5), 0 0 80px rgba(245,230,211,0.3), 0 0 120px rgba(245,230,211,0.15);
+}
+.box-glow-soft {
+  box-shadow: 0 0 15px rgba(245,230,211,0.5), 0 0 30px rgba(245,230,211,0.3), 0 0 45px rgba(245,230,211,0.15);
 }
 /* Image Filters */
 .duotone-filter {

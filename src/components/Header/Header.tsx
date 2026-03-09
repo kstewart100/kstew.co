@@ -1,56 +1,52 @@
-import React, { lazy } from 'react';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
 export interface HeaderProps {
   variant?: 'home' | 'case-study';
   className?: string;
   'data-id'?: string;
 }
+
 export const Header: React.FC<HeaderProps> = ({
   variant = 'case-study',
   className = '',
-  'data-id': dataId
+  'data-id': dataId,
 }) => {
   const isHome = variant === 'home';
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   return (
     <header
       data-id={dataId}
-      className={`w-full font-body ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}>
+      className={`w-full font-body ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
+    >
+      <div className="grid grid-cols-[auto_1fr_auto] gap-4 items-center px-5 md:px-8 lg:px-10 h-16 max-w-[1024px] mx-auto">
+        <Link
+          to="/"
+          aria-current={isHomePage ? 'page' : undefined}
+          className="flex items-center transition-opacity hover:opacity-80"
+        >
+          <img
+            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png"
+            alt="Logo"
+            className={`h-7 w-auto ${isHome ? 'brightness-0 invert' : ''}`}
+            loading="lazy"
+          />
+        </Link>
 
-      <div className="grid grid-cols-[auto_1fr_auto] gap-4 md:gap-5 items-center px-4 md:px-6 lg:px-10 h-[75px]">
-        {/* Logo Section */}
-        <div className="flex items-center justify-start">
-          <a
-            href="/"
-            aria-current="page"
-            className="flex items-center transition-opacity hover:opacity-80">
+        <h1
+          className={`font-body font-medium text-sm md:text-base text-center whitespace-nowrap tracking-tight ${isHome ? 'text-white/90' : 'text-color-text-primary/90'}`}
+        >
+          Kyle Stewart
+        </h1>
 
-            <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png"
-              alt="Logo"
-              className={`h-[32px] w-auto ${isHome ? 'brightness-0 invert' : ''}`}
-              loading="lazy" />
-
-          </a>
-        </div>
-
-        {/* Name Section */}
-        <div className="flex items-center justify-center">
-          <h1
-            className={`font-body font-bold text-base md:text-xl lg:text-2xl text-center whitespace-nowrap ${isHome ? 'text-white' : 'text-color-text-primary'}`}>
-
-            Kyle Stewart
-          </h1>
-        </div>
-
-        {/* Email Section */}
-        <div className="flex items-center justify-end">
-          <a
-            href="mailto:hello@kstew.co"
-            className={`font-body text-xs md:text-sm transition-colors whitespace-nowrap ${isHome ? 'text-white hover:text-gray-200' : 'text-color-text-primary hover:text-color-interactive-primary'}`}>
-
-            hello@kstew.co
-          </a>
-        </div>
+        <a
+          href="mailto:hello@kstew.co"
+          className={`font-body font-medium text-sm tracking-tight transition-colors whitespace-nowrap justify-self-end ${isHome ? 'text-white/90 hover:text-white' : 'text-color-text-primary/90 hover:text-color-interactive-primary'}`}
+        >
+          Contact
+        </a>
       </div>
-    </header>);
-
+    </header>
+  );
 };
