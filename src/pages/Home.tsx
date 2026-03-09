@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { TickerBanner } from '../components/TickerBanner';
+
+const PAGE_TITLE = 'Kyle Stewart — Portfolio';
 
 // Gradient scroll — sky blue → navy (from gradient-scroll demo)
 const BG_STOPS = [
@@ -27,7 +30,7 @@ function lerpColor(a: string, b: string, t: number): string {
 }
 
 function getScrollBackgroundColor(progress: number): string {
-  const p = Math.min(progress, 1);
+  const p = Math.min(Number(progress) || 0, 1);
   for (let i = 0; i < BG_STOPS.length - 1; i++) {
     const s = BG_STOPS[i],
       e = BG_STOPS[i + 1];
@@ -45,6 +48,7 @@ export function CaseStudyCard({
   borderColor,
   glowColor,
   logoUrl,
+  logoAlt,
   className,
 }: {
   title: string;
@@ -53,6 +57,7 @@ export function CaseStudyCard({
   borderColor: string;
   glowColor: string;
   logoUrl?: string;
+  logoAlt?: string;
   className?: string;
 }) {
   return (
@@ -70,12 +75,12 @@ export function CaseStudyCard({
             <div className="h-8 md:h-9 w-[100px] md:w-[110px] mb-4">
               <img
                 src={logoUrl}
-                alt=""
+                alt={logoAlt ?? ''}
                 className="h-full w-full object-contain object-left opacity-80 group-hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           )}
-          <h3 className="text-2xl md:text-3xl font-['DM_Sans'] font-bold text-[#F5E6D3] mb-3 group-hover:text-[#D4956B] transition-colors">
+          <h3 className="text-2xl md:text-3xl font-sans font-bold text-[#F5E6D3] mb-3 group-hover:text-[#D4956B] transition-colors">
             {title}
           </h3>
           <p className="text-[#F5E6D3]/80 text-lg line-clamp-2">{description}</p>
@@ -93,6 +98,7 @@ const caseStudies = [
     borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/peo6NBjQ4gNzPTgFEZt5Ua/Intuit_idITTG9Sz3_0.svg',
+    logoAlt: 'Intuit',
   },
   {
     title: 'Conversion goal updates',
@@ -101,6 +107,7 @@ const caseStudies = [
     borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
+    logoAlt: 'Google',
   },
   {
     title: 'Flexible lift confidence',
@@ -109,6 +116,7 @@ const caseStudies = [
     borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
+    logoAlt: 'Google',
   },
   {
     title: 'Measurement setup',
@@ -117,10 +125,16 @@ const caseStudies = [
     borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
+    logoAlt: 'Google',
   },
 ];
 
 export function Home() {
+  useEffect(() => {
+    document.title = PAGE_TITLE;
+    return () => { document.title = PAGE_TITLE; };
+  }, []);
+
   const { scrollY, scrollYProgress } = useScroll();
   const smoothScrollY = useSpring(scrollY, {
     stiffness: 40,
@@ -185,7 +199,7 @@ export function Home() {
           <Header variant="home" className="bg-transparent" />
         </div>
 
-        <main className="flex flex-col items-center w-full">
+        <main id="main-content" className="flex flex-col items-center w-full">
           {/* Hero Section */}
           <div className="h-[100vh] w-full relative flex justify-center items-center overflow-hidden">
             <div className="absolute inset-0 w-full h-full saturate-[1.1]">
@@ -197,38 +211,41 @@ export function Home() {
                 className="absolute inset-0 flex flex-col items-center pt-[15vh] md:pt-[20vh] z-[3]"
                 style={{ y: textY }}
               >
-                <h1 className="font-['DM_Sans'] font-black text-[64px] md:text-[100px] lg:text-[140px] leading-[0.9] uppercase tracking-wide text-white text-center text-glow-soft px-4">
+                <h1 className="font-sans font-black text-[48px] sm:text-[64px] md:text-[100px] lg:text-[140px] leading-[0.9] uppercase tracking-wide text-white text-center text-glow-soft px-4">
                   Get out / Build
                 </h1>
               </motion.div>
               <motion.img
                 src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693a1431094861a9c8fd6f13_db97f5c004372ba6c9cb380849abf6b8_Untitled-14-Full%20page.png"
-                alt="Midground Ridgeline"
+                alt="Midground ridgeline"
                 className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.1] origin-bottom z-[4] pointer-events-none"
-                fetchPriority="high"
+                {...({ fetchpriority: 'high' } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 style={{ y: midY, filter: mountainFilter }}
               />
               <motion.img
                 src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693b4b64d028993f587d9130_Hero%20Image%20Portfolio-5-1%20foreground%20-%20Mountain%20side.png"
                 alt="Foreground mountains"
                 className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.05] origin-bottom z-[5] pointer-events-none"
-                fetchPriority="high"
+                {...({ fetchpriority: 'high' } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 style={{ filter: mountainFilter }}
               />
               <motion.img
                 src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693b4bcf3a27b41a3f8990fb_Hero%20Image%20Portfolio-6-1%20foreground%20-%20Mountain%20side.png"
                 alt="Foreground mountains"
                 className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.05] origin-bottom z-[6] pointer-events-none"
-                fetchPriority="high"
+                loading="lazy"
                 style={{ filter: mountainFilter }}
               />
               <motion.img
                 src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693b4be4687cb650578097d7_Hero%20Image%20Portfolio-7-Full%20page.png"
                 alt="Foreground mountains"
                 className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.05] origin-bottom z-[7] pointer-events-none"
-                fetchPriority="high"
+                loading="lazy"
                 style={{ filter: mountainFilter }}
               />
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 z-10">
+              <TickerBanner />
             </div>
           </div>
 
@@ -258,6 +275,7 @@ export function Home() {
                     borderColor={study.borderColor}
                     glowColor={study.glowColor}
                     logoUrl={study.logoUrl}
+                    logoAlt={study.logoAlt}
                     className="w-full h-full max-w-none"
                   />
                 </motion.div>
@@ -272,7 +290,7 @@ export function Home() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="text-4xl md:text-5xl font-['DM_Sans'] font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide uppercase">
+                <h2 className="text-4xl md:text-5xl font-sans font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide uppercase">
                   About me
                 </h2>
                 <div className="text-lg md:text-xl text-[#F5E6D3]/90 leading-relaxed space-y-6">
@@ -293,12 +311,12 @@ export function Home() {
                   </p>
                 </div>
               </div>
-              <div className="order-1 md:order-2 flex justify-center md:justify-end">
+              <div className="order-1 md:order-2 w-full flex justify-center md:justify-end">
                 <div className="relative w-full max-w-md aspect-square md:aspect-[4/5] rounded-[20px] overflow-hidden border border-[#D4956B]/30 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_4px_30px_rgba(0,0,0,0.1)]">
                   <img
                     src="https://cdn.magicpatterns.com/uploads/1kTXKRcTKkkfzsyMm5zCn9/IMG_4050.jpg"
                     alt="Portrait of Kyle in the mountains"
-                    className="w-full h-full object-cover duotone-filter"
+                    className="w-full h-full min-w-full min-h-full object-cover duotone-filter"
                     loading="lazy"
                   />
                 </div>

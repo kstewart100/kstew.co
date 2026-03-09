@@ -1,21 +1,30 @@
-import React, { lazy } from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyLayout } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+
+const PAGE_TITLE = 'Flexible lift confidence — Kyle Stewart';
+
 export function FlexibleLiftConfidence() {
-  const CaptionText = ({ children }: {children: React.ReactNode;}) =>
-  <div className="font-['JetBrains_Mono'] text-gray-700 text-xs font-normal leading-[19.2px] not-italic">
+  useEffect(() => {
+    document.title = PAGE_TITLE;
+    return () => { document.title = 'Kyle Stewart — Portfolio'; };
+  }, []);
+
+  const CaptionText = ({ children }: { children: React.ReactNode }) => (
+    <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] not-italic">
       {children}
-    </div>;
+    </div>
+  );
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] text-xs font-['Lato'] leading-[19.2px]">
+    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] text-xs font-sans leading-[19.2px]">
       <Header variant="case-study" />
-      <div className="flex-1 py-10 lg:py-20">
+      <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
         {/* Hero Title */}
         <CaseStudyLayout maxWidth="734px">
-          <h1 className="font-['DM_Sans'] text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+          <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
             Flexible lift confidence
           </h1>
         </CaseStudyLayout>
@@ -42,7 +51,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Intro Body Text */}
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             Brand lift campaigns on Google Ads rarely achieved statistical
             significance, leaving advertisers with vague insights like "Your
             campaign drove an increase in awareness." We proposed lowering the
@@ -60,7 +69,7 @@ export function FlexibleLiftConfidence() {
         <CaseStudyLayout maxWidth="734px">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
             <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-['DM_Sans']">
+              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
                 <strong>
                   Role
                   <br />
@@ -69,7 +78,7 @@ export function FlexibleLiftConfidence() {
               </p>
             </div>
             <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-['DM_Sans']">
+              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
                 <strong>
                   Team
                   <br />
@@ -79,7 +88,7 @@ export function FlexibleLiftConfidence() {
               </p>
             </div>
             <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-['DM_Sans']">
+              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
                 <strong>
                   Company
                   <br />
@@ -89,40 +98,40 @@ export function FlexibleLiftConfidence() {
             </div>
           </div>
         </CaseStudyLayout>
-        {/* Principles Section */}
-        <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-            Our content design principles
-          </h2>
-        </CaseStudyLayout>
+        {/* Design principles card */}
         <CaseStudyLayout maxWidth="816px">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-            <div className="bg-[#8ECAE6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
-              Make statistics human by translating terminology into clear,
-              trustworthy language
-            </div>
-            <div className="bg-[#8ECAE6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
-              Put information where it belongs
-            </div>
-            <div className="bg-[#8ECAE6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
-              Validate language choices through research rather than following
-              others
+          <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+              Our design principles
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
+              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                Make statistics human by translating terminology into clear,
+                trustworthy language
+              </div>
+              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                Put information where it belongs
+              </div>
+              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                Validate language choices through research rather than following
+                others
+              </div>
             </div>
           </div>
         </CaseStudyLayout>
         {/* Users Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Serving two important but distinct users
           </h2>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px] mb-6">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px] mb-6">
             Our research identified two distinct user groups within the brand
             marketer audience, each with different needs and capabilities.
             Understanding both user types was essential for creating inclusive
             content.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="font-['JetBrains_Mono'] text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
+            <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
               <strong>
                 Stats expert
                 <br />
@@ -136,7 +145,7 @@ export function FlexibleLiftConfidence() {
               <br />- Serves as the team's go-to resource for understanding
               statistical implications.
             </div>
-            <div className="font-['JetBrains_Mono'] text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
+            <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
               <strong>
                 Stats novice
                 <br />
@@ -153,10 +162,10 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Literature Review Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Conducting a literature review
           </h2>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             I began by examining existing research and documentation to
             understand previous approaches and establish context. The literature
             review encompassed past research studies, brand guidelines, naming
@@ -167,10 +176,10 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Exploring Options Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Exploring the different options for a name
           </h2>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             The team had explored several naming options before my involvement.
             After conducting the literature review and consulting design
             guidelines, I proposed "certainty of lift," though stakeholders
@@ -198,7 +207,7 @@ export function FlexibleLiftConfidence() {
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             To move beyond subjective preferences, I developed a structured
             evaluation framework. Each option was assessed against established
             guidelines, user needs, and plain language principles, ensuring our
@@ -227,7 +236,7 @@ export function FlexibleLiftConfidence() {
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             The analysis narrowed our options to two candidates: "statistical
             significance" (favored by data science stakeholders) and "certainty
             of lift detection" (aligned with content standards). User research
@@ -255,15 +264,15 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Testing Through Research Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Testing through research
           </h2>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px] mb-6">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px] mb-6">
             Effective feature names should be self-explanatory. While tooltips
             and help documentation provide support, the primary terminology
             should communicate clearly without additional explanation.
           </p>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             I partnered with UX researchers to design a study comparing both
             terminology options. Participants viewed identical interfaces with
             different terminology, then explained their understanding of the
@@ -298,7 +307,7 @@ export function FlexibleLiftConfidence() {
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             Results strongly favored "certainty of lift detection" across all
             user segments. Notably, even statistically sophisticated users found
             "statistical significance" ambiguous in this context. We further
@@ -315,12 +324,12 @@ export function FlexibleLiftConfidence() {
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
 
-              <div className="font-['JetBrains_Mono'] text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
+              <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
                 <strong>
-                  Statsitical signficance
+                  Statistical significance
                   <br />
                 </strong>
-                - More stats savvy users preferred this because they uses this
+                - More stats savvy users preferred this because they use this
                 language today
                 <br />
                 - Less stats savvy users preferred this because it seemed more
@@ -337,9 +346,9 @@ export function FlexibleLiftConfidence() {
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
 
-              <div className="font-['JetBrains_Mono'] text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
+              <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
                 <strong>
-                  Certiantiy of lift detection
+                  Certainty of lift detection
                   <br />‍
                 </strong>
                 - More specific term to lift
@@ -355,7 +364,7 @@ export function FlexibleLiftConfidence() {
           </div>
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             We launched this experience to a cohort of 50 advertisers. Prior to
             the launch, the team wanted to validate the experience's usability
             and confirm users correctly comprehended the new metric. Before a
@@ -389,10 +398,10 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Creating an easy-to-read page Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Creating an easy-to-read page
           </h2>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             With validated terminology, I focused on designing the complete user
             experience. The goal was to make statistical results both
             comprehensible and actionable for decision-making.
@@ -422,7 +431,7 @@ export function FlexibleLiftConfidence() {
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             Research revealed two primary use cases: some advertisers required
             statistical validation for major decisions, while others sought
             directional insights for ongoing optimization. Our content strategy
@@ -441,7 +450,7 @@ export function FlexibleLiftConfidence() {
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             To align stakeholders on tooltip language, I developed two
             versions—one using plain language and another with technical
             terminology. Demonstrating that the accessible version maintained
@@ -469,10 +478,10 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Learnings Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Learnings
           </h2>
-          <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
             The project delivered measurable improvements: over 50% of users
             found brand lift campaigns easy to use, and 90% understood
             "Certainty of lift."
@@ -489,8 +498,9 @@ export function FlexibleLiftConfidence() {
           </p>
         </CaseStudyLayout>
         </div>
-      </div>
+      </main>
       <Footer variant="case-study" />
-    </div>);
+    </div>
+  );
 
 }

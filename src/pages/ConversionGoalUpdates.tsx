@@ -1,16 +1,24 @@
-import React, { lazy } from 'react';
+import React, { useEffect } from 'react';
 import { CaseStudyLayout } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+
+const PAGE_TITLE = 'Conversion goal updates — Kyle Stewart';
+
 export function ConversionGoalUpdates() {
+  useEffect(() => {
+    document.title = PAGE_TITLE;
+    return () => { document.title = 'Kyle Stewart — Portfolio'; };
+  }, []);
+
   return (
     <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
       <Header variant="case-study" />
-      <main className="flex-1 bg-[#EFF0F3] text-[#1a1a1a] py-10 lg:py-20 font-['Lato']">
+      <main id="main-content" className="flex-1 bg-[#EFF0F3] text-[#1a1a1a] py-10 lg:py-20 font-sans">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-['DM_Sans'] text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Conversion goal updates
             </h1>
           </CaseStudyLayout>
@@ -18,7 +26,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-            <p className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed">
+            <p className="font-mono text-gray-600 text-xs font-normal leading-relaxed">
                 The conversion updates tool lets advertisers view
                 recommendations, make changes, and save updates without manually
                 editing each conversion.
@@ -27,14 +35,14 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc3ab43fdbb1c4c6cbf8_Laptop.png"
-              alt=""
+              alt="Conversion updates tool on laptop showing recommendations and save flow"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
           </CaseStudyLayout>
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-['DM_Sans'] text-gray-700 text-base md:text-lg font-normal leading-relaxed md:leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-base md:text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Ahead of an analytics platform update, advertisers needed to
               update their conversion goals—a critical part of their paid ad
               campaigns. The migration created duplicate conversion actions that
@@ -48,48 +56,47 @@ export function ConversionGoalUpdates() {
           {/* Metadata Grid */}
           <CaseStudyLayout maxWidth="734px">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-['DM_Sans'] p-4 md:p-5">
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
                 <strong className="font-bold">Role</strong>
                 <br />
                 Senior Content Designer
               </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-['DM_Sans'] p-4 md:p-5">
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
                 <strong className="font-bold">Team</strong>
                 <br />
                 UX Designers, Product Managers, Software Engineers, and Program
                 Managers
               </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-['DM_Sans'] p-4 md:p-5">
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
                 <strong className="font-bold">Company</strong>
                 <br />
                 Google, Google Ads
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Design Principles */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Our design principles
-            </h2>
-          </CaseStudyLayout>
-          {/* Three Principle Cards */}
+          {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-              <div className="bg-[#8ECAE6] font-['DM_Sans'] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5">
-                Be upfront about potential changes–both positive and negative.
-              </div>
-              <div className="bg-[#8ECAE6] font-['DM_Sans'] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5">
-                Automate where possible and break tasks into manageable steps.
-              </div>
-              <div className="bg-[#8ECAE6] font-['DM_Sans'] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5">
-                Be honest about trade-offs, both the short-term pain and
-                long-term benefits.
+            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+                Our design principles
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
+                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                  Be upfront about potential changes–both positive and negative.
+                </div>
+                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                  Automate where possible and break tasks into manageable steps.
+                </div>
+                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                  Be honest about trade-offs, both the short-term pain and
+                  long-term benefits.
+                </div>
               </div>
             </div>
           </CaseStudyLayout>
           {/* H2 Refining Content Hierarchy */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Refining the content hierarchy
             </h2>
           </CaseStudyLayout>
@@ -98,7 +105,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 First draft iteration from design partner.
@@ -107,7 +114,7 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc4d17cc67389db35e74_CGU%202.png"
-              alt=""
+              alt="First draft iteration of conversion goal updates from design partner"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -115,7 +122,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               The headlines from my partner&#39;s first iterations were
@@ -135,7 +142,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Second iteration outlining exact tasks for advertisers to
@@ -145,7 +152,7 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc56cfebde2e6c840aa2_CGU%203.png"
-              alt=""
+              alt="Second iteration outlining exact tasks for advertisers to complete in the flow"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -153,7 +160,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               After digging through past research and talking with our research
@@ -165,98 +172,47 @@ export function ConversionGoalUpdates() {
           {/* Decision Table 1 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
-
+              role="table"
+              aria-label="Proposed copy and design decisions"
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono"
+            >
               {/* Desktop Table */}
-              <div className="hidden md:grid md:grid-cols-[2fr_1fr_2fr] gap-4">
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Proposed copy
+              <div className="hidden md:block">
+                <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4 mb-4">
+                  <div role="columnheader" className="text-xs leading-[15.6px] font-bold">Proposed copy</div>
+                  <div role="columnheader" className="text-xs leading-[15.6px] font-bold">Status</div>
+                  <div role="columnheader" className="text-xs leading-[15.6px] font-bold">Design decision</div>
                 </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Status
+                <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4 mb-4">
+                  <div role="cell" className="text-xs leading-[15.6px]">
+                    Update your goals from Universal Analytics conversions to Google Analytics 4 conversions
+                  </div>
+                  <div role="cell">
+                    <span className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs">Rejected</span>
+                  </div>
+                  <div role="cell" className="text-xs leading-[15.6px]">
+                    - Way too much jargon<br />- Assumed users knew the relationship between goals and conversions<br />- Overly detailed for a headline
+                  </div>
                 </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Design decision
+                <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4 mb-4">
+                  <div role="cell" className="text-xs leading-[15.6px]">
+                    Change your Universal Analytics conversions to Google Analytics 4 conversions
+                  </div>
+                  <div role="cell">
+                    <span className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs">Rejected</span>
+                  </div>
+                  <div role="cell" className="text-xs leading-[15.6px]">
+                    - Redundant wording (&quot;conversions to conversions&quot;)<br />- unclear what type of change was needed
+                  </div>
                 </div>
-                {/* Row 1 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  Update your goals from Universal Analytics conversions to
-                  Google Analytics 4 conversions
-                </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  - Way too much jargon
-                  <br />- Assumed users knew the relationship between goals and
-                  conversions
-                  <br />- Overly detailed for a headline
-                </div>
-                {/* Row 2 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  Change your Universal Analytics conversions to Google
-                  Analytics 4 conversions
-                </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  - Redundant wording (&quot;conversions to conversions&quot;)
-                  <br />- unclear what type of change was needed
-                </div>
-                {/* Row 3 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  Switch to Google Analytics 4 conversions
-                </div>
-                <div>
-                  <span
-                    className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                    Final
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  - Simple, clear action
-                  <br />- Focused on the action rather than details
-                  <br />- Switch matches mental model
+                <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4">
+                  <div role="cell" className="text-xs leading-[15.6px]">Switch to Google Analytics 4 conversions</div>
+                  <div role="cell">
+                    <span className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold">Final</span>
+                  </div>
+                  <div role="cell" className="text-xs leading-[15.6px]">
+                    - Simple, clear action<br />- Focused on the action rather than details<br />- Switch matches mental model
+                  </div>
                 </div>
               </div>
               {/* Mobile Cards */}
@@ -341,7 +297,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               Working with PM and design, I found more opportunities to clean
@@ -354,7 +310,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Launched content with concrete information and headlines, CTAs,
@@ -364,7 +320,7 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc65b6baa5dc9999e6c5_CGU%204.png"
-              alt=""
+              alt="Launched content with concrete headlines, CTAs, and interactions driving user actions"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -372,7 +328,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               As we neared launch, I worked with help content teams to spot
@@ -382,14 +338,14 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 From Manual to Automated */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               From manual guide to automated recommendation
             </h2>
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               Product management initially wanted users to handle updates
@@ -403,7 +359,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Early iteration of the complete user flow for updating
@@ -413,7 +369,7 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd1eff1cf83b0eef755a_CGU%205.png"
-              alt=""
+              alt="Early iteration of the complete user flow for updating conversion goals across 6 screens"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -421,7 +377,7 @@ export function ConversionGoalUpdates() {
           {/* Long Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               The biggest headache was the individual conversion updates. We
@@ -455,7 +411,7 @@ export function ConversionGoalUpdates() {
           {/* Decision Table 2 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[1.5fr_1fr_2fr] gap-4">
@@ -638,7 +594,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               After validating this with engineering, I spotted another
@@ -657,7 +613,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Performance fluctuation communication explorations showing table
@@ -667,7 +623,7 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd0fb43fdbb1c4c70194_CGU%206.png"
-              alt=""
+              alt="Performance fluctuation communication explorations: table format and dialog format"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -675,7 +631,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               When we talked to engineering about moving these warnings earlier
@@ -698,7 +654,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Final user flow for updating conversion goals across 3 screens.
@@ -707,7 +663,7 @@ export function ConversionGoalUpdates() {
 
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ece43c2cd6050d290c412_CGU%20hero.png"
-              alt=""
+              alt="Final user flow for updating conversion goals across 3 screens"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -715,7 +671,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               The result was a dramatic reduction in cognitive load while
@@ -726,14 +682,14 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Challenging Language */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Challenging language precedent
             </h2>
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               While working on this experience, I kept two things in balance.
@@ -749,7 +705,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Getting Users to Take Action */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Getting users to take action with notifications
             </h2>
           </CaseStudyLayout>
@@ -757,7 +713,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout maxWidth="816px">
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd58b43fdbb1c4c7213c_CGU%207.png"
-              alt=""
+              alt="In-product notification for conversion goal updates"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -765,7 +721,7 @@ export function ConversionGoalUpdates() {
           {/* Decision Table 3 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[2.5fr_1fr_1.5fr] gap-4">
@@ -946,7 +902,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Giving Users More Context */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Giving users more context with subheaders
             </h2>
           </CaseStudyLayout>
@@ -954,7 +910,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout maxWidth="816px">
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd61e0440486c617b8e5_CGU%208.png"
-              alt=""
+              alt="Subheader copy for conversion updates context"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
@@ -962,7 +918,7 @@ export function ConversionGoalUpdates() {
           {/* Decision Table 4 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[2.5fr_1fr_1.5fr] gap-4">
@@ -1045,8 +1001,8 @@ export function ConversionGoalUpdates() {
                   helpful recommendation
                   <br />
                   <br />
-                  With the hindsight of 2+ years working this space, I know see
-                  areas of improvement... such the life of a writer.
+                  With the hindsight of 2+ years working this space, I now see
+                  areas of improvement... such is the life of a writer.
                 </div>
               </div>
               {/* Mobile Cards */}
@@ -1105,8 +1061,8 @@ export function ConversionGoalUpdates() {
                     Clear, concise messaging; consistent platform naming;
                     specific timeline that users can understand; positions
                     change as helpful recommendation. With the hindsight of 2+
-                    years working this space, I know see areas of improvement...
-                    such the life of a writer.
+                    years working this space, I now see areas of improvement...
+                    such is the life of a writer.
                   </p>
                 </div>
               </div>
@@ -1114,14 +1070,14 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Learnings */}
           <CaseStudyLayout maxWidth="734px" className="pl-[0px] pr-[0px]">
-            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Learnings
             </h2>
           </CaseStudyLayout>
           {/* Final Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
 >
 
               While specific user metrics remain confidential, the project

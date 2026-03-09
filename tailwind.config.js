@@ -8,12 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Cabin'],
-        body: ['Cabin'],
-        'changa-one': ['"Changa One"', 'Impact', 'sans-serif'],
-        'dm-sans': ['"DM Sans"', 'sans-serif'],
-        'lato': ['Lato', 'sans-serif'],
-        'jetbrains': ['"JetBrains Mono"', 'monospace'],
+        sans: ['"Instrument Sans"', 'sans-serif'],
+        body: ['"Instrument Sans"', 'sans-serif'],
+        heading: ['"Instrument Sans"', 'sans-serif'],
+        mono: ['"Geist Mono"', 'monospace'],
       },
       colors: {
         'color-primitive-blue': 'var(--color-primitive-blue)',

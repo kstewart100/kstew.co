@@ -15,6 +15,9 @@ export function LoadingScreen() {
 
   return (
     <motion.div
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#2B6788] text-[#F5E6D3]"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -40,7 +43,7 @@ export function LoadingScreen() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -4 }}
               transition={{ duration: 0.4 }}
-              className="font-['DM_Sans'] text-sm md:text-base font-medium tracking-wide text-[#F5E6D3] text-glow-soft text-center"
+              className="font-sans text-sm md:text-base font-medium tracking-wide text-[#F5E6D3] text-glow-soft text-center"
             >
               {loadingText}
             </motion.h1>

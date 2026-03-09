@@ -20,7 +20,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
         {caption && (
           <div className="mt-4 lg:mt-0 lg:absolute lg:left-full lg:top-0 lg:ml-12 lg:w-64">
             {typeof caption === 'string' ? (
-              <p className="font-['JetBrains_Mono'] text-xs text-gray-600 leading-relaxed text-left">
+              <p className="font-mono text-xs text-gray-600 leading-relaxed text-left">
                 {caption}
               </p>
             ) : (

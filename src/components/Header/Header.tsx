@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       data-id={dataId}
-      className={`w-full font-body ${isHome ? 'bg-transparent' : 'bg-white'} ${className}`}
+      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-white'} ${className}`}
     >
       <div className="grid grid-cols-[auto_1fr_auto] gap-4 items-center px-5 md:px-8 lg:px-10 h-16 max-w-[1024px] mx-auto">
         <Link
@@ -28,21 +28,29 @@ export const Header: React.FC<HeaderProps> = ({
         >
           <img
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png"
-            alt="Logo"
+            alt="Kyle Stewart home"
             className={`h-7 w-auto ${isHome ? 'brightness-0 invert' : ''}`}
-            loading="lazy"
           />
         </Link>
 
-        <h1
-          className={`font-body font-medium text-sm md:text-base text-center whitespace-nowrap tracking-tight ${isHome ? 'text-white/90' : 'text-[#1a1a1a]'}`}
-        >
-          Kyle Stewart
-        </h1>
+        {isHome ? (
+          <span
+            className="font-sans font-medium text-sm md:text-base text-center whitespace-nowrap tracking-tight text-white/90"
+          >
+            Kyle Stewart
+          </span>
+        ) : (
+          <h1
+            className="font-sans font-medium text-sm md:text-base text-center whitespace-nowrap tracking-tight text-[#1a1a1a]"
+          >
+            Kyle Stewart
+          </h1>
+        )}
 
         <a
           href="mailto:hello@kstew.co"
-          className={`font-body font-medium text-sm tracking-tight transition-colors whitespace-nowrap justify-self-end ${isHome ? 'text-white/90 hover:text-white' : 'text-[#1a1a1a] hover:text-[#294050]'}`}
+          aria-label="Contact by email"
+          className={`font-sans font-medium text-sm tracking-tight transition-colors whitespace-nowrap justify-self-end min-h-[44px] min-w-[44px] inline-flex items-center justify-center ${isHome ? 'text-white/90 hover:text-white' : 'text-[#1a1a1a] hover:text-[#294050]'}`}
         >
           Contact
         </a>

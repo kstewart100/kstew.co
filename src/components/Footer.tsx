@@ -18,8 +18,9 @@ export function Footer({ variant = 'case-study' }: FooterProps) {
         <div className="flex items-center gap-6 mb-8">
           <a
             href="mailto:hello@kstew.co"
-            className={`transition-colors text-sm md:text-base ${isHome ? 'text-[#F5E6D3]/80 hover:text-[#D4956B]' : 'text-gray-600 hover:text-[#1a1a1a]'}`}>
-
+            aria-label="Email Kyle"
+            className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center transition-colors text-sm md:text-base ${isHome ? 'text-[#F5E6D3]/80 hover:text-[#D4956B]' : 'text-gray-600 hover:text-[#1a1a1a]'}`}
+          >
             Email
           </a>
           <span className={isHome ? 'text-[#F5E6D3]/40' : 'text-gray-400'}>
@@ -29,8 +30,9 @@ export function Footer({ variant = 'case-study' }: FooterProps) {
             href="https://linkedin.com/in/kylestewart100"
             target="_blank"
             rel="noopener noreferrer"
-            className={`transition-colors text-sm md:text-base ${isHome ? 'text-[#F5E6D3]/80 hover:text-[#D4956B]' : 'text-gray-600 hover:text-[#1a1a1a]'}`}>
-
+            aria-label="Kyle Stewart on LinkedIn"
+            className={`inline-flex min-h-[44px] min-w-[44px] items-center justify-center transition-colors text-sm md:text-base ${isHome ? 'text-[#F5E6D3]/80 hover:text-[#D4956B]' : 'text-gray-600 hover:text-[#1a1a1a]'}`}
+          >
             LinkedIn
           </a>
         </div>

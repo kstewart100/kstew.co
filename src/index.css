@@ -1,10 +1,4 @@
-/* --- MANAGED FONT IMPORTS START (do not edit manually) --- */
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=DM+Sans:wght@400;500;700;900&family=Lato:wght@400&display=swap');
-
-/* --- MANAGED FONT IMPORTS END --- */
-
-/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+/* Fonts are imported in index.tsx (@fontsource/instrument-sans, @fontsource/geist-mono) */
 
 /* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
 @import 'tailwindcss/base';
@@ -45,7 +39,7 @@ body {
   background-color: #EFF0F3;
   background-image: none;
   color: #1a1a1a;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -78,6 +72,11 @@ body {
   70% { transform: translate(0%, 15%); }
   80% { transform: translate(3%, 35%); }
   90% { transform: translate(-10%, 10%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .film-grain::after {
+    animation: none;
+  }
 }
 /* Typography Utilities */
 .text-glow-peach {
