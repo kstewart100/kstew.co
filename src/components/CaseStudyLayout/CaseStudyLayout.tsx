@@ -8,35 +8,27 @@ export interface CaseStudyLayoutProps {
 }
 export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
   children,
-  maxWidth = '650px',
+  maxWidth = '734px',
   caption,
   className = '',
   'data-id': dataId
 }) => {
   return (
-    <div className="w-full px-4 sm:px-8 lg:px-12 relative" data-id={dataId}>
-      <div
-        className="mx-auto relative"
-        style={{
-          maxWidth
-        }}>
-
-        {/* Main Content: Always left-aligned within the 650px max-width container */}
+    <div className="w-full max-w-[1024px] mx-auto px-5 md:px-8 lg:px-10 relative" data-id={dataId}>
+      <div className="mx-auto relative" style={{ maxWidth }}>
         <div className={`w-full text-left ${className}`}>{children}</div>
-
-        {/* Caption:
-             Mobile/Tablet: Stacked below content
-             Desktop (lg+): Positioned absolutely to the right of the 650px container
-             to ensure it doesn't "push" the main content off-center.
-          */}
-        {caption &&
-        <div className="mt-4 lg:mt-0 lg:absolute lg:left-full lg:top-0 lg:ml-12 lg:w-64">
-            <p className="font-body text-sm text-color-text-secondary italic leading-relaxed text-left">
-              {caption}
-            </p>
+        {caption && (
+          <div className="mt-4 lg:mt-0 lg:absolute lg:left-full lg:top-0 lg:ml-12 lg:w-64">
+            {typeof caption === 'string' ? (
+              <p className="font-['JetBrains_Mono'] text-xs text-gray-600 leading-relaxed text-left">
+                {caption}
+              </p>
+            ) : (
+              caption
+            )}
           </div>
-        }
+        )}
       </div>
-    </div>);
-
+    </div>
+  );
 };

@@ -5,31 +5,12 @@ import { Footer } from '../components/Footer';
 export function ConversionGoalUpdates() {
   return (
     <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
-      <div
-        style={
-        {
-          '--color-text-primary': '#000000'
-        } as React.CSSProperties
-        }>
-
-        <Header variant="case-study" />
-      </div>
-      <div
-        className="flex-1 bg-[#EFF0F3] text-[#1a1a1a] text-xs leading-[19.2px] py-10 md:py-16 lg:py-20"
-        style={{
-          fontFamily: 'Lato, sans-serif'
-        }}>
-
+      <Header variant="case-study" />
+      <main className="flex-1 bg-[#EFF0F3] text-[#1a1a1a] py-10 lg:py-20 font-['Lato']">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1
-              className="text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] text-gray-700"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '-2.4px'
-              }}>
-
+            <h1 className="font-['DM_Sans'] text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Conversion goal updates
             </h1>
           </CaseStudyLayout>
@@ -37,12 +18,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-            <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
-
+            <p className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed">
                 The conversion updates tool lets advertisers view
                 recommendations, make changes, and save updates without manually
                 editing each conversion.
@@ -53,20 +29,12 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc3ab43fdbb1c4c6cbf8_Laptop.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px]"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
           </CaseStudyLayout>
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p
-              className="text-gray-700 text-base md:text-lg font-normal leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
-
+            <p className="font-['DM_Sans'] text-gray-700 text-base md:text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Ahead of an analytics platform update, advertisers needed to
               update their conversion goals—a critical part of their paid ad
               campaigns. The migration created duplicate conversion actions that
@@ -79,34 +47,19 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* Metadata Grid */}
           <CaseStudyLayout maxWidth="734px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-b border-[rgba(26,26,26,0.25)] py-4">
-              <div
-                className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-4 md:p-5"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif'
-                }}>
-
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-['DM_Sans'] p-4 md:p-5">
                 <strong className="font-bold">Role</strong>
                 <br />
                 Senior Content Designer
               </div>
-              <div
-                className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-4 md:p-5"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif'
-                }}>
-
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-['DM_Sans'] p-4 md:p-5">
                 <strong className="font-bold">Team</strong>
                 <br />
                 UX Designers, Product Managers, Software Engineers, and Program
                 Managers
               </div>
-              <div
-                className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-4 md:p-5"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif'
-                }}>
-
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-['DM_Sans'] p-4 md:p-5">
                 <strong className="font-bold">Company</strong>
                 <br />
                 Google, Google Ads
@@ -115,41 +68,20 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Design Principles */}
           <CaseStudyLayout maxWidth="734px">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Our design principles
             </h2>
           </CaseStudyLayout>
           {/* Three Principle Cards */}
-          <CaseStudyLayout maxWidth="734px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div
-                className="bg-[#8ECAE6] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif'
-                }}>
-
+          <CaseStudyLayout maxWidth="816px">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
+              <div className="bg-[#8ECAE6] font-['DM_Sans'] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5">
                 Be upfront about potential changes–both positive and negative.
               </div>
-              <div
-                className="bg-[#8ECAE6] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif'
-                }}>
-
+              <div className="bg-[#8ECAE6] font-['DM_Sans'] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5">
                 Automate where possible and break tasks into manageable steps.
               </div>
-              <div
-                className="bg-[#8ECAE6] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5"
-                style={{
-                  fontFamily: '"DM Sans", sans-serif'
-                }}>
-
+              <div className="bg-[#8ECAE6] font-['DM_Sans'] min-h-[148px] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5">
                 Be honest about trade-offs, both the short-term pain and
                 long-term benefits.
               </div>
@@ -157,13 +89,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Refining Content Hierarchy */}
           <CaseStudyLayout maxWidth="734px">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Refining the content hierarchy
             </h2>
           </CaseStudyLayout>
@@ -172,10 +98,8 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
+              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+>
 
                 First draft iteration from design partner.
               </p>
@@ -185,19 +109,14 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc4d17cc67389db35e74_CGU%202.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               The headlines from my partner&#39;s first iterations were
               technical, lacked action, and were filled with jargon. I wanted to
@@ -216,10 +135,8 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
+              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+>
 
                 Second iteration outlining exact tasks for advertisers to
                 complete in the flow.
@@ -230,19 +147,14 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc56cfebde2e6c840aa2_CGU%203.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               After digging through past research and talking with our research
               team, I reframed this as a &quot;switch&quot; to new analytics.
@@ -253,43 +165,32 @@ export function ConversionGoalUpdates() {
           {/* Decision Table 1 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-              }}>
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[2fr_1fr_2fr] gap-4">
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Proposed copy
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Status
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Design decision
                 </div>
                 {/* Row 1 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Update your goals from Universal Analytics conversions to
                   Google Analytics 4 conversions
@@ -297,18 +198,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   - Way too much jargon
                   <br />- Assumed users knew the relationship between goals and
@@ -318,9 +215,7 @@ export function ConversionGoalUpdates() {
                 {/* Row 2 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Change your Universal Analytics conversions to Google
                   Analytics 4 conversions
@@ -328,18 +223,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   - Redundant wording (&quot;conversions to conversions&quot;)
                   <br />- unclear what type of change was needed
@@ -347,27 +238,21 @@ export function ConversionGoalUpdates() {
                 {/* Row 3 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Switch to Google Analytics 4 conversions
                 </div>
                 <div>
                   <span
                     className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Final
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   - Simple, clear action
                   <br />- Focused on the action rather than details
@@ -380,27 +265,21 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Update your goals from Universal Analytics conversions to
                     Google Analytics 4 conversions
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     - Way too much jargon
                     <br />- Assumed users knew the relationship between goals
@@ -412,27 +291,21 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Change your Universal Analytics conversions to Google
                     Analytics 4 conversions
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     - Redundant wording (&quot;conversions to conversions&quot;)
                     <br />- unclear what type of change was needed
@@ -442,26 +315,20 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Final
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Switch to Google Analytics 4 conversions
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     - Simple, clear action
                     <br />- Focused on the action rather than details
@@ -474,10 +341,8 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               Working with PM and design, I found more opportunities to clean
               things up. I cut redundant explanations and focused on what
@@ -489,10 +354,8 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
+              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+>
 
                 Launched content with concrete information and headlines, CTAs,
                 and interactions driving user actions.
@@ -503,19 +366,14 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc65b6baa5dc9999e6c5_CGU%204.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               As we neared launch, I worked with help content teams to spot
               remaining knowledge gaps. We added tool tips and consolidated help
@@ -524,23 +382,15 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 From Manual to Automated */}
           <CaseStudyLayout maxWidth="734px">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               From manual guide to automated recommendation
             </h2>
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               Product management initially wanted users to handle updates
               manually, requiring us to share extensive information upfront. The
@@ -553,10 +403,8 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
+              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+>
 
                 Early iteration of the complete user flow for updating
                 conversion goals across 6 screens.
@@ -567,19 +415,14 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd1eff1cf83b0eef755a_CGU%205.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Long Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               The biggest headache was the individual conversion updates. We
               showed users a table with all their conversions and dropdown menus
@@ -612,61 +455,46 @@ export function ConversionGoalUpdates() {
           {/* Decision Table 2 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-              }}>
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[1.5fr_1fr_2fr] gap-4">
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Action or CTA
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Status
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Design decision
                 </div>
                 {/* Row 1 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Dropdown
                 </div>
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Generic dropdown to change &quot;Primary&quot; to
                   &quot;Secondary&quot; didn&#39;t provide enough context about
@@ -676,9 +504,7 @@ export function ConversionGoalUpdates() {
                 {/* Row 2 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   &quot;Switch,&quot; &quot;Change to secondary,&quot; and
                   &quot;Change to primary&quot;
@@ -686,18 +512,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   More specific CTAs like &quot;Switch,&quot; &quot;Change to
                   secondary,&quot; and &quot;Change to primary&quot; actually
@@ -710,27 +532,21 @@ export function ConversionGoalUpdates() {
                 {/* Row 3 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Switch to Google Analytics 4 conversions
                 </div>
                 <div>
                   <span
                     className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Final
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Shifted to automated recommendations with review-based
                   language. Users could see exactly what would change before
@@ -744,26 +560,20 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Dropdown
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Generic dropdown to change &quot;Primary&quot; to
                     &quot;Secondary&quot; didn&#39;t provide enough context
@@ -775,27 +585,21 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     &quot;Switch,&quot; &quot;Change to secondary,&quot; and
                     &quot;Change to primary&quot;
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     More specific CTAs like &quot;Switch,&quot; &quot;Change to
                     secondary,&quot; and &quot;Change to primary&quot; actually
@@ -807,26 +611,20 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Final
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Switch to Google Analytics 4 conversions
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Shifted to automated recommendations with review-based
                     language. Users could see exactly what would change before
@@ -840,10 +638,8 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               After validating this with engineering, I spotted another
               opportunity. While working on performance warnings, I realized we
@@ -861,10 +657,8 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
+              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+>
 
                 Performance fluctuation communication explorations showing table
                 format (left) and dialog format (right).
@@ -875,19 +669,14 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd0fb43fdbb1c4c70194_CGU%206.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               When we talked to engineering about moving these warnings earlier
               in the flow, they pointed out something helpful: since we were now
@@ -909,10 +698,8 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="text-gray-700 text-xs font-normal leading-[19.2px]"
-              style={{
-                fontFamily: '"JetBrains Mono", sans-serif'
-              }}>
+              className="font-['JetBrains_Mono'] text-gray-600 text-xs font-normal leading-relaxed"
+>
 
                 Final user flow for updating conversion goals across 3 screens.
               </p>
@@ -922,19 +709,14 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ece43c2cd6050d290c412_CGU%20hero.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               The result was a dramatic reduction in cognitive load while
               maintaining full transparency—users could see exactly what would
@@ -944,23 +726,15 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Challenging Language */}
           <CaseStudyLayout maxWidth="734px">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Challenging language precedent
             </h2>
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               While working on this experience, I kept two things in balance.
               What did people need to know, and what kind of urgency did we want
@@ -975,13 +749,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Getting Users to Take Action */}
           <CaseStudyLayout maxWidth="734px">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Getting users to take action with notifications
             </h2>
           </CaseStudyLayout>
@@ -991,52 +759,38 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd58b43fdbb1c4c7213c_CGU%207.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Decision Table 3 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-              }}>
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[2.5fr_1fr_1.5fr] gap-4">
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Proposed copy
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Status
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Design decision
                 </div>
                 {/* Row 1 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Failing to migrate to Google Analytics 4 will leave your
                   campaigns vulnerable to inaccurate data, ineffective bidding
@@ -1045,18 +799,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Fear-based messaging that focused on negatives; could create
                   anxiety rather than motivation to act
@@ -1064,9 +814,7 @@ export function ConversionGoalUpdates() {
                 {/* Row 2 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Migrating to Google Analytics 4 ensures your campaigns remain
                   functional and your data stays accurate as Universal Analytics
@@ -1075,18 +823,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Vague messaging without clear urgency; didn&#39;t specify
                   timeline or actionable next steps
@@ -1094,9 +838,7 @@ export function ConversionGoalUpdates() {
                 {/* Row 3 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   <strong>Switch to Google Analytics 4 conversions. M</strong>
                   ake the changes now to ensure you have enough historical data
@@ -1106,18 +848,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Final
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Clear call-to-action with specific deadline; emphasizes
                   proactive benefit (historical data) rather than fear; includes
@@ -1130,18 +868,14 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Failing to migrate to Google Analytics 4 will leave your
                     campaigns vulnerable to inaccurate data, ineffective bidding
@@ -1149,9 +883,7 @@ export function ConversionGoalUpdates() {
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Fear-based messaging that focused on negatives; could create
                     anxiety rather than motivation to act
@@ -1161,18 +893,14 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Migrating to Google Analytics 4 ensures your campaigns
                     remain functional and your data stays accurate as Universal
@@ -1180,9 +908,7 @@ export function ConversionGoalUpdates() {
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Vague messaging without clear urgency; didn&#39;t specify
                     timeline or actionable next steps
@@ -1192,18 +918,14 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Final
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     <strong>Switch to Google Analytics 4 conversions. M</strong>
                     ake the changes now to ensure you have enough historical
@@ -1212,9 +934,7 @@ export function ConversionGoalUpdates() {
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Clear call-to-action with specific deadline; emphasizes
                     proactive benefit (historical data) rather than fear;
@@ -1226,13 +946,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Giving Users More Context */}
           <CaseStudyLayout maxWidth="734px">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Giving users more context with subheaders
             </h2>
           </CaseStudyLayout>
@@ -1242,52 +956,38 @@ export function ConversionGoalUpdates() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd61e0440486c617b8e5_CGU%208.png"
               alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-              }} />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Decision Table 4 */}
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto"
-              style={{
-                boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-              }}>
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-['JetBrains_Mono']">
 
               {/* Desktop Table */}
               <div className="hidden md:grid md:grid-cols-[2.5fr_1fr_1.5fr] gap-4">
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Proposed copy
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Status
                 </div>
                 <div
                   className="text-xs leading-[15.6px] font-bold"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Design decision
                 </div>
                 {/* Row 1 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Universal Analytics (360) will cease data collection on July
                   1, 2024 and Universal Analytics on August 2024. You will need
@@ -1304,18 +1004,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Rejected
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Too technical and lengthy; mixed terminology between different
                   analytics platforms; unclear timeline expectations
@@ -1323,9 +1019,7 @@ export function ConversionGoalUpdates() {
                 {/* Row 2 */}
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Since Universal Analytics will stop collecting data in July
                   2023, we&#39;ve recommended new conversion optimization
@@ -1337,18 +1031,14 @@ export function ConversionGoalUpdates() {
                 <div>
                   <span
                     className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Final
                   </span>
                 </div>
                 <div
                   className="text-xs leading-[15.6px]"
-                  style={{
-                    fontFamily: '"JetBrains Mono", sans-serif'
-                  }}>
+>
 
                   Clear, concise messaging; consistent platform naming; specific
                   timeline that users can understand; positions change as
@@ -1365,18 +1055,14 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Rejected
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Universal Analytics (360) will cease data collection on July
                     1, 2024 and Universal Analytics on August 2024. You will
@@ -1385,9 +1071,7 @@ export function ConversionGoalUpdates() {
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Too technical and lengthy; mixed terminology between
                     different analytics platforms; unclear timeline expectations
@@ -1397,18 +1081,14 @@ export function ConversionGoalUpdates() {
                   <div className="mb-2">
                     <span
                       className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
-                      style={{
-                        fontFamily: '"JetBrains Mono", sans-serif'
-                      }}>
+>
 
                       Final
                     </span>
                   </div>
                   <p
                     className="text-xs leading-[15.6px] mb-2 font-bold"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Since Universal Analytics will stop collecting data in July
                     2023, we&#39;ve recommended new conversion optimization
@@ -1420,9 +1100,7 @@ export function ConversionGoalUpdates() {
                   </p>
                   <p
                     className="text-xs leading-[15.6px] text-gray-600"
-                    style={{
-                      fontFamily: '"JetBrains Mono", sans-serif'
-                    }}>
+>
 
                     Clear, concise messaging; consistent platform naming;
                     specific timeline that users can understand; positions
@@ -1436,23 +1114,15 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Learnings */}
           <CaseStudyLayout maxWidth="734px" className="pl-[0px] pr-[0px]">
-            <h2
-              className="font-normal text-xl md:text-2xl lg:text-[28px] leading-snug lg:leading-[40px] text-[#1a1a1a]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif',
-                letterSpacing: '1.2px'
-              }}>
-
+            <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Learnings
             </h2>
           </CaseStudyLayout>
           {/* Final Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
-              style={{
-                fontFamily: '"DM Sans", sans-serif'
-              }}>
+              className="font-['DM_Sans'] text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+>
 
               While specific user metrics remain confidential, the project
               received enthusiastic feedback from stakeholders for its clarity
@@ -1468,8 +1138,9 @@ export function ConversionGoalUpdates() {
             </p>
           </CaseStudyLayout>
         </div>
-      </div>
+      </main>
       <Footer variant="case-study" />
-    </div>);
+    </div>
+  );
 
 }

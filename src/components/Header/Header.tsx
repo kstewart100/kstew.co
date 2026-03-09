@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       data-id={dataId}
-      className={`w-full font-body ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
+      className={`w-full font-body ${isHome ? 'bg-transparent' : 'bg-white'} ${className}`}
     >
       <div className="grid grid-cols-[auto_1fr_auto] gap-4 items-center px-5 md:px-8 lg:px-10 h-16 max-w-[1024px] mx-auto">
         <Link
@@ -35,14 +35,14 @@ export const Header: React.FC<HeaderProps> = ({
         </Link>
 
         <h1
-          className={`font-body font-medium text-sm md:text-base text-center whitespace-nowrap tracking-tight ${isHome ? 'text-white/90' : 'text-color-text-primary/90'}`}
+          className={`font-body font-medium text-sm md:text-base text-center whitespace-nowrap tracking-tight ${isHome ? 'text-white/90' : 'text-[#1a1a1a]'}`}
         >
           Kyle Stewart
         </h1>
 
         <a
           href="mailto:hello@kstew.co"
-          className={`font-body font-medium text-sm tracking-tight transition-colors whitespace-nowrap justify-self-end ${isHome ? 'text-white/90 hover:text-white' : 'text-color-text-primary/90 hover:text-color-interactive-primary'}`}
+          className={`font-body font-medium text-sm tracking-tight transition-colors whitespace-nowrap justify-self-end ${isHome ? 'text-white/90 hover:text-white' : 'text-[#1a1a1a] hover:text-[#294050]'}`}
         >
           Contact
         </a>

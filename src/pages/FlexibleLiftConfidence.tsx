@@ -11,10 +11,11 @@ export function FlexibleLiftConfidence() {
   return (
     <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] text-xs font-['Lato'] leading-[19.2px]">
       <Header variant="case-study" />
-      <div className="flex-1 py-10 lg:py-20 space-y-12 lg:space-y-16">
+      <div className="flex-1 py-10 lg:py-20">
+        <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
         {/* Hero Title */}
         <CaseStudyLayout maxWidth="734px">
-          <h1 className="font-['DM_Sans'] text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px]">
+          <h1 className="font-['DM_Sans'] text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
             Flexible lift confidence
           </h1>
         </CaseStudyLayout>
@@ -41,7 +42,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Intro Body Text */}
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-['DM_Sans'] text-gray-700 text-lg font-normal leading-[28.8px]">
+          <p className="font-['DM_Sans'] text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             Brand lift campaigns on Google Ads rarely achieved statistical
             significance, leaving advertisers with vague insights like "Your
             campaign drove an increase in awareness." We proposed lowering the
@@ -57,7 +58,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Metadata Grid */}
         <CaseStudyLayout maxWidth="734px">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
             <div>
               <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-['DM_Sans']">
                 <strong>
@@ -90,20 +91,20 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Principles Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
             Our content design principles
           </h2>
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="816px">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-[#8ecae6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
+            <div className="bg-[#8ECAE6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
               Make statistics human by translating terminology into clear,
               trustworthy language
             </div>
-            <div className="bg-[#8ecae6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
+            <div className="bg-[#8ECAE6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
               Put information where it belongs
             </div>
-            <div className="bg-[#8ecae6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
+            <div className="bg-[#8ECAE6] font-['DM_Sans'] text-base font-semibold leading-[25.6px] border-[3px] border-black/5 rounded-[5px] p-5 min-h-[148px]">
               Validate language choices through research rather than following
               others
             </div>
@@ -111,7 +112,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Users Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Serving two important but distinct users
           </h2>
           <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px] mb-6">
@@ -152,7 +153,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Literature Review Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Conducting a literature review
           </h2>
           <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
@@ -166,7 +167,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Exploring Options Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Exploring the different options for a name
           </h2>
           <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
@@ -254,7 +255,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Testing Through Research Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Testing through research
           </h2>
           <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px] mb-6">
@@ -388,7 +389,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Creating an easy-to-read page Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Creating an easy-to-read page
           </h2>
           <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
@@ -468,7 +469,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Learnings Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-[28px] font-normal leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className="font-['DM_Sans'] text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
             Learnings
           </h2>
           <p className="font-['DM_Sans'] text-gray-700 text-lg leading-[28.8px]">
@@ -487,6 +488,7 @@ export function FlexibleLiftConfidence() {
             users—validating evidence-based content decisions over intuition.
           </p>
         </CaseStudyLayout>
+        </div>
       </div>
       <Footer variant="case-study" />
     </div>);

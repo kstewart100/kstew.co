@@ -37,7 +37,7 @@ export function Footer({ variant = 'case-study' }: FooterProps) {
         <p
           className={`text-sm md:text-base ${isHome ? 'text-[#F5E6D3]/60' : 'text-gray-500'}`}>
 
-          © Kyle Stewart 2025 All rights reserved.
+          © Kyle Stewart 2026 All rights reserved.
         </p>
       </div>
     </footer>);

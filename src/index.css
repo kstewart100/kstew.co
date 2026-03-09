@@ -41,9 +41,10 @@
   --color-status-error: #D94D59;
 }
 body {
-  background-color: #5AAEE8;
+  /* Default grey for case studies; home page paints its own gradient overlay */
+  background-color: #EFF0F3;
   background-image: none;
-  color: #F5E6D3;
+  color: #1a1a1a;
   font-family: 'Lato', sans-serif;
   min-height: 100%;
   margin: 0;

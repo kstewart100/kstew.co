@@ -232,9 +232,12 @@ export function Home() {
             </div>
           </div>
 
-          {/* Project Cards Grid */}
-          <div className="relative w-full lg:w-[1024px] mx-auto px-6 md:px-8 lg:px-0 py-[60px] pt-[40px] pb-[40px] mt-[40px] mb-[40px]">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[25px] relative z-10 items-start justify-items-start text-left">
+          {/* Project Cards Grid — section padding matches case study rhythm (py-12 lg:py-20) */}
+          <section
+            aria-label="Case studies"
+            className="relative w-full max-w-[1024px] mx-auto px-5 md:px-8 lg:px-10 py-12 lg:py-20"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 relative z-10 items-start justify-items-start text-left">
               {caseStudies.map((study, i) => (
                 <motion.div
                   key={study.title}
@@ -260,19 +263,19 @@ export function Home() {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* About Section */}
+          {/* About Section — same horizontal padding and section rhythm as case studies */}
           <section
             id="about"
-            className="w-full max-w-[1024px] mx-auto px-6 md:px-8 lg:px-0 text-left py-20 relative z-10 pt-[40px] pb-[40px] space-y-[40px]"
+            className="w-full max-w-[1024px] mx-auto px-5 md:px-8 lg:px-10 text-left py-12 lg:py-20 relative z-10"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div className="order-2 md:order-1">
                 <h2 className="text-4xl md:text-5xl font-['DM_Sans'] font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide uppercase">
                   About me
                 </h2>
-                <div className="space-y-6 text-lg md:text-xl text-[#F5E6D3]/90 leading-relaxed">
+                <div className="text-lg md:text-xl text-[#F5E6D3]/90 leading-relaxed space-y-6">
                   <p>
                     I'm a Bay Area native and content designer with 10+ years
                     building user experiences across startups, agencies, and
