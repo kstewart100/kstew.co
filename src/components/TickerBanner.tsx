@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-const message = 'Currently founding designer at a consumer running app';
-const cta = 'Open to project work';
+const lineA = 'Open to project work';
+const lineB = 'Open to work';
 const separator = '✦';
 
 const items = [
-  message,
+  lineA,
   separator,
-  cta,
+  lineB,
   separator,
-  message,
+  lineA,
   separator,
-  cta,
+  lineB,
   separator,
-  message,
+  lineA,
   separator,
-  cta,
+  lineB,
   separator,
 ];
 
@@ -30,22 +30,18 @@ export function TickerBanner() {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  const staticText = `${message} ${separator} ${cta}`;
-
   if (prefersReducedMotion) {
     return (
       <div
         className="font-sans text-center text-[13px] tracking-wide py-3.5 px-4 text-[var(--color-primitive-gold)]"
         style={{ background: 'var(--color-bg-invert)' }}
-        aria-label="Current role and availability"
+        aria-label="Availability"
       >
-        <span className="font-normal">{message}</span>
+        <span className="font-semibold text-[var(--color-interactive-accent)]">{lineA}</span>
         <span className="opacity-35 mx-2" aria-hidden="true">
           {separator}
         </span>
-        <span className="font-semibold text-[var(--color-interactive-accent)]">
-          {cta}
-        </span>
+        <span className="font-semibold text-[var(--color-interactive-accent)]">{lineB}</span>
       </div>
     );
   }
@@ -93,14 +89,12 @@ export function TickerBanner() {
             key={i}
             className="font-sans whitespace-nowrap py-0 px-7 text-[13px]"
             style={{
-              fontWeight: item === cta ? 600 : 400,
+              fontWeight: item === lineA || item === lineB ? 600 : 400,
               letterSpacing: item === separator ? 0 : '0.04em',
               color:
                 item === separator
                   ? 'rgba(196,163,90,0.35)'
-                  : item === cta
-                    ? 'var(--color-interactive-accent)'
-                    : 'var(--color-primitive-gold)',
+                  : 'var(--color-interactive-accent)',
             }}
           >
             {item}
