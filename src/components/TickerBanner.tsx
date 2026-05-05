@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const lineA = 'Open to project work';
 const lineB = 'Open to work';
 const separator = '✦';
 
-const items = [
+const tickerItems = [
   lineA,
   separator,
   lineB,
@@ -33,15 +33,15 @@ export function TickerBanner() {
   if (prefersReducedMotion) {
     return (
       <div
-        className="font-sans text-center text-[13px] tracking-wide py-3.5 px-4 text-[var(--color-primitive-gold)]"
-        style={{ background: 'var(--color-bg-invert)' }}
+        className="font-sans text-center text-[16px] tracking-wide text-[#C4A35A]"
+        style={{ background: '#0B3D4A', padding: '18px 16px' }}
         aria-label="Availability"
       >
-        <span className="font-semibold text-[var(--color-interactive-accent)]">{lineA}</span>
+        <span className="font-semibold text-[#D4956B]">{lineA}</span>
         <span className="opacity-35 mx-2" aria-hidden="true">
           {separator}
         </span>
-        <span className="font-semibold text-[var(--color-interactive-accent)]">{lineB}</span>
+        <span className="font-semibold text-[#D4956B]">{lineB}</span>
       </div>
     );
   }
@@ -50,10 +50,7 @@ export function TickerBanner() {
     <div
       aria-hidden="true"
       className="overflow-hidden relative"
-      style={{
-        background: 'var(--color-bg-invert)',
-        padding: '14px 0',
-      }}
+      style={{ background: '#0B3D4A', padding: '18px 0' }}
     >
       <style>{`
         @keyframes ticker-scroll {
@@ -69,32 +66,28 @@ export function TickerBanner() {
           animation-play-state: paused;
         }
       `}</style>
-
       <div
         className="absolute left-0 top-0 bottom-0 w-20 pointer-events-none z-[1]"
         style={{
-          background: 'linear-gradient(to right, var(--color-bg-invert), transparent)',
+          background: 'linear-gradient(to right, #0B3D4A, transparent)',
         }}
       />
       <div
         className="absolute right-0 top-0 bottom-0 w-20 pointer-events-none z-[1]"
         style={{
-          background: 'linear-gradient(to left, var(--color-bg-invert), transparent)',
+          background: 'linear-gradient(to left, #0B3D4A, transparent)',
         }}
       />
-
       <div className="ticker-track">
-        {[...items, ...items].map((item, i) => (
+        {[...tickerItems, ...tickerItems].map((item, i) => (
           <span
             key={i}
-            className="font-sans whitespace-nowrap py-0 px-7 text-[13px]"
+            className="font-sans whitespace-nowrap py-0 px-7 text-[16px]"
             style={{
               fontWeight: item === lineA || item === lineB ? 600 : 400,
               letterSpacing: item === separator ? 0 : '0.04em',
               color:
-                item === separator
-                  ? 'rgba(196,163,90,0.35)'
-                  : 'var(--color-interactive-accent)',
+                item === separator ? 'rgba(196,163,90,0.35)' : '#D4956B',
             }}
           >
             {item}

@@ -12,10 +12,12 @@ import App from './App';
 import { LoadingScreen } from './components/LoadingScreen';
 
 function AppWrapper() {
-  const [isLoading, setIsLoading] = useState(true);
+  // Skip the intro overlay in dev so local changes are visible immediately (production keeps it).
+  const [isLoading, setIsLoading] = useState(() => import.meta.env.PROD);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (!import.meta.env.PROD) return;
     const timer = setTimeout(() => setIsLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);

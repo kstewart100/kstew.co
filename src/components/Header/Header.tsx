@@ -18,9 +18,11 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       data-id={dataId}
-      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-white'} ${className}`}
+      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
     >
-      <div className="grid grid-cols-[auto_1fr_auto] gap-4 items-center px-5 md:px-8 lg:px-10 h-16 max-w-[1024px] mx-auto">
+      <div
+        className={`max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] gap-4 items-center h-16 w-full ${isHome ? 'px-6 md:px-16 lg:px-20' : 'px-5 md:px-8 lg:px-10'}`}
+      >
         <Link
           to="/"
           aria-current={isHomePage ? 'page' : undefined}
@@ -29,7 +31,7 @@ export const Header: React.FC<HeaderProps> = ({
           <img
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png"
             alt="Kyle Stewart home"
-            className={`h-7 w-auto ${isHome ? 'brightness-0 invert' : ''}`}
+            className={`h-7 w-fit ${isHome ? 'brightness-0 invert' : ''}`}
           />
         </Link>
 

@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Instrument Sans"', 'sans-serif'],
-        body: ['"Instrument Sans"', 'sans-serif'],
-        heading: ['"Instrument Sans"', 'sans-serif'],
+        sans: ['Cabin', '"Instrument Sans"', 'sans-serif'],
+        body: ['Cabin', '"Instrument Sans"', 'sans-serif'],
+        heading: ['Cabin', '"Instrument Sans"', 'sans-serif'],
         mono: ['"Geist Mono"', 'monospace'],
       },
       colors: {
