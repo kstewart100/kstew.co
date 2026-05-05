@@ -9,7 +9,7 @@ export function Footer({ variant = 'case-study' }: FooterProps) {
       className={`w-full relative z-10 ${isHome ? 'pt-32 pb-16 text-[#F5E6D3]' : 'py-16 md:py-20 mt-10 text-[#1a1a1a] bg-[#EFF0F3]'}`}
     >
       <div
-        className={`mx-auto text-left ${isHome ? 'max-w-[1280px] px-6 md:px-16 lg:px-20' : 'max-w-[1024px] px-6 md:px-8 lg:px-0'}`}
+        className={`mx-auto text-left ${isHome ? 'max-w-[1280px] px-6 md:px-16 lg:px-20' : 'max-w-[1024px] px-5 md:px-8 lg:px-10'}`}
       >
         <p
           className={`text-base md:text-lg mb-8 ${isHome ? 'text-[#F5E6D3]/80' : 'text-gray-600'}`}>

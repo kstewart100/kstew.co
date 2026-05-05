@@ -12,13 +12,13 @@ export function FlexibleLiftConfidence() {
   }, []);
 
   const CaptionText = ({ children }: { children: React.ReactNode }) => (
-    <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] not-italic">
+    <div className="font-mono text-gray-600 text-xs font-normal leading-relaxed not-italic">
       {children}
     </div>
   );
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] text-xs font-sans leading-[19.2px]">
+    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] font-sans">
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
@@ -43,10 +43,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688181680e5f8491648c19c1_Variant4.png"
             alt="Flexible lift confidence hero"
             loading="lazy"
-            className="w-full h-auto rounded-[20px] border-[3px] border-black/5 p-5 bg-white"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-            }} />
+            className="w-full h-auto rounded-[20px] border-[3px] border-black/5 p-5 bg-white shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
         </CaseStudyLayout>
         {/* Intro Body Text */}
@@ -68,33 +65,18 @@ export function FlexibleLiftConfidence() {
         {/* Metadata Grid */}
         <CaseStudyLayout maxWidth="734px">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-            <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
-                <strong>
-                  Role
-                  <br />
-                </strong>
-                Content Designer
-              </p>
+            <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+              <strong className="font-bold block">Role</strong>
+              Content Designer
             </div>
-            <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
-                <strong>
-                  Team
-                  <br />
-                </strong>
-                UX Designers, Product Managers, Software Engineers, and Program
-                Managers
-              </p>
+            <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+              <strong className="font-bold block">Team</strong>
+              UX Designers, Product Managers, Software Engineers, and Program
+              Managers
             </div>
-            <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
-                <strong>
-                  Company
-                  <br />
-                </strong>
-                Google, Google Ads
-              </p>
+            <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+              <strong className="font-bold block">Company</strong>
+              Google, Google Ads
             </div>
           </div>
         </CaseStudyLayout>

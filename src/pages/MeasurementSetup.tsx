@@ -18,7 +18,7 @@ export function MeasurementSetup() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px]">
+            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Measurement Setup
             </h1>
           </CaseStudyLayout>
@@ -31,12 +31,12 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee8002c3363fa68d1a9cd_CM%201.png"
               alt="Measurement Setup Hero"
               loading="lazy"
-              className="w-full max-w-full block bg-white p-2.5 rounded-lg border-[3px] border-[rgba(0,0,0,0.05)] shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px]" />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
           </CaseStudyLayout>
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Advertisers need to measure conversions to understand their
               return, but the setup process was buried in a discrete section,
               full of technical jargon, and lacking guidance.
@@ -52,7 +52,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Metadata Grid */}
           <CaseStudyLayout maxWidth="734px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
               <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
                 <strong className="font-bold block mb-1">Role</strong>
                 Content Designer
@@ -65,7 +65,9 @@ export function MeasurementSetup() {
               <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
                 <strong className="font-bold block mb-1">Timeline</strong>
                 July 2022 to Oct 2022
-                <strong className="font-bold block mt-4 mb-1">Company</strong>
+              </div>
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Company</strong>
                 Google, Google Ads
               </div>
             </div>
@@ -231,7 +233,7 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee873047c37afced10318_Group%20632552.png"
               alt="Launched copy"
               loading="lazy"
-              className="w-full bg-white p-2.5 rounded-lg border-[3px] border-[rgba(0,0,0,0.05)] shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px]" />
+              className="w-full bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* CTAs */}
@@ -330,7 +332,7 @@ export function MeasurementSetup() {
                       Rejected
                     </span>
                   </div>
-                  <div className="font-mono text-xs leading-relaxed text-[#0B3D4A]">
+                  <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     Too wordy and repetitive; confusing explanation of
                     relationship between global tag and event snippets
                   </div>
@@ -347,7 +349,7 @@ export function MeasurementSetup() {
                       Rejected
                     </span>
                   </div>
-                  <div className="font-mono text-xs leading-relaxed text-[#0B3D4A]">
+                  <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     Too brief and vague; inconsistent terminology (Google Tag vs
                     Your Tag); unclear purpose
                   </div>

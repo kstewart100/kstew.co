@@ -89,11 +89,9 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
           {/* Section: The expert journey */}
           <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               The expert journey
             </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Experts use the scheduling tool to set their weekly availability
               across a 12-week period before tax season ends, ensuring adequate
@@ -106,7 +104,7 @@ export function ExpertScheduling() {
               alt="Expert journey diagram"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6849d1c8f215334c1dbe8850_image%20293.png"
-              className="w-full bg-white" />
+              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -120,11 +118,9 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
           {/* Section: Laying the groundwork */}
           <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Laying the groundwork with a content audit
             </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               While my PM and interaction design partners dove into specific
               problems and screens, I stepped back to look at the bigger
@@ -383,11 +379,9 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
           {/* Section: Learnings */}
           <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Learnings
             </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               It's hard to separate how much the content changes helped versus
               other design improvements, but the overall redesign definitely

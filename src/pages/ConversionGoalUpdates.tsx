@@ -14,7 +14,7 @@ export function ConversionGoalUpdates() {
   return (
     <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
       <Header variant="case-study" />
-      <main id="main-content" className="flex-1 bg-[#EFF0F3] text-[#1a1a1a] py-10 lg:py-20 font-sans">
+      <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
@@ -42,7 +42,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-base md:text-lg font-normal leading-relaxed md:leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Ahead of an analytics platform update, advertisers needed to
               update their conversion goals—a critical part of their paid ad
               campaigns. The migration created duplicate conversion actions that
@@ -56,20 +56,17 @@ export function ConversionGoalUpdates() {
           {/* Metadata Grid */}
           <CaseStudyLayout maxWidth="734px">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
-                <strong className="font-bold">Role</strong>
-                <br />
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block">Role</strong>
                 Senior Content Designer
               </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
-                <strong className="font-bold">Team</strong>
-                <br />
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block">Team</strong>
                 UX Designers, Product Managers, Software Engineers, and Program
                 Managers
               </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
-                <strong className="font-bold">Company</strong>
-                <br />
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block">Company</strong>
                 Google, Google Ads
               </div>
             </div>
@@ -122,7 +119,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               The headlines from my partner&#39;s first iterations were
@@ -160,7 +157,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               After digging through past research and talking with our research
@@ -297,7 +294,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               Working with PM and design, I found more opportunities to clean
@@ -328,7 +325,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               As we neared launch, I worked with help content teams to spot
@@ -345,7 +342,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               Product management initially wanted users to handle updates
@@ -377,7 +374,7 @@ export function ConversionGoalUpdates() {
           {/* Long Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               The biggest headache was the individual conversion updates. We
@@ -594,7 +591,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               After validating this with engineering, I spotted another
@@ -631,7 +628,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               When we talked to engineering about moving these warnings earlier
@@ -671,7 +668,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               The result was a dramatic reduction in cognitive load while
@@ -689,7 +686,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               While working on this experience, I kept two things in balance.
@@ -1069,7 +1066,7 @@ export function ConversionGoalUpdates() {
             </div>
           </CaseStudyLayout>
           {/* H2 Learnings */}
-          <CaseStudyLayout maxWidth="734px" className="pl-[0px] pr-[0px]">
+          <CaseStudyLayout maxWidth="734px">
             <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Learnings
             </h2>
@@ -1077,7 +1074,7 @@ export function ConversionGoalUpdates() {
           {/* Final Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               While specific user metrics remain confidential, the project
