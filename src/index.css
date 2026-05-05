@@ -1,4 +1,12 @@
-/* Fonts are imported in index.tsx (@fontsource/instrument-sans, @fontsource/geist-mono) */
+/* --- MANAGED FONT IMPORTS START (do not edit manually) --- */
+/* INTERNAL USE NAME: Heading */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --- MANAGED FONT IMPORTS END --- */
+
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+
+/* Additional fonts loaded in index.tsx (@fontsource/instrument-sans, @fontsource/geist-mono) */
 
 /* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
 @import 'tailwindcss/base';
@@ -83,12 +91,12 @@ body {
   text-shadow: 0 0 40px rgba(212,149,107,0.6), 0 0 80px rgba(212,149,107,0.3), 0 0 120px rgba(212,149,107,0.15);
 }
 .text-glow-soft {
-  text-shadow: 0 0 40px rgba(245,230,211,0.5), 0 0 80px rgba(245,230,211,0.3), 0 0 120px rgba(245,230,211,0.15);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 .box-glow-soft {
   box-shadow: 0 0 15px rgba(245,230,211,0.5), 0 0 30px rgba(245,230,211,0.3), 0 0 45px rgba(245,230,211,0.15);
 }
 /* Image Filters */
 .duotone-filter {
-  filter: sepia(0.5) saturate(1.1) hue-rotate(5deg) brightness(0.9) contrast(1.1);
+  filter: contrast(1.05) saturate(0.9);
 }
