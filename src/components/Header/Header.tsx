@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
       className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
     >
       <div
-        className={`max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] gap-4 items-center h-16 w-full ${isHome ? 'px-6 md:px-16 lg:px-20' : 'px-5 md:px-8 lg:px-10'}`}
+        className="max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] gap-4 items-center h-16 w-full px-5 md:px-8 lg:px-10"
       >
         <Link
           to="/"
