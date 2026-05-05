@@ -45,7 +45,6 @@ export function CaseStudyCard({
   title,
   description,
   href,
-  borderColor,
   glowColor,
   logoUrl,
   logoAlt,
@@ -54,7 +53,6 @@ export function CaseStudyCard({
   title: string;
   description: string;
   href: string;
-  borderColor: string;
   glowColor: string;
   logoUrl?: string;
   logoAlt?: string;
@@ -63,9 +61,8 @@ export function CaseStudyCard({
   return (
     <Link
       to={href}
-      className={`block rounded-2xl relative group cursor-pointer bg-[#0B3D4A]/40 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 ${className}`}
+      className={`block rounded-2xl border border-[#F5E6D3] relative group cursor-pointer bg-[#0B3D4A]/40 backdrop-blur-sm transition-colors duration-300 hover:border-[#D4956B] focus-visible:border-[#D4956B] ${className}`}
       style={{
-        border: `1px solid ${borderColor}`,
         boxShadow: `0 8px 32px ${glowColor}`,
       }}
     >
@@ -76,14 +73,16 @@ export function CaseStudyCard({
               <img
                 src={logoUrl}
                 alt={logoAlt ?? ''}
-                className="h-full w-full object-contain object-left opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                className="h-full w-full object-contain object-left transition-[filter] duration-300 [filter:brightness(0)_saturate(100%)_invert(90%)_sepia(21%)_saturate(318%)_hue-rotate(346deg)_brightness(102%)_contrast(93%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(58%)_sepia(19%)_saturate(947%)_hue-rotate(338deg)_brightness(94%)_contrast(87%)]"
               />
             </div>
           )}
-          <h3 className="text-2xl md:text-3xl font-sans font-bold text-[#F5E6D3] mb-3 group-hover:text-[#D4956B] transition-colors">
+          <h3 className="text-2xl md:text-3xl font-sans font-bold text-[#F5E6D3] mb-3 group-hover:text-[#D4956B] transition-colors duration-300">
             {title}
           </h3>
-          <p className="text-[#F5E6D3]/80 text-lg line-clamp-2">{description}</p>
+          <p className="text-[#F5E6D3] text-lg line-clamp-2 group-hover:text-[#D4956B] transition-colors duration-300">
+            {description}
+          </p>
         </div>
       </div>
     </Link>
@@ -95,7 +94,6 @@ const caseStudies = [
     title: 'Expert scheduling',
     description: "Simplified scheduling for Intuit's tax experts.",
     href: '/expert-scheduling',
-    borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/peo6NBjQ4gNzPTgFEZt5Ua/Intuit_idITTG9Sz3_0.svg',
     logoAlt: 'Intuit',
@@ -104,7 +102,6 @@ const caseStudies = [
     title: 'Conversion goal updates',
     description: 'Guided Google Ads users through updates with clarity.',
     href: '/conversion-goal-updates',
-    borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
     logoAlt: 'Google',
@@ -113,7 +110,6 @@ const caseStudies = [
     title: 'Flexible lift confidence',
     description: 'Made results clearer and actionable for Google Ads lift users.',
     href: '/flexible-lift-confidence',
-    borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
     logoAlt: 'Google',
@@ -122,7 +118,6 @@ const caseStudies = [
     title: 'Measurement setup',
     description: 'Made measurement accessible for all Google Ads users.',
     href: '/measurement-setup',
-    borderColor: 'rgba(212,149,107,0.3)',
     glowColor: 'rgba(212,149,107,0.15)',
     logoUrl: 'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
     logoAlt: 'Google',
@@ -272,7 +267,6 @@ export function Home() {
                     title={study.title}
                     description={study.description}
                     href={study.href}
-                    borderColor={study.borderColor}
                     glowColor={study.glowColor}
                     logoUrl={study.logoUrl}
                     logoAlt={study.logoAlt}

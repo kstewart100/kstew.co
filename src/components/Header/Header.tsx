@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       data-id={dataId}
-      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-white'} ${className}`}
+      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
     >
       <div className="grid grid-cols-[auto_1fr_auto] gap-4 items-center px-5 md:px-8 lg:px-10 h-16 max-w-[1024px] mx-auto">
         <Link
