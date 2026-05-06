@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -43,7 +43,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688181680e5f8491648c19c1_Variant4.png"
             alt="Flexible lift confidence hero"
             loading="lazy"
-            className="w-full h-auto rounded-[20px] border-[3px] border-black/5 p-5 bg-white shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
         </CaseStudyLayout>
         {/* Intro Body Text */}
@@ -83,7 +83,7 @@ export function FlexibleLiftConfidence() {
         {/* Design principles card */}
         <CaseStudyLayout maxWidth="816px">
           <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+            <h2 className={caseStudyH2ClassName}>
               Our design principles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
@@ -103,7 +103,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Users Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Serving two important but distinct users
           </h2>
           <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-6">
@@ -144,7 +144,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Literature Review Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Conducting a literature review
           </h2>
           <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -158,7 +158,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Exploring Options Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Exploring the different options for a name
           </h2>
           <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -182,7 +182,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6881844e3a9d10b784a2a349_Group%20632545.png"
             alt="Naming options"
             loading="lazy"
-            className="w-full h-auto rounded-lg border-[3px] border-black/5 p-5 bg-white shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
@@ -208,7 +208,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688143b094c3af844ffe3765_Screenshot%202025-07-22%20at%2017.31.15.png"
             alt="Evaluation framework"
             loading="lazy"
-            className="w-full h-auto rounded-lg border-[3px] border-black/5 p-5 bg-white shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
@@ -232,12 +232,12 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818476617985a84c13098b_Group%20632560.png"
             alt="Two finalists"
             loading="lazy"
-            className="w-full h-auto rounded-lg border-[3px] border-black/5 p-5 bg-white shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         {/* Testing Through Research Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Testing through research
           </h2>
           <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-6">
@@ -273,7 +273,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818476617985a84c13098b_Group%20632560.png"
             alt="Research groups"
             loading="lazy"
-            className="w-full h-auto rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
@@ -286,7 +286,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Research Comparison Grid */}
         <CaseStudyLayout maxWidth="816px">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-5 bg-white rounded-lg border-[3px] border-black/5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-4 md:p-5 bg-white rounded-lg border-[3px] border-black/5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]">
             <div>
               <img
                 src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688184bc30b0f8ce8074082f_Group%20130.png"
@@ -360,12 +360,12 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/689630b9f0bf361d7890dbae_Frame%20632571.png"
             alt="Survey results"
             loading="lazy"
-            className="w-full h-auto rounded-lg p-3 bg-white border-[3px] border-black/5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         {/* Creating an easy-to-read page Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Creating an easy-to-read page
           </h2>
           <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -391,7 +391,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818aa94a83be540f37746d_Group%20632542.png"
             alt="Star tag iterations"
             loading="lazy"
-            className="w-full h-auto rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
@@ -407,7 +407,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6881851135f6c4b57b87c444_Group%20632550.png"
             alt="Use case comparison"
             loading="lazy"
-            className="w-full h-auto rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
@@ -431,12 +431,12 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818accbf7f140bd554d796_Group%20632544.png"
             alt="Tooltip versions"
             loading="lazy"
-            className="w-full h-auto rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         {/* Learnings Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Learnings
           </h2>
           <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">

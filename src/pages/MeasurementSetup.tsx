@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 
 const PAGE_TITLE = 'Measurement setup — Kyle Stewart';
 
@@ -75,7 +75,7 @@ export function MeasurementSetup() {
           {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
             <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+              <h2 className={caseStudyH2ClassName}>
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
@@ -93,7 +93,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Refining Content Hierarchy */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Refining content hierarchy
             </h2>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -112,7 +112,7 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee80e2c3363fa68d1ab3b_CM%202.png"
               alt="Initial mockups"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Text */}
@@ -133,7 +133,7 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee81831b71e66d3b8bf34_CM%203.png"
               alt="Streamlined copy attempt"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Text */}
@@ -150,7 +150,7 @@ export function MeasurementSetup() {
             maxWidth="816px"
             caption="A few iterations of the main headline and subheader copy.">
 
-            <div className="bg-white w-full shadow-[rgba(0,0,0,0.08)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.08)] rounded-lg p-5 overflow-x-auto">
+            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
               <div className="min-w-[600px]">
                 <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
                   <div className="font-mono text-xs font-bold text-[#294050]">
@@ -233,25 +233,25 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee873047c37afced10318_Group%20632552.png"
               alt="Launched copy"
               loading="lazy"
-              className="w-full bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
-          {/* CTAs */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Finding and aligning on the CTAs
-            </h2>
-          </CaseStudyLayout>
+          {/* CTAs + CTA variations image */}
           <CaseStudyLayout
             maxWidth="816px"
-            caption="Different variations of the same CTA from the product and testing phases.">
-
+            caption="Different variations of the same CTA from the product and testing phases."
+          >
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Finding and aligning on the CTAs
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee88110cc3a37269c4409_CM%205.png"
               alt="CTA variations"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout maxWidth="734px">
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -268,7 +268,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Jargon */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Working out the jargon
             </h2>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -285,25 +285,23 @@ export function MeasurementSetup() {
               mattered for their business.
             </p>
           </CaseStudyLayout>
-          {/* Tag Copy */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Tag copy
-            </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout maxWidth="734px">
+          {/* Tag Copy + image */}
+          <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>Tag copy</h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee8902d8b5cac4b72383a_CM%206.png"
               alt="Tag copy"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout
             maxWidth="816px"
             caption="A few iterations of the headline and subhead copy for the Star tag.">
 
-            <div className="bg-white w-full shadow-[rgba(0,0,0,0.08)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.08)] rounded-lg p-5 overflow-x-auto">
+            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
               <div className="min-w-[600px]">
                 <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
                   <div className="font-mono text-xs font-bold text-[#294050]">
@@ -375,25 +373,23 @@ export function MeasurementSetup() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* Event Snippet */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Event snippet copy
-            </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout maxWidth="734px">
+          {/* Event Snippet + image */}
+          <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>Event snippet copy</h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee899bef18141e0c9daca_CM%207.png"
               alt="Event snippet"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout
             maxWidth="816px"
             caption="A few iterations of the headline and subhead copy for the event snippet.">
 
-            <div className="bg-white w-full shadow-[rgba(0,0,0,0.08)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.08)] rounded-lg p-5 overflow-x-auto">
+            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
               <div className="min-w-[600px]">
                 <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
                   <div className="font-mono text-xs font-bold text-[#294050]">
@@ -469,7 +465,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Learnings */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Learnings
             </h2>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-4">
