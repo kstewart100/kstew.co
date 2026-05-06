@@ -12,7 +12,7 @@ export function MeasurementSetup() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
+    <div className="w-full min-h-screen flex flex-col bg-[#fafafa]">
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
@@ -37,17 +37,14 @@ export function MeasurementSetup() {
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
-              Advertisers need to measure conversions to understand their
-              return, but the setup process was buried in a discrete section,
-              full of technical jargon, and lacking guidance.
+              Conversion tracking was essential to campaign performance, but the
+              setup experience was buried, jargon-heavy, and easy for first-time
+              advertisers to skip.
               <br />
               <br />
-              We surfaced conversion measurement setup during onboarding—making
-              this critical step more prominent and transforming a frequently
-              skipped task into a natural part of campaign setup. I simplified
-              complex technical language, clarified the value of conversion
-              tracking, and created a guided experience that gave first-time
-              users confidence to complete setup successfully.
+              I helped reposition measurement setup inside onboarding with
+              clearer headlines, simpler guidance, and action-oriented copy so
+              more users could complete setup correctly on the first pass.
             </p>
           </CaseStudyLayout>
           {/* Metadata Grid */}
@@ -150,9 +147,9 @@ export function MeasurementSetup() {
             maxWidth="816px"
             caption="A few iterations of the main headline and subheader copy.">
 
-            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <div className="min-w-[600px]">
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
+            <div className="bg-white w-full min-w-0 border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 border-b border-gray-200 pb-2 [&>div]:min-w-0">
                   <div className="font-mono text-xs font-bold text-[#294050]">
                     Proposed copy
                   </div>
@@ -163,7 +160,7 @@ export function MeasurementSetup() {
                     Design decision
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Congrats! You're almost done.</strong>
                     <br />
@@ -180,7 +177,7 @@ export function MeasurementSetup() {
                     "almost done")
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Your campaign is published!</strong>
                     <br />
@@ -196,7 +193,7 @@ export function MeasurementSetup() {
                     steps
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Your ads will go live after a review</strong>
                     <br />
@@ -301,9 +298,9 @@ export function MeasurementSetup() {
             maxWidth="816px"
             caption="A few iterations of the headline and subhead copy for the Star tag.">
 
-            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <div className="min-w-[600px]">
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
+            <div className="bg-white w-full min-w-0 border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 border-b border-gray-200 pb-2 [&>div]:min-w-0">
                   <div className="font-mono text-xs font-bold text-[#294050]">
                     Proposed copy
                   </div>
@@ -314,7 +311,7 @@ export function MeasurementSetup() {
                     Design decision
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Install your Google tag</strong>
                     <br />
@@ -335,7 +332,7 @@ export function MeasurementSetup() {
                     relationship between global tag and event snippets
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Your tag</strong>
                     <br />
@@ -352,7 +349,7 @@ export function MeasurementSetup() {
                     Your Tag); unclear purpose
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Activate measurement with a Google tag</strong>
                     <br />A Google tag allows you to measure activity on your
@@ -389,9 +386,9 @@ export function MeasurementSetup() {
             maxWidth="816px"
             caption="A few iterations of the headline and subhead copy for the event snippet.">
 
-            <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <div className="min-w-[600px]">
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
+            <div className="bg-white w-full min-w-0 border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 border-b border-gray-200 pb-2 [&>div]:min-w-0">
                   <div className="font-mono text-xs font-bold text-[#294050]">
                     Proposed copy
                   </div>
@@ -402,7 +399,7 @@ export function MeasurementSetup() {
                     Design decision
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] mb-4 items-start gap-[0px]">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Event tracking</strong>
                     <br />
@@ -419,7 +416,7 @@ export function MeasurementSetup() {
                     relationship between Google Tag and event snippets
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] mb-4 items-start gap-[0px]">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Install your event snippets</strong>
                     <br />
@@ -440,7 +437,7 @@ export function MeasurementSetup() {
                     much detail for initial setup step
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] items-start gap-[0px]">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>
                       Measure each conversion with an event snippet

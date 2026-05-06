@@ -23,7 +23,7 @@
   --color-primitive-red: #D94D59;
   --color-primitive-cream: #EFE4CC;
   --color-primitive-gold: #C4A35A;
-  --color-bg-canvas: #EFF0F3;
+  --color-bg-canvas: #fafafa;
   --color-bg-surface: #FFFFFF;
   --color-bg-subtle: #E8EAED;
   --color-bg-invert: #294050;
@@ -44,7 +44,7 @@
 }
 body {
   /* Default grey for case studies; home page paints its own gradient overlay */
-  background-color: #EFF0F3;
+  background-color: #fafafa;
   background-image: none;
   color: #1a1a1a;
   font-family: 'Instrument Sans', sans-serif;

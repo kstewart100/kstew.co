@@ -12,7 +12,7 @@ export function ConversionGoalUpdates() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
+    <div className="w-full min-h-screen flex flex-col bg-[#fafafa]">
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
@@ -43,14 +43,14 @@ export function ConversionGoalUpdates() {
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
-              Ahead of an analytics platform update, advertisers needed to
-              update their conversion goals—a critical part of their paid ad
-              campaigns. The migration created duplicate conversion actions that
-              needed cleanup, directly affecting their ad spend.
+              During a major analytics migration, advertisers had to update
+              conversion goals tied directly to bidding and budget performance.
+              The process introduced duplicate actions and high-stakes cleanup
+              decisions.
               <br />
-              <br />I led UX content design and messaging strategy to walk users
-              through each step clearly, ensuring they understood exactly how
-              their campaigns would be affected.
+              <br />I led content design and messaging strategy to turn that
+              complexity into a clear, guided flow so teams could review,
+              understand, and approve updates with confidence.
             </p>
           </CaseStudyLayout>
           {/* Metadata Grid */}

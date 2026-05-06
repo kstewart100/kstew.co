@@ -21,17 +21,20 @@ export const Header: React.FC<HeaderProps> = ({
       className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
     >
       <div
-        className="max-w-[1280px] mx-auto grid grid-cols-[auto_1fr_auto] gap-4 items-center h-16 w-full px-5 md:px-8 lg:px-10"
+        className="max-w-[1280px] mx-auto grid grid-cols-[minmax(0,auto)_minmax(0,1fr)_auto] gap-4 items-center h-16 w-full px-5 md:px-8 lg:px-10"
       >
         <Link
           to="/"
           aria-current={isHomePage ? 'page' : undefined}
-          className="flex items-center transition-opacity hover:opacity-80"
+          className="inline-flex min-h-0 shrink-0 items-center self-center transition-opacity hover:opacity-80"
         >
           <img
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png"
             alt="Kyle Stewart home"
-            className={`h-7 w-fit ${isHome ? 'brightness-0 invert' : ''}`}
+            width={160}
+            height={28}
+            decoding="async"
+            className={`block h-7 max-h-7 w-auto shrink-0 object-contain object-left ${isHome ? 'brightness-0 invert' : ''}`}
           />
         </Link>
 
