@@ -1,72 +1,81 @@
 import React, { useEffect } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { AnimatedHeadline } from '../components/AnimatedHeadline';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { TickerBanner } from '../components/TickerBanner';
 import { CaseStudyCard } from '../components/CaseStudyCard';
-
+import { Photo } from '../components/Photo';
 const PAGE_TITLE = 'Kyle Stewart — Portfolio';
-
 const BG_STOPS = [
-  { pct: 0, hex: '#5AAEE8' },
-  { pct: 0.7, hex: '#1F4470' },
-  { pct: 0.85, hex: '#0F2440' },
-  { pct: 1, hex: '#294050' },
-];
+{
+  pct: 0,
+  hex: '#5AAEE8'
+},
+{
+  pct: 0.7,
+  hex: '#1F4470'
+},
+{
+  pct: 0.85,
+  hex: '#0F2440'
+},
+{
+  pct: 1,
+  hex: '#294050'
+}];
 
 const caseStudies = [
-  {
-    title: 'Expert scheduling',
-    description: "Simplified scheduling for Intuit's tax experts.",
-    href: '/expert-scheduling',
-    glowColor: 'rgba(212,149,107,0.15)',
-    logoUrl:
-      'https://cdn.magicpatterns.com/uploads/peo6NBjQ4gNzPTgFEZt5Ua/Intuit_idITTG9Sz3_0.svg',
-    logoAlt: 'Intuit',
-  },
-  {
-    title: 'Conversion goal updates',
-    description: 'Guided Google Ads users through updates with clarity.',
-    href: '/conversion-goal-updates',
-    glowColor: 'rgba(212,149,107,0.15)',
-    logoUrl:
-      'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
-    logoAlt: 'Google',
-  },
-  {
-    title: 'Flexible lift confidence',
-    description: 'Made results clearer and actionable for Google Ads lift users.',
-    href: '/flexible-lift-confidence',
-    glowColor: 'rgba(212,149,107,0.15)',
-    logoUrl:
-      'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
-    logoAlt: 'Google',
-  },
-  {
-    title: 'Measurement setup',
-    description: 'Made measurement accessible for all Google Ads users.',
-    href: '/measurement-setup',
-    glowColor: 'rgba(212,149,107,0.15)',
-    logoUrl:
-      'https://cdn.magicpatterns.com/uploads/doW1gcBdghq2cR5qSqUBG2/google-white-logo-6_3.png',
-    logoAlt: 'Google',
-  },
-];
+{
+  title: 'Expert scheduling',
+  description: "Simplified scheduling for Intuit's tax experts.",
+  href: '/expert-scheduling',
+  glowColor: 'rgba(212,149,107,0.15)',
+  logoUrl: "/Intuit_idITTG9Sz3_0.svg",
+
+  logoAlt: 'Intuit'
+},
+{
+  title: 'Conversion goal updates',
+  description: 'Guided Google Ads users through updates with clarity.',
+  href: '/conversion-goal-updates',
+  glowColor: 'rgba(212,149,107,0.15)',
+  logoUrl: "/google-white-logo-6_3.png",
+
+  logoAlt: 'Google'
+},
+{
+  title: 'Flexible lift confidence',
+  description:
+  'Made results clearer and actionable for Google Ads lift users.',
+  href: '/flexible-lift-confidence',
+  glowColor: 'rgba(212,149,107,0.15)',
+  logoUrl: "/google-white-logo-6_3.png",
+
+  logoAlt: 'Google'
+},
+{
+  title: 'Measurement setup',
+  description: 'Made measurement accessible for all Google Ads users.',
+  href: '/measurement-setup',
+  glowColor: 'rgba(212,149,107,0.15)',
+  logoUrl: "/google-white-logo-6_3.png",
+
+  logoAlt: 'Google'
+}];
 
 function hexToRgb(hex: string): [number, number, number] {
   return [
-    parseInt(hex.slice(1, 3), 16),
-    parseInt(hex.slice(3, 5), 16),
-    parseInt(hex.slice(5, 7), 16),
-  ];
-}
+  parseInt(hex.slice(1, 3), 16),
+  parseInt(hex.slice(3, 5), 16),
+  parseInt(hex.slice(5, 7), 16)];
 
+}
 function lerpColor(a: string, b: string, t: number): string {
   const ra = hexToRgb(a);
   const rb = hexToRgb(b);
   return `rgb(${Math.round(ra[0] + (rb[0] - ra[0]) * t)}, ${Math.round(ra[1] + (rb[1] - ra[1]) * t)}, ${Math.round(ra[2] + (rb[2] - ra[2]) * t)})`;
 }
-
 function getScrollBackgroundColor(progress: number): string {
   const p = Math.min(Number(progress) || 0, 1);
   for (let i = 0; i < BG_STOPS.length - 1; i++) {
@@ -78,179 +87,151 @@ function getScrollBackgroundColor(progress: number): string {
   }
   return BG_STOPS[BG_STOPS.length - 1].hex;
 }
-
 export function Home() {
   useEffect(() => {
     document.title = PAGE_TITLE;
   }, []);
-
-  const { scrollY, scrollYProgress } = useScroll();
-  const smoothScrollY = useSpring(scrollY, {
-    stiffness: 40,
-    damping: 25,
-    mass: 1,
-  });
-  const textY = useTransform(smoothScrollY, [0, 500], [0, 250]);
-  const midY = useTransform(smoothScrollY, [0, 500], [0, 80]);
-  const glowColor = useTransform(
-    smoothScrollY,
-    [0, 500, 1000],
-    [
-      'rgba(212, 149, 107, 0.4)',
-      'rgba(26, 107, 122, 0.5)',
-      'rgba(11, 61, 74, 0.3)',
-    ]
-  );
-  const glowIntensity = useTransform(smoothScrollY, [0, 400, 800], [2, 12, 4]);
-  const mountainFilter = useTransform(
-    [glowIntensity, glowColor],
-    ([intensity, color]) =>
-      `drop-shadow(0 -${intensity}px ${(intensity as number) * 2}px ${color})`
-  );
+  const { scrollYProgress } = useScroll();
   const pageBgColor = useTransform(scrollYProgress, getScrollBackgroundColor);
   const glowOpacity = useTransform(scrollYProgress, (p) =>
-    Math.max(0, 1 - p / 0.25)
+  Math.max(0, 1 - p / 0.25)
   );
-
   return (
-    <div className="relative min-h-screen">
-      <motion.div
-        className="fixed inset-0 z-[-2] pointer-events-none"
-        style={{ backgroundColor: pageBgColor }}
-      />
-      <motion.div
-        className="fixed inset-0 z-[-1] pointer-events-none"
-        style={{
-          opacity: glowOpacity,
-          background: `
+    <>
+      <div className="relative w-full">
+        <div
+          className="absolute top-0 left-0 right-0 z-[50] w-full"
+          style={
+            {
+              '--color-text-primary': '#F5E6D3',
+              '--color-bg-canvas': 'transparent',
+              '--color-interactive-primary': '#D4956B'
+            } as React.CSSProperties
+          }>
+          <Header variant="home" className="bg-transparent" />
+        </div>
+        <div className="relative min-h-[calc(100dvh-3.25rem)] flex-1 w-full overflow-hidden">
+        <Photo
+          src="/images/nz-ridge"
+          alt="Kyle on a mountain ridge with snow-capped peaks in the distance"
+          width={1600}
+          height={900}
+          eager
+          className="absolute inset-0 h-full w-full object-cover object-[22%_bottom] md:object-[32%_bottom] origin-bottom z-[4] pointer-events-none"
+        />
+        <div className="pointer-events-none absolute inset-0 z-[8] flex flex-col items-end justify-start px-6 pt-[44vh] sm:pt-[48vh] saturate-[1.1] md:justify-end md:px-16 md:pb-[min(26vh,11rem)] md:pt-0 lg:px-24 lg:pb-[min(28vh,12rem)]">
+          <h1 className="font-heading mr-4 md:mr-8 lg:mr-10 m-0 font-normal tracking-wide text-left md:mb-0 max-w-full">
+            <AnimatedHeadline />
+          </h1>
+        </div>
+        </div>
+      </div>
+      <div className="relative min-h-screen">
+        <motion.div
+          className="fixed inset-0 z-[-2] pointer-events-none"
+          style={{
+            backgroundColor: pageBgColor
+          }} />
+
+        <motion.div
+          className="fixed inset-0 z-[-1] pointer-events-none"
+          style={{
+            opacity: glowOpacity,
+            background: `
             radial-gradient(ellipse 70% 50% at 0% 100%, rgba(196, 160, 48, 0.60) 0%, transparent 60%),
             radial-gradient(ellipse 45% 35% at 10% 90%, rgba(210, 175, 60, 0.35) 0%, transparent 55%),
             radial-gradient(ellipse 55% 25% at 5% 100%, rgba(230, 195, 80, 0.20) 0%, transparent 50%)
-          `,
-        }}
-      />
+          `
+          }} />
 
-      <div
-        className="absolute top-0 left-0 w-full z-[20]"
-        style={
-          {
-            '--color-text-primary': '#F5E6D3',
-            '--color-bg-canvas': 'transparent',
-            '--color-interactive-primary': '#D4956B',
-          } as React.CSSProperties
-        }
-      >
-        <Header variant="home" className="bg-transparent" />
-      </div>
-
-      <main id="main-content" className="flex flex-col items-center w-full">
-        <div className="h-[100vh] w-full relative flex justify-center items-center overflow-hidden">
-          <div className="absolute inset-0 w-full h-full saturate-[1.1]">
-            <motion.div
-              className="absolute inset-0 w-full h-full z-0"
-              style={{ background: 'transparent', y: scrollY }}
-            />
-            <motion.div
-              className="absolute inset-0 flex flex-col items-center pt-[15vh] md:pt-[20vh] z-[3]"
-              style={{ y: textY }}
-            >
-              <h1 className="font-sans font-black text-[48px] sm:text-[64px] md:text-[100px] lg:text-[140px] leading-[0.9] uppercase tracking-wide text-white text-center text-glow-soft px-4">
-                Get out / Build
-              </h1>
-            </motion.div>
-            <motion.img
-              src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693a1431094861a9c8fd6f13_db97f5c004372ba6c9cb380849abf6b8_Untitled-14-Full%20page.png"
-              alt="Midground ridgeline"
-              className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.1] origin-bottom z-[4] pointer-events-none"
-              {...({ fetchpriority: 'high' } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              style={{ y: midY, filter: mountainFilter }}
-            />
-            <motion.img
-              src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693b4b64d028993f587d9130_Hero%20Image%20Portfolio-5-1%20foreground%20-%20Mountain%20side.png"
-              alt="Foreground mountains"
-              className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.05] origin-bottom z-[5] pointer-events-none"
-              {...({ fetchpriority: 'high' } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              style={{ filter: mountainFilter }}
-            />
-            <motion.img
-              src="https://cdn.prod.website-files.com/693b4bcf3a27b41a3f8990fb_Hero%20Image%20Portfolio-6-1%20foreground%20-%20Mountain%20side.png"
-              alt="Foreground mountains"
-              className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.05] origin-bottom z-[6] pointer-events-none"
-              loading="lazy"
-              style={{ filter: mountainFilter }}
-            />
-            <motion.img
-              src="https://cdn.prod.website-files.com/69385de55f4c37471e7068d4/693b4be4687cb650578097d7_Hero%20Image%20Portfolio-7-Full%20page.png"
-              alt="Foreground mountains"
-              className="absolute inset-0 w-full h-full object-cover object-[30%_center] md:object-center scale-[1.05] origin-bottom z-[7] pointer-events-none"
-              loading="lazy"
-              style={{ filter: mountainFilter }}
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 z-10">
+        <main id="main-content" className="flex flex-col items-center w-full">
+          <div className="relative z-10 w-full shrink-0">
             <TickerBanner />
           </div>
-        </div>
 
+          {/* Case studies */}
         <section
           aria-label="Case studies"
-          className="relative w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 pt-32"
-        >
+          className="relative w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 pt-32">
+          
           <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 lg:gap-8 mb-6 lg:mb-8">
-            {caseStudies.slice(0, 2).map((study, i) => (
-              <motion.div
-                key={study.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: i * 0.15 }}
-                className="w-full h-full"
-              >
+            {caseStudies.slice(0, 2).map((study, i) =>
+            <motion.div
+              key={study.title}
+              initial={{
+                opacity: 0,
+                y: 40
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2
+              }}
+              transition={{
+                duration: 0.8,
+                ease: 'easeOut',
+                delay: i * 0.15
+              }}
+              className="w-full h-full">
+              
                 <CaseStudyCard
-                  title={study.title}
-                  description={study.description}
-                  href={study.href}
-                  glowColor={study.glowColor}
-                  logoUrl={study.logoUrl}
-                  logoAlt={study.logoAlt}
-                />
+                title={study.title}
+                description={study.description}
+                href={study.href}
+                glowColor={study.glowColor}
+                logoUrl={study.logoUrl}
+                logoAlt={study.logoAlt} />
+              
               </motion.div>
-            ))}
+            )}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {caseStudies.slice(2).map((study, i) => (
-              <motion.div
-                key={study.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{
-                  duration: 0.8,
-                  ease: 'easeOut',
-                  delay: (i + 2) * 0.15,
-                }}
-                className="w-full h-full"
-              >
+            {caseStudies.slice(2).map((study, i) =>
+            <motion.div
+              key={study.title}
+              initial={{
+                opacity: 0,
+                y: 40
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2
+              }}
+              transition={{
+                duration: 0.8,
+                ease: 'easeOut',
+                delay: (i + 2) * 0.15
+              }}
+              className="w-full h-full">
+              
                 <CaseStudyCard
-                  title={study.title}
-                  description={study.description}
-                  href={study.href}
-                  glowColor={study.glowColor}
-                  logoUrl={study.logoUrl}
-                  logoAlt={study.logoAlt}
-                />
+                title={study.title}
+                description={study.description}
+                href={study.href}
+                glowColor={study.glowColor}
+                logoUrl={study.logoUrl}
+                logoAlt={study.logoAlt} />
+              
               </motion.div>
-            ))}
+            )}
           </div>
         </section>
 
+        {/* About */}
         <section
           id="about"
-          className="w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 text-left pt-32 relative z-10"
-        >
+          className="w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 text-left pt-32 relative z-10">
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-4xl md:text-5xl font-sans font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide uppercase">
+              <h2 className="text-4xl md:text-5xl font-heading font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide">
                 About me
               </h2>
               <div className="text-lg md:text-xl text-[#F5E6D3]/90 leading-relaxed space-y-6">
@@ -270,18 +251,19 @@ export function Home() {
             <div className="order-1 md:order-2 w-full flex justify-center md:justify-end">
               <div className="relative w-full max-w-md aspect-square md:aspect-[4/5] rounded-[20px] overflow-hidden border border-[#D4956B]/30 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_4px_30px_rgba(0,0,0,0.1)]">
                 <img
-                  src="https://cdn.magicpatterns.com/uploads/1kTXKRcTKkkfzsyMm5zCn9/IMG_4050.jpg"
+                  src="/IMG_4050.jpg"
                   alt="Portrait of Kyle in the mountains"
                   className="w-full h-full min-w-full min-h-full object-cover duotone-filter"
-                  loading="lazy"
-                />
+                  loading="lazy" />
+                
               </div>
             </div>
           </div>
         </section>
-      </main>
-
-      <Footer variant="home" />
-    </div>
+        </main>
+        <Footer variant="home" />
+      </div>
+    </>
   );
+
 }

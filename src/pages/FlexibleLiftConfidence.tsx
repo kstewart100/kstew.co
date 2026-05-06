@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -12,19 +12,19 @@ export function FlexibleLiftConfidence() {
   }, []);
 
   const CaptionText = ({ children }: { children: React.ReactNode }) => (
-    <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] not-italic">
+    <div className="font-sans text-gray-600 text-xs font-normal leading-relaxed not-italic">
       {children}
     </div>
   );
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] text-xs font-sans leading-[19.2px]">
+    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3] text-[#1a1a1a] font-sans">
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
         {/* Hero Title */}
         <CaseStudyLayout maxWidth="734px">
-          <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+          <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
             Flexible lift confidence
           </h1>
         </CaseStudyLayout>
@@ -43,10 +43,7 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688181680e5f8491648c19c1_Variant4.png"
             alt="Flexible lift confidence hero"
             loading="lazy"
-            className="w-full h-auto rounded-[20px] border-[3px] border-black/5 p-5 bg-white"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.08) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
         </CaseStudyLayout>
         {/* Intro Body Text */}
@@ -68,51 +65,36 @@ export function FlexibleLiftConfidence() {
         {/* Metadata Grid */}
         <CaseStudyLayout maxWidth="734px">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-            <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
-                <strong>
-                  Role
-                  <br />
-                </strong>
-                Content Designer
-              </p>
+            <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+              <strong className="font-bold block">Role</strong>
+              Content Designer
             </div>
-            <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
-                <strong>
-                  Team
-                  <br />
-                </strong>
-                UX Designers, Product Managers, Software Engineers, and Program
-                Managers
-              </p>
+            <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+              <strong className="font-bold block">Team</strong>
+              UX Designers, Product Managers, Software Engineers, and Program
+              Managers
             </div>
-            <div>
-              <p className="text-[rgba(5,37,55,0.95)] text-sm leading-5 p-5 font-sans">
-                <strong>
-                  Company
-                  <br />
-                </strong>
-                Google, Google Ads
-              </p>
+            <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+              <strong className="font-bold block">Company</strong>
+              Google, Google Ads
             </div>
           </div>
         </CaseStudyLayout>
         {/* Design principles card */}
         <CaseStudyLayout maxWidth="816px">
           <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+            <h2 className={caseStudyH2ClassName}>
               Our design principles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+              <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                 Make statistics human by translating terminology into clear,
                 trustworthy language
               </div>
-              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+              <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                 Put information where it belongs
               </div>
-              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+              <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                 Validate language choices through research rather than following
                 others
               </div>
@@ -121,17 +103,17 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Users Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Serving two important but distinct users
           </h2>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px] mb-6">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-6">
             Our research identified two distinct user groups within the brand
             marketer audience, each with different needs and capabilities.
             Understanding both user types was essential for creating inclusive
             content.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
+            <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
               <strong>
                 Stats expert
                 <br />
@@ -145,7 +127,7 @@ export function FlexibleLiftConfidence() {
               <br />- Serves as the team's go-to resource for understanding
               statistical implications.
             </div>
-            <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
+            <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
               <strong>
                 Stats novice
                 <br />
@@ -162,10 +144,10 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Literature Review Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Conducting a literature review
           </h2>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             I began by examining existing research and documentation to
             understand previous approaches and establish context. The literature
             review encompassed past research studies, brand guidelines, naming
@@ -176,10 +158,10 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Exploring Options Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Exploring the different options for a name
           </h2>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             The team had explored several naming options before my involvement.
             After conducting the literature review and consulting design
             guidelines, I proposed "certainty of lift," though stakeholders
@@ -200,14 +182,11 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6881844e3a9d10b784a2a349_Group%20632545.png"
             alt="Naming options"
             loading="lazy"
-            className="w-full h-auto rounded-lg border-[3px] border-black/5 p-5 bg-white"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             To move beyond subjective preferences, I developed a structured
             evaluation framework. Each option was assessed against established
             guidelines, user needs, and plain language principles, ensuring our
@@ -229,14 +208,11 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688143b094c3af844ffe3765_Screenshot%202025-07-22%20at%2017.31.15.png"
             alt="Evaluation framework"
             loading="lazy"
-            className="w-full h-auto rounded-lg border-[3px] border-black/5 p-5 bg-white"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             The analysis narrowed our options to two candidates: "statistical
             significance" (favored by data science stakeholders) and "certainty
             of lift detection" (aligned with content standards). User research
@@ -256,23 +232,20 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818476617985a84c13098b_Group%20632560.png"
             alt="Two finalists"
             loading="lazy"
-            className="w-full h-auto rounded-lg border-[3px] border-black/5 p-5 bg-white"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         {/* Testing Through Research Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Testing through research
           </h2>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px] mb-6">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-6">
             Effective feature names should be self-explanatory. While tooltips
             and help documentation provide support, the primary terminology
             should communicate clearly without additional explanation.
           </p>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             I partnered with UX researchers to design a study comparing both
             terminology options. Participants viewed identical interfaces with
             different terminology, then explained their understanding of the
@@ -300,14 +273,11 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818476617985a84c13098b_Group%20632560.png"
             alt="Research groups"
             loading="lazy"
-            className="w-full h-auto rounded-lg"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             Results strongly favored "certainty of lift detection" across all
             user segments. Notably, even statistically sophisticated users found
             "statistical significance" ambiguous in this context. We further
@@ -316,7 +286,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         {/* Research Comparison Grid */}
         <CaseStudyLayout maxWidth="816px">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-5 bg-white rounded-lg border-[3px] border-black/5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-4 md:p-5 bg-white rounded-lg border-[3px] border-black/5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]">
             <div>
               <img
                 src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688184bc30b0f8ce8074082f_Group%20130.png"
@@ -324,7 +294,7 @@ export function FlexibleLiftConfidence() {
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
 
-              <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
+              <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
                 <strong>
                   Statistical significance
                   <br />
@@ -346,7 +316,7 @@ export function FlexibleLiftConfidence() {
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
 
-              <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
+              <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
                 <strong>
                   Certainty of lift detection
                   <br />‍
@@ -364,7 +334,7 @@ export function FlexibleLiftConfidence() {
           </div>
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             We launched this experience to a cohort of 50 advertisers. Prior to
             the launch, the team wanted to validate the experience's usability
             and confirm users correctly comprehended the new metric. Before a
@@ -390,18 +360,15 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/689630b9f0bf361d7890dbae_Frame%20632571.png"
             alt="Survey results"
             loading="lazy"
-            className="w-full h-auto rounded-lg p-3 bg-white border-[3px] border-black/5"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         {/* Creating an easy-to-read page Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Creating an easy-to-read page
           </h2>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             With validated terminology, I focused on designing the complete user
             experience. The goal was to make statistical results both
             comprehensible and actionable for decision-making.
@@ -424,14 +391,11 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818aa94a83be540f37746d_Group%20632542.png"
             alt="Star tag iterations"
             loading="lazy"
-            className="w-full h-auto rounded-lg"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             Research revealed two primary use cases: some advertisers required
             statistical validation for major decisions, while others sought
             directional insights for ongoing optimization. Our content strategy
@@ -443,14 +407,11 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6881851135f6c4b57b87c444_Group%20632550.png"
             alt="Use case comparison"
             loading="lazy"
-            className="w-full h-auto rounded-lg"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="734px">
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             To align stakeholders on tooltip language, I developed two
             versions—one using plain language and another with technical
             terminology. Demonstrating that the accessible version maintained
@@ -470,18 +431,15 @@ export function FlexibleLiftConfidence() {
             src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818accbf7f140bd554d796_Group%20632544.png"
             alt="Tooltip versions"
             loading="lazy"
-            className="w-full h-auto rounded-lg"
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 4px 20px -2px'
-            }} />
+            className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
         </CaseStudyLayout>
         {/* Learnings Section */}
         <CaseStudyLayout maxWidth="734px">
-          <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+          <h2 className={caseStudyH2ClassName}>
             Learnings
           </h2>
-          <p className="font-sans text-gray-700 text-lg leading-[28.8px]">
+          <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
             The project delivered measurable improvements: over 50% of users
             found brand lift campaigns easy to use, and 90% understood
             "Certainty of lift."

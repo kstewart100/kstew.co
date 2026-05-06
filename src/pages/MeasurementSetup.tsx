@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 
 const PAGE_TITLE = 'Measurement setup — Kyle Stewart';
 
@@ -12,13 +12,13 @@ export function MeasurementSetup() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
+    <div className="w-full min-h-screen flex flex-col bg-[#fafafa]">
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px]">
+            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Measurement Setup
             </h1>
           </CaseStudyLayout>
@@ -31,28 +31,25 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee8002c3363fa68d1a9cd_CM%201.png"
               alt="Measurement Setup Hero"
               loading="lazy"
-              className="w-full max-w-full block bg-white p-2.5 rounded-lg border-[3px] border-[rgba(0,0,0,0.05)] shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px]" />
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
           </CaseStudyLayout>
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
-              Advertisers need to measure conversions to understand their
-              return, but the setup process was buried in a discrete section,
-              full of technical jargon, and lacking guidance.
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
+              Conversion tracking was essential to campaign performance, but the
+              setup experience was buried, jargon-heavy, and easy for first-time
+              advertisers to skip.
               <br />
               <br />
-              We surfaced conversion measurement setup during onboarding—making
-              this critical step more prominent and transforming a frequently
-              skipped task into a natural part of campaign setup. I simplified
-              complex technical language, clarified the value of conversion
-              tracking, and created a guided experience that gave first-time
-              users confidence to complete setup successfully.
+              I helped reposition measurement setup inside onboarding with
+              clearer headlines, simpler guidance, and action-oriented copy so
+              more users could complete setup correctly on the first pass.
             </p>
           </CaseStudyLayout>
           {/* Metadata Grid */}
           <CaseStudyLayout maxWidth="734px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
               <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
                 <strong className="font-bold block mb-1">Role</strong>
                 Content Designer
@@ -65,7 +62,9 @@ export function MeasurementSetup() {
               <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
                 <strong className="font-bold block mb-1">Timeline</strong>
                 July 2022 to Oct 2022
-                <strong className="font-bold block mt-4 mb-1">Company</strong>
+              </div>
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Company</strong>
                 Google, Google Ads
               </div>
             </div>
@@ -73,17 +72,17 @@ export function MeasurementSetup() {
           {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
             <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+              <h2 className={caseStudyH2ClassName}>
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Simplify and hide details with progressive disclosure
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Do the work for them
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Assume they're new
                 </div>
               </div>
@@ -91,10 +90,10 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Refining Content Hierarchy */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Refining content hierarchy
             </h2>
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               My initial approach included all information users might need
               directly on the page. But after exploring this, I realized we
               could streamline the narrative and significantly reduce cognitive
@@ -110,12 +109,12 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee80e2c3363fa68d1ab3b_CM%202.png"
               alt="Initial mockups"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               I thought a celebratory message would be motivating, but research
               quickly shot that down. People thought 'Congrats!' meant their
               campaigns were already live, which was completely wrong. This led
@@ -131,12 +130,12 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee81831b71e66d3b8bf34_CM%203.png"
               alt="Streamlined copy attempt"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           {/* Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               I initially added a celebratory message to build momentum, but
               research discussions revealed a critical issue—this messaging gave
               the false impression that campaigns had already launched. This led
@@ -148,9 +147,9 @@ export function MeasurementSetup() {
             maxWidth="816px"
             caption="A few iterations of the main headline and subheader copy.">
 
-            <div className="bg-white w-full shadow-[rgba(0,0,0,0.08)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.08)] rounded-lg p-5 overflow-x-auto">
-              <div className="min-w-[600px]">
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
+            <div className="bg-white w-full min-w-0 border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 border-b border-gray-200 pb-2 [&>div]:min-w-0">
                   <div className="font-mono text-xs font-bold text-[#294050]">
                     Proposed copy
                   </div>
@@ -161,7 +160,7 @@ export function MeasurementSetup() {
                     Design decision
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Congrats! You're almost done.</strong>
                     <br />
@@ -178,7 +177,7 @@ export function MeasurementSetup() {
                     "almost done")
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Your campaign is published!</strong>
                     <br />
@@ -194,7 +193,7 @@ export function MeasurementSetup() {
                     steps
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Your ads will go live after a review</strong>
                     <br />
@@ -216,7 +215,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               The final design uses clear, direct language to explain what
               advertisers should expect, building trust while considering the
               full journey of tasks they need to accomplish.
@@ -231,28 +230,28 @@ export function MeasurementSetup() {
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee873047c37afced10318_Group%20632552.png"
               alt="Launched copy"
               loading="lazy"
-              className="w-full bg-white p-2.5 rounded-lg border-[3px] border-[rgba(0,0,0,0.05)] shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px]" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
-          {/* CTAs */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
-              Finding and aligning on the CTAs
-            </h2>
-          </CaseStudyLayout>
+          {/* CTAs + CTA variations image */}
           <CaseStudyLayout
             maxWidth="816px"
-            caption="Different variations of the same CTA from the product and testing phases.">
-
+            caption="Different variations of the same CTA from the product and testing phases."
+          >
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Finding and aligning on the CTAs
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee88110cc3a37269c4409_CM%205.png"
               alt="CTA variations"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Leveraging prior research, I discovered that "Set up" and "Get
               event snippet" resonated strongly with advertisers. These
               action-oriented CTAs clearly communicated what users needed to do
@@ -266,10 +265,10 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Jargon */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Working out the jargon
             </h2>
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               While working on this experience, I kept one thing in mind: What
               did the user need to know to take action? Why did the user even
               care about taking action?
@@ -283,27 +282,25 @@ export function MeasurementSetup() {
               mattered for their business.
             </p>
           </CaseStudyLayout>
-          {/* Tag Copy */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
-              Tag copy
-            </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout maxWidth="734px">
+          {/* Tag Copy + image */}
+          <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>Tag copy</h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee8902d8b5cac4b72383a_CM%206.png"
               alt="Tag copy"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout
             maxWidth="816px"
             caption="A few iterations of the headline and subhead copy for the Star tag.">
 
-            <div className="bg-white w-full shadow-[rgba(0,0,0,0.08)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.08)] rounded-lg p-5 overflow-x-auto">
-              <div className="min-w-[600px]">
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
+            <div className="bg-white w-full min-w-0 border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 border-b border-gray-200 pb-2 [&>div]:min-w-0">
                   <div className="font-mono text-xs font-bold text-[#294050]">
                     Proposed copy
                   </div>
@@ -314,7 +311,7 @@ export function MeasurementSetup() {
                     Design decision
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Install your Google tag</strong>
                     <br />
@@ -330,12 +327,12 @@ export function MeasurementSetup() {
                       Rejected
                     </span>
                   </div>
-                  <div className="font-mono text-xs leading-relaxed text-[#0B3D4A]">
+                  <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     Too wordy and repetitive; confusing explanation of
                     relationship between global tag and event snippets
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Your tag</strong>
                     <br />
@@ -347,12 +344,12 @@ export function MeasurementSetup() {
                       Rejected
                     </span>
                   </div>
-                  <div className="font-mono text-xs leading-relaxed text-[#0B3D4A]">
+                  <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     Too brief and vague; inconsistent terminology (Google Tag vs
                     Your Tag); unclear purpose
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 items-start">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Activate measurement with a Google tag</strong>
                     <br />A Google tag allows you to measure activity on your
@@ -373,27 +370,25 @@ export function MeasurementSetup() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* Event Snippet */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
-              Event snippet copy
-            </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout maxWidth="734px">
+          {/* Event Snippet + image */}
+          <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>Event snippet copy</h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee899bef18141e0c9daca_CM%207.png"
               alt="Event snippet"
               loading="lazy"
-              className="w-full object-contain shadow-[rgba(0,0,0,0.2)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.05)] rounded-lg p-5 bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout
             maxWidth="816px"
             caption="A few iterations of the headline and subhead copy for the event snippet.">
 
-            <div className="bg-white w-full shadow-[rgba(0,0,0,0.08)_0px_4px_20px_-2px] border-[3px] border-[rgba(0,0,0,0.08)] rounded-lg p-5 overflow-x-auto">
-              <div className="min-w-[600px]">
-                <div className="grid grid-cols-[55%_15%_30%] gap-4 mb-4 border-b border-gray-200 pb-2">
+            <div className="bg-white w-full min-w-0 border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
+              <div>
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 border-b border-gray-200 pb-2 [&>div]:min-w-0">
                   <div className="font-mono text-xs font-bold text-[#294050]">
                     Proposed copy
                   </div>
@@ -404,7 +399,7 @@ export function MeasurementSetup() {
                     Design decision
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] mb-4 items-start gap-[0px]">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Event tracking</strong>
                     <br />
@@ -421,7 +416,7 @@ export function MeasurementSetup() {
                     relationship between Google Tag and event snippets
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] mb-4 items-start gap-[0px]">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 mb-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>Install your event snippets</strong>
                     <br />
@@ -442,7 +437,7 @@ export function MeasurementSetup() {
                     much detail for initial setup step
                   </div>
                 </div>
-                <div className="grid grid-cols-[55%_15%_30%] items-start gap-[0px]">
+                <div className="grid grid-cols-[minmax(0,11fr)_minmax(0,3fr)_minmax(0,6fr)] gap-x-4 gap-y-4 items-start [&>div]:min-w-0">
                   <div className="font-mono text-xs leading-relaxed text-[#294050]">
                     <strong>
                       Measure each conversion with an event snippet
@@ -467,10 +462,10 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Learnings */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Learnings
             </h2>
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px] mb-4">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-4">
               The experiment worked. More people actually completed the
               conversion setup, and they did it correctly. When you make
               something less confusing, people can actually use it. We
@@ -480,7 +475,7 @@ export function MeasurementSetup() {
               <br />
               This project reinforced several key insights:
             </p>
-            <ul className="font-sans text-gray-700 text-lg font-normal leading-[28.8px] list-disc pl-6 mb-4 space-y-2">
+            <ul className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] list-disc pl-6 mb-4 space-y-2">
               <li>
                 Meeting users in their natural workflow dramatically improves
                 adoption
@@ -494,7 +489,7 @@ export function MeasurementSetup() {
                 impact
               </li>
             </ul>
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Working with several different teams was tricky—everyone had
               opinions about what should be included. But keeping the focus on
               'will this help someone who's never done this before?' usually got

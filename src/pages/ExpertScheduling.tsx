@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -18,7 +18,7 @@ export function ExpertScheduling() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Expert scheduling
             </h1>
           </CaseStudyLayout>
@@ -28,7 +28,7 @@ export function ExpertScheduling() {
               alt="Future state concept for the scheduling tool"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/61dc9476de20fee46b908c56_Group%203766.png"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] border-[3px] border-black/5 rounded-[20px] p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
           </CaseStudyLayout>
           {/* Introduction */}
@@ -70,17 +70,17 @@ export function ExpertScheduling() {
           {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
             <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+              <h2 className={caseStudyH2ClassName}>
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
                   Give people information exactly when they need it
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
                   Celebrate progress
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
                   Break big, complicated tasks into smaller pieces that don't feel
                   intimidating
                 </div>
@@ -89,11 +89,9 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
           {/* Section: The expert journey */}
           <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className={caseStudyH2ClassName}>
               The expert journey
             </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Experts use the scheduling tool to set their weekly availability
               across a 12-week period before tax season ends, ensuring adequate
@@ -101,12 +99,12 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Journey diagram */}
-          <CaseStudyLayout>
+          <CaseStudyLayout maxWidth="816px">
             <img
               alt="Expert journey diagram"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6849d1c8f215334c1dbe8850_image%20293.png"
-              className="w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -120,11 +118,9 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
           {/* Section: Laying the groundwork */}
           <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className={caseStudyH2ClassName}>
               Laying the groundwork with a content audit
             </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               While my PM and interaction design partners dove into specific
               problems and screens, I stepped back to look at the bigger
@@ -145,25 +141,24 @@ export function ExpertScheduling() {
               alt="Audit slides"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/685c69fcd3e7d190e1cc64b7_Group%20632525.png"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
-          {/* Section: Updating the first-time use experience */}
-          <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Updating the first-time use experience
-            </h2>
-          </CaseStudyLayout>
-          {/* Original instructions image */}
+          {/* Section: Updating the first-time use experience + original instructions image */}
           <CaseStudyLayout maxWidth="816px" caption="Original instructions screen before redesign.">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Updating the first-time use experience
+              </h2>
+            </div>
             <img
               width="900"
               height="750"
               alt="Original instructions screen"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216ed0e2d6b0a03e0034_1.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -181,7 +176,7 @@ export function ExpertScheduling() {
               alt="Redesigned instructions screen"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216f5cdf024d95c73309_2.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -203,7 +198,7 @@ export function ExpertScheduling() {
               alt="Refined instructions screen"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216fcb26781c3b1f456f_3.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -219,14 +214,14 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Future state image */}
-          <CaseStudyLayout caption="Future state concept for the scheduling tool.">
+          <CaseStudyLayout maxWidth="816px" caption="Future state concept for the scheduling tool.">
             <img
               width="750"
               height="900"
               alt="Future state concept"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216fa511c087c37be18b_4.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -237,20 +232,19 @@ export function ExpertScheduling() {
               exactly when experts need it.
             </p>
           </CaseStudyLayout>
-          {/* Section: Creating helpful error messages */}
-          <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Creating helpful error messages
-            </h2>
-          </CaseStudyLayout>
-          {/* Error comparison image */}
+          {/* Section: Creating helpful error messages + error comparison image */}
           <CaseStudyLayout maxWidth="816px" caption="Error message comparison showing original version (left) and first iteration (right).">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Creating helpful error messages
+              </h2>
+            </div>
             <img
               alt="Error message comparison"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/684270edaa3779ba22dffa79_Error%20message%20mockup.png"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -272,7 +266,7 @@ export function ExpertScheduling() {
               alt="Error message audit spreadsheet"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831217011c7f20effc31522_6.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -291,7 +285,7 @@ export function ExpertScheduling() {
               alt="First iteration error message"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216f781e6d4d23cda26d_7.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -309,7 +303,7 @@ export function ExpertScheduling() {
               alt="Launched error message"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216fd0e2d6b0a03e0078_8.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -321,22 +315,21 @@ export function ExpertScheduling() {
               business needs.
             </p>
           </CaseStudyLayout>
-          {/* Section: In-product guidance */}
-          <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              In-product guidance
-            </h2>
-          </CaseStudyLayout>
-          {/* Original weekly image */}
+          {/* Section: In-product guidance + original weekly image */}
           <CaseStudyLayout maxWidth="816px" caption="Original weekly scheduling interface.">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                In-product guidance
+              </h2>
+            </div>
             <img
               width="900"
               height="750"
               alt="Original weekly scheduling interface"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/683121705ac228a8e8197fd6_10.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
@@ -354,7 +347,7 @@ export function ExpertScheduling() {
               alt="First iteration scheduling interface"
               loading="lazy"
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831217081fbd522db08325c_9.jpg"
-              className="shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)] border-[3px] border-black/5 rounded-lg p-5 w-full bg-white" />
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
           <CaseStudyLayout>
@@ -383,11 +376,9 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
           {/* Section: Learnings */}
           <CaseStudyLayout>
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className={caseStudyH2ClassName}>
               Learnings
             </h2>
-          </CaseStudyLayout>
-          <CaseStudyLayout>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               It's hard to separate how much the content changes helped versus
               other design improvements, but the overall redesign definitely

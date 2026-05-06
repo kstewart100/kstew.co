@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -12,13 +12,13 @@ export function ConversionGoalUpdates() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#EFF0F3]">
+    <div className="w-full min-h-screen flex flex-col bg-[#fafafa]">
       <Header variant="case-study" />
-      <main id="main-content" className="flex-1 bg-[#EFF0F3] text-[#1a1a1a] py-10 lg:py-20 font-sans">
+      <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Conversion goal updates
             </h1>
           </CaseStudyLayout>
@@ -26,7 +26,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-            <p className="font-mono text-gray-600 text-xs font-normal leading-relaxed">
+            <p className="font-sans text-gray-600 text-xs font-normal leading-relaxed">
                 The conversion updates tool lets advertisers view
                 recommendations, make changes, and save updates without manually
                 editing each conversion.
@@ -42,7 +42,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-base md:text-lg font-normal leading-relaxed md:leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Ahead of an analytics platform update, advertisers needed to
               update their conversion goals—a critical part of their paid ad
               campaigns. The migration created duplicate conversion actions that
@@ -56,20 +56,17 @@ export function ConversionGoalUpdates() {
           {/* Metadata Grid */}
           <CaseStudyLayout maxWidth="734px">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
-                <strong className="font-bold">Role</strong>
-                <br />
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block">Role</strong>
                 Senior Content Designer
               </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
-                <strong className="font-bold">Team</strong>
-                <br />
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block">Team</strong>
                 UX Designers, Product Managers, Software Engineers, and Program
                 Managers
               </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans p-4 md:p-5">
-                <strong className="font-bold">Company</strong>
-                <br />
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block">Company</strong>
                 Google, Google Ads
               </div>
             </div>
@@ -77,52 +74,48 @@ export function ConversionGoalUpdates() {
           {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
             <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+              <h2 className={caseStudyH2ClassName}>
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Be upfront about potential changes–both positive and negative.
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Automate where possible and break tasks into manageable steps.
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Be honest about trade-offs, both the short-term pain and
                   long-term benefits.
                 </div>
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Refining Content Hierarchy */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Refining the content hierarchy
-            </h2>
-          </CaseStudyLayout>
-          {/* Image CGU 2 */}
+          {/* H2 Refining Content Hierarchy + Image CGU 2 */}
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-            <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
->
-
+              <p className="font-sans text-gray-600 text-xs font-normal leading-relaxed">
                 First draft iteration from design partner.
               </p>
-            }>
-
+            }
+          >
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Refining the content hierarchy
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc4d17cc67389db35e74_CGU%202.png"
               alt="First draft iteration of conversion goal updates from design partner"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               The headlines from my partner&#39;s first iterations were
@@ -142,7 +135,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Second iteration outlining exact tasks for advertisers to
@@ -160,7 +153,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               After digging through past research and talking with our research
@@ -297,7 +290,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               Working with PM and design, I found more opportunities to clean
@@ -310,7 +303,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Launched content with concrete information and headlines, CTAs,
@@ -328,7 +321,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               As we neared launch, I worked with help content teams to spot
@@ -338,14 +331,11 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 From Manual to Automated */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className={caseStudyH2ClassName}>
               From manual guide to automated recommendation
             </h2>
-          </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               Product management initially wanted users to handle updates
@@ -359,7 +349,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Early iteration of the complete user flow for updating
@@ -377,7 +367,7 @@ export function ConversionGoalUpdates() {
           {/* Long Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               The biggest headache was the individual conversion updates. We
@@ -594,7 +584,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               After validating this with engineering, I spotted another
@@ -613,7 +603,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Performance fluctuation communication explorations showing table
@@ -631,7 +621,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               When we talked to engineering about moving these warnings earlier
@@ -654,7 +644,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Final user flow for updating conversion goals across 3 screens.
@@ -671,7 +661,7 @@ export function ConversionGoalUpdates() {
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               The result was a dramatic reduction in cognitive load while
@@ -682,14 +672,11 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Challenging Language */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className={caseStudyH2ClassName}>
               Challenging language precedent
             </h2>
-          </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               While working on this experience, I kept two things in balance.
@@ -703,20 +690,19 @@ export function ConversionGoalUpdates() {
               model.
             </p>
           </CaseStudyLayout>
-          {/* H2 Getting Users to Take Action */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Getting users to take action with notifications
-            </h2>
-          </CaseStudyLayout>
-          {/* Image CGU 7 */}
+          {/* H2 Getting Users to Take Action + Image CGU 7 */}
           <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Getting users to take action with notifications
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd58b43fdbb1c4c7213c_CGU%207.png"
               alt="In-product notification for conversion goal updates"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           {/* Decision Table 3 */}
           <CaseStudyLayout maxWidth="816px">
@@ -900,20 +886,19 @@ export function ConversionGoalUpdates() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Giving Users More Context */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Giving users more context with subheaders
-            </h2>
-          </CaseStudyLayout>
-          {/* Image CGU 8 */}
+          {/* H2 Giving Users More Context + Image CGU 8 */}
           <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Giving users more context with subheaders
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd61e0440486c617b8e5_CGU%208.png"
               alt="Subheader copy for conversion updates context"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           {/* Decision Table 4 */}
           <CaseStudyLayout maxWidth="816px">
@@ -1069,15 +1054,12 @@ export function ConversionGoalUpdates() {
             </div>
           </CaseStudyLayout>
           {/* H2 Learnings */}
-          <CaseStudyLayout maxWidth="734px" className="pl-[0px] pr-[0px]">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+          <CaseStudyLayout maxWidth="734px">
+            <h2 className={caseStudyH2ClassName}>
               Learnings
             </h2>
-          </CaseStudyLayout>
-          {/* Final Body Text */}
-          <CaseStudyLayout maxWidth="734px">
             <p
-              className="font-sans text-gray-700 text-base md:text-lg leading-relaxed md:leading-[28.8px]"
+              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
 
               While specific user metrics remain confidential, the project
