@@ -6,7 +6,10 @@ export interface CaseStudyLayoutProps {
   className?: string;
   'data-id'?: string;
 }
-/** Sections use outer space-y-12; combine h2 + body in one layout (h2 with mb-6). Heading-only layouts before figures omit mb-6 on h2 so margin does not stack with the next row. */
+/** Sections use outer space-y-12 / lg:space-y-16 between blocks. Use {@link caseStudyH2ClassName} on section h2s so the gap before the next paragraph or figure is always 24px (when h2 and content share one layout, or when heading + image are grouped—avoid a separate heading-only row before an image). */
+export const caseStudyH2ClassName =
+  'font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6';
+
 export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
   children,
   maxWidth = '734px',

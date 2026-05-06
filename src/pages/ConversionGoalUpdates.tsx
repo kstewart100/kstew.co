@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { CaseStudyLayout } from '../components/CaseStudyLayout';
+import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -74,7 +74,7 @@ export function ConversionGoalUpdates() {
           {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
             <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-4 md:mb-5">
+              <h2 className={caseStudyH2ClassName}>
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
@@ -91,30 +91,26 @@ export function ConversionGoalUpdates() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Refining Content Hierarchy */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Refining the content hierarchy
-            </h2>
-          </CaseStudyLayout>
-          {/* Image CGU 2 */}
+          {/* H2 Refining Content Hierarchy + Image CGU 2 */}
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-            <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
->
-
+              <p className="font-mono text-gray-600 text-xs font-normal leading-relaxed">
                 First draft iteration from design partner.
               </p>
-            }>
-
+            }
+          >
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Refining the content hierarchy
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc4d17cc67389db35e74_CGU%202.png"
               alt="First draft iteration of conversion goal updates from design partner"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           {/* Body Text */}
           <CaseStudyLayout maxWidth="734px">
@@ -335,7 +331,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 From Manual to Automated */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               From manual guide to automated recommendation
             </h2>
             <p
@@ -676,7 +672,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Challenging Language */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Challenging language precedent
             </h2>
             <p
@@ -694,20 +690,19 @@ export function ConversionGoalUpdates() {
               model.
             </p>
           </CaseStudyLayout>
-          {/* H2 Getting Users to Take Action */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Getting users to take action with notifications
-            </h2>
-          </CaseStudyLayout>
-          {/* Image CGU 7 */}
+          {/* H2 Getting Users to Take Action + Image CGU 7 */}
           <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Getting users to take action with notifications
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd58b43fdbb1c4c7213c_CGU%207.png"
               alt="In-product notification for conversion goal updates"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           {/* Decision Table 3 */}
           <CaseStudyLayout maxWidth="816px">
@@ -891,20 +886,19 @@ export function ConversionGoalUpdates() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Giving Users More Context */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
-              Giving users more context with subheaders
-            </h2>
-          </CaseStudyLayout>
-          {/* Image CGU 8 */}
+          {/* H2 Giving Users More Context + Image CGU 8 */}
           <CaseStudyLayout maxWidth="816px">
+            <div className="max-w-[734px]">
+              <h2 className={caseStudyH2ClassName}>
+                Giving users more context with subheaders
+              </h2>
+            </div>
             <img
               src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd61e0440486c617b8e5_CGU%208.png"
               alt="Subheader copy for conversion updates context"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+            />
           </CaseStudyLayout>
           {/* Decision Table 4 */}
           <CaseStudyLayout maxWidth="816px">
@@ -1061,7 +1055,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Learnings */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className={caseStudyH2ClassName}>
               Learnings
             </h2>
             <p
