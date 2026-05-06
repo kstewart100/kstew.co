@@ -335,12 +335,9 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 From Manual to Automated */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               From manual guide to automated recommendation
             </h2>
-          </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
             <p
               className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
@@ -679,12 +676,9 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Challenging Language */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Challenging language precedent
             </h2>
-          </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
             <p
               className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >
@@ -1067,12 +1061,9 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
           {/* H2 Learnings */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Learnings
             </h2>
-          </CaseStudyLayout>
-          {/* Final Body Text */}
-          <CaseStudyLayout maxWidth="734px">
             <p
               className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
 >

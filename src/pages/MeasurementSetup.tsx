@@ -96,7 +96,7 @@ export function MeasurementSetup() {
             <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Refining content hierarchy
             </h2>
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               My initial approach included all information users might need
               directly on the page. But after exploring this, I realized we
               could streamline the narrative and significantly reduce cognitive
@@ -117,7 +117,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               I thought a celebratory message would be motivating, but research
               quickly shot that down. People thought 'Congrats!' meant their
               campaigns were already live, which was completely wrong. This led
@@ -138,7 +138,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               I initially added a celebratory message to build momentum, but
               research discussions revealed a critical issue—this messaging gave
               the false impression that campaigns had already launched. This led
@@ -218,7 +218,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Text */}
           <CaseStudyLayout maxWidth="734px">
-            <p className="text-gray-700 font-sans text-lg leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               The final design uses clear, direct language to explain what
               advertisers should expect, building trust while considering the
               full journey of tasks they need to accomplish.
@@ -238,7 +238,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* CTAs */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Finding and aligning on the CTAs
             </h2>
           </CaseStudyLayout>
@@ -254,7 +254,7 @@ export function MeasurementSetup() {
 
           </CaseStudyLayout>
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Leveraging prior research, I discovered that "Set up" and "Get
               event snippet" resonated strongly with advertisers. These
               action-oriented CTAs clearly communicated what users needed to do
@@ -271,7 +271,7 @@ export function MeasurementSetup() {
             <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Working out the jargon
             </h2>
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               While working on this experience, I kept one thing in mind: What
               did the user need to know to take action? Why did the user even
               care about taking action?
@@ -287,7 +287,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Tag Copy */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Tag copy
             </h2>
           </CaseStudyLayout>
@@ -377,7 +377,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
           {/* Event Snippet */}
           <CaseStudyLayout maxWidth="734px">
-            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
+            <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px]">
               Event snippet copy
             </h2>
           </CaseStudyLayout>
@@ -472,7 +472,7 @@ export function MeasurementSetup() {
             <h2 className="font-sans text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6">
               Learnings
             </h2>
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px] mb-4">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mb-4">
               The experiment worked. More people actually completed the
               conversion setup, and they did it correctly. When you make
               something less confusing, people can actually use it. We
@@ -482,7 +482,7 @@ export function MeasurementSetup() {
               <br />
               This project reinforced several key insights:
             </p>
-            <ul className="font-sans text-gray-700 text-lg font-normal leading-[28.8px] list-disc pl-6 mb-4 space-y-2">
+            <ul className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] list-disc pl-6 mb-4 space-y-2">
               <li>
                 Meeting users in their natural workflow dramatically improves
                 adoption
@@ -496,7 +496,7 @@ export function MeasurementSetup() {
                 impact
               </li>
             </ul>
-            <p className="font-sans text-gray-700 text-lg font-normal leading-[28.8px]">
+            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
               Working with several different teams was tricky—everyone had
               opinions about what should be included. But keeping the focus on
               'will this help someone who's never done this before?' usually got

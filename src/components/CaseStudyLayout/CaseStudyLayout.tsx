@@ -6,6 +6,7 @@ export interface CaseStudyLayoutProps {
   className?: string;
   'data-id'?: string;
 }
+/** Sections use outer space-y-12; combine h2 + body in one layout (h2 with mb-6). Heading-only layouts before figures omit mb-6 on h2 so margin does not stack with the next row. */
 export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
   children,
   maxWidth = '734px',
