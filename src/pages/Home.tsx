@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { TickerBanner } from '../components/TickerBanner';
 import { CaseStudyCard } from '../components/CaseStudyCard';
+import { Photo } from '../components/Photo';
 const PAGE_TITLE = 'Kyle Stewart — Portfolio';
 const BG_STOPS = [
 {
@@ -95,57 +96,59 @@ export function Home() {
   Math.max(0, 1 - p / 0.25)
   );
   return (
-    <div className="relative min-h-screen">
-      <motion.div
-        className="fixed inset-0 z-[-2] pointer-events-none"
-        style={{
-          backgroundColor: pageBgColor
-        }} />
-      
-      <motion.div
-        className="fixed inset-0 z-[-1] pointer-events-none"
-        style={{
-          opacity: glowOpacity,
-          background: `
+    <>
+      <div className="relative w-full">
+        <div
+          className="absolute top-0 left-0 right-0 z-[50] w-full"
+          style={
+            {
+              '--color-text-primary': '#F5E6D3',
+              '--color-bg-canvas': 'transparent',
+              '--color-interactive-primary': '#D4956B'
+            } as React.CSSProperties
+          }>
+          <Header variant="home" className="bg-transparent" />
+        </div>
+        <div className="relative min-h-[calc(100dvh-3.25rem)] flex-1 w-full overflow-hidden">
+        <Photo
+          src="/images/nz-ridge"
+          alt="Kyle on a mountain ridge with snow-capped peaks in the distance"
+          width={1600}
+          height={900}
+          eager
+          className="absolute inset-0 h-full w-full object-cover object-[22%_bottom] md:object-[32%_bottom] origin-bottom z-[4] pointer-events-none"
+        />
+        <div className="pointer-events-none absolute inset-0 z-[8] flex flex-col items-center justify-start px-6 pt-[35vh] sm:pt-[38vh] saturate-[1.1] md:items-end md:justify-center md:px-16 md:pt-0 lg:px-24">
+          <h1 className="absolute left-[270px] font-heading whitespace-nowrap tracking-wide text-center md:text-right text-[34px] sm:text-[50px] md:text-[72px] lg:text-[70px] font-[600] text-[#F2F4F6] md:mr-8 lg:mr-16 md:mt-20 md:mb-0">
+            Get out and build
+          </h1>
+        </div>
+        </div>
+      </div>
+      <div className="relative min-h-screen">
+        <motion.div
+          className="fixed inset-0 z-[-2] pointer-events-none"
+          style={{
+            backgroundColor: pageBgColor
+          }} />
+
+        <motion.div
+          className="fixed inset-0 z-[-1] pointer-events-none"
+          style={{
+            opacity: glowOpacity,
+            background: `
             radial-gradient(ellipse 70% 50% at 0% 100%, rgba(196, 160, 48, 0.60) 0%, transparent 60%),
             radial-gradient(ellipse 45% 35% at 10% 90%, rgba(210, 175, 60, 0.35) 0%, transparent 55%),
             radial-gradient(ellipse 55% 25% at 5% 100%, rgba(230, 195, 80, 0.20) 0%, transparent 50%)
           `
-        }} />
-      
-      <div
-        className="absolute top-0 left-0 w-full z-[20]"
-        style={
-        {
-          '--color-text-primary': '#F5E6D3',
-          '--color-bg-canvas': 'transparent',
-          '--color-interactive-primary': '#D4956B'
-        } as React.CSSProperties
-        }>
-        
-        <Header variant="home" className="bg-transparent" />
-      </div>
-      <main id="main-content" className="flex flex-col items-center w-full">
-        <div className="h-[100vh] w-full relative flex justify-center items-center overflow-hidden">
-          <div className="absolute inset-0 w-full h-full saturate-[1.1]">
-            <div className="absolute inset-0 flex flex-col items-center md:items-end justify-start md:justify-center z-[8] px-6 md:px-16 lg:px-24 pt-[35vh] sm:pt-[38vh] md:pt-0">
-              <h1 className="absolute left-[270px] font-heading whitespace-nowrap tracking-wide text-center md:text-right text-[34px] sm:text-[50px] md:text-[72px] lg:text-[70px] font-[600] text-[#F2F4F6] md:mr-8 lg:mr-16 md:mt-20 md:mb-0">
-                Get out and build
-              </h1>
-            </div>
-            <img
-              src="/hero-image.png"
-              alt="Kyle on a mountain ridge with snow-capped peaks in the distance"
-              className="absolute inset-0 w-full h-full object-cover object-[25%_center] md:object-center scale-[1.1] origin-bottom z-[4] pointer-events-none"
-            />
-            
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 z-10">
+          }} />
+
+        <main id="main-content" className="flex flex-col items-center w-full">
+          <div className="relative z-10 w-full shrink-0">
             <TickerBanner />
           </div>
-        </div>
 
-        {/* Case studies */}
+          {/* Case studies */}
         <section
           aria-label="Case studies"
           className="relative w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 pt-32">
@@ -256,8 +259,10 @@ export function Home() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer variant="home" />
-    </div>);
+        </main>
+        <Footer variant="home" />
+      </div>
+    </>
+  );
 
 }
