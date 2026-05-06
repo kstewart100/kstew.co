@@ -18,7 +18,7 @@ export function ExpertScheduling() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Expert scheduling
             </h1>
           </CaseStudyLayout>
@@ -74,13 +74,13 @@ export function ExpertScheduling() {
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
                   Give people information exactly when they need it
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
                   Celebrate progress
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a] text-left">
                   Break big, complicated tasks into smaller pieces that don't feel
                   intimidating
                 </div>

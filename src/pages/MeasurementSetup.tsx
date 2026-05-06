@@ -18,7 +18,7 @@ export function MeasurementSetup() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Measurement Setup
             </h1>
           </CaseStudyLayout>
@@ -76,13 +76,13 @@ export function MeasurementSetup() {
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Simplify and hide details with progressive disclosure
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Do the work for them
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Assume they're new
                 </div>
               </div>

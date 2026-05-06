@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { AnimatedHeadline } from '../components/AnimatedHeadline';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { TickerBanner } from '../components/TickerBanner';
@@ -118,9 +119,9 @@ export function Home() {
           eager
           className="absolute inset-0 h-full w-full object-cover object-[22%_bottom] md:object-[32%_bottom] origin-bottom z-[4] pointer-events-none"
         />
-        <div className="pointer-events-none absolute inset-0 z-[8] flex flex-col items-center justify-start px-6 pt-[35vh] sm:pt-[38vh] saturate-[1.1] md:items-end md:justify-center md:px-16 md:pt-0 lg:px-24">
-          <h1 className="absolute left-[270px] font-heading whitespace-nowrap tracking-wide text-center md:text-right text-[34px] sm:text-[50px] md:text-[72px] lg:text-[70px] font-[600] text-[#F2F4F6] md:mr-8 lg:mr-16 md:mt-20 md:mb-0">
-            Get out and build
+        <div className="pointer-events-none absolute inset-0 z-[8] flex flex-col items-end justify-start px-6 pt-[44vh] sm:pt-[48vh] saturate-[1.1] md:justify-end md:px-16 md:pb-[min(26vh,11rem)] md:pt-0 lg:px-24 lg:pb-[min(28vh,12rem)]">
+          <h1 className="font-heading mr-4 md:mr-8 lg:mr-10 m-0 font-normal tracking-wide text-left md:mb-0 max-w-full">
+            <AnimatedHeadline />
           </h1>
         </div>
         </div>
@@ -230,7 +231,7 @@ export function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-4xl md:text-5xl font-sans font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide uppercase">
+              <h2 className="text-4xl md:text-5xl font-heading font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide">
                 About me
               </h2>
               <div className="text-lg md:text-xl text-[#F5E6D3]/90 leading-relaxed space-y-6">

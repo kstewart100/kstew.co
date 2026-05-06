@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       data-id={dataId}
-      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-color-bg-canvas'} ${className}`}
+      className={`w-full font-sans ${isHome ? 'bg-transparent' : 'bg-inherit'} ${className}`}
     >
       <div
         className="max-w-[1280px] mx-auto grid grid-cols-[minmax(0,auto)_minmax(0,1fr)_auto] gap-4 items-center h-16 w-full px-5 md:px-8 lg:px-10"

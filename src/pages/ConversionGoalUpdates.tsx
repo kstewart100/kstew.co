@@ -18,7 +18,7 @@ export function ConversionGoalUpdates() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Conversion goal updates
             </h1>
           </CaseStudyLayout>
@@ -26,7 +26,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-            <p className="font-mono text-gray-600 text-xs font-normal leading-relaxed">
+            <p className="font-sans text-gray-600 text-xs font-normal leading-relaxed">
                 The conversion updates tool lets advertisers view
                 recommendations, make changes, and save updates without manually
                 editing each conversion.
@@ -43,14 +43,14 @@ export function ConversionGoalUpdates() {
           {/* Intro Body Text */}
           <CaseStudyLayout maxWidth="734px">
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
-              During a major analytics migration, advertisers had to update
-              conversion goals tied directly to bidding and budget performance.
-              The process introduced duplicate actions and high-stakes cleanup
-              decisions.
+              Ahead of an analytics platform update, advertisers needed to
+              update their conversion goals—a critical part of their paid ad
+              campaigns. The migration created duplicate conversion actions that
+              needed cleanup, directly affecting their ad spend.
               <br />
-              <br />I led content design and messaging strategy to turn that
-              complexity into a clear, guided flow so teams could review,
-              understand, and approve updates with confidence.
+              <br />I led UX content design and messaging strategy to walk users
+              through each step clearly, ensuring they understood exactly how
+              their campaigns would be affected.
             </p>
           </CaseStudyLayout>
           {/* Metadata Grid */}
@@ -78,13 +78,13 @@ export function ConversionGoalUpdates() {
                 Our design principles
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Be upfront about potential changes–both positive and negative.
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Automate where possible and break tasks into manageable steps.
                 </div>
-                <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+                <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Be honest about trade-offs, both the short-term pain and
                   long-term benefits.
                 </div>
@@ -95,7 +95,7 @@ export function ConversionGoalUpdates() {
           <CaseStudyLayout
             maxWidth="816px"
             caption={
-              <p className="font-mono text-gray-600 text-xs font-normal leading-relaxed">
+              <p className="font-sans text-gray-600 text-xs font-normal leading-relaxed">
                 First draft iteration from design partner.
               </p>
             }
@@ -135,7 +135,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Second iteration outlining exact tasks for advertisers to
@@ -303,7 +303,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Launched content with concrete information and headlines, CTAs,
@@ -349,7 +349,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Early iteration of the complete user flow for updating
@@ -603,7 +603,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Performance fluctuation communication explorations showing table
@@ -644,7 +644,7 @@ export function ConversionGoalUpdates() {
             maxWidth="816px"
             caption={
             <p
-              className="font-mono text-gray-600 text-xs font-normal leading-relaxed"
+              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
 >
 
                 Final user flow for updating conversion goals across 3 screens.

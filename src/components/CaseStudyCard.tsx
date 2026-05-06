@@ -65,7 +65,7 @@ export function CaseStudyCard({
             </div>
           )}
           <h3
-            className="text-2xl md:text-3xl font-sans font-bold mb-3"
+            className="text-2xl md:text-3xl font-heading font-bold mb-3"
             style={{ color: 'var(--color-primitive-cream)' }}
           >
             {title}

@@ -12,7 +12,7 @@ export function FlexibleLiftConfidence() {
   }, []);
 
   const CaptionText = ({ children }: { children: React.ReactNode }) => (
-    <div className="font-mono text-gray-600 text-xs font-normal leading-relaxed not-italic">
+    <div className="font-sans text-gray-600 text-xs font-normal leading-relaxed not-italic">
       {children}
     </div>
   );
@@ -24,7 +24,7 @@ export function FlexibleLiftConfidence() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
         {/* Hero Title */}
         <CaseStudyLayout maxWidth="734px">
-          <h1 className="font-sans text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+          <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
             Flexible lift confidence
           </h1>
         </CaseStudyLayout>
@@ -87,14 +87,14 @@ export function FlexibleLiftConfidence() {
               Our design principles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+              <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                 Make statistics human by translating terminology into clear,
                 trustworthy language
               </div>
-              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+              <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                 Put information where it belongs
               </div>
-              <div className="font-sans text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
+              <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                 Validate language choices through research rather than following
                 others
               </div>
@@ -113,7 +113,7 @@ export function FlexibleLiftConfidence() {
             content.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
+            <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
               <strong>
                 Stats expert
                 <br />
@@ -127,7 +127,7 @@ export function FlexibleLiftConfidence() {
               <br />- Serves as the team's go-to resource for understanding
               statistical implications.
             </div>
-            <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
+            <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5 bg-white/50 rounded-lg">
               <strong>
                 Stats novice
                 <br />
@@ -294,7 +294,7 @@ export function FlexibleLiftConfidence() {
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
 
-              <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
+              <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
                 <strong>
                   Statistical significance
                   <br />
@@ -316,7 +316,7 @@ export function FlexibleLiftConfidence() {
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
 
-              <div className="font-mono text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
+              <div className="font-sans text-gray-700 text-xs font-normal leading-[19.2px] p-2.5">
                 <strong>
                   Certainty of lift detection
                   <br />‍
