@@ -119,8 +119,8 @@ export function Home() {
           eager
           className="absolute inset-0 h-full w-full object-cover object-[22%_bottom] md:object-[32%_bottom] origin-bottom z-[4] pointer-events-none"
         />
-        <div className="pointer-events-none absolute inset-0 z-[8] flex flex-col items-end justify-start px-6 pt-[44vh] sm:pt-[48vh] saturate-[1.1] md:justify-end md:px-16 md:pb-[min(26vh,11rem)] md:pt-0 lg:px-24 lg:pb-[min(28vh,12rem)]">
-          <h1 className="font-heading mr-4 md:mr-8 lg:mr-10 m-0 font-normal tracking-wide text-left md:mb-0 max-w-full">
+        <div className="pointer-events-none absolute inset-0 z-[8] saturate-[1.1]">
+          <h1 className="font-heading m-0 font-normal tracking-wide absolute top-[44vh] sm:top-[48vh] md:top-[28vh] left-1/2 -translate-x-1/2 md:translate-x-0">
             <AnimatedHeadline />
           </h1>
         </div>

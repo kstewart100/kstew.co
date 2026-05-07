@@ -18,6 +18,7 @@ export function AnimatedHeadline({
 }: AnimatedHeadlineProps) {
   const [index, setIndex] = useState(0);
   const [wordSlotWidth, setWordSlotWidth] = useState(0);
+  const [fontsReady, setFontsReady] = useState(false);
   const measureRef = useRef<HTMLSpanElement>(null);
 
   useLayoutEffect(() => {
@@ -28,45 +29,46 @@ export function AnimatedHeadline({
       let max = 0;
       for (const w of words) {
         el.textContent = w;
-        max = Math.max(max, el.getBoundingClientRect().width);
+        const width = el.getBoundingClientRect().width;
+        max = Math.max(max, width);
       }
       // Small buffer: per-letter spans can kern slightly wider than one measurement string.
-      setWordSlotWidth(Math.ceil(max) + 2);
+      const buffer = document.fonts.status === 'loaded' ? 2 : 12;
+      const nextSlotWidth = Math.ceil(max) + buffer;
+      setWordSlotWidth(nextSlotWidth);
     };
 
     measure();
-    document.fonts.ready.then(measure);
+    document.fonts.ready.then(() => {
+      measure();
+      setFontsReady(true);
+    });
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
   }, [words]);
 
   useEffect(() => {
+    if (!fontsReady) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [words.length, interval]);
+  }, [words.length, interval, fontsReady]);
 
   const sentenceContainer = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 6, filter: 'blur(2px)' },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.05, delayChildren: 0.1 },
+      y: 0,
+      filter: 'blur(0px)',
+      transition: { duration: 0.55, ease: 'easeOut' },
     },
     exit: {
       opacity: 0,
-      filter: 'blur(4px)',
-      transition: { duration: 0.2 },
-    },
-  };
-
-  const letterVariant = {
-    hidden: { opacity: 0, x: 5 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { type: 'spring', stiffness: 150, damping: 15 },
+      y: -4,
+      filter: 'blur(2px)',
+      transition: { duration: 0.32, ease: 'easeInOut' },
     },
   };
 
@@ -102,15 +104,7 @@ export function AnimatedHeadline({
             className="font-handwriting text-[#F2F4F6] flex flex-nowrap items-center"
             style={{ whiteSpace: 'nowrap' }}
           >
-            {words[index].split('').map((char, i) => (
-              <motion.span
-                key={`${words[index]}-${i}`}
-                variants={letterVariant}
-                className="inline-block"
-              >
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
-            ))}
+            {words[index]}
           </motion.div>
         </AnimatePresence>
       </div>
