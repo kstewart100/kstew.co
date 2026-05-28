@@ -28,7 +28,7 @@ export function MeasurementSetup() {
             caption="This conversion measurement page lets advertisers set up conversion tracking during onboarding, ensuring accurate reporting and optimal campaign performance from day one.">
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee8002c3363fa68d1a9cd_CM%201.png"
+              src="/images/case-studies/measurement-setup/cm-1.png"
               alt="Measurement Setup Hero"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
@@ -106,7 +106,7 @@ export function MeasurementSetup() {
             caption="Initial mockups from designer.">
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee80e2c3363fa68d1ab3b_CM%202.png"
+              src="/images/case-studies/measurement-setup/cm-2.png"
               alt="Initial mockups"
               loading="lazy"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -127,7 +127,7 @@ export function MeasurementSetup() {
             caption="Initial attempt at streamlined copy with tag and tracking terminology to be verified.">
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee81831b71e66d3b8bf34_CM%203.png"
+              src="/images/case-studies/measurement-setup/cm-3.png"
               alt="Streamlined copy attempt"
               loading="lazy"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -227,7 +227,7 @@ export function MeasurementSetup() {
             caption="Launched copy with reduced jargon and cohesive narrative across dialogue boxes and headlines.">
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee873047c37afced10318_Group%20632552.png"
+              src="/images/case-studies/measurement-setup/group-632552.png"
               alt="Launched copy"
               loading="lazy"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -244,7 +244,7 @@ export function MeasurementSetup() {
               </h2>
             </div>
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee88110cc3a37269c4409_CM%205.png"
+              src="/images/case-studies/measurement-setup/cm-5.png"
               alt="CTA variations"
               loading="lazy"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
@@ -288,7 +288,7 @@ export function MeasurementSetup() {
               <h2 className={caseStudyH2ClassName}>Tag copy</h2>
             </div>
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee8902d8b5cac4b72383a_CM%206.png"
+              src="/images/case-studies/measurement-setup/cm-6.png"
               alt="Tag copy"
               loading="lazy"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
@@ -376,7 +376,7 @@ export function MeasurementSetup() {
               <h2 className={caseStudyH2ClassName}>Event snippet copy</h2>
             </div>
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ee899bef18141e0c9daca_CM%207.png"
+              src="/images/case-studies/measurement-setup/cm-7.png"
               alt="Event snippet"
               loading="lazy"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"

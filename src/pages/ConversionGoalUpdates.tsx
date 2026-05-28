@@ -34,7 +34,7 @@ export function ConversionGoalUpdates() {
             }>
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc3ab43fdbb1c4c6cbf8_Laptop.png"
+              src="/images/case-studies/conversion-goal-updates/laptop.png"
               alt="Conversion updates tool on laptop showing recommendations and save flow"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
@@ -106,7 +106,7 @@ export function ConversionGoalUpdates() {
               </h2>
             </div>
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc4d17cc67389db35e74_CGU%202.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-2.png"
               alt="First draft iteration of conversion goal updates from design partner"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
@@ -144,7 +144,7 @@ export function ConversionGoalUpdates() {
             }>
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc56cfebde2e6c840aa2_CGU%203.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-3.png"
               alt="Second iteration outlining exact tasks for advertisers to complete in the flow"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -312,7 +312,7 @@ export function ConversionGoalUpdates() {
             }>
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecc65b6baa5dc9999e6c5_CGU%204.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-4.png"
               alt="Launched content with concrete headlines, CTAs, and interactions driving user actions"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -358,7 +358,7 @@ export function ConversionGoalUpdates() {
             }>
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd1eff1cf83b0eef755a_CGU%205.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-5.png"
               alt="Early iteration of the complete user flow for updating conversion goals across 6 screens"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -612,7 +612,7 @@ export function ConversionGoalUpdates() {
             }>
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd0fb43fdbb1c4c70194_CGU%206.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-6.png"
               alt="Performance fluctuation communication explorations: table format and dialog format"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -652,7 +652,7 @@ export function ConversionGoalUpdates() {
             }>
 
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ece43c2cd6050d290c412_CGU%20hero.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-hero.png"
               alt="Final user flow for updating conversion goals across 3 screens"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -698,7 +698,7 @@ export function ConversionGoalUpdates() {
               </h2>
             </div>
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd58b43fdbb1c4c7213c_CGU%207.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-7.png"
               alt="In-product notification for conversion goal updates"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
@@ -894,7 +894,7 @@ export function ConversionGoalUpdates() {
               </h2>
             </div>
             <img
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/687ecd61e0440486c617b8e5_CGU%208.png"
+              src="/images/case-studies/conversion-goal-updates/cgu-8.png"
               alt="Subheader copy for conversion updates context"
               loading="lazy"
               className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"

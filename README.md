@@ -16,3 +16,7 @@ A Vite + React portfolio with case studies from Google Ads and Intuit. Originall
 - `src/pages/` — Home and case study pages (Expert Scheduling, Conversion Goal Updates, Flexible Lift Confidence, Measurement Setup)
 - `src/components/` — Header, Footer, CaseStudyLayout
 - `src/index.css` — Global styles, Tailwind, fonts
+- `public/images/case-studies/` — Case study screenshots (served at `/images/case-studies/...`)
+- `public/images/logo.png` — Site logo used in the header
+
+To re-fetch case study images from the legacy Webflow CDN (only needed if restoring from scratch), run `./scripts/download-cdn-images.sh`.
