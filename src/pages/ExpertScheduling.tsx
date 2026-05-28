@@ -27,7 +27,7 @@ export function ExpertScheduling() {
             <img
               alt="Future state concept for the scheduling tool"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/61dc9476de20fee46b908c56_Group%203766.png"
+              src="/images/case-studies/expert-scheduling/hero-group-3766.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
 
           </CaseStudyLayout>
@@ -103,7 +103,7 @@ export function ExpertScheduling() {
             <img
               alt="Expert journey diagram"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6849d1c8f215334c1dbe8850_image%20293.png"
+              src="/images/case-studies/expert-scheduling/journey-image-293.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -140,7 +140,7 @@ export function ExpertScheduling() {
               height="750"
               alt="Audit slides"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/685c69fcd3e7d190e1cc64b7_Group%20632525.png"
+              src="/images/case-studies/expert-scheduling/group-632525.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -156,7 +156,7 @@ export function ExpertScheduling() {
               height="750"
               alt="Original instructions screen"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216ed0e2d6b0a03e0034_1.jpg"
+              src="/images/case-studies/expert-scheduling/01.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
             />
           </CaseStudyLayout>
@@ -175,7 +175,7 @@ export function ExpertScheduling() {
               height="900"
               alt="Redesigned instructions screen"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216f5cdf024d95c73309_2.jpg"
+              src="/images/case-studies/expert-scheduling/02.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -197,7 +197,7 @@ export function ExpertScheduling() {
               height="900"
               alt="Refined instructions screen"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216fcb26781c3b1f456f_3.jpg"
+              src="/images/case-studies/expert-scheduling/03.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -220,7 +220,7 @@ export function ExpertScheduling() {
               height="900"
               alt="Future state concept"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216fa511c087c37be18b_4.jpg"
+              src="/images/case-studies/expert-scheduling/04.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -242,7 +242,7 @@ export function ExpertScheduling() {
             <img
               alt="Error message comparison"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/684270edaa3779ba22dffa79_Error%20message%20mockup.png"
+              src="/images/case-studies/expert-scheduling/error-message-mockup.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
             />
           </CaseStudyLayout>
@@ -265,7 +265,7 @@ export function ExpertScheduling() {
               height="900"
               alt="Error message audit spreadsheet"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831217011c7f20effc31522_6.jpg"
+              src="/images/case-studies/expert-scheduling/06.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -284,7 +284,7 @@ export function ExpertScheduling() {
               height="900"
               alt="First iteration error message"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216f781e6d4d23cda26d_7.jpg"
+              src="/images/case-studies/expert-scheduling/07.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -302,7 +302,7 @@ export function ExpertScheduling() {
               height="900"
               alt="Launched error message"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831216fd0e2d6b0a03e0078_8.jpg"
+              src="/images/case-studies/expert-scheduling/08.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -327,7 +327,7 @@ export function ExpertScheduling() {
               height="750"
               alt="Original weekly scheduling interface"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/683121705ac228a8e8197fd6_10.jpg"
+              src="/images/case-studies/expert-scheduling/10.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
             />
           </CaseStudyLayout>
@@ -346,7 +346,7 @@ export function ExpertScheduling() {
               height="900"
               alt="First iteration scheduling interface"
               loading="lazy"
-              src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6831217081fbd522db08325c_9.jpg"
+              src="/images/case-studies/expert-scheduling/09.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>

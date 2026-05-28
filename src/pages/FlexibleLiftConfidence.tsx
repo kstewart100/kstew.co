@@ -40,7 +40,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688181680e5f8491648c19c1_Variant4.png"
+            src="/images/case-studies/flexible-lift-confidence/variant-4.png"
             alt="Flexible lift confidence hero"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
@@ -179,7 +179,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6881844e3a9d10b784a2a349_Group%20632545.png"
+            src="/images/case-studies/flexible-lift-confidence/group-632545.png"
             alt="Naming options"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -205,7 +205,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688143b094c3af844ffe3765_Screenshot%202025-07-22%20at%2017.31.15.png"
+            src="/images/case-studies/flexible-lift-confidence/screenshot-2025-07-22.png"
             alt="Evaluation framework"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -229,7 +229,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818476617985a84c13098b_Group%20632560.png"
+            src="/images/case-studies/flexible-lift-confidence/group-632560.png"
             alt="Two finalists"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -270,7 +270,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818476617985a84c13098b_Group%20632560.png"
+            src="/images/case-studies/flexible-lift-confidence/group-632560.png"
             alt="Research groups"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -289,7 +289,7 @@ export function FlexibleLiftConfidence() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 p-4 md:p-5 bg-white rounded-lg border-[3px] border-black/5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]">
             <div>
               <img
-                src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688184bc30b0f8ce8074082f_Group%20130.png"
+                src="/images/case-studies/flexible-lift-confidence/group-130.png"
                 alt="Statistical significance"
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
@@ -311,7 +311,7 @@ export function FlexibleLiftConfidence() {
             </div>
             <div>
               <img
-                src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/688184c03a9d10b784a2cbef_Group%20131.png"
+                src="/images/case-studies/flexible-lift-confidence/group-131.png"
                 alt="Certainty of lift detection"
                 loading="lazy"
                 className="w-full h-auto rounded-lg mb-4" />
@@ -357,7 +357,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/689630b9f0bf361d7890dbae_Frame%20632571.png"
+            src="/images/case-studies/flexible-lift-confidence/frame-632571.png"
             alt="Survey results"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -388,7 +388,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818aa94a83be540f37746d_Group%20632542.png"
+            src="/images/case-studies/flexible-lift-confidence/group-632542.png"
             alt="Star tag iterations"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -404,7 +404,7 @@ export function FlexibleLiftConfidence() {
         </CaseStudyLayout>
         <CaseStudyLayout maxWidth="816px">
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6881851135f6c4b57b87c444_Group%20632550.png"
+            src="/images/case-studies/flexible-lift-confidence/group-632550.png"
             alt="Use case comparison"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -428,7 +428,7 @@ export function FlexibleLiftConfidence() {
           }>
 
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/68818accbf7f140bd554d796_Group%20632544.png"
+            src="/images/case-studies/flexible-lift-confidence/group-632544.png"
             alt="Tooltip versions"
             loading="lazy"
             className="w-full max-w-full block h-auto object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />

@@ -29,7 +29,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="inline-flex min-h-0 shrink-0 items-center self-center transition-opacity hover:opacity-80"
         >
           <img
-            src="https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png"
+            src="/images/logo.png"
             alt="Kyle Stewart home"
             width={160}
             height={28}
