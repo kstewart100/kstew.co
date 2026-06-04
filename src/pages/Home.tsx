@@ -76,7 +76,7 @@ export function Home() {
 
         <div className="absolute bottom-10 right-6 left-6 z-20 pointer-events-none md:left-auto lg:bottom-12 lg:right-12">
           <p className="font-mono text-[11px] sm:text-xs lg:text-sm text-white/90 text-right drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
-            Routburn Track in New Zealand. April 2025.
+            Routeburn Track in New Zealand. April 2025.
           </p>
         </div>
       </div>
@@ -102,7 +102,7 @@ export function Home() {
           className="container relative z-10 mx-auto max-w-6xl px-6 md:px-12 pt-12 md:pt-16 pb-24 md:pb-32"
         >
           <section aria-label="Case studies" className="mb-28 md:mb-36">
-            <h2 className="md:text-6xl font-heading mb-8 tracking-tight text-color-text-primary font-[600] text-[45px]">
+            <h2 className="md:text-6xl font-heading mb-8 tracking-tight text-color-text-primary font-[600] text-[30px]">
               Projects I&apos;ve worked on
             </h2>
 
