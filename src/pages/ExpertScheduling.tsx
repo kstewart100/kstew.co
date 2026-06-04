@@ -19,18 +19,36 @@ export function ExpertScheduling() {
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
           {/* Title */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-3xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Streamlining schedule creation for tax pros
             </h1>
           </CaseStudyLayout>
+          {/* Metadata */}
+          <CaseStudyLayout maxWidth="734px">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Company</strong>
+                Intuit, Virtual Expert Platform
+              </div>
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Role</strong>
+                Content Designer
+              </div>
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Team</strong>
+                UX Designers, Product Managers, Software Engineers, and Program
+                Managers
+              </div>
+            </div>
+          </CaseStudyLayout>
           {/* Hero Image */}
-          <CaseStudyLayout maxWidth="816px" caption="Future state concept for the scheduling tool.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               alt="Future state concept for the scheduling tool"
               loading="lazy"
               src="/images/case-studies/expert-scheduling/hero-group-3766.png"
-              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
-
+              className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]"
+            />
           </CaseStudyLayout>
           {/* Introduction */}
           <CaseStudyLayout maxWidth="734px">
@@ -38,7 +56,7 @@ export function ExpertScheduling() {
               Every year, Intuit onboards thousands of TurboTax Live experts as
               seasonal employees. Before they can start helping customers, they
               need to set up their base schedule—something both the experts and
-              Intuit's staffing team depend on.
+              Intuit&apos;s staffing team depend on.
             </p>
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mt-6">
               A previous team had built a self-service tool, but it was
@@ -50,23 +68,6 @@ export function ExpertScheduling() {
               scheduling tool. My goal: turn a frustrating hurdle into something
               that helped experts feel ready and confident about their new role.
             </p>
-          </CaseStudyLayout>
-          {/* Metadata */}
-          <CaseStudyLayout maxWidth="734px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
-                <strong className="font-bold block">Role</strong>
-                Content Designer
-              </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
-                <strong className="font-bold block">Team</strong>
-                Intuit, Virtual Expert Platform
-              </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
-                <strong className="font-bold block">Timeline</strong>
-                May 2020 to June 2021
-              </div>
-            </div>
           </CaseStudyLayout>
           {/* Design principles card */}
           <CaseStudyLayout maxWidth="816px">
@@ -131,11 +132,13 @@ export function ExpertScheduling() {
             <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px] mt-6">
               I put together an audit deck and asked teammates to weigh in.
               Going through everything with fresh eyes revealed many places
-              where we could make the content work harder.
+              where we could make the content work harder. Audit slides
+              documented the base schedule creation workflow, compiled from
+              product screenshots, interface strings, design files, and data.
             </p>
           </CaseStudyLayout>
           {/* Audit image */}
-          <CaseStudyLayout maxWidth="816px" caption="Audit slides documenting the base schedule creation workflow, compiled from product screenshots, interface strings, design files, and data.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="900"
               height="750"
@@ -146,7 +149,7 @@ export function ExpertScheduling() {
 
           </CaseStudyLayout>
           {/* Section: Updating the first-time use experience + original instructions image */}
-          <CaseStudyLayout maxWidth="816px" caption="Original instructions screen before redesign.">
+          <CaseStudyLayout maxWidth="816px">
             <div className="max-w-[734px]">
               <h2 className={caseStudyH2ClassName}>
                 Updating the first-time use experience
@@ -155,9 +158,9 @@ export function ExpertScheduling() {
             <img
               width="900"
               height="750"
-              alt="Original instructions screen"
+              alt="Original onboarding instructions screen"
               loading="lazy"
-              src="/images/case-studies/expert-scheduling/01.jpg"
+              src="/images/case-studies/expert-scheduling/onboarding-original.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
             />
           </CaseStudyLayout>
@@ -170,11 +173,11 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Redesigned image */}
-          <CaseStudyLayout maxWidth="816px" caption="Redesigned instructions screen (first iteration) featuring clear headings and logical information grouping.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
-              alt="Redesigned instructions screen"
+              alt="Redesigned instructions screen (first iteration)"
               loading="lazy"
               src="/images/case-studies/expert-scheduling/02.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -192,13 +195,13 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Refined image */}
-          <CaseStudyLayout maxWidth="816px" caption="Refined instructions screen with reduced content to minimize information overload.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
-              alt="Refined instructions screen"
+              alt="Refined onboarding instructions screen"
               loading="lazy"
-              src="/images/case-studies/expert-scheduling/03.jpg"
+              src="/images/case-studies/expert-scheduling/onboarding-refined.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -215,11 +218,11 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Future state image */}
-          <CaseStudyLayout maxWidth="816px" caption="Future state concept for the scheduling tool.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
-              alt="Future state concept"
+              alt="Future state concept for the scheduling tool"
               loading="lazy"
               src="/images/case-studies/expert-scheduling/04.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -234,14 +237,14 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Section: Creating helpful error messages + error comparison image */}
-          <CaseStudyLayout maxWidth="816px" caption="Error message comparison showing original version (left) and first iteration (right).">
+          <CaseStudyLayout maxWidth="816px">
             <div className="max-w-[734px]">
               <h2 className={caseStudyH2ClassName}>
                 Creating helpful error messages
               </h2>
             </div>
             <img
-              alt="Error message comparison"
+              alt="Error message comparison showing original version (left) and first iteration (right)"
               loading="lazy"
               src="/images/case-studies/expert-scheduling/error-message-mockup.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
@@ -260,11 +263,11 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Error audit spreadsheet image */}
-          <CaseStudyLayout maxWidth="816px" caption="Working spreadsheet documenting error message audit and revisions.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
-              alt="Error message audit spreadsheet"
+              alt="Working spreadsheet documenting error message audit and revisions"
               loading="lazy"
               src="/images/case-studies/expert-scheduling/06.jpg"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
@@ -279,13 +282,13 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* First iteration error image */}
-          <CaseStudyLayout maxWidth="816px" caption="First iteration of the redesigned error message with directive information.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
               alt="First iteration error message"
               loading="lazy"
-              src="/images/case-studies/expert-scheduling/07.jpg"
+              src="/images/case-studies/expert-scheduling/error-first-iteration.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -297,13 +300,13 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Launched error image */}
-          <CaseStudyLayout maxWidth="816px" caption="Launched error message that accounts for unseen use cases while providing schedule approval guidance.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
               alt="Launched error message"
               loading="lazy"
-              src="/images/case-studies/expert-scheduling/08.jpg"
+              src="/images/case-studies/expert-scheduling/error-launched.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>
@@ -317,7 +320,7 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* Section: In-product guidance + original weekly image */}
-          <CaseStudyLayout maxWidth="816px" caption="Original weekly scheduling interface.">
+          <CaseStudyLayout maxWidth="816px">
             <div className="max-w-[734px]">
               <h2 className={caseStudyH2ClassName}>
                 In-product guidance
@@ -328,7 +331,7 @@ export function ExpertScheduling() {
               height="750"
               alt="Original weekly scheduling interface"
               loading="lazy"
-              src="/images/case-studies/expert-scheduling/10.jpg"
+              src="/images/case-studies/expert-scheduling/scheduling-original.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
             />
           </CaseStudyLayout>
@@ -341,13 +344,13 @@ export function ExpertScheduling() {
             </p>
           </CaseStudyLayout>
           {/* First iteration scheduling image */}
-          <CaseStudyLayout maxWidth="816px" caption="First iteration with requirements content moved from instructions screen to scheduling interface.">
+          <CaseStudyLayout maxWidth="816px">
             <img
               width="750"
               height="900"
               alt="First iteration scheduling interface"
               loading="lazy"
-              src="/images/case-studies/expert-scheduling/09.jpg"
+              src="/images/case-studies/expert-scheduling/scheduling-first-iteration.png"
               className="w-full max-w-full block object-contain bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
 
           </CaseStudyLayout>

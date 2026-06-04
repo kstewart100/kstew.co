@@ -120,6 +120,22 @@ body {
   font-family: 'Gochi Hand', cursive;
 }
 
+/* Hero background — single layer, left-anchored focal point, smooth resize */
+.hero-background {
+  background-size: 330%;
+  background-position: center 60%;
+  transition:
+    background-size 0.3s ease,
+    background-position 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .hero-background {
+    background-size: 150%;
+    background-position: 30% center;
+  }
+}
+
 /* Topo map substrate — full-bleed background behind all in-flow content */
 .home-substrate {
   position: relative;

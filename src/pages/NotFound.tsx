@@ -24,11 +24,10 @@ export function NotFound() {
           404
         </p>
         <h1 className="font-heading text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight tracking-[-0.02em] text-color-text-primary mb-6">
-          This page isn&apos;t on the map
+        Looks like this one's off-trail. 
         </h1>
         <p className="text-base md:text-lg leading-relaxed text-color-text-secondary max-w-xl mb-10">
-          The link may be outdated, or the page may have moved. Head back to the
-          portfolio to explore recent work.
+          The link may be outdated, or the page may have moved. Head back home to explore recent work.
         </p>
         <Link
           to="/"
