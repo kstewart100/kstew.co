@@ -1,269 +1,162 @@
 import React, { useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { AnimatedHeadline } from '../components/AnimatedHeadline';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { TickerBanner } from '../components/TickerBanner';
-import { CaseStudyCard } from '../components/CaseStudyCard';
-import { Photo } from '../components/Photo';
+import { WorkCard } from '../components/WorkCard';
+
 const PAGE_TITLE = 'Kyle Stewart — Portfolio';
-const BG_STOPS = [
-{
-  pct: 0,
-  hex: '#5AAEE8'
-},
-{
-  pct: 0.7,
-  hex: '#1F4470'
-},
-{
-  pct: 0.85,
-  hex: '#0F2440'
-},
-{
-  pct: 1,
-  hex: '#294050'
-}];
 
-const caseStudies = [
-{
-  title: 'Expert scheduling',
-  description: "Simplified scheduling for Intuit's tax experts.",
-  href: '/expert-scheduling',
-  glowColor: 'rgba(212,149,107,0.15)',
-  logoUrl: "/Intuit_idITTG9Sz3_0.svg",
+const WORN_EDGE =
+  'polygon(0 4px, 2% 3px, 4% 5px, 6% 3px, 8% 4px, 10% 6px, 12% 4px, 14% 3px, 16% 5px, 18% 4px, 20% 6px, 22% 4px, 24% 3px, 26% 5px, 28% 4px, 30% 3px, 32% 5px, 34% 4px, 36% 6px, 38% 4px, 40% 3px, 42% 5px, 44% 4px, 46% 3px, 48% 5px, 50% 4px, 52% 6px, 54% 4px, 56% 3px, 58% 5px, 60% 4px, 62% 3px, 64% 5px, 66% 4px, 68% 6px, 70% 4px, 72% 3px, 74% 5px, 76% 4px, 78% 3px, 80% 5px, 82% 4px, 84% 6px, 86% 4px, 88% 3px, 90% 5px, 92% 4px, 94% 3px, 96% 5px, 98% 4px, 100% 4px, 100% 100%, 0 100%)';
 
-  logoAlt: 'Intuit'
-},
-{
-  title: 'Conversion goal updates',
-  description: 'Guided Google Ads users through updates with clarity.',
-  href: '/conversion-goal-updates',
-  glowColor: 'rgba(212,149,107,0.15)',
-  logoUrl: "/google-white-logo-6_3.png",
+const HERO_IMAGE = 'url("/images/hero-routburn.jpg")';
 
-  logoAlt: 'Google'
-},
-{
-  title: 'Flexible lift confidence',
-  description:
-  'Made results clearer and actionable for Google Ads lift users.',
-  href: '/flexible-lift-confidence',
-  glowColor: 'rgba(212,149,107,0.15)',
-  logoUrl: "/google-white-logo-6_3.png",
+const workItems = [
+  {
+    label: 'Intuit',
+    title: 'Streamlining schedule creation for tax pros',
+    href: '/expert-scheduling',
+  },
+  {
+    label: 'Google',
+    title: 'Turning a confusing conversion change into a clear one',
+    href: '/conversion-goal-updates',
+  },
+  {
+    label: 'Google',
+    title: 'Redesigning ad metrics teams can report with confidence',
+    href: '/flexible-lift-confidence',
+  },
+  {
+    label: 'Google',
+    title:
+      "Helping more advertisers measure what's working in Google Ads",
+    href: '/measurement-setup',
+  },
+];
 
-  logoAlt: 'Google'
-},
-{
-  title: 'Measurement setup',
-  description: 'Made measurement accessible for all Google Ads users.',
-  href: '/measurement-setup',
-  glowColor: 'rgba(212,149,107,0.15)',
-  logoUrl: "/google-white-logo-6_3.png",
-
-  logoAlt: 'Google'
-}];
-
-function hexToRgb(hex: string): [number, number, number] {
-  return [
-  parseInt(hex.slice(1, 3), 16),
-  parseInt(hex.slice(3, 5), 16),
-  parseInt(hex.slice(5, 7), 16)];
-
-}
-function lerpColor(a: string, b: string, t: number): string {
-  const ra = hexToRgb(a);
-  const rb = hexToRgb(b);
-  return `rgb(${Math.round(ra[0] + (rb[0] - ra[0]) * t)}, ${Math.round(ra[1] + (rb[1] - ra[1]) * t)}, ${Math.round(ra[2] + (rb[2] - ra[2]) * t)})`;
-}
-function getScrollBackgroundColor(progress: number): string {
-  const p = Math.min(Number(progress) || 0, 1);
-  for (let i = 0; i < BG_STOPS.length - 1; i++) {
-    const s = BG_STOPS[i];
-    const e = BG_STOPS[i + 1];
-    if (p >= s.pct && p <= e.pct) {
-      return lerpColor(s.hex, e.hex, (p - s.pct) / (e.pct - s.pct));
-    }
-  }
-  return BG_STOPS[BG_STOPS.length - 1].hex;
-}
 export function Home() {
   useEffect(() => {
     document.title = PAGE_TITLE;
   }, []);
-  const { scrollYProgress } = useScroll();
-  const pageBgColor = useTransform(scrollYProgress, getScrollBackgroundColor);
-  const glowOpacity = useTransform(scrollYProgress, (p) =>
-  Math.max(0, 1 - p / 0.25)
-  );
+
   return (
-    <>
-      <div className="relative w-full">
+    <div className="home-page min-h-screen bg-white text-color-text-primary font-mono selection:bg-color-primitive-blue selection:text-white">
+      {/* Hero Section */}
+      <div className="relative h-[80vh] w-full overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 z-20">
+          <Header variant="home" />
+        </div>
+
+        <div className="absolute inset-x-0 top-0 h-56 md:h-32 bg-gradient-to-b from-black/55 md:from-black/25 to-transparent pointer-events-none z-[5]" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/65 via-black/30 to-transparent pointer-events-none z-[5] md:h-1/3 md:from-black/70 md:via-black/35" />
+
         <div
-          className="absolute top-0 left-0 right-0 z-[50] w-full"
-          style={
-            {
-              '--color-text-primary': '#F5E6D3',
-              '--color-bg-canvas': 'transparent',
-              '--color-interactive-primary': '#D4956B'
-            } as React.CSSProperties
-          }>
-          <Header variant="home" className="bg-transparent" />
-        </div>
-        <div className="relative min-h-[calc(100dvh-3.25rem)] flex-1 w-full overflow-hidden">
-        <Photo
-          src="/images/nz-ridge"
-          alt="Kyle on a mountain ridge with snow-capped peaks in the distance"
-          width={1600}
-          height={900}
-          eager
-          className="absolute inset-0 h-full w-full object-cover object-[22%_bottom] md:object-[32%_bottom] origin-bottom z-[4] pointer-events-none"
+          className="hidden md:block absolute inset-0 bg-no-repeat"
+          style={{
+            backgroundImage: HERO_IMAGE,
+            backgroundSize: '150%',
+            backgroundPosition: '75% 55%',
+          }}
         />
-        <div className="pointer-events-none absolute inset-0 z-[8] saturate-[1.1]">
-          <h1 className="font-heading m-0 font-normal tracking-wide absolute top-[44vh] sm:top-[48vh] md:top-[28vh] left-1/2 -translate-x-1/2 md:translate-x-0">
+        <div
+          className="block md:hidden absolute inset-0 bg-no-repeat"
+          style={{
+            backgroundImage: HERO_IMAGE,
+            backgroundSize: '330%',
+            backgroundPosition: '35% 60%',
+          }}
+        />
+
+        <div className="absolute inset-0 z-10 flex items-start md:items-center justify-center md:justify-end pt-24 md:pt-0 pointer-events-none">
+          <div className="container mx-auto max-w-6xl px-6 md:px-12 w-full">
             <AnimatedHeadline />
-          </h1>
+          </div>
         </div>
+
+        <div className="absolute bottom-10 right-6 left-6 z-20 pointer-events-none md:left-auto lg:bottom-12 lg:right-12">
+          <p className="font-mono text-[11px] sm:text-xs lg:text-sm text-white/90 text-right drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
+            Routburn Track in New Zealand. April 2025.
+          </p>
         </div>
       </div>
-      <div className="relative min-h-screen">
-        <motion.div
-          className="fixed inset-0 z-[-2] pointer-events-none"
-          style={{
-            backgroundColor: pageBgColor
-          }} />
 
-        <motion.div
-          className="fixed inset-0 z-[-1] pointer-events-none"
-          style={{
-            opacity: glowOpacity,
-            background: `
-            radial-gradient(ellipse 70% 50% at 0% 100%, rgba(196, 160, 48, 0.60) 0%, transparent 60%),
-            radial-gradient(ellipse 45% 35% at 10% 90%, rgba(210, 175, 60, 0.35) 0%, transparent 55%),
-            radial-gradient(ellipse 55% 25% at 5% 100%, rgba(230, 195, 80, 0.20) 0%, transparent 50%)
-          `
-          }} />
+      {/* Main content — topo map substrate */}
+      <div
+        className="relative z-10 -mt-8"
+        style={{
+          filter: 'drop-shadow(0 -1px 3px rgba(41, 64, 80, 0.10))',
+        }}
+      >
+        <div className="home-substrate" style={{ clipPath: WORN_EDGE }}>
+          <img
+            src="/images/nztopomap-print.jpg?v=3"
+            alt=""
+            aria-hidden
+            className="home-substrate__map"
+            decoding="async"
+          />
+          <div className="home-substrate__wash" aria-hidden />
+          <main
+          id="main-content"
+          className="container relative z-10 mx-auto max-w-6xl px-6 md:px-12 pt-12 md:pt-16 pb-24 md:pb-32"
+        >
+          <section aria-label="Case studies" className="mb-28 md:mb-36">
+            <h2 className="md:text-6xl font-heading mb-8 tracking-tight text-color-text-primary font-[600] text-[45px]">
+              Projects I&apos;ve worked on
+            </h2>
 
-        <main id="main-content" className="flex flex-col items-center w-full">
-          <div className="relative z-10 w-full shrink-0">
-            <TickerBanner />
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+              {workItems.map((item) => (
+                <WorkCard
+                  key={item.href}
+                  label={item.label}
+                  title={item.title}
+                  href={item.href}
+                />
+              ))}
+            </div>
+          </section>
 
-          {/* Case studies */}
-        <section
-          aria-label="Case studies"
-          className="relative w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 pt-32">
-          
-          <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 lg:gap-8 mb-6 lg:mb-8">
-            {caseStudies.slice(0, 2).map((study, i) =>
-            <motion.div
-              key={study.title}
-              initial={{
-                opacity: 0,
-                y: 40
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true,
-                amount: 0.2
-              }}
-              transition={{
-                duration: 0.8,
-                ease: 'easeOut',
-                delay: i * 0.15
-              }}
-              className="w-full h-full">
-              
-                <CaseStudyCard
-                title={study.title}
-                description={study.description}
-                href={study.href}
-                glowColor={study.glowColor}
-                logoUrl={study.logoUrl}
-                logoAlt={study.logoAlt} />
-              
-              </motion.div>
-            )}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {caseStudies.slice(2).map((study, i) =>
-            <motion.div
-              key={study.title}
-              initial={{
-                opacity: 0,
-                y: 40
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true,
-                amount: 0.2
-              }}
-              transition={{
-                duration: 0.8,
-                ease: 'easeOut',
-                delay: (i + 2) * 0.15
-              }}
-              className="w-full h-full">
-              
-                <CaseStudyCard
-                title={study.title}
-                description={study.description}
-                href={study.href}
-                glowColor={study.glowColor}
-                logoUrl={study.logoUrl}
-                logoAlt={study.logoAlt} />
-              
-              </motion.div>
-            )}
-          </div>
-        </section>
-
-        {/* About */}
-        <section
-          id="about"
-          className="w-full max-w-[1280px] mx-auto px-6 md:px-16 lg:px-20 text-left pt-32 relative z-10">
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-4xl md:text-5xl font-heading font-black text-[#F5E6D3] text-glow-soft mb-8 tracking-wide">
-                About me
-              </h2>
-              <div className="text-lg md:text-xl text-[#F5E6D3]/90 leading-relaxed space-y-6">
-                <p>
-                  I&apos;m a Bay Area native and content designer with 10+ years
-                  building user experiences across startups, agencies, and
-                  companies like Google and Intuit. Above all else, I love
-                  creating and collaborating.
-                </p>
-                <p>
-                  These days I&apos;m in the Inner Sunset, running Golden Gate
-                  Park, cycling Marin&apos;s hills, and planning my next
-                  backpacking trip.
-                </p>
+          <section
+            id="about"
+            className="relative overflow-visible md:min-h-[28rem] lg:min-h-[30rem] md:py-10 lg:py-14 md:pb-10 lg:pb-10"
+          >
+            <div className="about-card bg-color-bg-surface p-10 md:p-16 w-full md:w-[85%] relative z-10 shadow-[0_4px_24px_rgba(41,64,80,0.12)]">
+              <div className="about-text">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 tracking-tight text-color-text-primary">
+                  About me
+                </h2>
+                <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
+                  <p>
+                    I&apos;m a Bay Area native and content designer with 10+
+                    years building user experiences across startups, agencies,
+                    and companies like Google and Intuit. Above all else, I love
+                    creating and collaborating.
+                  </p>
+                  <p>
+                    These days I&apos;m in the Inner Sunset, running Golden Gate
+                    Park, cycling Marin&apos;s hills, and planning my next
+                    backpacking trip.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="order-1 md:order-2 w-full flex justify-center md:justify-end">
-              <div className="relative w-full max-w-md aspect-square md:aspect-[4/5] rounded-[20px] overflow-hidden border border-[#D4956B]/30 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_4px_30px_rgba(0,0,0,0.1)]">
-                <img
-                  src="/IMG_4050.jpg"
-                  alt="Portrait of Kyle in the mountains"
-                  className="w-full h-full min-w-full min-h-full object-cover duotone-filter"
-                  loading="lazy" />
-                
-              </div>
+
+            <div className="mt-8 md:mt-0 md:absolute md:right-0 lg:right-2 md:top-1/2 md:-translate-y-1/2 z-20 w-full md:w-[min(100%,360px)] lg:w-[400px] overflow-visible">
+              <img
+                src="/images/about-portrait.png"
+                alt="Portrait of Kyle in the mountains"
+                className="about-portrait w-full h-auto"
+                loading="lazy"
+              />
             </div>
-          </div>
-        </section>
-        </main>
-        <Footer variant="home" />
+          </section>
+          </main>
+        </div>
       </div>
-    </>
+
+      <Footer variant="home" />
+    </div>
   );
-
 }

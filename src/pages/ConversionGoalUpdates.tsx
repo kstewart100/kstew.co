@@ -3,7 +3,8 @@ import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLa
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const PAGE_TITLE = 'Conversion goal updates — Kyle Stewart';
+const PAGE_TITLE =
+  'Turning a confusing conversion change into a clear one — Kyle Stewart';
 
 export function ConversionGoalUpdates() {
   useEffect(() => {
@@ -19,7 +20,7 @@ export function ConversionGoalUpdates() {
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
             <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
-              Conversion goal updates
+              Turning a confusing conversion change into a clear one
             </h1>
           </CaseStudyLayout>
           {/* Hero Image */}

@@ -3,7 +3,8 @@ import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLa
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const PAGE_TITLE = 'Expert scheduling — Kyle Stewart';
+const PAGE_TITLE =
+  "Streamlining schedule creation for tax pros — Kyle Stewart";
 
 export function ExpertScheduling() {
   useEffect(() => {
@@ -19,7 +20,7 @@ export function ExpertScheduling() {
           {/* Title */}
           <CaseStudyLayout maxWidth="734px">
             <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
-              Expert scheduling
+              Streamlining schedule creation for tax pros
             </h1>
           </CaseStudyLayout>
           {/* Hero Image */}
