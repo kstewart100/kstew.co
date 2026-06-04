@@ -1,10 +1,34 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 const PAGE_TITLE =
   'Turning a confusing conversion change into a clear one — Kyle Stewart';
+
+const bodyClassName =
+  'font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]';
+
+const imageClassName =
+  'w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 object-contain';
+
+const h3ClassName =
+  'font-heading text-[#1a1a1a] text-lg font-normal leading-snug tracking-[1.2px] mb-4';
+
+function StatusBadge({ status }: { status: 'Rejected' | 'Final' }) {
+  if (status === 'Final') {
+    return (
+      <span className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold">
+        Final
+      </span>
+    );
+  }
+  return (
+    <span className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs">
+      Rejected
+    </span>
+  );
+}
 
 export function ConversionGoalUpdates() {
   useEffect(() => {
@@ -17,67 +41,56 @@ export function ConversionGoalUpdates() {
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-10 lg:py-20">
         <div className="space-y-12 lg:space-y-16 mb-20 lg:mb-[140px]">
-          {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
-            <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
+            <h1 className="font-heading text-gray-700 text-3xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
               Turning a confusing conversion change into a clear one
             </h1>
           </CaseStudyLayout>
-          {/* Hero Image */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-            <p className="font-sans text-gray-600 text-xs font-normal leading-relaxed">
-                The conversion updates tool lets advertisers view
-                recommendations, make changes, and save updates without manually
-                editing each conversion.
-              </p>
-            }>
 
+          <CaseStudyLayout maxWidth="734px">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Company</strong>
+                Google, Google Ads
+              </div>
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Role</strong>
+                Senior Content Designer
+              </div>
+              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
+                <strong className="font-bold block mb-1">Team</strong>
+                UX Designers, Product Managers, Software Engineers, and Program
+                Managers
+              </div>
+            </div>
+          </CaseStudyLayout>
+
+          <CaseStudyLayout maxWidth="816px">
             <img
               src="/images/case-studies/conversion-goal-updates/laptop.png"
-              alt="Conversion updates tool on laptop showing recommendations and save flow"
+              alt="Conversion updates tool on laptop"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]" />
-
+              className={`${imageClassName} rounded-[20px] shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]`}
+            />
           </CaseStudyLayout>
-          {/* Intro Body Text */}
+
           <CaseStudyLayout maxWidth="734px">
-            <p className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]">
+            <p className={bodyClassName}>
               Ahead of an analytics platform update, advertisers needed to
               update their conversion goals—a critical part of their paid ad
               campaigns. The migration created duplicate conversion actions that
               needed cleanup, directly affecting their ad spend.
-              <br />
-              <br />I led UX content design and messaging strategy to walk users
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              I led UX content design and messaging strategy to walk users
               through each step clearly, ensuring they understood exactly how
               their campaigns would be affected.
             </p>
           </CaseStudyLayout>
-          {/* Metadata Grid */}
-          <CaseStudyLayout maxWidth="734px">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 border-t border-b border-[rgba(26,26,26,0.25)] py-5">
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
-                <strong className="font-bold block">Role</strong>
-                Senior Content Designer
-              </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
-                <strong className="font-bold block">Team</strong>
-                UX Designers, Product Managers, Software Engineers, and Program
-                Managers
-              </div>
-              <div className="text-[rgba(5,37,55,0.95)] text-sm leading-5 font-sans">
-                <strong className="font-bold block">Company</strong>
-                Google, Google Ads
-              </div>
-            </div>
-          </CaseStudyLayout>
-          {/* Design principles card */}
+
           <CaseStudyLayout maxWidth="816px">
             <div className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)]">
-              <h2 className={caseStudyH2ClassName}>
-                Our design principles
-              </h2>
+              <h2 className={caseStudyH2ClassName}>Our design principles</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
                 <div className="font-heading text-base font-semibold leading-[25.6px] text-[#1a1a1a]">
                   Be upfront about potential changes–both positive and negative.
@@ -92,85 +105,61 @@ export function ConversionGoalUpdates() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Refining Content Hierarchy + Image CGU 2 */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-              <p className="font-sans text-gray-600 text-xs font-normal leading-relaxed">
-                First draft iteration from design partner.
-              </p>
-            }
-          >
+
+          <CaseStudyLayout maxWidth="816px">
             <div className="max-w-[734px]">
               <h2 className={caseStudyH2ClassName}>
                 Refining the content hierarchy
               </h2>
             </div>
             <img
-              src="/images/case-studies/conversion-goal-updates/cgu-2.png"
-              alt="First draft iteration of conversion goal updates from design partner"
+              src="/images/case-studies/conversion-goal-updates/image.png"
+              alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
             />
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
-              The headlines from my partner&#39;s first iterations were
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
+              The headlines from my partner&apos;s first iterations were
               technical, lacked action, and were filled with jargon. I wanted to
               understand what we were actually asking users to do and how they
               thought about it.
-              <br />
-              <br />
-              The main headline from PM mocks captured the user&#39;s directive:
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              The main headline from PM mocks captured the user&apos;s directive:
               &quot;Update your goals from Universal Analytics conversions to
               Google Analytics 4 conversions.&quot; Technically correct, but way
               too complicated.
             </p>
           </CaseStudyLayout>
-          {/* Image CGU 3 */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-            <p
-              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
->
 
-                Second iteration outlining exact tasks for advertisers to
-                complete in the flow.
-              </p>
-            }>
-
+          <CaseStudyLayout maxWidth="816px">
             <img
-              src="/images/case-studies/conversion-goal-updates/cgu-3.png"
-              alt="Second iteration outlining exact tasks for advertisers to complete in the flow"
+              src="/images/case-studies/conversion-goal-updates/image-1.png"
+              alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
+            />
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               After digging through past research and talking with our research
               team, I reframed this as a &quot;switch&quot; to new analytics.
               Research backed this up. The language change aligned better with
               how advertisers think and reduced hesitation in testing.
             </p>
           </CaseStudyLayout>
-          {/* Decision Table 1 */}
+
           <CaseStudyLayout maxWidth="816px">
+            <h3 className={h3ClassName}>Headline copy decisions</h3>
             <div
               role="table"
-              aria-label="Proposed copy and design decisions"
+              aria-label="Headline copy decisions"
               className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono"
             >
-              {/* Desktop Table */}
               <div className="hidden md:block">
                 <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4 mb-4">
                   <div role="columnheader" className="text-xs leading-[15.6px] font-bold">Proposed copy</div>
@@ -181,398 +170,210 @@ export function ConversionGoalUpdates() {
                   <div role="cell" className="text-xs leading-[15.6px]">
                     Update your goals from Universal Analytics conversions to Google Analytics 4 conversions
                   </div>
-                  <div role="cell">
-                    <span className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs">Rejected</span>
-                  </div>
+                  <div role="cell"><StatusBadge status="Rejected" /></div>
                   <div role="cell" className="text-xs leading-[15.6px]">
-                    - Way too much jargon<br />- Assumed users knew the relationship between goals and conversions<br />- Overly detailed for a headline
+                    Way too much jargon; assumed users knew the relationship between goals and conversions; overly detailed for a headline
                   </div>
                 </div>
                 <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4 mb-4">
                   <div role="cell" className="text-xs leading-[15.6px]">
                     Change your Universal Analytics conversions to Google Analytics 4 conversions
                   </div>
-                  <div role="cell">
-                    <span className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs">Rejected</span>
-                  </div>
+                  <div role="cell"><StatusBadge status="Rejected" /></div>
                   <div role="cell" className="text-xs leading-[15.6px]">
-                    - Redundant wording (&quot;conversions to conversions&quot;)<br />- unclear what type of change was needed
+                    Redundant wording (&quot;conversions to conversions&quot;); unclear what type of change was needed
                   </div>
                 </div>
                 <div role="row" className="grid grid-cols-[2fr_1fr_2fr] gap-4">
-                  <div role="cell" className="text-xs leading-[15.6px]">Switch to Google Analytics 4 conversions</div>
-                  <div role="cell">
-                    <span className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold">Final</span>
+                  <div role="cell" className="text-xs leading-[15.6px] font-bold">
+                    Switch to Google Analytics 4 conversions
                   </div>
+                  <div role="cell"><StatusBadge status="Final" /></div>
                   <div role="cell" className="text-xs leading-[15.6px]">
-                    - Simple, clear action<br />- Focused on the action rather than details<br />- Switch matches mental model
+                    Simple, clear action; focused on the action rather than details; switch matches mental model
                   </div>
                 </div>
               </div>
-              {/* Mobile Cards */}
               <div className="md:hidden space-y-6">
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
-                    Update your goals from Universal Analytics conversions to
-                    Google Analytics 4 conversions
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
+                    Update your goals from Universal Analytics conversions to Google Analytics 4 conversions
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
-                    - Way too much jargon
-                    <br />- Assumed users knew the relationship between goals
-                    and conversions
-                    <br />- Overly detailed for a headline
+                  <p className="text-xs leading-[15.6px] text-gray-600">
+                    Way too much jargon; assumed users knew the relationship between goals and conversions; overly detailed for a headline
                   </p>
                 </div>
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
-                    Change your Universal Analytics conversions to Google
-                    Analytics 4 conversions
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
+                    Change your Universal Analytics conversions to Google Analytics 4 conversions
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
-                    - Redundant wording (&quot;conversions to conversions&quot;)
-                    <br />- unclear what type of change was needed
+                  <p className="text-xs leading-[15.6px] text-gray-600">
+                    Redundant wording (&quot;conversions to conversions&quot;); unclear what type of change was needed
                   </p>
                 </div>
                 <div>
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                      Final
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Final" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     Switch to Google Analytics 4 conversions
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
-                    - Simple, clear action
-                    <br />- Focused on the action rather than details
-                    <br />- Switch matches mental model
+                  <p className="text-xs leading-[15.6px] text-gray-600">
+                    Simple, clear action; focused on the action rather than details; switch matches mental model
                   </p>
                 </div>
               </div>
             </div>
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               Working with PM and design, I found more opportunities to clean
               things up. I cut redundant explanations and focused on what
               advertisers needed to know.
             </p>
           </CaseStudyLayout>
-          {/* Image CGU 4 */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-            <p
-              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
->
 
-                Launched content with concrete information and headlines, CTAs,
-                and interactions driving user actions.
-              </p>
-            }>
-
+          <CaseStudyLayout maxWidth="816px">
             <img
-              src="/images/case-studies/conversion-goal-updates/cgu-4.png"
-              alt="Launched content with concrete headlines, CTAs, and interactions driving user actions"
+              src="/images/case-studies/conversion-goal-updates/image-2.png"
+              alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
+            />
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               As we neared launch, I worked with help content teams to spot
               remaining knowledge gaps. We added tool tips and consolidated help
               resources to give people answers without overwhelming them.
             </p>
           </CaseStudyLayout>
-          {/* H2 From Manual to Automated */}
+
           <CaseStudyLayout maxWidth="734px">
             <h2 className={caseStudyH2ClassName}>
               From manual guide to automated recommendation
             </h2>
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
-
+            <p className={bodyClassName}>
               Product management initially wanted users to handle updates
               manually, requiring us to share extensive information upfront. The
               thinking was that more information would help people feel
-              confident making changes themselves.
+              confident making changes themselves, but this meant the user need
+              to go through 6 different screens.
             </p>
           </CaseStudyLayout>
-          {/* Image CGU 5 */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-            <p
-              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
->
 
-                Early iteration of the complete user flow for updating
-                conversion goals across 6 screens.
-              </p>
-            }>
-
+          <CaseStudyLayout maxWidth="816px">
             <img
               src="/images/case-studies/conversion-goal-updates/cgu-5.png"
-              alt="Early iteration of the complete user flow for updating conversion goals across 6 screens"
+              alt="Early iteration of the complete user flow across 6 screens"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
+            />
           </CaseStudyLayout>
-          {/* Long Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               The biggest headache was the individual conversion updates. We
               showed users a table with all their conversions and dropdown menus
               to switch between &quot;Primary&quot; and &quot;Secondary&quot;
               settings. It felt comprehensive, but was actually a mess.
-              <br />
-              <br />
-              My first iteration replaced generic dropdowns with clearer actions
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              My first iteration replaced generic drop-downs with clearer actions
               like &quot;Switch&quot; and &quot;Change to primary.&quot; I
               wanted to carry the language we used elsewhere and connect
-              directly to the user&#39;s mental model.
-              <br />
-              <br />
+              directly to the user&apos;s mental model.
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
               After putting this iteration in front of users, we heard something
               different. In roundtables, advertisers said this approach felt
               overwhelming and created decision paralysis. More options
-              didn&#39;t mean more confidence.
-              <br />
-              <br />
+              didn&apos;t mean more confidence.
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
               Taking in this feedback, I explored how to build confidence while
               reducing cognitive load. To do some of the heavy lifting, I
               explored automation. The change was straightforward: old
               conversions become secondary, new ones become primary.
-              <br />
-              <br />I mocked up a two-column layout displaying current settings
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              I mocked up a two-column layout displaying current settings
               alongside recommended changes, giving users clear visibility into
               exactly what would change before committing.
             </p>
           </CaseStudyLayout>
-          {/* Decision Table 2 */}
+
           <CaseStudyLayout maxWidth="816px">
+            <h3 className={h3ClassName}>Action / CTA decisions</h3>
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono">
-
-              {/* Desktop Table */}
+              role="table"
+              aria-label="Action and CTA decisions"
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono"
+            >
               <div className="hidden md:grid md:grid-cols-[1.5fr_1fr_2fr] gap-4">
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Action or CTA
-                </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Status
-                </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Design decision
-                </div>
-                {/* Row 1 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  Dropdown
-                </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px] font-bold">Action or CTA</div>
+                <div className="text-xs leading-[15.6px] font-bold">Status</div>
+                <div className="text-xs leading-[15.6px] font-bold">Design decision</div>
+                <div className="text-xs leading-[15.6px]">Dropdown</div>
+                <div><StatusBadge status="Rejected" /></div>
+                <div className="text-xs leading-[15.6px]">
                   Generic dropdown to change &quot;Primary&quot; to
-                  &quot;Secondary&quot; didn&#39;t provide enough context about
+                  &quot;Secondary&quot; didn&apos;t provide enough context about
                   what users were actually changing. Felt too vague for such a
                   critical migration task.
                 </div>
-                {/* Row 2 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px]">
                   &quot;Switch,&quot; &quot;Change to secondary,&quot; and
                   &quot;Change to primary&quot;
                 </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
+                <div><StatusBadge status="Rejected" /></div>
+                <div className="text-xs leading-[15.6px]">
+                  More specific CTAs actually increased cognitive load. Users
+                  said this approach felt overwhelming and created decision
+                  paralysis.
                 </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  More specific CTAs like &quot;Switch,&quot; &quot;Change to
-                  secondary,&quot; and &quot;Change to primary&quot; actually
-                  increased cognitive load.
-                  <br />
-                  <br />
-                  Users said this approach felt overwhelming and created
-                  decision paralysis.
-                </div>
-                {/* Row 3 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px] font-bold">
                   Switch to Google Analytics 4 conversions
                 </div>
-                <div>
-                  <span
-                    className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                    Final
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div><StatusBadge status="Final" /></div>
+                <div className="text-xs leading-[15.6px]">
                   Shifted to automated recommendations with review-based
                   language. Users could see exactly what would change before
                   approving, dramatically reducing cognitive load while
                   maintaining transparency.
                 </div>
               </div>
-              {/* Mobile Cards */}
               <div className="md:hidden space-y-6">
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
-                    Dropdown
-                  </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">Dropdown</p>
+                  <p className="text-xs leading-[15.6px] text-gray-600">
                     Generic dropdown to change &quot;Primary&quot; to
-                    &quot;Secondary&quot; didn&#39;t provide enough context
+                    &quot;Secondary&quot; didn&apos;t provide enough context
                     about what users were actually changing. Felt too vague for
                     such a critical migration task.
                   </p>
                 </div>
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     &quot;Switch,&quot; &quot;Change to secondary,&quot; and
                     &quot;Change to primary&quot;
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
-                    More specific CTAs like &quot;Switch,&quot; &quot;Change to
-                    secondary,&quot; and &quot;Change to primary&quot; actually
-                    increased cognitive load. Users said this approach felt
-                    overwhelming and created decision paralysis.
+                  <p className="text-xs leading-[15.6px] text-gray-600">
+                    More specific CTAs actually increased cognitive load. Users
+                    said this approach felt overwhelming and created decision
+                    paralysis.
                   </p>
                 </div>
                 <div>
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                      Final
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Final" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     Switch to Google Analytics 4 conversions
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
+                  <p className="text-xs leading-[15.6px] text-gray-600">
                     Shifted to automated recommendations with review-based
                     language. Users could see exactly what would change before
                     approving, dramatically reducing cognitive load while
@@ -582,116 +383,84 @@ export function ConversionGoalUpdates() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               After validating this with engineering, I spotted another
               opportunity. While working on performance warnings, I realized we
               were asking people to approve changes without showing the
               potential impact upfront.
-              <br />
-              <br />I made a mockup of how to share performance fluctuations on
-              the review and update page. I shared updates with my design
-              partner, and we presented the proposal to our product and
-              engineering partners.
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              I made a mockup of how to share performance fluctuations on the
+              review and update page. I shared updates with my design partner,
+              and we presented the proposal to our product and engineering
+              partners.
             </p>
           </CaseStudyLayout>
-          {/* Image CGU 6 */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-            <p
-              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
->
 
-                Performance fluctuation communication explorations showing table
-                format (left) and dialog format (right).
-              </p>
-            }>
-
+          <CaseStudyLayout maxWidth="816px">
             <img
-              src="/images/case-studies/conversion-goal-updates/cgu-6.png"
-              alt="Performance fluctuation communication explorations: table format and dialog format"
+              src="/images/case-studies/conversion-goal-updates/image-3.png"
+              alt=""
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
+            />
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               When we talked to engineering about moving these warnings earlier
               in the flow, they pointed out something helpful: since we were now
               generating recommendations automatically, we could also calculate
               and show the performance impact before users made any decisions.
-              <br />
-              <br />
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
               Why were we making people figure this out manually when we could
               automate it?
-              <br />
-              <br />
-              We flipped the entire approach. Instead of &quot;here&#39;s a
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              We flipped the entire approach. Instead of &quot;here&apos;s a
               complex table, and you need to make changes,&quot; it became
-              &quot;here&#39;s our recommendations–does this look right?&quot;
+              &quot;here&apos;s our recommendations–does this look right?&quot;
             </p>
           </CaseStudyLayout>
-          {/* Image CGU Hero */}
-          <CaseStudyLayout
-            maxWidth="816px"
-            caption={
-            <p
-              className="font-sans text-gray-600 text-xs font-normal leading-relaxed"
->
 
-                Final user flow for updating conversion goals across 3 screens.
-              </p>
-            }>
-
+          <CaseStudyLayout maxWidth="816px">
             <img
               src="/images/case-studies/conversion-goal-updates/cgu-hero.png"
               alt="Final user flow for updating conversion goals across 3 screens"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]" />
-
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
+            />
           </CaseStudyLayout>
-          {/* Body Text */}
-          <CaseStudyLayout maxWidth="734px">
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <p className={bodyClassName}>
               The result was a dramatic reduction in cognitive load while
               maintaining full transparency—users could see exactly what would
               change and why, then approve updates with confidence in a fraction
               of the time.
             </p>
           </CaseStudyLayout>
-          {/* H2 Challenging Language */}
+
           <CaseStudyLayout maxWidth="734px">
             <h2 className={caseStudyH2ClassName}>
               Challenging language precedent
             </h2>
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
-
+            <p className={bodyClassName}>
               While working on this experience, I kept two things in balance.
               What did people need to know, and what kind of urgency did we want
               to create?
-              <br />
-              <br />
-              The in-product notification and subheader copy became just as
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
+              The in-product notification and sub-header copy became just as
               important as the flow itself. They had to communicate both urgency
-              and confidence–in a tone that matched their user&#39;s mental
+              and confidence–in a tone that matched their user&apos;s mental
               model.
             </p>
           </CaseStudyLayout>
-          {/* H2 Getting Users to Take Action + Image CGU 7 */}
+
           <CaseStudyLayout maxWidth="816px">
             <div className="max-w-[734px]">
               <h2 className={caseStudyH2ClassName}>
@@ -702,183 +471,85 @@ export function ConversionGoalUpdates() {
               src="/images/case-studies/conversion-goal-updates/cgu-7.png"
               alt="In-product notification for conversion goal updates"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
             />
           </CaseStudyLayout>
-          {/* Decision Table 3 */}
+
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono">
-
-              {/* Desktop Table */}
+              role="table"
+              aria-label="Notification copy decisions"
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono"
+            >
               <div className="hidden md:grid md:grid-cols-[2.5fr_1fr_1.5fr] gap-4">
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Proposed copy
-                </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Status
-                </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Design decision
-                </div>
-                {/* Row 1 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px] font-bold">Proposed copy</div>
+                <div className="text-xs leading-[15.6px] font-bold">Status</div>
+                <div className="text-xs leading-[15.6px] font-bold">Design decision</div>
+                <div className="text-xs leading-[15.6px]">
                   Failing to migrate to Google Analytics 4 will leave your
                   campaigns vulnerable to inaccurate data, ineffective bidding
                   and lost revenue opportunities.
                 </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div><StatusBadge status="Rejected" /></div>
+                <div className="text-xs leading-[15.6px]">
                   Fear-based messaging that focused on negatives; could create
                   anxiety rather than motivation to act
                 </div>
-                {/* Row 2 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px]">
                   Migrating to Google Analytics 4 ensures your campaigns remain
                   functional and your data stays accurate as Universal Analytics
                   phases out.
                 </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  Vague messaging without clear urgency; didn&#39;t specify
+                <div><StatusBadge status="Rejected" /></div>
+                <div className="text-xs leading-[15.6px]">
+                  Vague messaging without clear urgency; didn&apos;t specify
                   timeline or actionable next steps
                 </div>
-                {/* Row 3 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
-                  <strong>Switch to Google Analytics 4 conversions. M</strong>
-                  ake the changes now to ensure you have enough historical data
-                  when Universal Analytics stops collecting data on July 1,
-                  2023.
+                <div className="text-xs leading-[15.6px] font-bold">
+                  Switch to Google Analytics 4 conversions. Make the changes now
+                  to ensure you have enough historical data when Universal
+                  Analytics stops collecting data on July 1, 2023.
                 </div>
-                <div>
-                  <span
-                    className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                    Final
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div><StatusBadge status="Final" /></div>
+                <div className="text-xs leading-[15.6px]">
                   Clear call-to-action with specific deadline; emphasizes
                   proactive benefit (historical data) rather than fear; includes
                   concrete date for urgency
                 </div>
               </div>
-              {/* Mobile Cards */}
               <div className="md:hidden space-y-6">
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     Failing to migrate to Google Analytics 4 will leave your
                     campaigns vulnerable to inaccurate data, ineffective bidding
                     and lost revenue opportunities.
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
+                  <p className="text-xs leading-[15.6px] text-gray-600">
                     Fear-based messaging that focused on negatives; could create
                     anxiety rather than motivation to act
                   </p>
                 </div>
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     Migrating to Google Analytics 4 ensures your campaigns
                     remain functional and your data stays accurate as Universal
                     Analytics phases out.
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
-                    Vague messaging without clear urgency; didn&#39;t specify
+                  <p className="text-xs leading-[15.6px] text-gray-600">
+                    Vague messaging without clear urgency; didn&apos;t specify
                     timeline or actionable next steps
                   </p>
                 </div>
                 <div>
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                      Final
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
-                    <strong>Switch to Google Analytics 4 conversions. M</strong>
-                    ake the changes now to ensure you have enough historical
-                    data when Universal Analytics stops collecting data on July
-                    1, 2023.
+                  <div className="mb-2"><StatusBadge status="Final" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
+                    Switch to Google Analytics 4 conversions. Make the changes
+                    now to ensure you have enough historical data when Universal
+                    Analytics stops collecting data on July 1, 2023.
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
+                  <p className="text-xs leading-[15.6px] text-gray-600">
                     Clear call-to-action with specific deadline; emphasizes
                     proactive benefit (historical data) rather than fear;
                     includes concrete date for urgency
@@ -887,7 +558,7 @@ export function ConversionGoalUpdates() {
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Giving Users More Context + Image CGU 8 */}
+
           <CaseStudyLayout maxWidth="816px">
             <div className="max-w-[734px]">
               <h2 className={caseStudyH2ClassName}>
@@ -898,176 +569,102 @@ export function ConversionGoalUpdates() {
               src="/images/case-studies/conversion-goal-updates/cgu-8.png"
               alt="Subheader copy for conversion updates context"
               loading="lazy"
-              className="w-full max-w-full block bg-white border-[3px] border-black/5 p-4 md:p-5 rounded-lg object-contain shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]"
+              className={`${imageClassName} rounded-lg shadow-[0_4px_20px_-2px_rgba(0,0,0,0.2)]`}
             />
           </CaseStudyLayout>
-          {/* Decision Table 4 */}
+
           <CaseStudyLayout maxWidth="816px">
             <div
-              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono">
-
-              {/* Desktop Table */}
+              role="table"
+              aria-label="Sub-header copy decisions"
+              className="bg-white w-full border-[3px] border-black/[0.08] rounded-lg p-4 md:p-5 overflow-x-auto shadow-[0_4px_20px_-2px_rgba(0,0,0,0.08)] font-mono"
+            >
               <div className="hidden md:grid md:grid-cols-[2.5fr_1fr_1.5fr] gap-4">
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Proposed copy
-                </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Status
-                </div>
-                <div
-                  className="text-xs leading-[15.6px] font-bold"
->
-
-                  Design decision
-                </div>
-                {/* Row 1 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px] font-bold">Proposed copy</div>
+                <div className="text-xs leading-[15.6px] font-bold">Status</div>
+                <div className="text-xs leading-[15.6px] font-bold">Design decision</div>
+                <div className="text-xs leading-[15.6px]">
                   Universal Analytics (360) will cease data collection on July
                   1, 2024 and Universal Analytics on August 2024. You will need
                   to migrate your primary conversions from the legacy Universal
-                  Analytics to the new Google Analytics 4.
-                  <br />
-                  <br />
-                  Your primary conversion actions for automated bidding from
-                  Universal Analytics will be superseded by Google Analytics 4
-                  conversions. After you save these changes, you should expect
-                  potential performance fluctuations over 2 to 3 learning
-                  cycles.
+                  Analytics to the new Google Analytics 4. Your primary
+                  conversion actions for automated bidding from Universal
+                  Analytics will be superseded by Google Analytics 4 conversions.
+                  After you save these changes, you should expect potential
+                  performance fluctuations over 2 to 3 learning cycles.
                 </div>
-                <div>
-                  <span
-                    className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                    Rejected
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div><StatusBadge status="Rejected" /></div>
+                <div className="text-xs leading-[15.6px]">
                   Too technical and lengthy; mixed terminology between different
                   analytics platforms; unclear timeline expectations
                 </div>
-                {/* Row 2 */}
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div className="text-xs leading-[15.6px] font-bold">
                   Since Universal Analytics will stop collecting data in July
-                  2023, we&#39;ve recommended new conversion optimization
+                  2023, we&apos;ve recommended new conversion optimization
                   settings. Your primary conversion actions for bid optimization
                   from Universal Analytics will be replaced with ones from
                   Google Analytics 4. After saving, you may see temporary
                   performance changes as the system learns for 1–2 weeks.
                 </div>
-                <div>
-                  <span
-                    className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                    Final
-                  </span>
-                </div>
-                <div
-                  className="text-xs leading-[15.6px]"
->
-
+                <div><StatusBadge status="Final" /></div>
+                <div className="text-xs leading-[15.6px]">
                   Clear, concise messaging; consistent platform naming; specific
-                  timeline that users can understand; positions change as
-                  helpful recommendation
-                  <br />
-                  <br />
-                  With the hindsight of 2+ years working this space, I now see
-                  areas of improvement... such is the life of a writer.
+                  timeline that users can understand; positions change as helpful
+                  recommendation. With the hindsight of 2+ years working this
+                  space, I now see areas of improvement… such is the life of a
+                  writer.
                 </div>
               </div>
-              {/* Mobile Cards */}
               <div className="md:hidden space-y-6">
                 <div className="border-b border-black/10 pb-4">
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#F4ACB7] border-2 border-black/5 rounded-xl px-2 py-1 text-xs"
->
-
-                      Rejected
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Rejected" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     Universal Analytics (360) will cease data collection on July
-                    1, 2024 and Universal Analytics on August 2024. You will
-                    need to migrate your primary conversions from the legacy
-                    Universal Analytics to the new Google Analytics 4.
+                    1, 2024 and Universal Analytics on August 2024. You will need
+                    to migrate your primary conversions from the legacy Universal
+                    Analytics to the new Google Analytics 4. Your primary
+                    conversion actions for automated bidding from Universal
+                    Analytics will be superseded by Google Analytics 4
+                    conversions. After you save these changes, you should expect
+                    potential performance fluctuations over 2 to 3 learning
+                    cycles.
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
+                  <p className="text-xs leading-[15.6px] text-gray-600">
                     Too technical and lengthy; mixed terminology between
                     different analytics platforms; unclear timeline expectations
                   </p>
                 </div>
                 <div>
-                  <div className="mb-2">
-                    <span
-                      className="bg-[#95D5B2] border-2 border-black/[0.08] rounded-xl px-2 py-1 text-xs font-bold"
->
-
-                      Final
-                    </span>
-                  </div>
-                  <p
-                    className="text-xs leading-[15.6px] mb-2 font-bold"
->
-
+                  <div className="mb-2"><StatusBadge status="Final" /></div>
+                  <p className="text-xs leading-[15.6px] mb-2 font-bold">
                     Since Universal Analytics will stop collecting data in July
-                    2023, we&#39;ve recommended new conversion optimization
+                    2023, we&apos;ve recommended new conversion optimization
                     settings. Your primary conversion actions for bid
                     optimization from Universal Analytics will be replaced with
                     ones from Google Analytics 4. After saving, you may see
                     temporary performance changes as the system learns for 1–2
                     weeks.
                   </p>
-                  <p
-                    className="text-xs leading-[15.6px] text-gray-600"
->
-
+                  <p className="text-xs leading-[15.6px] text-gray-600">
                     Clear, concise messaging; consistent platform naming;
-                    specific timeline that users can understand; positions
-                    change as helpful recommendation. With the hindsight of 2+
-                    years working this space, I now see areas of improvement...
-                    such is the life of a writer.
+                    specific timeline that users can understand; positions change
+                    as helpful recommendation. With the hindsight of 2+ years
+                    working this space, I now see areas of improvement… such is
+                    the life of a writer.
                   </p>
                 </div>
               </div>
             </div>
           </CaseStudyLayout>
-          {/* H2 Learnings */}
-          <CaseStudyLayout maxWidth="734px">
-            <h2 className={caseStudyH2ClassName}>
-              Learnings
-            </h2>
-            <p
-              className="font-sans text-gray-700 text-lg font-normal leading-relaxed md:leading-[28.8px]"
->
 
+          <CaseStudyLayout maxWidth="734px">
+            <h2 className={caseStudyH2ClassName}>Learnings</h2>
+            <p className={bodyClassName}>
               While specific user metrics remain confidential, the project
               received enthusiastic feedback from stakeholders for its clarity
               and usability improvements.
-              <br />
-              <br />
+            </p>
+            <p className={`${bodyClassName} mt-6`}>
               This project solidified my role as a trusted content design
               partner and demonstrated my ability to influence product decisions
               through content strategy. By challenging assumptions and
@@ -1081,5 +678,4 @@ export function ConversionGoalUpdates() {
       <Footer variant="case-study" />
     </div>
   );
-
 }
