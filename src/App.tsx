@@ -5,6 +5,7 @@ import { ExpertScheduling } from './pages/ExpertScheduling';
 import { ConversionGoalUpdates } from './pages/ConversionGoalUpdates';
 import { FlexibleLiftConfidence } from './pages/FlexibleLiftConfidence';
 import { MeasurementSetup } from './pages/MeasurementSetup';
+import { NotFound } from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ export default function App() {
       <Route path="/conversion-goal-updates" element={<ConversionGoalUpdates />} />
       <Route path="/flexible-lift-confidence" element={<FlexibleLiftConfidence />} />
       <Route path="/measurement-setup" element={<MeasurementSetup />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     </>
   );
