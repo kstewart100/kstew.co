@@ -3,7 +3,8 @@ import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLa
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const PAGE_TITLE = 'Flexible lift confidence — Kyle Stewart';
+const PAGE_TITLE =
+  'Redesigning ad metrics teams can report with confidence — Kyle Stewart';
 
 export function FlexibleLiftConfidence() {
   useEffect(() => {
@@ -25,7 +26,7 @@ export function FlexibleLiftConfidence() {
         {/* Hero Title */}
         <CaseStudyLayout maxWidth="734px">
           <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
-            Flexible lift confidence
+            Redesigning ad metrics teams can report with confidence
           </h1>
         </CaseStudyLayout>
         {/* Hero Image */}

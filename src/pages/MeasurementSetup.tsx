@@ -3,7 +3,8 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyLayout, caseStudyH2ClassName } from '../components/CaseStudyLayout';
 
-const PAGE_TITLE = 'Measurement setup — Kyle Stewart';
+const PAGE_TITLE =
+  "Helping more advertisers measure what's working in Google Ads — Kyle Stewart";
 
 export function MeasurementSetup() {
   useEffect(() => {
@@ -19,7 +20,8 @@ export function MeasurementSetup() {
           {/* Title Section */}
           <CaseStudyLayout maxWidth="734px">
             <h1 className="font-heading text-gray-700 text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight lg:leading-[72px] tracking-[-0.02em]">
-              Measurement Setup
+              Helping more advertisers measure what&apos;s working in Google
+              Ads
             </h1>
           </CaseStudyLayout>
           {/* Hero Image */}

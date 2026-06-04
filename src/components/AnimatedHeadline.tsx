@@ -1,112 +1,72 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
 export interface AnimatedHeadlineProps {
-  prefix?: string;
   words?: string[];
   interval?: number;
   className?: string;
 }
 
-const DEFAULT_WORDS = ['explore.', 'write.', 'push.', 'show up.', 'build.'];
+const DEFAULT_WORDS = ['explore', 'write', 'push', 'show up', 'build'];
 
 export function AnimatedHeadline({
-  prefix = 'Get out and',
   words = DEFAULT_WORDS,
-  interval = 3000,
+  interval = 2400,
   className = '',
 }: AnimatedHeadlineProps) {
-  const [index, setIndex] = useState(0);
-  const [wordSlotWidth, setWordSlotWidth] = useState(0);
-  const [fontsReady, setFontsReady] = useState(false);
-  const measureRef = useRef<HTMLSpanElement>(null);
-
-  useLayoutEffect(() => {
-    const el = measureRef.current;
-    if (!el) return;
-
-    const measure = () => {
-      let max = 0;
-      for (const w of words) {
-        el.textContent = w;
-        const width = el.getBoundingClientRect().width;
-        max = Math.max(max, width);
-      }
-      // Small buffer: per-letter spans can kern slightly wider than one measurement string.
-      const buffer = document.fonts.status === 'loaded' ? 2 : 12;
-      const nextSlotWidth = Math.ceil(max) + buffer;
-      setWordSlotWidth(nextSlotWidth);
-    };
-
-    measure();
-    document.fonts.ready.then(() => {
-      measure();
-      setFontsReady(true);
-    });
-    window.addEventListener('resize', measure);
-    return () => window.removeEventListener('resize', measure);
-  }, [words]);
+  const [wordIndex, setWordIndex] = useState(0);
+  const [wordVisible, setWordVisible] = useState(true);
 
   useEffect(() => {
-    if (!fontsReady) return;
+    const prefersReduced = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+    if (prefersReduced) {
+      setWordIndex(words.length - 1);
+      return;
+    }
+
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
+      setWordVisible(false);
+      setTimeout(() => {
+        setWordIndex((prev) => (prev + 1) % words.length);
+        setWordVisible(true);
+      }, 350);
     }, interval);
 
     return () => clearInterval(timer);
-  }, [words.length, interval, fontsReady]);
+  }, [words.length, interval]);
 
-  const sentenceContainer = {
-    hidden: { opacity: 0, y: 6, filter: 'blur(2px)' },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      transition: { duration: 0.55, ease: 'easeOut' },
-    },
-    exit: {
-      opacity: 0,
-      y: -4,
-      filter: 'blur(2px)',
-      transition: { duration: 0.32, ease: 'easeInOut' },
-    },
-  };
+  const longestWord = words.reduce((a, b) => (a.length >= b.length ? a : b));
 
   return (
-    <div
-      className={`flex flex-nowrap items-baseline justify-start text-[34px] sm:text-[50px] md:text-[72px] lg:text-[70px] ${className}`}
-    >
-      <span className="font-heading font-medium tracking-tight text-[#F2F4F6] whitespace-nowrap mr-[0.25em]">
-        {prefix}
-      </span>
-
-      <span
-        ref={measureRef}
-        className="font-handwriting invisible absolute left-0 top-0 whitespace-nowrap pointer-events-none"
-        aria-hidden
-      />
-
-      <div
-        className="relative inline-flex shrink-0 items-baseline justify-start min-h-[1em]"
-        style={
-          wordSlotWidth > 0
-            ? { width: wordSlotWidth, minWidth: wordSlotWidth }
-            : undefined
-        }
+    <div className={`text-center md:text-right ${className}`}>
+      <h1
+        className="font-heading font-black text-white tracking-tight leading-[0.95]"
+        style={{ fontSize: 'clamp(4rem, 12vw, 9rem)' }}
       >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={words[index]}
-            variants={sentenceContainer}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="font-handwriting text-[#F2F4F6] flex flex-nowrap items-center"
-            style={{ whiteSpace: 'nowrap' }}
+        Get out.
+      </h1>
+      <div
+        className="font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap"
+        style={{
+          color: '#1AFF66',
+          fontSize: 'clamp(4rem, 12vw, 9rem)',
+        }}
+      >
+        <span className="relative inline-block align-baseline">
+          <span aria-hidden="true" className="invisible">
+            {longestWord}.
+          </span>
+          <span
+            className="absolute inset-0 text-center md:text-right transition-all duration-300"
+            style={{
+              opacity: wordVisible ? 1 : 0,
+              filter: wordVisible ? 'blur(0px)' : 'blur(8px)',
+            }}
           >
-            {words[index]}
-          </motion.div>
-        </AnimatePresence>
+            {words[wordIndex]}.
+          </span>
+        </span>
       </div>
     </div>
   );
