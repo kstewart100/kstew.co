@@ -13,9 +13,10 @@ const HERO_IMAGE = 'url("/images/hero-routburn.jpg")';
 
 const workItems = [
   {
-    label: 'Intuit',
-    title: 'Streamlining schedule creation for tax pros',
-    href: '/expert-scheduling',
+    label: 'Google',
+    title:
+      "Helping more advertisers measure what's working in Google Ads",
+    href: '/measurement-setup',
   },
   {
     label: 'Google',
@@ -28,10 +29,9 @@ const workItems = [
     href: '/flexible-lift-confidence',
   },
   {
-    label: 'Google',
-    title:
-      "Helping more advertisers measure what's working in Google Ads",
-    href: '/measurement-setup',
+    label: 'Intuit',
+    title: 'Streamlining schedule creation for tax pros',
+    href: '/expert-scheduling',
   },
 ];
 
