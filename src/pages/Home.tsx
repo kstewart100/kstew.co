@@ -1,45 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AnimatedHeadline } from '../components/AnimatedHeadline';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WorkCard } from '../components/WorkCard';
-
-const PAGE_TITLE = 'Kyle Stewart — Portfolio';
+import { caseStudies } from '../data/caseStudies';
 
 const WORN_EDGE =
   'polygon(0 4px, 2% 3px, 4% 5px, 6% 3px, 8% 4px, 10% 6px, 12% 4px, 14% 3px, 16% 5px, 18% 4px, 20% 6px, 22% 4px, 24% 3px, 26% 5px, 28% 4px, 30% 3px, 32% 5px, 34% 4px, 36% 6px, 38% 4px, 40% 3px, 42% 5px, 44% 4px, 46% 3px, 48% 5px, 50% 4px, 52% 6px, 54% 4px, 56% 3px, 58% 5px, 60% 4px, 62% 3px, 64% 5px, 66% 4px, 68% 6px, 70% 4px, 72% 3px, 74% 5px, 76% 4px, 78% 3px, 80% 5px, 82% 4px, 84% 6px, 86% 4px, 88% 3px, 90% 5px, 92% 4px, 94% 3px, 96% 5px, 98% 4px, 100% 4px, 100% 100%, 0 100%)';
 
 const HERO_IMAGE = 'url("/images/hero-routburn.jpg")';
 
-const workItems = [
-  {
-    label: 'Google',
-    title:
-      "Helping more advertisers measure what's working in Google Ads",
-    href: '/measurement-setup',
-  },
-  {
-    label: 'Google',
-    title: 'Turning a confusing conversion change into a clear one',
-    href: '/conversion-goal-updates',
-  },
-  {
-    label: 'Google',
-    title: 'Redesigning ad metrics teams can report with confidence',
-    href: '/flexible-lift-confidence',
-  },
-  {
-    label: 'Intuit',
-    title: 'Streamlining schedule creation for tax pros',
-    href: '/expert-scheduling',
-  },
-];
-
 export function Home() {
-  useEffect(() => {
-    document.title = PAGE_TITLE;
-  }, []);
-
   return (
     <div className="home-page min-h-screen bg-white text-color-text-primary font-mono selection:bg-color-primitive-blue selection:text-white">
       {/* Hero Section */}
@@ -107,12 +78,12 @@ export function Home() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-              {workItems.map((item) => (
+              {caseStudies.map((study) => (
                 <WorkCard
-                  key={item.href}
-                  label={item.label}
-                  title={item.title}
-                  href={item.href}
+                  key={study.slug}
+                  label={study.label}
+                  title={study.title}
+                  href={`/${study.slug}`}
                 />
               ))}
             </div>

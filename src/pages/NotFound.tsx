@@ -1,18 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const PAGE_TITLE = 'Page not found — Kyle Stewart';
-
 export function NotFound() {
-  useEffect(() => {
-    document.title = PAGE_TITLE;
-    return () => {
-      document.title = 'Kyle Stewart — Portfolio';
-    };
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col bg-white text-color-text-primary font-mono selection:bg-color-primitive-blue selection:text-white">
       <Header variant="case-study" />

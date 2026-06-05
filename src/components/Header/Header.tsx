@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="hidden md:block font-heading font-medium text-sm">
           Kyle Stewart
           <span className="mx-3 opacity-50">·</span>
-          Content design
+          Content Design
         </div>
 
         <a

@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
   CaseStudyLayout,
   CopyDecisionTable,
@@ -11,9 +10,6 @@ import {
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const PAGE_TITLE =
-  "Helping more advertisers measure what's working in Google Ads — Kyle Stewart";
-
 const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
@@ -22,13 +18,6 @@ const imgShadow = `${documentCaseStudyImageClassName} shadow-[0_12px_40px_rgba(4
 const list = documentCaseStudyListClassName;
 
 export function MeasurementSetup() {
-  useEffect(() => {
-    document.title = PAGE_TITLE;
-    return () => {
-      document.title = 'Kyle Stewart — Portfolio';
-    };
-  }, []);
-
   return (
     <div className="w-full min-h-screen flex flex-col bg-[#FAFAFA]">
       <Header variant="case-study" />
