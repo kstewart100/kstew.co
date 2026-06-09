@@ -19,7 +19,7 @@ export const documentCaseStudyTitleClassName =
   'font-heading text-[rgb(55,53,47)] text-[2rem] sm:text-[2.5rem] font-bold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyBodyClassName =
-  'font-sans text-[rgb(55,53,47)] text-base font-normal leading-normal';
+  'font-body text-[rgb(55,53,47)] text-base font-normal leading-normal';
 
 export const documentCaseStudyH2ClassName =
   'font-heading text-[rgb(55,53,47)] text-2xl font-semibold leading-[1.2] tracking-[-0.01em]';
@@ -31,7 +31,7 @@ export const documentCaseStudyImageClassName =
   'w-full max-w-full block h-auto my-5 first:mt-0 last:mb-0';
 
 export const documentCaseStudyListClassName =
-  'font-sans text-[rgb(55,53,47)] text-base font-normal leading-normal list-disc pl-6 space-y-1';
+  'font-body text-[rgb(55,53,47)] text-base font-normal leading-normal list-disc pl-6 space-y-1';
 
 export const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
 
@@ -60,7 +60,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
         {caption && (
           <div className="mt-4 w-full">
             {typeof caption === 'string' ? (
-              <p className="font-sans text-xs text-gray-600 leading-relaxed text-left">
+              <p className="font-body text-xs text-gray-600 leading-relaxed text-left">
                 {caption}
               </p>
             ) : (

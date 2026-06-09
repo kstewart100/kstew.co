@@ -33,7 +33,7 @@ export function TickerBanner() {
   if (prefersReducedMotion) {
     return (
       <div
-        className="font-sans text-center text-[16px] tracking-wide text-[#C4A35A]"
+        className="font-body text-center text-[16px] tracking-wide text-[#C4A35A]"
         style={{ background: '#0B3D4A', padding: '18px 16px' }}
         aria-label="Availability"
       >
@@ -82,7 +82,7 @@ export function TickerBanner() {
         {[...tickerItems, ...tickerItems].map((item, i) => (
           <span
             key={i}
-            className="font-sans whitespace-nowrap py-0 px-7 text-[16px]"
+            className="font-body whitespace-nowrap py-0 px-7 text-[16px]"
             style={{
               fontWeight: item === lineA || item === lineB ? 600 : 400,
               letterSpacing: item === separator ? 0 : '0.04em',

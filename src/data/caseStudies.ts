@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://kstew.co';
-export const DEFAULT_PAGE_TITLE = 'Kyle Stewart — Portfolio';
-export const SITE_DESCRIPTION = 'Kyle Stewart — Content Design';
+export const DEFAULT_PAGE_TITLE = 'Content Design Portfolio';
+export const SITE_DESCRIPTION = 'Kyle Stewart · Content Design';
 
 export interface CaseStudy {
   slug: string;

@@ -1,6 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="7" fill="#294050"/>
-  <line x1="8.85" y1="2.16" x2="8.85" y2="29.53" stroke="#F2F4F6" stroke-width="3.95" stroke-linecap="round"/>
-  <line x1="9.91" y1="14.92" x2="23.55" y2="2.65" stroke="#d880f0" stroke-width="3.95" stroke-linecap="round"/>
-  <line x1="8.17" y1="14.50" x2="24.37" y2="29.32" stroke="#64b8f0" stroke-width="3.95" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <image width="32" height="32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACMElEQVR4nMWXvWsWQRCHn9v3EiMaDWkkEAQFKytFLSTpJME/wCKkDcRGrLUUS7HURrERBK1iYZGvwsJGEEIgYmfg1YSkEFHwK+9FDn4Lw3Lnnffu6cAyd7ezu8/O7s7swX+WpEa90/M+kNXo05l+e/xjcbE6SlSOAY+BF8DZikFS6TPAE2CuH6hU+oFcn5d1oFOybAPS08Bn0+ZEUwgnvQrsqewAh/U9KYCdAX7JNh98Axgx3mwEsGhmsxUAJPJILtdk81P6DTDedPa20ZIB2DYAztjcUv136VXN3PYTFSAxLr2num/Sz4ADqvPeiQpwVN8HgafB4PcLYkdUgF3N6giwErj9tmn31xuuLsAmcBJ4rfcf0tdlW3ZEowD0gE9AV+/+aM4GR5G2APaMJ/LyBbjc1uBlAD095wHpQqzB05p2mWzfA5NailRgfYmraZdo9sNKNq2LK1iCzOyBedWnMXd+3U3o4/2NNo5fGUCmZLQUBKA7xt61CbAPfFCcfxiE4EfGA65NgB3gkL7fDSAWgIMxklBVMho2s70ZLMdLYDQWhKu4D/gr2NVgY64Bx2MEKVcBkJgBrgjAn5Q8WJ3uF8LVuJLZAS4Fl9E8dV8M+moEsKwckJk9YAEsxDngo8meX4GpphAd6QUzq65uQkW3XA9xCngXLNtgAXSlODU4D7yV+2crdriHGANeCeC57PuKDwPG9VXi4fKANQEM6b1xqHYlz3+S6HmhyZ+N/2mpbPcb20u4YQUk5scAAAAASUVORK5CYII="/>
 </svg>

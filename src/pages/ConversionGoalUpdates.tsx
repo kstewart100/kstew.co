@@ -150,9 +150,7 @@ export function ConversionGoalUpdates() {
                     'Redundant wording ("conversions to conversions"); unclear what type of change was needed',
                 },
                 {
-                  copy: (
-                    <strong>Switch to Google Analytics 4 conversions</strong>
-                  ),
+                  copy: 'Switch to Google Analytics 4 conversions',
                   status: 'Final',
                   decision:
                     'Simple, clear action; focused on the action rather than details; switch matches mental model',
@@ -261,9 +259,7 @@ export function ConversionGoalUpdates() {
                     'More specific CTAs actually increased cognitive load. Users said this approach felt overwhelming and created decision paralysis.',
                 },
                 {
-                  copy: (
-                    <strong>Switch to Google Analytics 4 conversions</strong>
-                  ),
+                  copy: 'Save',
                   status: 'Final',
                   decision:
                     'Shifted to automated recommendations with review-based language. Users could see exactly what would change before approving, dramatically reducing cognitive load while maintaining transparency.',
@@ -376,13 +372,8 @@ export function ConversionGoalUpdates() {
                     "Vague messaging without clear urgency; didn't specify timeline or actionable next steps",
                 },
                 {
-                  copy: (
-                    <strong>
-                      Switch to Google Analytics 4 conversions. Make the changes
-                      now to ensure you have enough historical data when Universal
-                      Analytics stops collecting data on July 1, 2023.
-                    </strong>
-                  ),
+                  copy:
+                    'Switch to Google Analytics 4 conversions. Make the changes now to ensure you have enough historical data when Universal Analytics stops collecting data on July 1, 2023.',
                   status: 'Final',
                   decision:
                     'Clear call-to-action with specific deadline; emphasizes proactive benefit (historical data) rather than fear; includes concrete date for urgency',
@@ -414,17 +405,8 @@ export function ConversionGoalUpdates() {
                     'Too technical and lengthy; mixed terminology between different analytics platforms; unclear timeline expectations',
                 },
                 {
-                  copy: (
-                    <strong>
-                      Since Universal Analytics will stop collecting data in
-                      July 2023, we&apos;ve recommended new conversion optimization
-                      settings. Your primary conversion actions for bid
-                      optimization from Universal Analytics will be replaced with
-                      ones from Google Analytics 4. After saving, you may see
-                      temporary performance changes as the system learns for 1–2
-                      weeks.
-                    </strong>
-                  ),
+                  copy:
+                    "Since Universal Analytics will stop collecting data in July 2023, we've recommended new conversion optimization settings. Your primary conversion actions for bid optimization from Universal Analytics will be replaced with ones from Google Analytics 4. After saving, you may see temporary performance changes as the system learns for 1–2 weeks.",
                   status: 'Final',
                   decision:
                     'Clear, concise messaging; consistent platform naming; specific timeline that users can understand; positions change as helpful recommendation. With the hindsight of 2+ years working this space, I now see areas of improvement… such is the life of a writer.',

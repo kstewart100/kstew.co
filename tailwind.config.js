@@ -8,11 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inconsolata', 'monospace'],
         body: ['Inconsolata', 'monospace'],
+        mono: ['Inconsolata', 'monospace'],
         heading: ['Cabin', 'sans-serif'],
-        handwriting: ['Caveat', 'cursive'],
-        mono: ['"Geist Mono"', 'monospace'],
+        handwriting: ['Gochi Hand', 'cursive'],
       },
       colors: {
         'color-primitive-blue': 'var(--color-primitive-blue)',

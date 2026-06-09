@@ -16,6 +16,9 @@ export const Header: React.FC<HeaderProps> = ({
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
+  const taglineClassName =
+    'hidden md:block font-medium text-lg tracking-normal !font-heading';
+
   return (
     <header
       data-id={dataId}
@@ -42,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
           />
         </Link>
 
-        <div className="hidden md:block font-heading font-medium text-sm">
+        <div className={taglineClassName}>
           Kyle Stewart
           <span className="mx-3 opacity-50">·</span>
           Content Design

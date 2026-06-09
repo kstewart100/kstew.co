@@ -1,4 +1,3 @@
-import '@fontsource/geist-mono/400.css';
 import './index.css';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
