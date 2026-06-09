@@ -1,33 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
-let initialized = false;
-
-export function initAnalytics() {
-  if (!GA_ID || initialized || typeof window === 'undefined') return;
-
-  initialized = true;
-
-  const script = document.createElement('script');
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-  document.head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer.push(args);
-  };
-  window.gtag('js', new Date());
-  window.gtag('config', GA_ID, { send_page_view: false });
-}
-
 export function Analytics() {
   const { pathname, search } = useLocation();
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    if (!GA_ID || !window.gtag) return;
+    if (!GA_ID || typeof window.gtag !== 'function') return;
+
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
 
     window.gtag('event', 'page_view', {
       page_path: pathname + search,
