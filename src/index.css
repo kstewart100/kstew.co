@@ -136,7 +136,7 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-  opacity: 0.38;
+  opacity: 1;
   mix-blend-mode: multiply;
   pointer-events: none;
   user-select: none;

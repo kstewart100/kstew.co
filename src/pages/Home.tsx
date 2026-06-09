@@ -20,7 +20,7 @@ export function Home() {
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/65 via-black/30 to-transparent pointer-events-none z-[5] md:h-1/3 md:from-black/70 md:via-black/35" />
 
         <div
-          className="hidden md:block absolute inset-0 bg-no-repeat"
+          className="hidden md:block absolute right-0 bottom-0 w-full h-full bg-no-repeat"
           style={{
             backgroundImage: HERO_IMAGE,
             backgroundSize: '150%',
@@ -58,7 +58,7 @@ export function Home() {
       >
         <div className="home-substrate">
           <img
-            src="/images/nztopomap-print.jpg?v=3"
+            src="/images/map-paper.png"
             alt=""
             aria-hidden
             className="home-substrate__map"
@@ -67,10 +67,10 @@ export function Home() {
           <div className="home-substrate__wash" aria-hidden />
           <main
           id="main-content"
-          className="container relative z-10 mx-auto max-w-6xl px-6 md:px-12 pt-12 md:pt-16 pb-24 md:pb-32"
+          className="container relative z-10 mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-16 pb-6 md:pb-32"
         >
           <section aria-label="Case studies" className="mb-28 md:mb-36">
-            <h2 className="md:text-6xl font-heading mb-8 tracking-tight text-color-text-primary font-[600] text-[30px]">
+            <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
               Projects I&apos;ve worked on
             </h2>
 
