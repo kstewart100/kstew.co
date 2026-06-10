@@ -56,72 +56,67 @@ export function Home() {
           filter: 'drop-shadow(0 -1px 3px rgba(41, 64, 80, 0.10))',
         }}
       >
-        <div className="home-substrate">
+        <main id="main-content" className="relative z-10 w-full">
           <img
             src="/images/map-paper.png"
             alt=""
             aria-hidden
-            className="home-substrate__map"
             decoding="async"
           />
-          <div className="home-substrate__wash" aria-hidden />
-          <main
-          id="main-content"
-          className="container relative z-10 mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-16 pb-6 md:pb-32"
-        >
-          <section aria-label="Case studies" className="mb-28 md:mb-36">
-            <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
-              Projects I&apos;ve worked on
-            </h2>
+          <div className="container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-16 pb-6 md:pb-32">
+            <section aria-label="Case studies" className="mb-28 md:mb-36">
+              <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
+                Some of my projects
+              </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-              {caseStudies.map((study) => (
-                <WorkCard
-                  key={study.slug}
-                  label={study.label}
-                  title={study.title}
-                  href={`/${study.slug}`}
-                />
-              ))}
-            </div>
-          </section>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                {caseStudies.map((study) => (
+                  <WorkCard
+                    key={study.slug}
+                    label={study.label}
+                    title={study.title}
+                    href={`/${study.slug}`}
+                  />
+                ))}
+              </div>
+            </section>
 
-          <section
-            id="about"
-            className="relative overflow-visible md:min-h-[28rem] lg:min-h-[30rem] md:py-10 lg:py-14 md:pb-10 lg:pb-10"
-          >
-            <div className="about-card bg-color-bg-surface p-10 md:p-16 w-full md:w-[85%] relative z-10 shadow-[0_4px_24px_rgba(41,64,80,0.12)]">
-              <div className="about-text">
-                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 tracking-tight text-color-text-primary">
-                  About me
-                </h2>
-                <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
-                  <p>
-                    I&apos;m a Bay Area native and content designer with 10+
-                    years building user experiences across startups, agencies,
-                    and companies like Google and Intuit. Above all else, I love
-                    creating and collaborating.
-                  </p>
-                  <p>
-                    These days I&apos;m in the Inner Sunset, running Golden Gate
-                    Park, cycling Marin&apos;s hills, and planning my next
-                    backpacking trip.
-                  </p>
+            <section
+              id="about"
+              className="relative overflow-visible md:min-h-[28rem] lg:min-h-[30rem] md:py-10 lg:py-14 md:pb-10 lg:pb-10"
+            >
+              <div className="about-card bg-color-bg-surface p-10 md:p-16 w-full md:w-[85%] relative z-10 shadow-[0_4px_24px_rgba(41,64,80,0.12)]">
+                <div className="about-text">
+                  <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 tracking-tight text-color-text-primary">
+                    About me
+                  </h2>
+                  <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
+                    <p>
+                      I&apos;m a Bay Area native and content designer with 10+
+                      years building user experiences across startups, agencies,
+                      and companies like Google and Intuit. Above all else, I love
+                      creating and collaborating.
+                    </p>
+                    <p>
+                      These days I&apos;m in the Inner Sunset, running Golden Gate
+                      Park, cycling Marin&apos;s hills, and planning my next
+                      backpacking trip.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-8 md:mt-0 md:absolute md:right-0 lg:right-2 md:top-1/2 md:-translate-y-1/2 z-20 w-full md:w-[min(100%,360px)] lg:w-[400px] overflow-visible">
-              <img
-                src="/images/about-portrait.png"
-                alt="Portrait of Kyle in the mountains"
-                className="about-portrait w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </section>
-          </main>
-        </div>
+              <div className="mt-8 md:mt-0 md:absolute md:right-0 lg:right-2 md:top-1/2 md:-translate-y-1/2 z-20 w-full md:w-[min(100%,360px)] lg:w-[400px] overflow-visible">
+                <img
+                  src="/images/about-portrait.png"
+                  alt="Portrait of Kyle in the mountains"
+                  className="about-portrait w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
 
       <Footer variant="home" />

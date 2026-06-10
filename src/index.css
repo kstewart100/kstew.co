@@ -123,33 +123,30 @@ body {
 }
 
 /* Topo map substrate — full-bleed background behind all in-flow content */
-.home-substrate {
+#main-content {
   position: relative;
-  display: flow-root;
+  min-height: 100dvh;
   overflow: hidden;
   background-color: var(--color-primitive-cream);
 }
 
-.home-substrate__map {
+#main-content > img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
-  height: auto;
-  opacity: 1;
-  mix-blend-mode: multiply;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
   pointer-events: none;
+  mix-blend-mode: multiply;
   user-select: none;
 }
 
-.home-substrate__wash {
-  position: absolute;
-  inset: 0;
-  background-color: #f4efe3;
-  opacity: 0.3;
-  pointer-events: none;
+#main-content > *:not(img) {
+  position: relative;
+  z-index: 1;
 }
-
 /* About section: keep image overlap while clearing copy at any width */
 .about-card {
   container-type: inline-size;
