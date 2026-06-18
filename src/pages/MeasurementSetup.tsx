@@ -371,7 +371,7 @@ export function MeasurementSetup() {
           </CaseStudyLayout>
         </div>
       </main>
-      <Footer variant="case-study" />
+      <Footer />
     </div>
   );
 }

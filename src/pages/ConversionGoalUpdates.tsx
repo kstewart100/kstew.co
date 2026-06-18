@@ -433,7 +433,7 @@ export function ConversionGoalUpdates() {
           </CaseStudyLayout>
         </div>
       </main>
-      <Footer variant="case-study" />
+      <Footer />
     </div>
   );
 }

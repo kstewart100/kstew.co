@@ -33,7 +33,7 @@ export function WorkCard({ label, title, href }: WorkCardProps) {
   return (
     <Link
       to={href}
-      className="group flex flex-col h-full min-h-[260px] md:min-h-[320px] bg-color-bg-surface p-8 md:p-12 border border-color-border-default shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg [&:hover_span]:text-color-interactive-primary [&:hover_h3]:text-color-interactive-primary"
+      className="group flex flex-col h-full min-h-[260px] md:min-h-[320px] bg-color-bg-surface p-8 md:p-12 border border-black transition-all duration-300 hover:-translate-y-1 hover:border-color-interactive-primary focus-visible:border-color-interactive-primary active:border-color-interactive-primary [&:hover_span]:text-color-interactive-primary [&:hover_h3]:text-color-interactive-primary"
     >
       <div className="flex items-start justify-between mb-8">
         <span className="font-mono text-[26px] text-color-text-secondary transition-colors duration-300">

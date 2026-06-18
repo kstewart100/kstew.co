@@ -10,7 +10,7 @@ export default {
       fontFamily: {
         body: ['Inconsolata', 'monospace'],
         mono: ['Inconsolata', 'monospace'],
-        heading: ['Cabin', 'sans-serif'],
+        heading: ['Be Vietnam Pro', 'sans-serif'],
         handwriting: ['Gochi Hand', 'cursive'],
       },
       colors: {

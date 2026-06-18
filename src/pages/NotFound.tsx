@@ -27,7 +27,7 @@ export function NotFound() {
           Back to home
         </Link>
       </main>
-      <Footer variant="home" />
+      <Footer />
     </div>
   );
 }

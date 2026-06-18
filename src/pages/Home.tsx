@@ -49,7 +49,6 @@ export function Home() {
         </div>
       </div>
 
-      {/* Main content — topo map substrate */}
       <div
         className="relative z-10 -mt-8"
         style={{
@@ -57,16 +56,10 @@ export function Home() {
         }}
       >
         <main id="main-content" className="relative z-10 w-full">
-          <img
-            src="/images/map-paper.png"
-            alt=""
-            aria-hidden
-            decoding="async"
-          />
-          <div className="container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-16 pb-6 md:pb-32">
+          <div className="container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-8">
             <section aria-label="Case studies" className="mb-28 md:mb-36">
               <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
-                Some of my projects
+                Take a look around
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
@@ -85,9 +78,9 @@ export function Home() {
               id="about"
               className="relative overflow-visible md:min-h-[28rem] lg:min-h-[30rem] md:py-10 lg:py-14 md:pb-10 lg:pb-10"
             >
-              <div className="about-card bg-color-bg-surface p-10 md:p-16 w-full md:w-[85%] relative z-10 shadow-[0_4px_24px_rgba(41,64,80,0.12)]">
+              <div className="about-card bg-color-bg-surface p-8 md:p-12 w-full md:w-[85%] relative z-10 border border-black">
                 <div className="about-text">
-                  <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 tracking-tight text-color-text-primary">
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 tracking-tight text-color-text-primary leading-snug">
                     About me
                   </h2>
                   <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
@@ -119,7 +112,7 @@ export function Home() {
         </main>
       </div>
 
-      <Footer variant="home" />
+      <Footer />
     </div>
   );
 }

@@ -343,7 +343,7 @@ export function FlexibleLiftConfidence() {
           </CaseStudyLayout>
         </div>
       </main>
-      <Footer variant="case-study" />
+      <Footer />
     </div>
   );
 }

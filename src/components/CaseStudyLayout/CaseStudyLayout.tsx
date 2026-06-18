@@ -14,7 +14,7 @@ export interface CaseStudyLayoutProps {
 export const caseStudyH2ClassName =
   'font-heading text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6';
 
-/** Notion-style tokens (fonts unchanged: Cabin + Inconsolata). */
+/** Notion-style tokens (fonts unchanged: Be Vietnam Pro + Inconsolata). */
 export const documentCaseStudyTitleClassName =
   'font-heading text-[rgb(55,53,47)] text-[2rem] sm:text-[2.5rem] font-bold leading-[1.2] tracking-[-0.01em]';
 
