@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-export const caseStudyBySlug = Object.fromEntries(
+const caseStudyBySlug = Object.fromEntries(
   caseStudies.map((study) => [study.slug, study]),
 ) as Record<string, CaseStudy>;
 

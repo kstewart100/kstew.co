@@ -10,30 +10,29 @@ export interface CaseStudyLayoutProps {
   'data-id'?: string;
 }
 
-/** Legacy section h2 — used by case studies not yet migrated to document layout. */
-export const caseStudyH2ClassName =
-  'font-heading text-[#1a1a1a] text-xl md:text-2xl lg:text-[28px] font-normal leading-snug lg:leading-[40px] tracking-[1.2px] mb-6';
-
 /** Notion-style tokens (fonts unchanged: Be Vietnam Pro + Inconsolata). */
 export const documentCaseStudyTitleClassName =
-  'font-heading text-[rgb(55,53,47)] text-[2rem] sm:text-[2.5rem] font-bold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-notion text-[2rem] sm:text-[2.5rem] font-bold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyBodyClassName =
-  'font-body text-[rgb(55,53,47)] text-base font-normal leading-normal';
+  'font-body text-color-text-notion text-base font-normal leading-normal';
 
 export const documentCaseStudyH2ClassName =
-  'font-heading text-[rgb(55,53,47)] text-2xl font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-notion text-2xl font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyH3ClassName =
-  'font-heading text-[rgb(55,53,47)] text-xl font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-notion text-xl font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyImageClassName =
   'w-full max-w-full block h-auto my-5 first:mt-0 last:mb-0';
 
-export const documentCaseStudyListClassName =
-  'font-body text-[rgb(55,53,47)] text-base font-normal leading-normal list-disc pl-6 space-y-1';
+export const documentCaseStudyImageShadowClassName =
+  `${documentCaseStudyImageClassName} shadow-navy-md`;
 
-export const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
+export const documentCaseStudyListClassName =
+  'font-body text-color-text-notion text-base font-normal leading-normal list-disc pl-6 space-y-1';
+
+const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
 
 export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
   children,
