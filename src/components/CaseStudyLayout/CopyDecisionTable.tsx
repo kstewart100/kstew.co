@@ -8,7 +8,7 @@ export type CopyDecisionRow = {
 };
 
 const cellClassName =
-  'text-left align-top p-2 border border-color-border-notion min-w-[7.5rem]';
+  'text-left align-top p-2 border border-color-border-notion min-w-[7.5rem] bg-color-bg-surface';
 
 const headerClassName =
   'text-left font-medium p-2 border border-color-border-notion min-w-[7.5rem] bg-color-bg-notion-subtle';
