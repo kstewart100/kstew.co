@@ -12,37 +12,40 @@
 /* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
 
 :root {
-  --color-primitive-blue: #37A2BF;
-  --color-primitive-navy: #294050;
+  /* Base palette */
+  --color-primitive-blue: #00A8C0;
+  --color-primitive-navy: #134A70;
   --color-primitive-coral: #DE6952;
-  --color-primitive-magenta: #C83D5D;
-  --color-primitive-red: #D94D59;
-  --color-primitive-cream: #FDFBD4;
+  --color-primitive-cream: #F5EFE4;
   --color-primitive-gold: #C4A35A;
-  --color-bg-canvas: #fafafa;
-  --color-bg-surface: #FFFFFF;
-  --color-bg-subtle: #E8EAED;
-  --color-bg-invert: #294050;
-  --color-text-primary: #294050;
+  --color-primitive-ticker-bg: #0B3D4A;
+  --color-primitive-ticker-accent: #D4956B;
+
+  /* Semantic */
+  --color-bg-canvas: var(--color-primitive-cream);
+  --color-bg-surface: #ffffff;
+  --color-text-primary: var(--color-primitive-navy);
   --color-text-secondary: #5A6F7E;
-  --color-text-link: #37A2BF;
-  --color-text-on-dark: #C4A35A;
-  --color-interactive-primary: #37A2BF;
-  --color-interactive-primary-hover: #2A8CA8;
-  --color-interactive-accent: #DE6952;
-  --color-interactive-accent-hover: #C83D5D;
+  --color-text-body: #1a1a1a;
+  --color-text-on-dark: var(--color-primitive-gold);
+  --color-interactive-primary: var(--color-primitive-blue);
   --color-border-default: #D5D9DE;
-  --color-border-strong: #294050;
-  --color-border-accent: #DE6952;
-  --color-decor-highlight: #DE6952;
-  --color-decor-emphasis: #C83D5D;
+  --color-border-accent: var(--color-primitive-coral);
   --color-status-error: #D94D59;
+  --color-bg-ticker: var(--color-primitive-ticker-bg);
+  --color-text-ticker-accent: var(--color-primitive-ticker-accent);
+
+  /* Case study (Notion export) */
+  --color-text-notion: rgb(55, 53, 47);
+  --color-border-notion: rgba(55, 53, 47, 0.09);
+  --color-bg-notion-subtle: rgb(247, 246, 243);
+  --color-text-notion-muted: rgba(55, 53, 47, 0.6);
 }
 body {
-  /* Default grey for case studies; home page paints its own gradient overlay */
-  background-color: #fafafa;
+  /* Default cream for case studies; home page paints its own gradient overlay */
+  background-color: var(--color-bg-canvas);
   background-image: none;
-  color: #1a1a1a;
+  color: var(--color-text-body);
   font-family: 'Inconsolata', monospace;
   min-height: 100%;
   margin: 0;
@@ -84,13 +87,13 @@ body {
 }
 /* Typography Utilities */
 .text-glow-peach {
-  text-shadow: 0 0 40px rgba(212,149,107,0.6), 0 0 80px rgba(212,149,107,0.3), 0 0 120px rgba(212,149,107,0.15);
+  text-shadow:
+    0 0 40px color-mix(in srgb, var(--color-primitive-ticker-accent) 60%, transparent),
+    0 0 80px color-mix(in srgb, var(--color-primitive-ticker-accent) 30%, transparent),
+    0 0 120px color-mix(in srgb, var(--color-primitive-ticker-accent) 15%, transparent);
 }
 .text-glow-soft {
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
-}
-.box-glow-soft {
-  box-shadow: 0 0 15px rgba(245,230,211,0.5), 0 0 30px rgba(245,230,211,0.3), 0 0 45px rgba(245,230,211,0.15);
 }
 /* Image Filters */
 .duotone-filter {
@@ -142,7 +145,27 @@ body {
 
   .about-portrait {
     border-radius: 4px;
-    box-shadow: 0 12px 40px rgba(41, 64, 80, 0.22);
+    box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primitive-navy) 22%, transparent);
     transform: rotate(6deg);
   }
+}
+
+.shadow-navy-md {
+  box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primitive-navy) 18%, transparent);
+}
+
+.drop-shadow-navy-soft {
+  filter: drop-shadow(0 -1px 3px color-mix(in srgb, var(--color-primitive-navy) 10%, transparent));
+}
+
+.ticker-fade-left {
+  background: linear-gradient(to right, var(--color-bg-ticker), transparent);
+}
+
+.ticker-fade-right {
+  background: linear-gradient(to left, var(--color-bg-ticker), transparent);
+}
+
+.text-ticker-separator {
+  color: color-mix(in srgb, var(--color-text-on-dark) 35%, transparent);
 }

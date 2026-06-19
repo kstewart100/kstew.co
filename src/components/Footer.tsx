@@ -25,7 +25,7 @@ function ArrowUpRight({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer className="bg-white py-16 border-t border-color-border-default">
+    <footer className="bg-color-bg-surface py-16 border-t border-color-border-default">
       <div className="container mx-auto max-w-6xl px-6 md:px-12">
         <Link
           to="/"

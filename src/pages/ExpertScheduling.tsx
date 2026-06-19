@@ -3,22 +3,24 @@ import {
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
+  documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { CaseStudyNav } from '../components/CaseStudyNav';
 
 const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
-const imgShadow = `${documentCaseStudyImageClassName} shadow-[0_12px_40px_rgba(41,64,80,0.18)]`;
+const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
 
 export function ExpertScheduling() {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-[#FAFAFA]">
+    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas">
       <Header variant="case-study" />
       <main id="main-content" className="flex-1 py-8 lg:py-12">
         <div className="space-y-6 mb-16 lg:mb-24">
@@ -359,7 +361,7 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
 
           <CaseStudyLayout {...layout}>
-            <hr className="border-0 border-b border-[rgba(55,53,47,0.09)] my-6" />
+            <hr className="border-0 border-b border-color-border-notion my-6" />
             <h2 className={h2}>Learnings</h2>
             <p className={`${body} mt-3`}>
               It&apos;s hard to separate how much the content changes helped
@@ -388,6 +390,7 @@ export function ExpertScheduling() {
               empowering—is still guiding how the tool evolves.
             </p>
           </CaseStudyLayout>
+          <CaseStudyNav />
         </div>
       </main>
       <Footer />

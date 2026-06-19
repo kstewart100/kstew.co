@@ -5,7 +5,7 @@ import { Footer } from '../components/Footer';
 
 export function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-color-text-primary font-mono selection:bg-color-primitive-blue selection:text-white">
+    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive-primary selection:text-white">
       <Header variant="case-study" />
       <main
         id="main-content"

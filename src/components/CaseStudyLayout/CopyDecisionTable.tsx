@@ -8,16 +8,18 @@ export type CopyDecisionRow = {
 };
 
 const cellClassName =
-  'text-left align-top p-2 border border-[rgba(55,53,47,0.09)] min-w-[7.5rem]';
+  'text-left align-top p-2 border border-color-border-notion min-w-[7.5rem]';
 
 const headerClassName =
-  'text-left font-medium p-2 border border-[rgba(55,53,47,0.09)] min-w-[7.5rem] bg-[rgb(247,246,243)]';
+  'text-left font-medium p-2 border border-color-border-notion min-w-[7.5rem] bg-color-bg-notion-subtle';
 
-const labelClassName =
-  'text-xs font-medium text-[rgba(55,53,47,0.6)] mb-1';
+const fieldLabelClassName =
+  'text-sm font-bold text-color-text-notion mb-1';
+
+const fieldValueClassName = documentCaseStudyBodyClassName;
 
 const cardClassName =
-  'border border-[rgba(55,53,47,0.09)] bg-white p-4 space-y-3';
+  'border border-color-border-notion bg-color-bg-surface p-4 space-y-3';
 
 function CardField({
   label,
@@ -28,10 +30,8 @@ function CardField({
 }) {
   return (
     <div>
-      <p className={labelClassName}>{label}</p>
-      <div className={`${documentCaseStudyBodyClassName} text-sm`}>
-        {children}
-      </div>
+      <p className={fieldLabelClassName}>{label}</p>
+      <div className={fieldValueClassName}>{children}</div>
     </div>
   );
 }
@@ -77,13 +77,13 @@ export function CopyDecisionTable({
           <tbody>
             {rows.map((row, index) => (
               <tr key={index}>
-                <td className={`${documentCaseStudyBodyClassName} ${cellClassName}`}>
+                <td className={`${fieldValueClassName} ${cellClassName}`}>
                   {row.copy}
                 </td>
-                <td className={`${documentCaseStudyBodyClassName} ${cellClassName}`}>
+                <td className={`${fieldValueClassName} ${cellClassName}`}>
                   {row.status}
                 </td>
-                <td className={`${documentCaseStudyBodyClassName} ${cellClassName}`}>
+                <td className={`${fieldValueClassName} ${cellClassName}`}>
                   {row.decision}
                 </td>
               </tr>

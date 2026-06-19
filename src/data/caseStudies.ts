@@ -62,6 +62,14 @@ export function getCaseStudyByPath(pathname: string): CaseStudy | undefined {
   return slug ? caseStudyBySlug[slug] : undefined;
 }
 
+export function getNextCaseStudy(slug: string): CaseStudy {
+  const index = caseStudies.findIndex((study) => study.slug === slug);
+  if (index === -1) {
+    return caseStudies[0];
+  }
+  return caseStudies[(index + 1) % caseStudies.length];
+}
+
 export function absoluteUrl(path: string): string {
   return path.startsWith('http') ? path : `${SITE_URL}${path}`;
 }
