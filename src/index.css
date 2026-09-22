@@ -51,11 +51,13 @@
   --color-bg-canvas: var(--color-blue-25);
   --color-bg-surface: var(--color-white);
   --color-bg-subtle: var(--color-blue-100);
+  --color-bg-inverse: var(--color-blue-800);
   --color-text-primary: var(--color-blue-800);
   --color-text-body: var(--color-blue-700);
   --color-text-secondary: var(--color-slate-600);
   --color-text-caption: var(--color-slate-700);
   --color-text-on-dark: var(--color-white);
+  --color-text-on-dark-muted: var(--color-white-a70);
   --color-interactive: var(--color-blue-400);
   --color-border-default: var(--color-slate-200);
   --color-accent-hero: var(--color-green-hero);
