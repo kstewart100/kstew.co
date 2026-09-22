@@ -35,22 +35,29 @@ export function Home() {
           }}
         />
 
+        <div className="film-grain z-[6]" aria-hidden="true" />
+
         <div className="absolute inset-0 z-10 flex items-end md:items-center justify-center md:justify-end pb-20 md:pb-0 pointer-events-none">
-          <div className="container mx-auto max-w-6xl px-6 md:px-12 w-full">
-            <AnimatedHeadline />
+          <div className="w-full px-6 md:px-12">
+            <div className="container mx-auto max-w-6xl">
+              <AnimatedHeadline />
+            </div>
           </div>
         </div>
 
-        <div className="absolute bottom-10 right-6 left-6 z-20 pointer-events-none md:left-auto lg:bottom-12 lg:right-12">
-          <p className="font-mono text-[11px] sm:text-xs lg:text-sm text-white/90 text-right drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
-            Queenstown, New Zealand. April 2025.
-          </p>
+        <div className="absolute inset-x-0 bottom-10 z-20 px-6 md:px-12 pointer-events-none lg:bottom-12">
+          <div className="container mx-auto max-w-6xl">
+            <p className="font-mono text-[11px] sm:text-xs lg:text-sm text-white/90 text-right drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
+              Queenstown, New Zealand. April 2025.
+            </p>
+          </div>
         </div>
       </div>
 
       <div className="relative z-10 -mt-8 drop-shadow-navy-soft md:mt-0">
         <main id="main-content" className="relative z-10 w-full">
-          <div className="container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-8">
+          <div className="film-grain z-0" aria-hidden="true" />
+          <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-10">
             <section aria-label="Case studies" className="mb-6 md:mb-10">
               <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
                 Look around
@@ -73,7 +80,7 @@ export function Home() {
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 tracking-tight text-color-text-primary leading-snug">
                   About me
                 </h2>
-                <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
+                <div className="space-y-6 text-[18px] leading-relaxed text-color-text-secondary">
                   <p>
                     I&apos;m a Bay Area native and content designer with 10+ years
                     building user experiences across startups, agencies, and

@@ -37,6 +37,7 @@
   --color-blue-950: #022036;
   --color-slate-950: #142027;
   --color-green-hero: #1AFF66;
+  --color-amber-hero: #FF9F43;
   --color-white: #FFFFFF;
   --color-black: #000000;
   --color-black-a25: rgba(0, 0, 0, 0.25);
@@ -53,14 +54,14 @@
   --color-bg-subtle: var(--color-blue-100);
   --color-bg-inverse: var(--color-blue-800);
   --color-text-primary: var(--color-blue-800);
-  --color-text-body: var(--color-blue-950);
-  --color-text-secondary: var(--color-slate-600);
-  --color-text-caption: var(--color-slate-700);
+  --color-text-body: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-primary);
+  --color-text-caption: var(--color-text-primary);
   --color-text-on-dark: var(--color-white);
   --color-text-on-dark-muted: var(--color-white-a70);
   --color-interactive: var(--color-blue-800);
   --color-border-default: var(--color-slate-200);
-  --color-accent-hero: var(--color-green-hero);
+  --color-accent-hero: var(--color-amber-hero);
 }
 body {
   background-color: var(--color-bg-canvas);
@@ -71,37 +72,29 @@ body {
   margin: 0;
   padding: 0;
 }
-/* Film Grain Overlay */
+/* Animated static — stacking is set per use so text and cards stay above it */
 .film-grain {
-  position: relative;
-  min-height: 100vh;
-}
-.film-grain::after {
-  content: '';
-  position: fixed;
-  inset: -50%;
-  width: 200%;
-  height: 200%;
-  z-index: 9999;
+  position: absolute;
+  inset: 0;
   pointer-events: none;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  animation: grain 1.5s steps(6) infinite;
+  opacity: 0.07;
+  background-image: url('/images/film-grain.png');
+  background-size: 256px 256px;
+  background-repeat: repeat;
+  animation: film-grain-static 1.2s steps(1) infinite;
 }
-@keyframes grain {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -10%); }
-  20% { transform: translate(-15%, 5%); }
-  30% { transform: translate(7%, -25%); }
-  40% { transform: translate(-5%, 25%); }
-  50% { transform: translate(-15%, 10%); }
-  60% { transform: translate(15%, 0%); }
-  70% { transform: translate(0%, 15%); }
-  80% { transform: translate(3%, 35%); }
-  90% { transform: translate(-10%, 10%); }
+@keyframes film-grain-static {
+  0% { background-position: 0 0; }
+  12.5% { background-position: -97px 41px; }
+  25% { background-position: 53px -118px; }
+  37.5% { background-position: -171px -29px; }
+  50% { background-position: 132px 87px; }
+  62.5% { background-position: -38px 163px; }
+  75% { background-position: 201px -74px; }
+  87.5% { background-position: -145px 119px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .film-grain::after {
+  .film-grain {
     animation: none;
   }
 }
@@ -131,6 +124,21 @@ body {
 /* Typography Utilities */
 .text-glow-soft {
   text-shadow: 0 2px 24px var(--color-black-a35), 0 1px 2px var(--color-black-a25);
+}
+
+/* Slight film halation: a tight bright core and a softer bloom around the glyph. */
+.hero-copy-halation {
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.425),
+    0 0 8px rgba(255, 250, 240, 0.275),
+    0 0 18px rgba(255, 196, 150, 0.14);
+}
+
+.hero-copy-halation-accent {
+  text-shadow:
+    0 0 1px color-mix(in srgb, var(--color-accent-hero) 42.5%, transparent),
+    0 0 8px color-mix(in srgb, var(--color-accent-hero) 22.5%, transparent),
+    0 0 18px color-mix(in srgb, var(--color-accent-hero) 11%, transparent);
 }
 /* Image Filters */
 .duotone-filter {

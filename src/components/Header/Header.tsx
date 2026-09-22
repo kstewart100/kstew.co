@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header
       data-id={dataId}
       className={`w-full px-6 md:px-12 py-6 ${
-        isCaseStudy ? 'text-black' : 'text-white'
+        isCaseStudy ? 'text-color-text-primary' : 'text-white'
       } ${className}`}
     >
       <div className="container mx-auto max-w-6xl flex items-center justify-between">
@@ -33,15 +33,18 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label="Kyle Stewart home"
           className="inline-flex items-center group transition-opacity hover:opacity-80"
         >
-          <img
-            src="/images/logo.png"
-            alt="Kyle Stewart home"
-            width={160}
-            height={28}
-            decoding="async"
-            className={`block h-8 w-auto transition-opacity group-hover:opacity-80 ${
-              isCaseStudy ? '' : 'brightness-0 invert'
-            }`}
+          <span
+            role="img"
+            aria-label="Kyle Stewart home"
+            className="block h-8 aspect-[117/180] bg-current transition-opacity group-hover:opacity-80"
+            style={{
+              maskImage: 'url(/images/logo.png)',
+              WebkitMaskImage: 'url(/images/logo.png)',
+              maskSize: 'contain',
+              WebkitMaskSize: 'contain',
+              maskRepeat: 'no-repeat',
+              WebkitMaskRepeat: 'no-repeat',
+            }}
           />
         </Link>
 
@@ -55,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({
           href="mailto:hello@kstew.co"
           aria-label="Contact by email"
           className={`font-mono text-sm underline underline-offset-4 decoration-1 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center ${
-            isCaseStudy ? 'hover:text-black/70' : 'hover:text-white/70'
+            isCaseStudy ? 'hover:opacity-70' : 'hover:text-white/70'
           }`}
         >
           Contact

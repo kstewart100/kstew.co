@@ -8,7 +8,7 @@ export interface AnimatedHeadlineProps {
 
 const DEFAULT_WORDS = ['explore', 'write', 'push', 'show up', 'build'];
 
-const HEADLINE_FONT_SIZE = 'clamp(4rem, 12vw, 9rem)';
+const HEADLINE_FONT_SIZE = 'clamp(4.8rem, 14.4vw, 10.8rem)';
 const FONT_MEASURE_TIMEOUT_MS = 1500;
 
 export function AnimatedHeadline({
@@ -61,13 +61,13 @@ export function AnimatedHeadline({
   return (
     <div className={`text-center md:text-right ${className}`}>
       <h1
-        className="font-heading font-black text-white tracking-tight leading-[0.95]"
+        className="hero-copy-halation font-heading font-black text-white tracking-tight leading-[0.95] md:-mr-[0.065em]"
         style={{ fontSize: HEADLINE_FONT_SIZE }}
       >
         Get out.
       </h1>
       <div
-        className="font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap"
+        className="hero-copy-halation-accent font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap md:-mr-[0.093em]"
         style={{
           color: 'var(--color-accent-hero)',
           fontSize: HEADLINE_FONT_SIZE,

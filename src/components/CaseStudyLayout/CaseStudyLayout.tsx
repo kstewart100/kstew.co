@@ -12,16 +12,16 @@ export interface CaseStudyLayoutProps {
 
 /** Case study type styles (fonts: Be Vietnam Pro + Inconsolata). */
 export const documentCaseStudyTitleClassName =
-  'font-heading text-color-text-primary text-[2rem] sm:text-[2.5rem] font-bold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[36px] sm:text-[45px] font-bold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyBodyClassName =
-  'font-body text-color-text-body text-base font-normal leading-normal';
+  'font-body text-color-text-body text-[18px] font-normal leading-normal';
 
 export const documentCaseStudyH2ClassName =
-  'font-heading text-color-text-primary text-2xl font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[27px] font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyH3ClassName =
-  'font-heading text-color-text-primary text-xl font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[22.5px] font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyImageClassName =
   'w-full max-w-full block h-auto my-5 first:mt-0 last:mb-0';
@@ -30,7 +30,7 @@ export const documentCaseStudyImageShadowClassName =
   `${documentCaseStudyImageClassName} shadow-navy-md`;
 
 export const documentCaseStudyListClassName =
-  'font-body text-color-text-body text-base font-normal leading-normal list-disc pl-6 space-y-1';
+  'font-body text-color-text-body text-[18px] font-normal leading-normal list-disc pl-6 space-y-1';
 
 const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
 
@@ -59,7 +59,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
         {caption && (
           <div className="mt-4 w-full">
             {typeof caption === 'string' ? (
-              <p className="font-body text-xs text-color-text-caption leading-relaxed text-left">
+              <p className="font-body text-[13.5px] text-color-text-caption leading-relaxed text-left">
                 {caption}
               </p>
             ) : (
