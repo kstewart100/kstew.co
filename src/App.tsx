@@ -15,6 +15,7 @@ import { FlexibleLiftConfidence } from './pages/FlexibleLiftConfidence';
 import { MeasurementSetup } from './pages/MeasurementSetup';
 import { NotFound } from './pages/NotFound';
 import { Analytics } from './components/Analytics';
+import { PageTransition } from './components/PageTransition';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -66,14 +67,16 @@ export default function App() {
       <ScrollToTop />
       <RoutePreviewMeta />
       <Analytics />
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/expert-scheduling" element={<ExpertScheduling />} />
-      <Route path="/conversion-goal-updates" element={<ConversionGoalUpdates />} />
-      <Route path="/flexible-lift-confidence" element={<FlexibleLiftConfidence />} />
-      <Route path="/measurement-setup" element={<MeasurementSetup />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+      <PageTransition>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/expert-scheduling" element={<ExpertScheduling />} />
+          <Route path="/conversion-goal-updates" element={<ConversionGoalUpdates />} />
+          <Route path="/flexible-lift-confidence" element={<FlexibleLiftConfidence />} />
+          <Route path="/measurement-setup" element={<MeasurementSetup />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </PageTransition>
     </>
   );
 }

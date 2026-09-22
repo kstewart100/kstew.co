@@ -14,27 +14,27 @@
 :root {
   /* Primitives */
   --color-blue-25: #FEFEFF;
-  --color-blue-50: #F3F7FF;
+  --color-blue-50: #F0F8FF;
   --color-slate-50: #EFF8FF;
-  --color-blue-100: #E4EDFF;
+  --color-blue-100: #DEF0FF;
   --color-slate-100: #E2EEF7;
-  --color-blue-200: #CDDCFA;
+  --color-blue-200: #BEE1FF;
   --color-slate-200: #CEDDE9;
-  --color-blue-300: #B0C4ED;
+  --color-blue-300: #9DCCF4;
   --color-slate-300: #B1C6D5;
-  --color-blue-400: #91A6D2;
+  --color-blue-400: #7BB0DC;
   --color-slate-400: #92A8B9;
-  --color-blue-500: #758AB4;
+  --color-blue-500: #6094BF;
   --color-slate-500: #758B9B;
-  --color-blue-600: #5B6E96;
+  --color-blue-600: #4579A2;
   --color-slate-600: #5A6F7E;
-  --color-blue-700: #43557B;
+  --color-blue-700: #2C6088;
   --color-slate-700: #445967;
-  --color-blue-800: #2D3E63;
+  --color-blue-800: #134A70;
   --color-slate-800: #324452;
-  --color-blue-900: #202D48;
+  --color-blue-900: #093451;
   --color-slate-900: #22313B;
-  --color-blue-950: #141D33;
+  --color-blue-950: #022036;
   --color-slate-950: #142027;
   --color-green-hero: #1AFF66;
   --color-white: #FFFFFF;
@@ -45,7 +45,7 @@
   --color-black-a70: rgba(0, 0, 0, 0.70);
   --color-white-a70: rgba(255, 255, 255, 0.70);
   --color-white-a90: rgba(255, 255, 255, 0.90);
-  --color-blue-shadow: rgba(45, 62, 99, 0.25);
+  --color-blue-shadow: rgba(19, 74, 112, 0.25);
 
   /* Semantic */
   --color-bg-canvas: var(--color-blue-25);
@@ -53,12 +53,12 @@
   --color-bg-subtle: var(--color-blue-100);
   --color-bg-inverse: var(--color-blue-800);
   --color-text-primary: var(--color-blue-800);
-  --color-text-body: var(--color-blue-700);
+  --color-text-body: var(--color-blue-950);
   --color-text-secondary: var(--color-slate-600);
   --color-text-caption: var(--color-slate-700);
   --color-text-on-dark: var(--color-white);
   --color-text-on-dark-muted: var(--color-white-a70);
-  --color-interactive: var(--color-blue-400);
+  --color-interactive: var(--color-blue-800);
   --color-border-default: var(--color-slate-200);
   --color-accent-hero: var(--color-green-hero);
 }
@@ -196,5 +196,103 @@ body {
 @media (hover: none) {
   .work-card-grid:has(:hover) .work-card:not(:hover):not(:focus-visible) {
     --card-ink: var(--color-blue-600);
+  }
+}
+
+/* Page transitions (Codrops moveToRightEasing) */
+.pt-perspective {
+  position: relative;
+  width: 100%;
+}
+
+.pt-perspective-animating {
+  overflow: hidden;
+}
+
+.pt-page {
+  width: 100%;
+  background-color: var(--color-bg-canvas);
+}
+
+.pt-page-ontop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: var(--color-bg-canvas);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.pt-page-moveToRightEasing,
+.pt-page-moveFromLeft {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.pt-page-moveToRightEasing {
+  -webkit-animation: moveToRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: moveToRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.pt-page-moveFromLeft {
+  -webkit-animation: moveFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation: moveFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@-webkit-keyframes moveToRight {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translate3d(28%, 0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes moveToRight {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(28%, 0, 0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes moveFromLeft {
+  from {
+    -webkit-transform: translate3d(-4%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft {
+  from {
+    transform: translate3d(-4%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+html.pt-animating {
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pt-page-moveToRightEasing,
+  .pt-page-moveFromLeft {
+    -webkit-animation: none;
+    animation: none;
   }
 }
