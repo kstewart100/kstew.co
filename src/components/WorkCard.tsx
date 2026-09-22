@@ -33,15 +33,15 @@ export function WorkCard({ label, title, href }: WorkCardProps) {
   return (
     <Link
       to={href}
-      className="group flex flex-col h-full min-h-[260px] md:min-h-[320px] bg-color-bg-surface p-8 md:p-12 border border-black transition-all duration-300 hover:-translate-y-1 hover:border-color-interactive-primary focus-visible:border-color-interactive-primary active:border-color-interactive-primary [&:hover_span]:text-color-interactive-primary [&:hover_h3]:text-color-interactive-primary"
+      className="work-card group flex flex-col h-full min-h-[260px] md:min-h-[320px] bg-color-bg-surface p-8 md:p-12 border-2 shadow-navy-md transition-all duration-300 hover:-translate-y-1"
     >
       <div className="flex items-start justify-between mb-8">
-        <span className="font-mono text-[26px] text-color-text-secondary transition-colors duration-300">
+        <span className="font-mono text-[26px] text-current">
           {label}
         </span>
-        <ArrowUpRight className="w-5 h-5 text-color-text-secondary opacity-0 -translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:text-color-interactive-primary" />
+        <ArrowUpRight className="w-5 h-5 text-current opacity-0 -translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0" />
       </div>
-      <h3 className="text-2xl md:text-3xl font-heading font-bold text-color-text-primary leading-snug transition-colors duration-300">
+      <h3 className="text-2xl md:text-3xl font-heading font-bold text-current leading-snug">
         {title}
       </h3>
     </Link>

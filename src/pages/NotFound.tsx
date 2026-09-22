@@ -5,7 +5,7 @@ import { Footer } from '../components/Footer';
 
 export function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive-primary selection:text-white">
+    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-white">
       <Header variant="case-study" />
       <main
         id="main-content"
@@ -22,7 +22,7 @@ export function NotFound() {
         </p>
         <Link
           to="/"
-          className="inline-flex items-center min-h-[44px] font-mono text-sm underline underline-offset-4 decoration-1 text-color-text-primary hover:text-color-interactive-primary transition-colors"
+          className="inline-flex items-center min-h-[44px] font-mono text-sm underline underline-offset-4 decoration-1 text-color-text-primary hover:text-color-interactive transition-colors"
         >
           Back to home
         </Link>

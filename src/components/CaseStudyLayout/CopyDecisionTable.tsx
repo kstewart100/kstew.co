@@ -8,18 +8,18 @@ export type CopyDecisionRow = {
 };
 
 const cellClassName =
-  'text-left align-top p-2 border border-color-border-notion min-w-[7.5rem] bg-color-bg-surface';
+  'text-left align-top p-2 border border-color-border-default min-w-[7.5rem] bg-color-bg-surface';
 
 const headerClassName =
-  'text-left font-medium p-2 border border-color-border-notion min-w-[7.5rem] bg-color-bg-notion-subtle';
+  'text-left font-medium p-2 border border-color-border-default min-w-[7.5rem] bg-color-bg-subtle';
 
 const fieldLabelClassName =
-  'text-sm font-bold text-color-text-notion mb-1';
+  'text-sm font-bold text-color-text-primary mb-1';
 
 const fieldValueClassName = documentCaseStudyBodyClassName;
 
 const cardClassName =
-  'border border-color-border-notion bg-color-bg-surface p-4 space-y-3';
+  'border border-color-border-default bg-color-bg-surface p-4 space-y-3';
 
 function CardField({
   label,

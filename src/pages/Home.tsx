@@ -9,7 +9,7 @@ const HERO_IMAGE = 'url("/images/hero-routburn.jpg")';
 
 export function Home() {
   return (
-    <div className="home-page w-full min-h-screen bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive-primary selection:text-white">
+    <div className="home-page w-full min-h-screen bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-white">
       {/* Hero Section */}
       <div className="relative h-[80vh] w-full overflow-hidden">
         <div className="absolute top-0 left-0 right-0 z-20 w-full">
@@ -52,12 +52,12 @@ export function Home() {
       <div className="relative z-10 -mt-8 drop-shadow-navy-soft">
         <main id="main-content" className="relative z-10 w-full">
           <div className="container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-8">
-            <section aria-label="Case studies" className="mb-28 md:mb-36">
+            <section aria-label="Case studies" className="mb-6 md:mb-10">
               <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
                 Look around
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+              <div className="work-card-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                 {caseStudies.map((study) => (
                   <WorkCard
                     key={study.slug}
@@ -69,38 +69,24 @@ export function Home() {
               </div>
             </section>
 
-            <section
-              id="about"
-              className="relative overflow-visible md:min-h-[28rem] lg:min-h-[30rem] md:py-10 lg:py-14 md:pb-10 lg:pb-10"
-            >
-              <div className="about-card bg-color-bg-surface p-8 md:p-12 w-full md:w-[85%] relative z-10 border border-black">
-                <div className="about-text">
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 tracking-tight text-color-text-primary leading-snug">
-                    About me
-                  </h2>
-                  <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
-                    <p>
-                      I&apos;m a Bay Area native and content designer with 10+
-                      years building user experiences across startups, agencies,
-                      and companies like Google and Intuit. Above all else, I love
-                      creating and collaborating.
-                    </p>
-                    <p>
-                      These days I&apos;m in the Inner Sunset, running Golden Gate
-                      Park, cycling Marin&apos;s hills, and planning my next
-                      backpacking trip.
-                    </p>
-                  </div>
+            <section id="about">
+              <div className="bg-color-bg-surface p-8 md:p-12 w-full border border-black">
+                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 tracking-tight text-color-text-primary leading-snug">
+                  About me
+                </h2>
+                <div className="space-y-6 text-sm md:text-base leading-relaxed text-color-text-secondary">
+                  <p>
+                    I&apos;m a Bay Area native and content designer with 10+ years
+                    building user experiences across startups, agencies, and
+                    companies like Google and Intuit. Above all else, I love
+                    creating and collaborating.
+                  </p>
+                  <p>
+                    These days I&apos;m in the Inner Sunset, running Golden Gate
+                    Park, cycling Marin&apos;s hills, and planning my next
+                    backpacking trip.
+                  </p>
                 </div>
-              </div>
-
-              <div className="mt-8 md:mt-0 md:absolute md:right-0 lg:right-2 md:top-1/2 md:-translate-y-1/2 z-20 w-full md:w-[min(100%,360px)] lg:w-[400px] overflow-visible">
-                <img
-                  src="/images/about-portrait.png"
-                  alt="Portrait of Kyle in the mountains"
-                  className="about-portrait w-full h-auto"
-                  loading="lazy"
-                />
               </div>
             </section>
           </div>

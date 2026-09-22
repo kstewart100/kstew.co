@@ -12,37 +12,55 @@
 /* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
 
 :root {
-  /* Base palette */
-  --color-primitive-blue: #00A8C0;
-  --color-primitive-navy: #134A70;
-  --color-primitive-coral: #DE6952;
-  --color-primitive-cream: #F5EFE4;
-  --color-primitive-gold: #C4A35A;
-  --color-primitive-ticker-bg: #0B3D4A;
-  --color-primitive-ticker-accent: #D4956B;
+  /* Primitives */
+  --color-blue-25: #FEFEFF;
+  --color-blue-50: #F3F7FF;
+  --color-slate-50: #EFF8FF;
+  --color-blue-100: #E4EDFF;
+  --color-slate-100: #E2EEF7;
+  --color-blue-200: #CDDCFA;
+  --color-slate-200: #CEDDE9;
+  --color-blue-300: #B0C4ED;
+  --color-slate-300: #B1C6D5;
+  --color-blue-400: #91A6D2;
+  --color-slate-400: #92A8B9;
+  --color-blue-500: #758AB4;
+  --color-slate-500: #758B9B;
+  --color-blue-600: #5B6E96;
+  --color-slate-600: #5A6F7E;
+  --color-blue-700: #43557B;
+  --color-slate-700: #445967;
+  --color-blue-800: #2D3E63;
+  --color-slate-800: #324452;
+  --color-blue-900: #202D48;
+  --color-slate-900: #22313B;
+  --color-blue-950: #141D33;
+  --color-slate-950: #142027;
+  --color-green-hero: #1AFF66;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-black-a25: rgba(0, 0, 0, 0.25);
+  --color-black-a35: rgba(0, 0, 0, 0.35);
+  --color-black-a45: rgba(0, 0, 0, 0.45);
+  --color-black-a70: rgba(0, 0, 0, 0.70);
+  --color-white-a70: rgba(255, 255, 255, 0.70);
+  --color-white-a90: rgba(255, 255, 255, 0.90);
+  --color-blue-shadow: rgba(45, 62, 99, 0.25);
 
   /* Semantic */
-  --color-bg-canvas: var(--color-primitive-cream);
-  --color-bg-surface: #ffffff;
-  --color-text-primary: var(--color-primitive-navy);
-  --color-text-secondary: #5A6F7E;
-  --color-text-body: #1a1a1a;
-  --color-text-on-dark: var(--color-primitive-gold);
-  --color-interactive-primary: var(--color-primitive-blue);
-  --color-border-default: #D5D9DE;
-  --color-border-accent: var(--color-primitive-coral);
-  --color-status-error: #D94D59;
-  --color-bg-ticker: var(--color-primitive-ticker-bg);
-  --color-text-ticker-accent: var(--color-primitive-ticker-accent);
-
-  /* Case study (Notion export) */
-  --color-text-notion: rgb(55, 53, 47);
-  --color-border-notion: rgba(55, 53, 47, 0.09);
-  --color-bg-notion-subtle: rgb(247, 246, 243);
-  --color-text-notion-muted: rgba(55, 53, 47, 0.6);
+  --color-bg-canvas: var(--color-blue-25);
+  --color-bg-surface: var(--color-white);
+  --color-bg-subtle: var(--color-blue-100);
+  --color-text-primary: var(--color-blue-800);
+  --color-text-body: var(--color-blue-700);
+  --color-text-secondary: var(--color-slate-600);
+  --color-text-caption: var(--color-slate-700);
+  --color-text-on-dark: var(--color-white);
+  --color-interactive: var(--color-blue-400);
+  --color-border-default: var(--color-slate-200);
+  --color-accent-hero: var(--color-green-hero);
 }
 body {
-  /* Default cream for case studies; home page paints its own gradient overlay */
   background-color: var(--color-bg-canvas);
   background-image: none;
   color: var(--color-text-body);
@@ -86,14 +104,8 @@ body {
   }
 }
 /* Typography Utilities */
-.text-glow-peach {
-  text-shadow:
-    0 0 40px color-mix(in srgb, var(--color-primitive-ticker-accent) 60%, transparent),
-    0 0 80px color-mix(in srgb, var(--color-primitive-ticker-accent) 30%, transparent),
-    0 0 120px color-mix(in srgb, var(--color-primitive-ticker-accent) 15%, transparent);
-}
 .text-glow-soft {
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 24px var(--color-black-a35), 0 1px 2px var(--color-black-a25);
 }
 /* Image Filters */
 .duotone-filter {
@@ -129,43 +141,35 @@ body {
 .home-page #main-content {
   position: relative;
   min-height: 100dvh;
-  background-color: var(--color-primitive-cream);
+  background-color: var(--color-bg-canvas);
 }
-/* About section: keep image overlap while clearing copy at any width */
-.about-card {
-  container-type: inline-size;
-}
-
-@media (min-width: 768px) {
-  .about-text {
-    /* Keep copy clear of the overlapping portrait on the right */
-    max-width: 36rem;
-    padding-right: min(12rem, 28cqw);
-  }
-
-  .about-portrait {
-    border-radius: 4px;
-    box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primitive-navy) 22%, transparent);
-    transform: rotate(6deg);
-  }
-}
-
 .shadow-navy-md {
-  box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primitive-navy) 18%, transparent);
+  box-shadow: 0 12px 40px var(--color-blue-shadow);
 }
 
 .drop-shadow-navy-soft {
-  filter: drop-shadow(0 -1px 3px color-mix(in srgb, var(--color-primitive-navy) 10%, transparent));
+  filter: drop-shadow(0 -1px 3px var(--color-blue-shadow));
 }
 
-.ticker-fade-left {
-  background: linear-gradient(to right, var(--color-bg-ticker), transparent);
+/* Work cards: rest lighter, hovered/focused card navy, siblings interactive */
+.work-card {
+  --card-ink: var(--color-blue-600);
+  border-color: var(--card-ink);
+  color: var(--card-ink);
 }
 
-.ticker-fade-right {
-  background: linear-gradient(to left, var(--color-bg-ticker), transparent);
+.work-card-grid:has(:hover) .work-card:not(:hover):not(:focus-visible),
+.work-card-grid:has(:focus-visible) .work-card:not(:hover):not(:focus-visible) {
+  --card-ink: var(--color-interactive);
 }
 
-.text-ticker-separator {
-  color: color-mix(in srgb, var(--color-text-on-dark) 35%, transparent);
+.work-card-grid .work-card:hover,
+.work-card-grid .work-card:focus-visible {
+  --card-ink: var(--color-text-primary);
+}
+
+@media (hover: none) {
+  .work-card-grid:has(:hover) .work-card:not(:hover):not(:focus-visible) {
+    --card-ink: var(--color-blue-600);
+  }
 }

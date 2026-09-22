@@ -21,13 +21,13 @@ export function CaseStudyNav() {
     <CaseStudyLayout variant="document">
       <section
         aria-labelledby="case-study-nav-heading"
-        className="border-t border-color-border-notion pt-8 md:pt-10"
+        className="border-t border-color-border-default pt-8 md:pt-10"
       >
         <h2 id="case-study-nav-heading" className={`${documentCaseStudyH2ClassName} mb-6`}>
           Keep exploring
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+        <div className="work-card-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           <WorkCard
             label={next.label}
             title={next.title}

@@ -90,7 +90,7 @@ export function AnimatedHeadline({
       <div
         className="font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap"
         style={{
-          color: '#1AFF66',
+          color: 'var(--color-accent-hero)',
           fontSize: HEADLINE_FONT_SIZE,
         }}
       >

@@ -361,7 +361,7 @@ export function ExpertScheduling() {
           </CaseStudyLayout>
 
           <CaseStudyLayout {...layout}>
-            <hr className="border-0 border-b border-color-border-notion my-6" />
+            <hr className="border-0 border-b border-color-border-default my-6" />
             <h2 className={h2}>Learnings</h2>
             <p className={`${body} mt-3`}>
               It&apos;s hard to separate how much the content changes helped

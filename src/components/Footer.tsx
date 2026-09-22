@@ -51,7 +51,7 @@ export function Footer() {
           <a
             href="mailto:hello@kstew.co"
             aria-label="Email Kyle"
-            className="flex items-center gap-1 text-color-text-primary hover:text-color-interactive-primary transition-colors group min-h-[44px] min-w-[44px]"
+            className="flex items-center gap-1 text-color-text-primary hover:text-color-interactive transition-colors group min-h-[44px] min-w-[44px]"
           >
             Email{' '}
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -62,7 +62,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Kyle Stewart on LinkedIn"
-            className="flex items-center gap-1 text-color-text-primary hover:text-color-interactive-primary transition-colors group min-h-[44px] min-w-[44px]"
+            className="flex items-center gap-1 text-color-text-primary hover:text-color-interactive transition-colors group min-h-[44px] min-w-[44px]"
           >
             LinkedIn{' '}
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
