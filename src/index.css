@@ -176,7 +176,7 @@ body {
   filter: drop-shadow(0 -1px 3px var(--color-blue-shadow));
 }
 
-/* Work cards: rest lighter, hovered/focused card navy, siblings interactive */
+/* Work cards: rest mid-blue, hovered/focused card navy, siblings lighter */
 .work-card {
   --card-ink: var(--color-blue-600);
   border-color: var(--card-ink);
@@ -185,7 +185,7 @@ body {
 
 .work-card-grid:has(:hover) .work-card:not(:hover):not(:focus-visible),
 .work-card-grid:has(:focus-visible) .work-card:not(:hover):not(:focus-visible) {
-  --card-ink: var(--color-interactive);
+  --card-ink: var(--color-blue-400);
 }
 
 .work-card-grid .work-card:hover,
