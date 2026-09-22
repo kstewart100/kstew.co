@@ -1,5 +1,4 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 
 export interface AnimatedHeadlineProps {
   words?: string[];
@@ -10,6 +9,7 @@ export interface AnimatedHeadlineProps {
 const DEFAULT_WORDS = ['explore', 'write', 'push', 'show up', 'build'];
 
 const HEADLINE_FONT_SIZE = 'clamp(4rem, 12vw, 9rem)';
+const FONT_MEASURE_TIMEOUT_MS = 1500;
 
 export function AnimatedHeadline({
   words = DEFAULT_WORDS,
@@ -18,7 +18,6 @@ export function AnimatedHeadline({
 }: AnimatedHeadlineProps) {
   const [wordIndex, setWordIndex] = useState(0);
   const [wordSlotWidth, setWordSlotWidth] = useState(0);
-  const [fontsReady, setFontsReady] = useState(false);
   const measureRef = useRef<HTMLSpanElement>(null);
 
   useLayoutEffect(() => {
@@ -31,53 +30,33 @@ export function AnimatedHeadline({
         el.textContent = `${word}.`;
         max = Math.max(max, el.getBoundingClientRect().width);
       }
-      const buffer = document.fonts.status === 'loaded' ? 2 : 12;
+      const fontsLoaded = document.fonts?.status === 'loaded';
+      const buffer = fontsLoaded ? 2 : 12;
       setWordSlotWidth(Math.ceil(max) + buffer);
       el.textContent = '';
     };
 
     measure();
-    document.fonts.ready.then(() => {
-      measure();
-      setFontsReady(true);
-    });
     window.addEventListener('resize', measure);
+
+    const fontsReady = document.fonts?.ready ?? Promise.resolve();
+    const timeout = new Promise<void>((resolve) => {
+      window.setTimeout(resolve, FONT_MEASURE_TIMEOUT_MS);
+    });
+    void Promise.race([fontsReady, timeout]).then(measure);
+
     return () => window.removeEventListener('resize', measure);
   }, [words]);
 
   useEffect(() => {
-    const prefersReduced = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-    if (prefersReduced) {
-      setWordIndex(words.length - 1);
-      return;
-    }
-
-    if (!fontsReady) return;
-
-    const timer = setInterval(() => {
+    const timer = window.setInterval(() => {
       setWordIndex((prev) => (prev + 1) % words.length);
     }, interval);
 
-    return () => clearInterval(timer);
-  }, [words, interval, fontsReady]);
+    return () => window.clearInterval(timer);
+  }, [words, interval]);
 
-  const wordVariants = {
-    hidden: { opacity: 0, y: 10, filter: 'blur(6px)' },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      transition: { duration: 0.35, ease: 'easeOut' },
-    },
-    exit: {
-      opacity: 0,
-      y: -8,
-      filter: 'blur(6px)',
-      transition: { duration: 0.28, ease: 'easeIn' },
-    },
-  };
+  const currentWord = words[wordIndex];
 
   return (
     <div className={`text-center md:text-right ${className}`}>
@@ -93,9 +72,10 @@ export function AnimatedHeadline({
           color: 'var(--color-accent-hero)',
           fontSize: HEADLINE_FONT_SIZE,
         }}
+        aria-live="polite"
       >
         <span
-          className="relative inline-block align-baseline text-center md:text-right"
+          className="relative inline-block align-baseline overflow-visible text-center md:text-right"
           style={
             wordSlotWidth > 0
               ? { width: wordSlotWidth, minWidth: wordSlotWidth }
@@ -108,18 +88,12 @@ export function AnimatedHeadline({
             className="invisible absolute left-0 top-0 whitespace-nowrap pointer-events-none"
             style={{ fontSize: HEADLINE_FONT_SIZE }}
           />
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={words[wordIndex]}
-              variants={wordVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className="inline-block w-full"
-            >
-              {words[wordIndex]}.
-            </motion.span>
-          </AnimatePresence>
+          <span
+            key={`${wordIndex}-${currentWord}`}
+            className="headline-cycle-word"
+          >
+            {currentWord}.
+          </span>
         </span>
       </div>
     </div>

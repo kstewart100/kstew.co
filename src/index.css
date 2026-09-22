@@ -105,6 +105,29 @@ body {
     animation: none;
   }
 }
+
+.headline-cycle-word {
+  display: inline-block;
+  width: 100%;
+  animation: headline-cycle-in 0.4s ease-out both;
+}
+
+@keyframes headline-cycle-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.08em, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headline-cycle-word {
+    animation: none;
+  }
+}
 /* Typography Utilities */
 .text-glow-soft {
   text-shadow: 0 2px 24px var(--color-black-a35), 0 1px 2px var(--color-black-a25);

@@ -10,13 +10,12 @@ const HERO_IMAGE = 'url("/images/hero-queenstown.jpg")';
 export function Home() {
   return (
     <div className="home-page w-full min-h-screen bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-white">
-      {/* Hero Section */}
-      <div className="relative h-[80vh] w-full overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 z-20 w-full">
+      <div className="relative h-[80vh] w-full overflow-hidden md:h-[calc(100svh-140px)]">
+        <div className="absolute top-0 left-0 right-0 z-20 w-full bg-transparent">
           <Header variant="home" />
         </div>
 
-        <div className="absolute inset-x-0 top-0 h-32 md:h-32 bg-gradient-to-b from-black/40 md:from-black/25 to-transparent pointer-events-none z-[5]" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/40 md:from-black/25 to-transparent pointer-events-none z-[5]" />
         <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/70 via-black/35 to-transparent pointer-events-none z-[5] md:h-1/3 md:from-black/70 md:via-black/35" />
 
         <div
@@ -24,7 +23,7 @@ export function Home() {
           style={{
             backgroundImage: HERO_IMAGE,
             backgroundSize: 'cover',
-            backgroundPosition: 'left 42%',
+            backgroundPosition: 'center 22%',
           }}
         />
         <div
@@ -49,7 +48,7 @@ export function Home() {
         </div>
       </div>
 
-      <div className="relative z-10 -mt-8 drop-shadow-navy-soft">
+      <div className="relative z-10 -mt-8 drop-shadow-navy-soft md:mt-0">
         <main id="main-content" className="relative z-10 w-full">
           <div className="container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-8">
             <section aria-label="Case studies" className="mb-6 md:mb-10">
