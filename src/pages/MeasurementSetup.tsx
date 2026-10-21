@@ -22,10 +22,8 @@ const list = documentCaseStudyListClassName;
 export function MeasurementSetup() {
   return (
     <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas">
-      <div className="relative flex-1 flex flex-col">
-        <div className="film-grain z-0" aria-hidden="true" />
-        <Header variant="case-study" className="relative z-10" />
-        <main id="main-content" className="relative z-10 flex-1 py-8 lg:py-12">
+      <Header variant="case-study" />
+      <main id="main-content" className="flex-1 py-8 lg:py-12">
           <div className="space-y-6 mb-16 lg:mb-24">
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
@@ -375,8 +373,7 @@ export function MeasurementSetup() {
             </CaseStudyLayout>
             <CaseStudyNav />
           </div>
-        </main>
-      </div>
+      </main>
       <Footer />
     </div>
   );
