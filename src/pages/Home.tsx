@@ -45,7 +45,7 @@ export function Home() {
           </div>
         </div>
 
-        <div className="absolute inset-x-0 bottom-10 z-20 px-6 md:px-12 pointer-events-none lg:bottom-12">
+        <div className="absolute inset-x-0 bottom-8 z-20 px-6 md:px-12 pointer-events-none md:bottom-3">
           <div className="container mx-auto max-w-6xl">
             <p className="font-mono text-[11px] sm:text-xs lg:text-sm text-white/90 text-right drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
               Queenstown, New Zealand. April 2025.

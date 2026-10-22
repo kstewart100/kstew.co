@@ -61,13 +61,13 @@ export function AnimatedHeadline({
   return (
     <div className={`text-center md:text-right ${className}`}>
       <h1
-        className="hero-copy-halation font-heading font-black text-white tracking-tight leading-[0.95] md:-mr-[0.065em]"
+        className="font-heading font-black text-white tracking-tight leading-[0.95] md:-mr-[0.065em]"
         style={{ fontSize: HEADLINE_FONT_SIZE }}
       >
         Get out.
       </h1>
       <div
-        className="hero-copy-halation-accent font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap md:-mr-[0.093em]"
+        className="font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap md:-mr-[0.093em]"
         style={{
           color: 'var(--color-accent-hero)',
           fontSize: HEADLINE_FONT_SIZE,
