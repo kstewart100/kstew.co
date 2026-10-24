@@ -36,7 +36,7 @@ export function MeasurementSetup() {
                 <strong>Company:</strong> Google, Google Ads
               </p>
               <p className={`${body} mt-0`}>
-                <strong>Role:</strong> Content Designer
+                <strong>Role:</strong> Senior Content Designer
               </p>
               <p className={`${body} mt-0`}>
                 <strong>Team:</strong> UX Designers, Product Managers, Software
