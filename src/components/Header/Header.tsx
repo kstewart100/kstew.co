@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ContactButton } from '../ContactButton';
 
 export interface HeaderProps {
   variant?: 'home' | 'case-study';
@@ -26,12 +27,12 @@ export const Header: React.FC<HeaderProps> = ({
         isCaseStudy ? 'text-color-text-primary' : 'text-white'
       } ${className}`}
     >
-      <div className="container mx-auto max-w-6xl flex items-center justify-between">
+      <div className="container mx-auto max-w-6xl grid grid-cols-[1fr_auto_1fr] items-center">
         <Link
           to="/"
           aria-current={isHomePage ? 'page' : undefined}
           aria-label="Kyle Stewart home"
-          className="inline-flex items-center group transition-opacity hover:opacity-80"
+          className="justify-self-start inline-flex items-center group transition-opacity hover:opacity-80"
         >
           <span
             role="img"
@@ -54,15 +55,9 @@ export const Header: React.FC<HeaderProps> = ({
           Content Design
         </div>
 
-        <a
-          href="mailto:hello@kstew.co"
-          aria-label="Contact by email"
-          className={`font-mono text-sm underline underline-offset-4 decoration-1 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center ${
-            isCaseStudy ? 'hover:opacity-70' : 'hover:text-white/70'
-          }`}
-        >
-          Contact
-        </a>
+        <div className="justify-self-end">
+          <ContactButton />
+        </div>
       </div>
     </header>
   );

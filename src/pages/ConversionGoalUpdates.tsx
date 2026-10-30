@@ -71,20 +71,14 @@ export function ConversionGoalUpdates() {
               <h2 className={h2}>Our design principles</h2>
               <ul className={`${list} mt-3`}>
                 <li>
-                  <strong>
-                    Be upfront about potential changes–both positive and negative.
-                  </strong>
+                  Be upfront about potential changes–both positive and negative.
                 </li>
                 <li>
-                  <strong>
-                    Automate where possible and break tasks into manageable steps.
-                  </strong>
+                  Automate where possible and break tasks into manageable steps.
                 </li>
                 <li>
-                  <strong>
-                    Be honest about trade-offs, both the short-term pain and
-                    long-term benefits.
-                  </strong>
+                  Be honest about trade-offs, both the short-term pain and
+                  long-term benefits.
                 </li>
               </ul>
             </CaseStudyLayout>
@@ -93,10 +87,13 @@ export function ConversionGoalUpdates() {
               <h2 className={h2}>Refining the content hierarchy</h2>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="First iteration with content from my design partner."
+            >
               <img
                 src="/images/case-studies/conversion-goal-updates/image.png"
-                alt=""
+                alt="First iteration of conversion goal updates with design-partner content"
                 loading="lazy"
                 className={imgShadow}
               />
@@ -117,10 +114,13 @@ export function ConversionGoalUpdates() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Second iteration outlining the exact tasks advertisers need to complete."
+            >
               <img
                 src="/images/case-studies/conversion-goal-updates/image-1.png"
-                alt=""
+                alt="Second iteration outlining the tasks advertisers need to complete"
                 loading="lazy"
                 className={imgShadow}
               />
@@ -169,10 +169,13 @@ export function ConversionGoalUpdates() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Launched content with concrete information, headlines, CTAs, and interactions driving user action."
+            >
               <img
                 src="/images/case-studies/conversion-goal-updates/image-2.png"
-                alt=""
+                alt="Launched conversion goal updates with concrete headlines, CTAs, and interactions"
                 loading="lazy"
                 className={imgShadow}
               />
@@ -385,7 +388,7 @@ export function ConversionGoalUpdates() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <h2 className={h2}>Giving users more context with subheaders</h2>
+              <h2 className={h2}>Giving users more context with sub-headers</h2>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>

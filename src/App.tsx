@@ -46,7 +46,7 @@ function RoutePreviewMeta() {
         title={DEFAULT_PAGE_TITLE}
         description={SITE_DESCRIPTION}
         url={`${SITE_URL}/`}
-        image={absoluteUrl('/og-image.png')}
+        image={absoluteUrl('/og-image.png?v=2')}
       />
     );
   }
@@ -56,7 +56,7 @@ function RoutePreviewMeta() {
       title={`Page not found — Kyle Stewart`}
       description={SITE_DESCRIPTION}
       url={`${SITE_URL}${pathname}`}
-      image={absoluteUrl('/og-image.png')}
+      image={absoluteUrl('/og-image.png?v=2')}
     />
   );
 }

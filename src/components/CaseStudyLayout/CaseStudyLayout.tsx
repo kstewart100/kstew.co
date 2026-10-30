@@ -27,7 +27,7 @@ export const documentCaseStudyImageClassName =
   'w-full max-w-full block h-auto my-5 first:mt-0 last:mb-0';
 
 export const documentCaseStudyImageShadowClassName =
-  `${documentCaseStudyImageClassName} shadow-navy-md`;
+  `${documentCaseStudyImageClassName} shadow-neutral-tight`;
 
 export const documentCaseStudyListClassName =
   'font-body text-color-text-body text-[18px] font-normal leading-normal list-disc pl-6 space-y-1';
@@ -59,7 +59,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
         {caption && (
           <div className="mt-4 w-full">
             {typeof caption === 'string' ? (
-              <p className="font-body text-[13.5px] text-color-text-caption leading-relaxed text-left">
+              <p className="font-body italic text-[13.5px] text-color-text-caption leading-relaxed text-left">
                 {caption}
               </p>
             ) : (

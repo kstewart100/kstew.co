@@ -44,10 +44,13 @@ export function MeasurementSetup() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="The language guides advertisers through setup in clear, plain terms."
+            >
               <img
                 src="/images/case-studies/measurement-setup/image.png"
-                alt=""
+                alt="Google Ads new campaign screen with measurement setup steps"
                 loading="lazy"
                 className={img}
               />
@@ -71,17 +74,9 @@ export function MeasurementSetup() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
               <ul className={`${list} mt-3`}>
-                <li>
-                  <strong>
-                    Simplify and hide details with progressive disclosure
-                  </strong>
-                </li>
-                <li>
-                  <strong>Do the work for them</strong>
-                </li>
-                <li>
-                  <strong>Assume they&apos;re new</strong>
-                </li>
+                <li>Simplify and hide details with progressive disclosure</li>
+                <li>Do the work for them</li>
+                <li>Assume they&apos;re new</li>
               </ul>
             </CaseStudyLayout>
 

@@ -15,9 +15,6 @@ export function Home() {
           <Header variant="home" />
         </div>
 
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/40 md:from-black/25 to-transparent pointer-events-none z-[5]" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/70 via-black/35 to-transparent pointer-events-none z-[5] md:h-1/3 md:from-black/70 md:via-black/35" />
-
         <div
           className="hidden md:block absolute right-0 bottom-0 w-full h-full bg-no-repeat"
           style={{
@@ -34,8 +31,6 @@ export function Home() {
             backgroundPosition: '18% 20%',
           }}
         />
-
-        <div className="film-grain z-[6]" aria-hidden="true" />
 
         <div className="absolute inset-0 z-10 flex items-end md:items-center justify-center md:justify-end pb-20 md:pb-0 pointer-events-none">
           <div className="w-full px-6 md:px-12">
@@ -56,7 +51,6 @@ export function Home() {
 
       <div className="relative z-10 -mt-8 drop-shadow-navy-soft md:mt-0">
         <main id="main-content" className="relative z-10 w-full">
-          <div className="film-grain z-0" aria-hidden="true" />
           <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-10">
             <section aria-label="Case studies" className="mb-6 md:mb-10">
               <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">

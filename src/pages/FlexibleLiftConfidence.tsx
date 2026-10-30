@@ -45,10 +45,13 @@ export function FlexibleLiftConfidence() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Brand lift results now show how certain we are that the campaign actually drove lift."
+            >
               <img
                 src="/images/case-studies/flexible-lift-confidence/image.png"
-                alt=""
+                alt="Google Ads brand lift metrics showing certainty of lift"
                 loading="lazy"
                 className={imgShadow}
               />
@@ -75,19 +78,13 @@ export function FlexibleLiftConfidence() {
               <h2 className={h2}>Our design principles</h2>
               <ul className={`${list} mt-3`}>
                 <li>
-                  <strong>
-                    Make statistics human by translating terminology into clear,
-                    trustworthy language
-                  </strong>
+                  Make statistics human by translating terminology into clear,
+                  trustworthy language
                 </li>
+                <li>Put information where it belongs</li>
                 <li>
-                  <strong>Put information where it belongs</strong>
-                </li>
-                <li>
-                  <strong>
-                    Validate language choices through research rather than
-                    following others
-                  </strong>
+                  Validate language choices through research rather than
+                  following others
                 </li>
               </ul>
             </CaseStudyLayout>
