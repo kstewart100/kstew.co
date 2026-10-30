@@ -11,6 +11,12 @@ import {
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyNav } from '../components/CaseStudyNav';
+import { FlexibleLiftNamingOptions } from '../components/FlexibleLiftNamingOptions';
+import { FlexibleLiftNamingMatrix } from '../components/FlexibleLiftNamingMatrix';
+import { FlexibleLiftSurveyResults } from '../components/FlexibleLiftSurveyResults';
+import { FlexibleLiftCertaintyTooltip } from '../components/FlexibleLiftCertaintyTooltip';
+import { FlexibleLiftCertaintyQuotes } from '../components/FlexibleLiftCertaintyQuotes';
+import { FlexibleLiftCertaintyIterations } from '../components/FlexibleLiftCertaintyIterations';
 
 const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
@@ -28,7 +34,7 @@ export function FlexibleLiftConfidence() {
           <div className="space-y-6 mb-16 lg:mb-24">
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
-                A metric name that works for statisticians and everyone else
+                A stats metric that works for everyone
               </h1>
             </CaseStudyLayout>
 
@@ -115,12 +121,7 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/flexible-lift-confidence/group-632545.png"
-                alt="Naming options from cross-functional collaboration"
-                loading="lazy"
-                className={imgShadow}
-              />
+              <FlexibleLiftNamingOptions />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -133,13 +134,11 @@ export function FlexibleLiftConfidence() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/flexible-lift-confidence/image-1.png"
-                alt=""
-                loading="lazy"
-                className={imgShadow}
-              />
+            <CaseStudyLayout
+              {...layout}
+              caption="An example of a brand matrix, devoid of need-to-know information."
+            >
+              <FlexibleLiftNamingMatrix />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -252,12 +251,7 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/flexible-lift-confidence/frame-632571.png"
-                alt="Survey results"
-                loading="lazy"
-                className={img}
-              />
+              <FlexibleLiftSurveyResults />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -275,12 +269,7 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/flexible-lift-confidence/group-632542.png"
-                alt="Star tag headline and subhead iterations"
-                loading="lazy"
-                className={img}
-              />
+              <FlexibleLiftCertaintyIterations />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -293,12 +282,7 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/flexible-lift-confidence/group-632550.png"
-                alt="Use case comparison"
-                loading="lazy"
-                className={imgShadow}
-              />
+              <FlexibleLiftCertaintyQuotes />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -312,13 +296,11 @@ export function FlexibleLiftConfidence() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/flexible-lift-confidence/image-2.png"
-                alt=""
-                loading="lazy"
-                className={img}
-              />
+            <CaseStudyLayout
+              {...layout}
+              caption="The plain language version. This is the one we launched with."
+            >
+              <FlexibleLiftCertaintyTooltip />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -329,7 +311,7 @@ export function FlexibleLiftConfidence() {
                 &ldquo;Certainty of lift.&rdquo;
               </p>
               <p className={`${body} mt-4`}>
-                Key learnings: Complex concepts don&apos;t require complex
+                Complex concepts don&apos;t require complex
                 language—simple terminology that resonates with users can maintain
                 technical accuracy while bridging knowledge gaps. Showing results
                 below traditional significance thresholds proved valuable, with 70%
