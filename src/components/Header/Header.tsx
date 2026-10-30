@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({
         isCaseStudy ? 'text-color-text-primary' : 'text-white'
       } ${className}`}
     >
-      <div className="container mx-auto max-w-6xl grid grid-cols-[1fr_auto_1fr] items-center">
+      <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
         <Link
           to="/"
           aria-current={isHomePage ? 'page' : undefined}

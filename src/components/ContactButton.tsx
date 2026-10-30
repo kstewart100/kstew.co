@@ -11,49 +11,7 @@ type ContactButtonProps = {
   className?: string;
 };
 
-const SWAP_TRANSITION = { duration: 0.5, ease: [0.32, 0.72, 0, 1] } as const;
-
-const STEAM_PATHS = [
-  'M8 8.5c-1-1.2 1-2.3 0-3.5',
-  'M11.5 8.5c-1-1.2 1-2.3 0-3.5',
-  'M15 8.5c-1-1.2 1-2.3 0-3.5',
-];
-
-function CoffeeIcon() {
-  const reduceMotion = useReducedMotion();
-
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-5 w-5 overflow-visible"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2.25}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      {STEAM_PATHS.map((d, i) => (
-        <motion.path
-          key={d}
-          d={d}
-          initial={{ opacity: reduceMotion ? 1 : 0, y: 0 }}
-          animate={
-            reduceMotion ? undefined : { opacity: [0, 1, 0], y: [1.5, -1, -3] }
-          }
-          transition={{
-            duration: 1.6,
-            ease: 'easeOut',
-            repeat: Infinity,
-            delay: 0.15 + i * 0.3,
-          }}
-        />
-      ))}
-      <path d="M5 11h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5v-4z" />
-      <path d="M17 12h1a2.5 2.5 0 0 1 0 5h-1.2" />
-    </svg>
-  );
-}
+const SWAP_TRANSITION = { duration: 0.85, ease: [0.4, 0, 0.2, 1] } as const;
 
 const DOT_POSITIONS = [8, 12, 16];
 
@@ -139,7 +97,6 @@ function WaveIcon() {
 const ICONS: Record<ContactIconName, () => React.ReactElement> = {
   message: MessageIcon,
   wave: WaveIcon,
-  coffee: CoffeeIcon,
 };
 
 export function ContactButton({
@@ -175,41 +132,50 @@ export function ContactButton({
     'inline-flex min-h-[44px] items-center rounded-full px-5 py-2 font-heading text-sm font-semibold leading-6 md:px-6 md:text-base';
 
   return (
-    <span className={`relative inline-flex shrink-0 ${className}`}>
-      <span aria-hidden="true" className={`${pillClassName} invisible`}>
-        {label}
-      </span>
-      <motion.a
+    <>
+      <a
         href={href}
-        layout
-        initial={false}
-        onMouseEnter={activate}
-        onMouseLeave={deactivate}
-        onFocus={activate}
-        onBlur={deactivate}
-        whileTap={reduceMotion ? undefined : { scale: 0.97 }}
         aria-label={label}
-        transition={transition}
-        className={`${pillClassName} absolute right-0 top-0 z-10 origin-right whitespace-nowrap bg-color-accent-hero text-color-text-primary transition-colors duration-500 hover:bg-color-accent-hero-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-color-text-primary focus-visible:ring-offset-2`}
+        className={`md:hidden ${pillClassName} whitespace-nowrap bg-color-accent-hero text-color-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-color-text-primary focus-visible:ring-offset-2 ${className}`}
       >
-        <span className="relative block h-7 overflow-hidden">
-          <AnimatePresence initial={false}>
-            <motion.span
-              key={text}
-              className="flex h-7 items-center gap-2 whitespace-nowrap"
-              {...rowMotion}
-              transition={transition}
-            >
-              {Icon && (
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center">
-                  <Icon />
-                </span>
-              )}
-              {text}
-            </motion.span>
-          </AnimatePresence>
+        {label}
+      </a>
+      <span className={`relative hidden md:inline-flex shrink-0 ${className}`}>
+        <span aria-hidden="true" className={`${pillClassName} invisible`}>
+          {label}
         </span>
-      </motion.a>
-    </span>
+        <motion.a
+          href={href}
+          layout
+          initial={false}
+          onMouseEnter={activate}
+          onMouseLeave={deactivate}
+          onFocus={activate}
+          onBlur={deactivate}
+          whileTap={reduceMotion ? undefined : { scale: 0.97 }}
+          aria-label={label}
+          transition={transition}
+          className={`${pillClassName} absolute right-0 top-0 z-10 origin-right whitespace-nowrap bg-color-accent-hero text-color-text-primary transition-colors duration-500 hover:bg-color-accent-hero-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-color-text-primary focus-visible:ring-offset-2`}
+        >
+          <span className="relative block h-7 overflow-hidden">
+            <AnimatePresence initial={false}>
+              <motion.span
+                key={text}
+                className="flex h-7 items-center gap-2 whitespace-nowrap"
+                {...rowMotion}
+                transition={transition}
+              >
+                {Icon && (
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center">
+                    <Icon />
+                  </span>
+                )}
+                {text}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+        </motion.a>
+      </span>
+    </>
   );
 }
