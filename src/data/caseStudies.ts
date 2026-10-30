@@ -15,41 +15,40 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'measurement-setup',
     label: 'Google',
-    title: "Helping more advertisers measure what's working in Google Ads",
+    title: 'Making an easy\u2011to\u2011skip step worth finishing',
     pageTitle:
-      "Helping more advertisers measure what's working in Google Ads — Kyle Stewart",
+      'Making an easy\u2011to\u2011skip step worth finishing — Kyle Stewart',
     previewImage: '/images/case-studies/measurement-setup/image.png',
     description:
-      'Repositioning measurement setup in Google Ads onboarding with clearer headlines and action-oriented copy.',
+      'Conversion measurement setup was buried and easy to skip. Clearer headlines, simpler guidance, and action-oriented copy helped more advertisers finish it.',
   },
   {
     slug: 'conversion-goal-updates',
     label: 'Google',
-    title: 'Turning a confusing conversion change into a clear one',
-    pageTitle:
-      'Turning a confusing conversion change into a clear one — Kyle Stewart',
+    title: 'Turning a migration chore into a clear yes',
+    pageTitle: 'Turning a migration chore into a clear yes — Kyle Stewart',
     previewImage: '/images/case-studies/conversion-goal-updates/laptop.png',
     description:
-      'UX content design for a Google Ads conversion goal migration that affected advertiser spend.',
+      'Switching conversion goals created duplicate actions and wasted spend. Content design turned the migration into a clear yes.',
   },
   {
     slug: 'flexible-lift-confidence',
     label: 'Google',
-    title: 'Redesigning ad metrics teams can report with confidence',
+    title: 'A metric name that works for statisticians and everyone else',
     pageTitle:
-      'Redesigning ad metrics teams can report with confidence — Kyle Stewart',
+      'A metric name that works for statisticians and everyone else — Kyle Stewart',
     previewImage: '/images/case-studies/flexible-lift-confidence/image.png',
     description:
-      'Making brand lift confidence levels understandable for both novice and expert Google Ads users.',
+      'Naming “certainty of lift” so both stats experts and novices could understand brand lift results from the name alone.',
   },
   {
     slug: 'expert-scheduling',
     label: 'Intuit',
-    title: 'Streamlining schedule creation for tax pros',
-    pageTitle: 'Streamlining schedule creation for tax pros — Kyle Stewart',
+    title: 'Less reading, easier scheduling',
+    pageTitle: 'Less reading, easier scheduling — Kyle Stewart',
     previewImage: '/images/case-studies/expert-scheduling/hero-group-3766.png',
     description:
-      'A content redesign of Intuit’s TurboTax Live expert scheduling tool ahead of tax season.',
+      'A content redesign of Intuit’s TurboTax Live expert scheduling tool that cut reading and made setup easier ahead of tax season.',
   },
 ];
 

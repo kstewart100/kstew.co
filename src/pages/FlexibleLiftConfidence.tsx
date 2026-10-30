@@ -28,7 +28,7 @@ export function FlexibleLiftConfidence() {
           <div className="space-y-6 mb-16 lg:mb-24">
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
-                Redesigning ad metrics teams can report with confidence
+                A metric name that works for statisticians and everyone else
               </h1>
             </CaseStudyLayout>
 
@@ -60,17 +60,18 @@ export function FlexibleLiftConfidence() {
             <CaseStudyLayout {...layout}>
               <p className={body}>
                 Brand lift campaigns on Google Ads rarely achieved statistical
-                significance, leaving advertisers with vague insights like &ldquo;Your
-                campaign drove an increase in awareness.&rdquo; We proposed lowering
-                the statistical threshold and displaying confidence levels directly
-                in the product—giving advertisers transparency about result
-                reliability while making more campaigns actionable.
+                significance, so advertisers received vague insights like
+                &ldquo;Your campaign drove an increase in awareness.&rdquo; We
+                proposed lowering the statistical threshold and showing confidence
+                levels directly in the product. This gave advertisers transparency
+                about result reliability and made more campaigns actionable.
               </p>
               <p className={`${body} mt-4`}>
                 I lead the content design and messaging to make this complex
                 statistical concept accessible to both novices and experts. The
                 updates significantly improved customer satisfaction scores and
-                renewed engagement with brand lift campaigns.
+                renewed engagement with brand lift campaigns. Among users studied,
+                90% understood what the metric was from the name alone!
               </p>
             </CaseStudyLayout>
 
@@ -83,8 +84,7 @@ export function FlexibleLiftConfidence() {
                 </li>
                 <li>Put information where it belongs</li>
                 <li>
-                  Validate language choices through research rather than
-                  following others
+                  Ground language choices in research, not convention
                 </li>
               </ul>
             </CaseStudyLayout>
@@ -167,7 +167,7 @@ export function FlexibleLiftConfidence() {
               </p>
               <p className={`${body} mt-4`}>
                 The drafted research study ensured the in-product content would be
-                thoroughly validated and that both user groups understood the metric
+                thoroughly tested and that both user groups understood the metric
                 and metric group without needing to reference tooltips or additional
                 educational information.
               </p>
@@ -240,10 +240,10 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <p className={body}>
-                Prior to the launch, the team wanted to validate the
+                Prior to the launch, the team wanted to ensure the
                 experience&apos;s usability and confirm users correctly comprehended
                 the new metric. Before a market release, our research partners
-                conducted a quantitative study to measure and validate key user
+                conducted a quantitative study to measure and understand key user
                 perceptions. The survey included questions to specifically confirm
                 that this initial cohort interpreted the new metric as we intended.
                 This provided the data-backed signal we needed to de-risk the
@@ -263,8 +263,8 @@ export function FlexibleLiftConfidence() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Creating an easy-to-read tooltip</h2>
               <p className={`${body} mt-3`}>
-                With validated terminology, I focused on designing the complete user
-                experience. The goal was to make statistical results both
+                With the terminology settled, I focused on designing the complete
+                user experience. The goal was to make statistical results both
                 comprehensible and actionable for decision-making.
               </p>
               <p className={`${body} mt-4`}>

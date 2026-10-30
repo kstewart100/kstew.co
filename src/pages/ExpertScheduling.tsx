@@ -26,7 +26,7 @@ export function ExpertScheduling() {
           <div className="space-y-6 mb-16 lg:mb-24">
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
-                Streamlining schedule creation for tax pros
+                Less reading, easier scheduling
               </h1>
             </CaseStudyLayout>
 
@@ -73,18 +73,12 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-3 list-outside`}>
+              <ul className={`${list} mt-3`}>
+                <li>Give people information exactly when they need it</li>
+                <li>Celebrate progress</li>
                 <li>
-                  <strong>Give people information exactly when they need it</strong>
-                </li>
-                <li>
-                  <strong>Celebrate progress</strong>
-                </li>
-                <li>
-                  <strong>
-                    Break big, complicated tasks into smaller pieces that
-                    don&apos;t feel intimidating
-                  </strong>
+                  Break big, complicated tasks into smaller pieces that
+                  don&apos;t feel intimidating
                 </li>
               </ul>
             </CaseStudyLayout>

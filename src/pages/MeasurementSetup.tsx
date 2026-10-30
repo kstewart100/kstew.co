@@ -27,7 +27,7 @@ export function MeasurementSetup() {
           <div className="space-y-6 mb-16 lg:mb-24">
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
-                Helping more advertisers measure what&apos;s working in Google Ads
+                Making an easy{'\u2011'}to{'\u2011'}skip step worth finishing
               </h1>
             </CaseStudyLayout>
 
@@ -58,17 +58,27 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <p className={body}>
-                Conversion tracking was essential to campaign performance, but the
-                setup experience was buried, jargon-heavy, and easy for first-time
-                advertisers to skip.
+                Conversion measurement was essential to campaign performance, but
+                the setup experience was buried, jargon-heavy, and easy for
+                first-time advertisers to skip. Most people skipped this step, and
+                as a result, their campaigns performed poorly and they grew
+                frustrated with Google Ads.
               </p>
               <p className={`${body} mt-4`}>
                 I helped reposition measurement setup inside onboarding with
                 clearer headlines, simpler guidance, and action-oriented copy so
-                more users could complete setup correctly on the first pass. With
+                more people could complete setup correctly on the first pass. With
                 these new updates, we saw a 25 percent increase in people setting
                 up these tools.
               </p>
+              <aside
+                className={`${body} mt-4 bg-color-bg-subtle px-5 py-4`}
+              >
+                Along with this update, the product language for conversion
+                measurement also needed changes in three other parts of the
+                product. As a result, I needed stakeholder buy-in from three other
+                product areas.
+              </aside>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -83,7 +93,7 @@ export function MeasurementSetup() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Refining content hierarchy</h2>
               <p className={`${body} mt-3`}>
-                My initial approach included all information users might need
+                My initial approach included all information someone might need
                 directly on the page. But after exploring this, I realized we
                 could streamline the narrative and significantly reduce cognitive
                 load.
@@ -151,7 +161,7 @@ export function MeasurementSetup() {
                     ),
                     status: 'Rejected',
                     decision:
-                      'Unclear about review process; users were confused about next steps',
+                      'Unclear about review process; some were confused about next steps',
                   },
                   {
                     copy: (
@@ -205,8 +215,8 @@ export function MeasurementSetup() {
                 Leveraging prior research, I discovered that &ldquo;Set up&rdquo;
                 and &ldquo;Get event snippet&rdquo; resonated strongly with
                 advertisers. These action-oriented CTAs clearly communicated what
-                users needed to do while avoiding technical jargon that might cause
-                hesitation.
+                someone needed to do while avoiding technical jargon that might
+                cause hesitation.
               </p>
               <p className={`${body} mt-4`}>
                 This seemingly small decision had significant impact—clear CTAs
@@ -219,13 +229,13 @@ export function MeasurementSetup() {
               <h2 className={h2}>Working out the jargon</h2>
               <p className={`${body} mt-3`}>
                 While working on this experience, I kept one thing in mind: What
-                did the user need to know to take action? Why did the user even
-                care about taking action?
+                did the advertiser need to know to take action? Why did the
+                advertiser even care about taking action?
               </p>
               <p className={`${body} mt-4`}>
                 An important place this thought should be alleviated is in the
                 directional copy in the tags and snippets. Without setting these
-                up correctly, users wouldn&apos;t see results in their campaign.
+                up correctly, people wouldn&apos;t see results in their campaign.
                 This approach—explaining the &ldquo;why&rdquo; alongside the
                 &ldquo;what&rdquo;—helped advertisers understand not just what
                 they were doing, but why it mattered for their business
@@ -311,7 +321,7 @@ export function MeasurementSetup() {
                     ),
                     status: 'Rejected',
                     decision:
-                      'Overly technical explanation that overwhelmed users; too much detail for initial setup step',
+                      'Overly technical explanation that overwhelmed some; too much detail for initial setup step',
                   },
                   {
                     copy: (
@@ -336,19 +346,19 @@ export function MeasurementSetup() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                The experiment worked. More people actually completed the
-                conversion setup, and they did it correctly. When you make
-                something less confusing, people can actually use it. We
-                significantly improved conversion tracking accuracy and increased
-                successful setup completion rates.
+                The update worked. More people actually completed the conversion
+                setup, and they did it correctly. When you make something less
+                confusing, people can actually use it. We significantly improved
+                conversion tracking accuracy and increased successful setup
+                completion rates.
               </p>
               <p className={`${body} mt-4`}>
                 This project reinforced several key insights:
               </p>
               <ul className={`${list} mt-3`}>
                 <li>
-                  Meeting users in their natural workflow dramatically improves
-                  adoption
+                  Meeting advertisers in their natural workflow dramatically
+                  improves adoption
                 </li>
                 <li>
                   Technical processes can be made approachable through thoughtful
