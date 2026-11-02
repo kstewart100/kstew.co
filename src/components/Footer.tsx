@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         <div className="text-xs text-color-text-on-dark-muted">
-          © Kyle Stewart 2026 All rights reserved.
+          © Kyle Stewart 2026 · All rights reserved.
         </div>
       </div>
     </footer>

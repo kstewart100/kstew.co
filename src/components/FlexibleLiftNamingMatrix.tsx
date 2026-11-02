@@ -11,7 +11,7 @@ type MatrixRow = {
 };
 
 const COLUMNS = [
-  'Certainty of Lift Detection',
+  'Certainty of lift detection',
   'Lift Confidence',
   'Statistical Significance',
   'P-Value',
@@ -111,7 +111,7 @@ const ROWS: MatrixRow[] = [
         },
         {
           label: 'W:',
-          text: 'Excludes majority users, needs explanation',
+          text: 'Excludes most users, needs explanation',
         },
         {
           label: 'O:',

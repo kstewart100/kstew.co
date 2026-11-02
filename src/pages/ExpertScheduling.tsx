@@ -87,7 +87,7 @@ export function ExpertScheduling() {
               <h2 className={h2}>The expert journey</h2>
               <p className={`${body} mt-3`}>
                 Experts use the scheduling tool to set their weekly availability
-                across a 12-week period before tax season ends, ensuring adequate
+                across a 12-week period before tax season begins, ensuring adequate
                 coverage while respecting their availability.
               </p>
             </CaseStudyLayout>

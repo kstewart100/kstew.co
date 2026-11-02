@@ -20,7 +20,7 @@ export function FlexibleLiftCertaintyTooltip() {
         Results with a 90% certainty are the most reliable.
       </p>
       <span className="mt-6 inline-block text-[17px] text-[#1a73e8]">
-        Learn more about certainty of lift
+        Learn more about Certainty of lift
       </span>
     </motion.div>
   );

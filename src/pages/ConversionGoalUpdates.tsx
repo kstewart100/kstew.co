@@ -79,20 +79,20 @@ export function ConversionGoalUpdates() {
               <h2 className={h2}>Our design principles</h2>
               <ul className={`${list} mt-3`}>
                 <li>
-                  Be upfront about potential changes–both positive and negative.
+                  Be upfront about potential changes—both positive and negative
                 </li>
                 <li>
-                  Automate where possible and break tasks into manageable steps.
+                  Automate where possible and break tasks into manageable steps
                 </li>
                 <li>
                   Be honest about trade-offs, both the short-term pain and
-                  long-term benefits.
+                  long-term benefits
                 </li>
               </ul>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <h2 className={h2}>Refining the content hierarchy</h2>
+              <h2 className={h2}>Refining content hierarchy</h2>
             </CaseStudyLayout>
 
             <CaseStudyLayout
@@ -115,7 +115,7 @@ export function ConversionGoalUpdates() {
                 they thought about it.
               </p>
               <p className={`${body} mt-4`}>
-                The main headline from PM mocks captured the directive:
+                The main headline from PM mockups captured the directive:
                 &ldquo;Update your goals from Universal Analytics conversions to
                 Google Analytics 4 conversions.&rdquo; Technically correct, but way
                 too complicated.
@@ -192,7 +192,7 @@ export function ConversionGoalUpdates() {
             <CaseStudyLayout {...layout}>
               <p className={body}>
                 As we neared launch, I worked with help content teams to spot
-                remaining knowledge gaps. We added tool tips and consolidated help
+                remaining knowledge gaps. We added tooltips and consolidated help
                 resources to give people answers without overwhelming them.
               </p>
             </CaseStudyLayout>
@@ -321,7 +321,7 @@ export function ConversionGoalUpdates() {
               <p className={`${body} mt-4`}>
                 We flipped the entire approach. Instead of &ldquo;here&apos;s a
                 complex table, and you need to make changes,&rdquo; it became
-                &ldquo;here&apos;s our recommendations–does this look right?&rdquo;
+                &ldquo;here&apos;s a recommendation—does this look right?&rdquo;
               </p>
             </CaseStudyLayout>
 
@@ -353,8 +353,8 @@ export function ConversionGoalUpdates() {
               <p className={`${body} mt-4`}>
                 The in-product notification and sub-header copy became just as
                 important as the flow itself. They had to communicate both urgency
-                and confidence–in a tone that matched their user&apos;s mental
-                model.
+                and confidence—in a tone that matched advertisers&apos; mental
+                models.
               </p>
             </CaseStudyLayout>
 

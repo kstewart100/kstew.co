@@ -68,7 +68,7 @@ export function MeasurementSetup() {
                 I helped reposition measurement setup inside onboarding with
                 clearer headlines, simpler guidance, and action-oriented copy so
                 more people could complete setup correctly on the first pass. With
-                these new updates, we saw a 25 percent increase in people setting
+                these new updates, we saw a 25% increase in people setting
                 up these tools.
               </p>
               <aside
@@ -107,15 +107,6 @@ export function MeasurementSetup() {
                 loading="lazy"
                 className={imgShadow}
               />
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
-                I thought a celebratory message would be motivating, but research
-                quickly shot that down. People thought &apos;Congrats!&apos; meant
-                their campaigns were already live, which was completely wrong.
-                This led to a complete rethink of our messaging strategy.
-              </p>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -233,12 +224,12 @@ export function MeasurementSetup() {
                 advertiser even care about taking action?
               </p>
               <p className={`${body} mt-4`}>
-                An important place this thought should be alleviated is in the
-                directional copy in the tags and snippets. Without setting these
-                up correctly, people wouldn&apos;t see results in their campaign.
-                This approach—explaining the &ldquo;why&rdquo; alongside the
-                &ldquo;what&rdquo;—helped advertisers understand not just what
-                they were doing, but why it mattered for their business
+                That question mattered most in the directional copy for tags and
+                snippets. Without setting these up correctly, people wouldn&apos;t
+                see results in their campaign. This approach—explaining the
+                &ldquo;why&rdquo; alongside the &ldquo;what&rdquo;—helped
+                advertisers understand not just what they were doing, but why it
+                mattered for their business.
               </p>
             </CaseStudyLayout>
 
