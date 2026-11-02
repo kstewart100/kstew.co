@@ -340,34 +340,13 @@ export function MeasurementSetup() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                The update worked. More people actually completed the conversion
-                setup, and they did it correctly. When you make something less
-                confusing, people can actually use it. We significantly improved
-                conversion tracking accuracy and increased successful setup
-                completion rates.
+                The update worked. More people finished measurement setup, and
+                they did it correctly—about 25% more than before.
               </p>
               <p className={`${body} mt-4`}>
-                This project reinforced several key insights:
-              </p>
-              <ul className={`${list} mt-3`}>
-                <li>
-                  Meeting advertisers in their natural workflow dramatically
-                  improves adoption
-                </li>
-                <li>
-                  Technical processes can be made approachable through thoughtful
-                  content design
-                </li>
-                <li>
-                  Small language changes—like simplified CTAs—can have outsized
-                  impact
-                </li>
-              </ul>
-              <p className={`${body} mt-4`}>
-                Working with several different teams was tricky—everyone had
-                opinions about what should be included. But keeping the focus on
-                &apos;will this help someone who&apos;s never done this before?&apos;
-                usually got us to the right answer.
+                The useful pressure test was simple: would this help someone
+                who&apos;s never done this before? That question usually settled
+                what stayed on the page and what got cut.
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />

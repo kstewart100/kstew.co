@@ -31,6 +31,7 @@ export function CaseStudyNav() {
           <WorkCard
             label={next.label}
             title={next.title}
+            outcome={next.outcome}
             href={`/${next.slug}`}
           />
           <WorkCard label="Home" title="All case studies" href="/" />

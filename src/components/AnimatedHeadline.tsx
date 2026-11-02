@@ -96,6 +96,9 @@ export function AnimatedHeadline({
           </span>
         </span>
       </div>
+      <p className="mt-4 md:mt-5 font-mono text-base sm:text-lg text-white/90 leading-snug max-w-[22rem] mx-auto md:mx-0 md:ml-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
+        Content design for products that feel good to use.
+      </p>
     </div>
   );
 }

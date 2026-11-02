@@ -306,20 +306,10 @@ export function FlexibleLiftConfidence() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                The project delivered measurable improvements: over 50% of users
-                found brand lift campaigns easy to use, and 90% understood
-                &ldquo;Certainty of lift.&rdquo;
-              </p>
-              <p className={`${body} mt-4`}>
-                Complex concepts don&apos;t require complex
-                language—simple terminology that resonates with users can maintain
-                technical accuracy while bridging knowledge gaps. Showing results
-                below traditional significance thresholds proved valuable, with 70%
-                of users preferring directional insights over no information. Most
-                importantly, user research revealed that terminology seeming
-                &ldquo;oversimplified&rdquo; to internal stakeholders was optimal for
-                actual users—validating evidence-based content decisions over
-                intuition.
+                Over 50% found brand lift easier to use, and 90% understood
+                &ldquo;Certainty of lift&rdquo; from the name. Research beat
+                internal preference: what felt &ldquo;oversimplified&rdquo; to
+                stakeholders was what users could actually use.
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />

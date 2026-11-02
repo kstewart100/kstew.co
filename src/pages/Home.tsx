@@ -54,7 +54,7 @@ export function Home() {
           <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-10">
             <section aria-label="Case studies" className="mb-6 md:mb-10">
               <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
-                Look around
+                Here&apos;s the proof
               </h2>
 
               <div className="work-card-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
@@ -63,6 +63,7 @@ export function Home() {
                     key={study.slug}
                     label={study.label}
                     title={study.title}
+                    outcome={study.outcome}
                     href={`/${study.slug}`}
                   />
                 ))}
@@ -77,9 +78,12 @@ export function Home() {
                 <div className="space-y-6 text-[18px] leading-relaxed text-color-text-secondary">
                   <p>
                     I&apos;m a Bay Area native and content designer with 10+ years
-                    building user experiences across startups, agencies, and
-                    companies like Google and Intuit. Above all else, I love
-                    creating and collaborating.
+                    across startups, agencies, Google, and Intuit. I design
+                    content for products that feel good to use.
+                  </p>
+                  <p>
+                    If you&apos;re building something like that and want a content
+                    design partner, I&apos;d love to talk.
                   </p>
                   <p>
                     These days I&apos;m in the Inner Sunset, running Golden Gate
