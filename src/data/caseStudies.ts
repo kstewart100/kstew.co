@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
     pageTitle: 'A stats metric that works for everyone — Kyle Stewart',
     previewImage: '/images/case-studies/flexible-lift-confidence/image.png',
     description:
-      'Naming “certainty of lift” so both stats experts and novices could understand brand lift results from the name alone.',
+      'Naming “Certainty of lift” so both stats experts and novices could understand brand lift results from the name alone.',
   },
   {
     slug: 'expert-scheduling',

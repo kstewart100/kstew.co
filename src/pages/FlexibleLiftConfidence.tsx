@@ -57,7 +57,7 @@ export function FlexibleLiftConfidence() {
             >
               <img
                 src="/images/case-studies/flexible-lift-confidence/image.png"
-                alt="Google Ads brand lift metrics showing certainty of lift"
+                alt="Google Ads brand lift metrics showing Certainty of lift"
                 loading="lazy"
                 className={imgShadow}
               />
@@ -73,7 +73,7 @@ export function FlexibleLiftConfidence() {
                 about result reliability and made more campaigns actionable.
               </p>
               <p className={`${body} mt-4`}>
-                I lead the content design and messaging to make this complex
+                I led the content design and messaging to make this complex
                 statistical concept accessible to both novices and experts. The
                 updates significantly improved customer satisfaction scores and
                 renewed engagement with brand lift campaigns. Among users studied,
@@ -115,7 +115,7 @@ export function FlexibleLiftConfidence() {
               <p className={`${body} mt-3`}>
                 The team had explored several naming options before my involvement.
                 After conducting the literature review and consulting design
-                guidelines, I proposed &ldquo;certainty of lift,&rdquo; though
+                guidelines, I proposed &ldquo;Certainty of lift,&rdquo; though
                 stakeholders initially expressed skepticism about this terminology.
               </p>
             </CaseStudyLayout>
@@ -136,7 +136,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout
               {...layout}
-              caption="An example of a brand matrix, devoid of need-to-know information."
+              caption="An example of the naming matrix—without confidential scores or notes."
             >
               <FlexibleLiftNamingMatrix />
             </CaseStudyLayout>
@@ -145,7 +145,7 @@ export function FlexibleLiftConfidence() {
               <p className={body}>
                 The analysis narrowed our options to two candidates:
                 &ldquo;statistical significance&rdquo; (favored by data science
-                stakeholders) and &ldquo;certainty of lift detection&rdquo; (aligned
+                stakeholders) and &ldquo;Certainty of lift detection&rdquo; (aligned
                 with content standards). User research would determine the final
                 choice.
               </p>
@@ -167,7 +167,7 @@ export function FlexibleLiftConfidence() {
               <p className={`${body} mt-4`}>
                 The drafted research study ensured the in-product content would be
                 thoroughly tested and that both user groups understood the metric
-                and metric group without needing to reference tooltips or additional
+                from the name alone, without needing tooltips or additional
                 educational information.
               </p>
             </CaseStudyLayout>
@@ -189,10 +189,10 @@ export function FlexibleLiftConfidence() {
                 asked to explain what the term means to them.
               </p>
               <p className={`${body} mt-4`}>
-                Results strongly favored &ldquo;certainty of lift detection&rdquo;
+                Results strongly favored &ldquo;Certainty of lift detection&rdquo;
                 across all user segments. Notably, even statistically sophisticated
                 users found &ldquo;statistical significance&rdquo; ambiguous in this
-                context. We further simplified it to &ldquo;certainty of lift&rdquo;
+                context. We further simplified it to &ldquo;Certainty of lift&rdquo;
                 based on these findings.
               </p>
             </CaseStudyLayout>
@@ -206,11 +206,11 @@ export function FlexibleLiftConfidence() {
                   </p>
                   <ul className={list}>
                     <li>
-                      More stats savvy users preferred this because they use this
+                      More stats-savvy users preferred this because they use this
                       language today
                     </li>
                     <li>
-                      Less stats savvy users preferred this because it seemed more
+                      Less stats-savvy users preferred this because it seemed more
                       technical and exact
                     </li>
                     <li>More universal term, specific to stats</li>
@@ -229,7 +229,7 @@ export function FlexibleLiftConfidence() {
                       accurate the results are
                     </li>
                     <li>
-                      Both more and less stats savvy users preferred this because
+                      Both more and less stats-savvy users preferred this because
                       it was easier to understand and explain to others
                     </li>
                   </ul>
@@ -289,10 +289,10 @@ export function FlexibleLiftConfidence() {
               <p className={body}>
                 To align stakeholders on the tooltip language, I developed two
                 versions—one using plain language and another with technical
-                terminology. After showing my stakeholders you can use plain language
-                to get a technical point across, we launched with a version that
-                balanced clarity with accuracy to ensure both technical and
-                non-technical users could understand and trust the results.
+                terminology. Once stakeholders saw that plain language could get a
+                technical point across, we launched with a version that balanced
+                clarity with accuracy to ensure both technical and non-technical
+                users could understand and trust the results.
               </p>
             </CaseStudyLayout>
 

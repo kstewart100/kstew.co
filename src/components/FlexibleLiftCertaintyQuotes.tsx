@@ -11,7 +11,7 @@ const QUOTES = [
   {
     id: 'ecommerce',
     quote:
-      'We are typically please with seeing a positive lift campaign with 75% certainty.',
+      'We are typically pleased with seeing a positive lift campaign with 75% certainty.',
     attribution: 'Brand marketer at large e-commerce company',
     avatar:
       '/images/case-studies/flexible-lift-confidence/quote-avatar-ecommerce.png',
