@@ -63,6 +63,7 @@ export function Home() {
                     key={study.slug}
                     label={study.label}
                     title={study.title}
+                    outcome={study.outcome}
                     href={`/${study.slug}`}
                   />
                 ))}

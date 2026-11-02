@@ -6,6 +6,7 @@ export interface CaseStudy {
   slug: string;
   label: string;
   title: string;
+  outcome: string;
   pageTitle: string;
   previewImage: string;
   description: string;
@@ -16,6 +17,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'measurement-setup',
     label: 'Google',
     title: 'Making an easy\u2011to\u2011skip step worth finishing',
+    outcome: '25% more people measure their ads correctly',
     pageTitle:
       'Making an easy\u2011to\u2011skip step worth finishing — Kyle Stewart',
     previewImage: '/images/case-studies/measurement-setup/image.png',
@@ -26,6 +28,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'conversion-goal-updates',
     label: 'Google',
     title: 'Turning a migration chore into a clear yes',
+    outcome: 'From flipping each setting to a review and approve',
     pageTitle: 'Turning a migration chore into a clear yes — Kyle Stewart',
     previewImage: '/images/case-studies/conversion-goal-updates/laptop.png',
     description:
@@ -35,6 +38,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'flexible-lift-confidence',
     label: 'Google',
     title: 'A stats metric that works for everyone',
+    outcome: '90% got the name, no help needed',
     pageTitle: 'A stats metric that works for everyone — Kyle Stewart',
     previewImage: '/images/case-studies/flexible-lift-confidence/image.png',
     description:
@@ -44,6 +48,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'expert-scheduling',
     label: 'Intuit',
     title: 'Less reading, easier scheduling',
+    outcome: 'Plain guidance so tax pros can set their own schedules',
     pageTitle: 'Less reading, easier scheduling — Kyle Stewart',
     previewImage: '/images/case-studies/expert-scheduling/hero-group-3766.png',
     description:

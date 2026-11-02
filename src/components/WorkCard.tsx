@@ -9,9 +9,10 @@ export interface WorkCardProps {
   label: string;
   title: string;
   href: string;
+  outcome?: string;
 }
 
-export function WorkCard({ label, title, href }: WorkCardProps) {
+export function WorkCard({ label, title, href, outcome }: WorkCardProps) {
   return (
     <Link
       to={href}
@@ -32,6 +33,11 @@ export function WorkCard({ label, title, href }: WorkCardProps) {
       <h3 className="text-2xl md:text-3xl font-heading font-semibold text-current leading-snug">
         {title}
       </h3>
+      {outcome ? (
+        <p className="mt-3 font-mono text-[15px] leading-snug text-current/70">
+          {outcome}
+        </p>
+      ) : null}
     </Link>
   );
 }
