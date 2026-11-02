@@ -92,12 +92,6 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Refining content hierarchy</h2>
-              <p className={`${body} mt-3`}>
-                My initial approach included all information someone might need
-                directly on the page. But after exploring this, I realized we
-                could streamline the narrative and significantly reduce cognitive
-                load.
-              </p>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -107,6 +101,15 @@ export function MeasurementSetup() {
                 loading="lazy"
                 className={imgShadow}
               />
+            </CaseStudyLayout>
+
+            <CaseStudyLayout {...layout}>
+              <p className={body}>
+                My initial approach included all information someone might need
+                directly on the page. But after exploring this, I realized we
+                could streamline the narrative and significantly reduce the cognitive
+                load.
+              </p>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
