@@ -78,9 +78,12 @@ export function Home() {
                 <div className="space-y-6 text-[18px] leading-relaxed text-color-text-secondary">
                   <p>
                     I&apos;m a Bay Area native and content designer with 10+ years
-                    building user experiences across startups, agencies, and
-                    companies like Google and Intuit. Above all else, I love
-                    creating and collaborating.
+                    across startups, agencies, Google, and Intuit. I design
+                    content for products that feel good to use.
+                  </p>
+                  <p>
+                    If you&apos;re building something like that and want a content
+                    design partner, I&apos;d love to talk.
                   </p>
                   <p>
                     These days I&apos;m in the Inner Sunset, running Golden Gate
