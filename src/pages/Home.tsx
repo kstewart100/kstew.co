@@ -54,7 +54,7 @@ export function Home() {
           <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-10">
             <section aria-label="Case studies" className="mb-6 md:mb-10">
               <h2 className="text-[40px] font-heading mb-8 tracking-tight text-color-text-primary font-[600]">
-                Look around
+                Here&apos;s the proof
               </h2>
 
               <div className="work-card-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
