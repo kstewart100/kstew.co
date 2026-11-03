@@ -275,7 +275,7 @@ export function MeasurementSetup() {
                         snippets can start measuring conversions.
                       </>
                     ),
-                    status: <strong>Final</strong>,
+                    status: 'Final',
                     decision:
                       'Clear, concise explanation of purpose; establishes proper sequence (Google tag before event snippets); action-oriented language',
                   },
@@ -327,7 +327,7 @@ export function MeasurementSetup() {
                         each conversion.
                       </>
                     ),
-                    status: <strong>Final</strong>,
+                    status: 'Final',
                     decision:
                       'Strikes balance between clarity and completeness; explains purpose without technical jargon; actionable next step',
                   },

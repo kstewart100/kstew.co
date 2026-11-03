@@ -12,8 +12,6 @@ export default {
         mono: ['Inconsolata', 'monospace'],
         heading: ['Be Vietnam Pro', 'sans-serif'],
         hero: ['Hanken Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
-        // Product UI recreations only (Google Ads mocks, etc.)
-        mock: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
         'color-bg-canvas': 'var(--color-bg-canvas)',
@@ -30,6 +28,12 @@ export default {
         'color-border-default': 'var(--color-border-default)',
         'color-accent-hero': 'var(--color-accent-hero)',
         'color-accent-hero-hover': 'var(--color-accent-hero-hover)',
+        'color-status-rejected-bg': 'var(--color-status-rejected-bg)',
+        'color-status-rejected-border': 'var(--color-status-rejected-border)',
+        'color-status-rejected-text': 'var(--color-status-rejected-text)',
+        'color-status-final-bg': 'var(--color-status-final-bg)',
+        'color-status-final-border': 'var(--color-status-final-border)',
+        'color-status-final-text': 'var(--color-status-final-text)',
       },
     },
   },
