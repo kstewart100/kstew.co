@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Children, isValidElement } from 'react';
-import { documentCaseStudyBodyClassName, documentCaseStudyH3ClassName } from './CaseStudyLayout';
+import { documentCaseStudyH3ClassName } from './CaseStudyLayout';
 
 export type CopyDecisionRow = {
   copy: ReactNode;
@@ -8,27 +8,25 @@ export type CopyDecisionRow = {
   decision: string;
 };
 
+/** Shared type scale: labels lead, content supports. */
+const labelClassName =
+  'font-heading text-[17px] font-semibold leading-normal text-color-text-primary';
+
+const contentClassName =
+  'font-body text-[17px] font-normal leading-normal text-color-text-body';
+
 const cellClassName =
-  'text-left align-top p-2 border border-color-border-default min-w-[7.5rem] bg-color-bg-surface';
+  'text-left align-top p-3 border border-color-border-default min-w-[7.5rem] bg-color-bg-surface';
 
-const headerClassName =
-  'text-left font-medium p-2 border border-color-border-default min-w-[7.5rem] bg-color-bg-subtle';
-
-const fieldValueClassName = documentCaseStudyBodyClassName;
+const headerClassName = `${labelClassName} text-left p-3 border border-color-border-default min-w-[7.5rem] bg-color-bg-subtle`;
 
 const cardClassName =
   'rounded-lg border border-color-border-default bg-color-bg-surface overflow-hidden';
 
 const cardSectionClassName = 'px-4 py-3';
 
-const statusLabelClassName =
-  'font-heading text-[16px] font-semibold text-color-text-primary';
-
-const decisionLabelClassName =
-  'font-heading text-[16px] font-semibold text-color-text-primary mb-1';
-
 const statusPillBaseClassName =
-  'inline-flex items-center rounded-md border px-2.5 py-0.5 font-heading text-[16px] font-semibold leading-normal';
+  'inline-flex items-center rounded-md border px-2.5 py-0.5 font-heading text-[17px] font-normal leading-normal';
 
 const statusPillToneClassName = {
   rejected:
@@ -85,28 +83,28 @@ export function CopyDecisionTable({
             <div
               className={`${cardSectionClassName} flex items-center justify-between gap-3`}
             >
-              <p className={statusLabelClassName}>Status</p>
+              <p className={labelClassName}>Status</p>
               <StatusPill status={row.status} />
             </div>
 
             <div className="mx-4 border-t border-color-border-default" />
 
-            <div className={`${cardSectionClassName} ${fieldValueClassName}`}>
+            <div className={`${cardSectionClassName} ${contentClassName}`}>
               {row.copy}
             </div>
 
             <div className="mx-4 border-t border-color-border-default" />
 
             <div className={cardSectionClassName}>
-              <p className={decisionLabelClassName}>Design decision</p>
-              <div className={fieldValueClassName}>{row.decision}</div>
+              <p className={`${labelClassName} mb-1`}>Design decision</p>
+              <div className={contentClassName}>{row.decision}</div>
             </div>
           </article>
         ))}
       </div>
 
       <div className={`hidden overflow-x-auto md:block ${title ? 'mt-3' : ''}`}>
-        <table className="mt-4 w-full border-collapse text-sm">
+        <table className="mt-4 w-full border-collapse">
           <thead>
             <tr>
               <th scope="col" className={headerClassName}>
@@ -123,13 +121,13 @@ export function CopyDecisionTable({
           <tbody>
             {rows.map((row, index) => (
               <tr key={index}>
-                <td className={`${fieldValueClassName} ${cellClassName}`}>
+                <td className={`${contentClassName} ${cellClassName}`}>
                   {row.copy}
                 </td>
-                <td className={`${cellClassName}`}>
+                <td className={cellClassName}>
                   <StatusPill status={row.status} />
                 </td>
-                <td className={`${fieldValueClassName} ${cellClassName}`}>
+                <td className={`${contentClassName} ${cellClassName}`}>
                   {row.decision}
                 </td>
               </tr>
