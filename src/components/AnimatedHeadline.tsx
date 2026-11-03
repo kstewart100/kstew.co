@@ -8,7 +8,8 @@ export interface AnimatedHeadlineProps {
 
 const DEFAULT_WORDS = ['explore', 'write', 'push', 'show up', 'build'];
 
-const HEADLINE_FONT_SIZE = 'clamp(4.8rem, 14.4vw, 10.8rem)';
+const HEADLINE_FONT_SIZE = 'clamp(3.4rem, 10vw, 7.6rem)';
+const WORD_PREFIX = '_';
 const FONT_MEASURE_TIMEOUT_MS = 1500;
 
 export function AnimatedHeadline({
@@ -27,7 +28,7 @@ export function AnimatedHeadline({
     const measure = () => {
       let max = 0;
       for (const word of words) {
-        el.textContent = `${word}.`;
+        el.textContent = `${WORD_PREFIX}${word}.`;
         max = Math.max(max, el.getBoundingClientRect().width);
       }
       const fontsLoaded = document.fonts?.status === 'loaded';
@@ -61,17 +62,14 @@ export function AnimatedHeadline({
   return (
     <div className={`text-center md:text-right ${className}`}>
       <h1
-        className="font-heading font-black text-white tracking-tight leading-[0.95] md:-mr-[0.065em]"
+        className="font-hero font-semibold text-white leading-[1] md:-mr-[0.04em]"
         style={{ fontSize: HEADLINE_FONT_SIZE }}
       >
         Get out.
       </h1>
       <div
-        className="font-handwriting mt-2 md:mt-4 leading-[0.95] whitespace-nowrap md:-mr-[0.093em]"
-        style={{
-          color: 'var(--color-accent-hero)',
-          fontSize: HEADLINE_FONT_SIZE,
-        }}
+        className="font-hero font-semibold text-white leading-[1] whitespace-nowrap md:-mr-[0.04em]"
+        style={{ fontSize: HEADLINE_FONT_SIZE }}
         aria-live="polite"
       >
         <span
@@ -92,11 +90,15 @@ export function AnimatedHeadline({
             key={`${wordIndex}-${currentWord}`}
             className="headline-cycle-word"
           >
+            <span className="text-color-accent-hero">{WORD_PREFIX}</span>
             {currentWord}.
           </span>
         </span>
       </div>
-      <p className="mt-4 md:mt-5 font-mono text-base sm:text-lg text-white/90 leading-snug max-w-[22rem] mx-auto md:mx-0 md:ml-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
+      <p
+        className="mt-4 md:mt-6 font-mono font-medium text-white leading-snug max-w-[34rem] mx-auto md:mx-0 md:ml-auto"
+        style={{ fontSize: 'clamp(1.125rem, 1.6vw, 1.5rem)', textWrap: 'balance' }}
+      >
         Content design for products that feel good to use.
       </p>
     </div>

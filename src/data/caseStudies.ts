@@ -37,9 +37,10 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'flexible-lift-confidence',
     label: 'Google',
-    title: 'A stats metric that works for everyone',
+    title: 'A metric name that works for statisticians and everyone else',
     outcome: '90% got the name, no help needed',
-    pageTitle: 'A stats metric that works for everyone — Kyle Stewart',
+    pageTitle:
+      'A metric name that works for statisticians and everyone else — Kyle Stewart',
     previewImage: '/images/case-studies/flexible-lift-confidence/image.png',
     description:
       'Naming “Certainty of lift” so both stats experts and novices could understand brand lift results from the name alone.',

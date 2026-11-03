@@ -37,7 +37,9 @@ export const Header: React.FC<HeaderProps> = ({
           <span
             role="img"
             aria-label="Kyle Stewart home"
-            className="block h-8 aspect-[117/180] bg-current transition-opacity group-hover:opacity-80"
+            className={`block h-8 aspect-[117/180] bg-current transition-opacity group-hover:opacity-80 ${
+              isCaseStudy ? '' : 'text-color-accent-hero'
+            }`}
             style={{
               maskImage: 'url(/images/logo.png)',
               WebkitMaskImage: 'url(/images/logo.png)',

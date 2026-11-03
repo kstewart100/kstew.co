@@ -11,7 +11,9 @@ export default {
         body: ['Inconsolata', 'monospace'],
         mono: ['Inconsolata', 'monospace'],
         heading: ['Be Vietnam Pro', 'sans-serif'],
-        handwriting: ['Gochi Hand', 'cursive'],
+        hero: ['Hanken Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        // Product UI recreations only (Google Ads mocks, etc.)
+        mock: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
         'color-bg-canvas': 'var(--color-bg-canvas)',
@@ -28,9 +30,6 @@ export default {
         'color-border-default': 'var(--color-border-default)',
         'color-accent-hero': 'var(--color-accent-hero)',
         'color-accent-hero-hover': 'var(--color-accent-hero-hover)',
-      },
-      boxShadow: {
-        'glass': 'inset 0 1px 1px rgba(255,255,255,0.1), 0 4px 30px rgba(0,0,0,0.1)',
       },
     },
   },
