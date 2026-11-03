@@ -129,7 +129,7 @@ export function ContactButton({
       };
 
   const pillClassName =
-    'inline-flex min-h-[44px] items-center rounded-full px-5 py-2 font-heading text-sm font-semibold leading-6 md:px-6 md:text-base';
+    'inline-flex min-h-[44px] items-center rounded-full px-5 py-2 font-heading text-sm font-medium leading-6 md:px-6 md:text-base';
 
   return (
     <>

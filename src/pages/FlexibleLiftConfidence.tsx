@@ -11,12 +11,7 @@ import {
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyNav } from '../components/CaseStudyNav';
-import { FlexibleLiftNamingOptions } from '../components/FlexibleLiftNamingOptions';
-import { FlexibleLiftNamingMatrix } from '../components/FlexibleLiftNamingMatrix';
-import { FlexibleLiftSurveyResults } from '../components/FlexibleLiftSurveyResults';
-import { FlexibleLiftCertaintyTooltip } from '../components/FlexibleLiftCertaintyTooltip';
 import { FlexibleLiftCertaintyQuotes } from '../components/FlexibleLiftCertaintyQuotes';
-import { FlexibleLiftCertaintyIterations } from '../components/FlexibleLiftCertaintyIterations';
 
 const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
@@ -34,7 +29,7 @@ export function FlexibleLiftConfidence() {
           <div className="space-y-6 mb-16 lg:mb-24">
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
-                A stats metric that works for everyone
+                A metric name that works for statisticians and everyone else
               </h1>
             </CaseStudyLayout>
 
@@ -121,7 +116,12 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <FlexibleLiftNamingOptions />
+              <img
+                src="/images/case-studies/flexible-lift-confidence/naming-options.png"
+                alt="Naming options explored for the brand lift metric"
+                loading="lazy"
+                className={img}
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -134,11 +134,13 @@ export function FlexibleLiftConfidence() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout
-              {...layout}
-              caption="An example of the naming matrix—without confidential scores or notes."
-            >
-              <FlexibleLiftNamingMatrix />
+            <CaseStudyLayout {...layout}>
+              <img
+                src="/images/case-studies/flexible-lift-confidence/naming-matrix.png"
+                alt="Naming evaluation matrix comparing metric name options"
+                loading="lazy"
+                className={img}
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -251,7 +253,12 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <FlexibleLiftSurveyResults />
+              <img
+                src="/images/case-studies/flexible-lift-confidence/survey-results.png"
+                alt="Survey results confirming understanding of Certainty of lift"
+                loading="lazy"
+                className={img}
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -269,7 +276,12 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <FlexibleLiftCertaintyIterations />
+              <img
+                src="/images/case-studies/flexible-lift-confidence/certainty-iterations.png"
+                alt="Tooltip iterations exploring guidance for different certainty levels"
+                loading="lazy"
+                className={img}
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -300,7 +312,12 @@ export function FlexibleLiftConfidence() {
               {...layout}
               caption="The plain language version. This is the one we launched with."
             >
-              <FlexibleLiftCertaintyTooltip />
+              <img
+                src="/images/case-studies/flexible-lift-confidence/certainty-tooltip.png"
+                alt="Launched plain-language Certainty of lift tooltip"
+                loading="lazy"
+                className={img}
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>

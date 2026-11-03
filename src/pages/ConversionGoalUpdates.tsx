@@ -175,22 +175,7 @@ export function ConversionGoalUpdates() {
                 things up. I cut redundant explanations and focused on what
                 advertisers needed to know.
               </p>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout
-              {...layout}
-              caption="Launched content with concrete information, headlines, CTAs, and interactions driving action."
-            >
-              <img
-                src="/images/case-studies/conversion-goal-updates/image-2.png"
-                alt="Launched conversion goal updates with concrete headlines, CTAs, and interactions"
-                loading="lazy"
-                className={imgShadow}
-              />
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
+              <p className={`${body} mt-4`}>
                 As we neared launch, I worked with help content teams to spot
                 remaining knowledge gaps. We added tooltips and consolidated help
                 resources to give people answers without overwhelming them.
@@ -210,7 +195,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <img
-                src="/images/case-studies/conversion-goal-updates/cgu-5.png"
+                src="/images/case-studies/conversion-goal-updates/cgu-5.gif"
                 alt="Early iteration of the complete user flow across 6 screens"
                 loading="lazy"
                 className={img}
@@ -327,7 +312,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <img
-                src="/images/case-studies/conversion-goal-updates/cgu-hero.png"
+                src="/images/case-studies/conversion-goal-updates/cgu-hero.gif"
                 alt="Final user flow for updating conversion goals across 3 screens"
                 loading="lazy"
                 className={img}
@@ -437,15 +422,17 @@ export function ConversionGoalUpdates() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                We cut the flow from six screens of manual updates to a shorter
-                path: review the recommendation, then approve. Advertisers could
-                see what would change before they committed—instead of flipping
-                each setting themselves.
+                While specific metrics remain confidential, the project received
+                enthusiastic feedback from stakeholders for its clarity and
+                usability improvements.
               </p>
               <p className={`${body} mt-4`}>
-                Content didn&apos;t just label the chore. It reframed the job from
-                &ldquo;change every conversion&rdquo; to &ldquo;does this look
-                right?&rdquo;
+                This project solidified my role as a trusted content design
+                partner and demonstrated my ability to influence product
+                decisions through content strategy. By challenging assumptions
+                and advocating for advertiser needs, I helped transform a
+                potentially disruptive requirement into a smooth transition that
+                set advertisers up for success.
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />

@@ -1,6 +1,9 @@
 /* --- MANAGED FONT IMPORTS START (do not edit manually) --- */
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;900&family=Gochi+Hand&family=Inconsolata:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;900&family=Hanken+Grotesk:wght@400;500;600&family=Inconsolata:wght@400;500;600;700&display=swap');
 /* --- MANAGED FONT IMPORTS END --- */
+
+/* Product-mock type lane: Roboto is for in-case-study UI recreations (e.g. Google Ads),
+   not portfolio chrome. Keep separate from Be Vietnam Pro / Hanken Grotesk / Inconsolata. */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 /* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
@@ -55,9 +58,9 @@
   --color-bg-subtle: var(--color-blue-100);
   --color-bg-inverse: var(--color-blue-800);
   --color-text-primary: var(--color-blue-800);
-  --color-text-body: var(--color-text-primary);
-  --color-text-secondary: var(--color-text-primary);
-  --color-text-caption: var(--color-text-primary);
+  --color-text-body: var(--color-blue-800);
+  --color-text-secondary: var(--color-slate-600);
+  --color-text-caption: var(--color-slate-500);
   --color-text-on-dark: var(--color-white);
   --color-text-on-dark-muted: var(--color-white-a70);
   --color-interactive: var(--color-blue-800);
@@ -101,29 +104,24 @@ body {
   filter: contrast(1.05) saturate(0.9);
 }
 
-/* Homepage-scoped typography (case study pages unchanged) */
+/* Homepage-scoped typography (case study pages keep Be Vietnam Pro + Inconsolata) */
+.home-page {
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.home-page .font-body,
 .home-page .font-heading,
+.home-page .font-hero,
 .home-page h1,
 .home-page h2,
 .home-page h3 {
-  font-family: 'Be Vietnam Pro', sans-serif;
-  letter-spacing: 0;
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: -0.02em;
 }
 
-/* Hero background — single layer, left-anchored focal point, smooth resize */
-.hero-background {
-  background-size: 330%;
-  background-position: center 60%;
-  transition:
-    background-size 0.3s ease,
-    background-position 0.3s ease;
-}
-
-@media (min-width: 768px) {
-  .hero-background {
-    background-size: 150%;
-    background-position: 30% center;
-  }
+.home-page .font-hero,
+.home-page h1.font-hero {
+  letter-spacing: -0.03em;
 }
 
 /* Main content background */

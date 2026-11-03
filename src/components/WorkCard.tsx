@@ -30,11 +30,11 @@ export function WorkCard({ label, title, href, outcome }: WorkCardProps) {
           <span className="font-mono text-[26px] text-current">{label}</span>
         )}
       </div>
-      <h3 className="text-2xl md:text-3xl font-heading font-semibold text-current leading-snug">
+      <h3 className="text-2xl md:text-[28px] font-heading font-semibold text-current leading-snug">
         {title}
       </h3>
       {outcome ? (
-        <p className="mt-3 font-mono text-[15px] leading-snug text-current/70">
+        <p className="mt-3 font-body text-base leading-snug text-current/70">
           {outcome}
         </p>
       ) : null}

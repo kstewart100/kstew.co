@@ -76,7 +76,7 @@ export function MeasurementSetup() {
               >
                 Along with this update, the product language for conversion
                 measurement also needed changes in three other parts of the
-                product. As a result, I needed stakeholder buy-in from three other
+                product. As a result, I need stakeholder buy-in from three other
                 product areas.
               </aside>
             </CaseStudyLayout>
@@ -92,30 +92,18 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Refining content hierarchy</h2>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/measurement-setup/image-1.png"
-                alt=""
-                loading="lazy"
-                className={imgShadow}
-              />
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
+              <p className={`${body} mt-3`}>
                 My initial approach included all information someone might need
                 directly on the page. But after exploring this, I realized we
-                could streamline the narrative and significantly reduce the cognitive
+                could streamline the narrative and significantly reduce cognitive
                 load.
               </p>
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
               <img
-                src="/images/case-studies/measurement-setup/cm-3.png"
-                alt="Initial attempt at streamlined copy"
+                src="/images/case-studies/measurement-setup/image-1.png"
+                alt="Exploring a denser first version of measurement setup content"
                 loading="lazy"
                 className={imgShadow}
               />
@@ -128,6 +116,15 @@ export function MeasurementSetup() {
                 the false impression that campaigns had already launched. This led
                 to a complete rethink of our messaging strategy.
               </p>
+            </CaseStudyLayout>
+
+            <CaseStudyLayout {...layout}>
+              <img
+                src="/images/case-studies/measurement-setup/cm-3.png"
+                alt="Celebratory messaging exploration for campaign setup"
+                loading="lazy"
+                className={imgShadow}
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -193,9 +190,19 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Finding and aligning on the CTAs</h2>
+              <p className={`${body} mt-3`}>
+                Leveraging prior research, I discovered that &ldquo;Set up&rdquo;
+                and &ldquo;Get event snippet&rdquo; resonated strongly with
+                advertisers. These action-oriented CTAs clearly communicated what
+                someone needed to do while avoiding technical jargon that might
+                cause hesitation.
+              </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Some explorations revealed inconsistent content patterns for Google tags and event snippets in Google Ads."
+            >
               <img
                 src="/images/case-studies/measurement-setup/cm-5.png"
                 alt="CTA variations from product and testing phases"
@@ -206,13 +213,6 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <p className={body}>
-                Leveraging prior research, I discovered that &ldquo;Set up&rdquo;
-                and &ldquo;Get event snippet&rdquo; resonated strongly with
-                advertisers. These action-oriented CTAs clearly communicated what
-                someone needed to do while avoiding technical jargon that might
-                cause hesitation.
-              </p>
-              <p className={`${body} mt-4`}>
                 This seemingly small decision had significant impact—clear CTAs
                 reduced decision paralysis and helped advertisers move confidently
                 through setup.
@@ -340,13 +340,34 @@ export function MeasurementSetup() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                The update worked. More people finished measurement setup, and
-                they did it correctly—about 25% more than before.
+                The update worked. More people actually completed the conversion
+                setup, and they did it correctly. When you make something less
+                confusing, people can actually use it. We significantly improved
+                conversion tracking accuracy and increased successful setup
+                completion rates.
               </p>
               <p className={`${body} mt-4`}>
-                The useful pressure test was simple: would this help someone
-                who&apos;s never done this before? That question usually settled
-                what stayed on the page and what got cut.
+                This project reinforced several key insights:
+              </p>
+              <ul className={`${list} mt-3`}>
+                <li>
+                  Meeting advertisers in their natural workflow dramatically
+                  improves adoption
+                </li>
+                <li>
+                  Technical processes can be made approachable through thoughtful
+                  content design
+                </li>
+                <li>
+                  Small language changes—like simplified CTAs—can have outsized
+                  impact
+                </li>
+              </ul>
+              <p className={`${body} mt-4`}>
+                Working with several different teams was tricky—everyone had
+                opinions about what should be included. But keeping the focus on
+                &lsquo;will this help someone who&apos;s never done this
+                before?&rsquo; usually got us to the right answer.
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />

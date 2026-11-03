@@ -358,15 +358,30 @@ export function ExpertScheduling() {
               <hr className="border-0 border-b border-color-border-default my-6" />
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                It&apos;s hard to separate content from the rest of the redesign,
-                but the experience experts got was clearer: guidance that told
-                them what to do, information in smaller pieces, and errors that
-                explained how to fix the problem—not just that something was
-                wrong.
+                It&apos;s hard to separate how much the content changes helped
+                versus other design improvements, but the overall redesign
+                definitely made things better. Now experts get:
+              </p>
+              <ul className={`${list} mt-3`}>
+                <li>Clear guidance that tells them what to do</li>
+                <li>
+                  Information in manageable chunks instead of all at once
+                </li>
+                <li>
+                  Error messages that help them fix problems instead of just
+                  pointing them out
+                </li>
+              </ul>
+              <p className={`${body} mt-4`}>
+                This project reminded me: good content design isn&apos;t about
+                writing perfect copy. It&apos;s about understanding what people
+                need well enough to know what to tell them, when to tell them,
+                and—maybe most importantly—what to leave out.
               </p>
               <p className={`${body} mt-4`}>
-                The win was less reading at the moment of scheduling, and help
-                that showed up when they were stuck.
+                The team working on this now has a solid foundation to build
+                from. The approach we took—keeping things clear, contextual, and
+                empowering—is still guiding how the tool evolves.
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />
