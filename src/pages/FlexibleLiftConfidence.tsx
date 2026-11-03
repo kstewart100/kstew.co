@@ -68,11 +68,10 @@ export function FlexibleLiftConfidence() {
                 about result reliability and made more campaigns actionable.
               </p>
               <p className={`${body} mt-4`}>
-                I led the content design and messaging to make this complex
-                statistical concept accessible to both novices and experts. The
-                updates significantly improved customer satisfaction scores and
-                renewed engagement with brand lift campaigns. Among users studied,
-                90% understood what the metric was from the name alone!
+                I led the content design and messaging so both novices and
+                experts could understand the concept from the product itself.
+                Among users studied, over 50% found brand lift easier to use, and
+                90% understood the metric from the name alone.
               </p>
             </CaseStudyLayout>
 

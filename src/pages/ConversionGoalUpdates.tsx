@@ -189,7 +189,7 @@ export function ConversionGoalUpdates() {
                 manually, requiring us to share extensive information upfront. The
                 thinking was that more information would help people feel confident
                 making changes themselves, but this meant the advertiser needed to
-                go through 6 different screens.
+                go through six different screens.
               </p>
             </CaseStudyLayout>
 
@@ -218,20 +218,20 @@ export function ConversionGoalUpdates() {
               </p>
               <p className={`${body} mt-4`}>
                 After putting this iteration in front of advertisers, we heard
-                something different. In roundtables, advertisers said this approach
-                felt overwhelming and created decision paralysis. More options
-                didn&apos;t mean more confidence.
+                something different. Clearer CTAs still left them deciding Primary
+                vs. Secondary for every conversion. In roundtables they
+                stalled—more labeled choices didn&apos;t make them more sure.
               </p>
               <p className={`${body} mt-4`}>
-                Taking in this feedback, I explored how to build confidence while
-                reducing cognitive load. To do some of the heavy lifting, I
-                explored automation. The change was straightforward: old conversions
-                become secondary, new ones become primary.
+                So I stopped asking them to make the change row by row. The rule
+                was simple: old conversions become secondary, new ones become
+                primary. Content&apos;s job shifted from &ldquo;pick an
+                action&rdquo; to &ldquo;does this look right?&rdquo;
               </p>
               <p className={`${body} mt-4`}>
-                I mocked up a two-column layout displaying current settings
-                alongside recommended changes, giving advertisers clear visibility
-                into exactly what would change before committing.
+                I mocked a two-column review: current settings next to recommended
+                changes, so advertisers could see exactly what would change before
+                committing.
               </p>
             </CaseStudyLayout>
 
@@ -255,13 +255,13 @@ export function ConversionGoalUpdates() {
                     ),
                     status: 'Rejected',
                     decision:
-                      'More specific CTAs actually increased cognitive load. Advertisers said this approach felt overwhelming and created decision paralysis.',
+                      'Clearer action labels still left a row-by-row Primary/Secondary decision. Advertisers stalled; more options didn\'t mean more confidence.',
                   },
                   {
                     copy: '\u201cSave\u201d',
                     status: 'Final',
                     decision:
-                      'Shifted to automated recommendations with review-based language. Advertisers could see exactly what would change before approving, dramatically reducing cognitive load while maintaining transparency.',
+                      'Automated recommendations with review language. Advertisers saw what would change, then approved—instead of flipping each setting themselves.',
                   },
                 ]}
               />
@@ -321,10 +321,9 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <p className={body}>
-                The result was a dramatic reduction in cognitive load while
-                maintaining full transparency—advertisers could see exactly what
-                would change and why, then approve updates with confidence in a
-                fraction of the time.
+                Instead of a table of manual updates, advertisers got a
+                recommendation they could check and approve. Same transparency, far
+                less work at the moment of change.
               </p>
             </CaseStudyLayout>
 
@@ -403,7 +402,7 @@ export function ConversionGoalUpdates() {
               <CopyDecisionTable
                 rows={[
                   {
-                    copy: 'Universal Analytics (360) will cease data collection on July 1, 2024 and Universal Analytics on August 2024. You will need to migrate your primary conversions from the legacy Universal Analytics to the new Google Analytics 4. Your primary conversion actions for automated bidding from Universal Analytics will be superseded by Google Analytics 4 conversions. After you save these changes, you should expect potential performance fluctuations over 2 to 3 learning cycles.',
+                    copy: 'Universal Analytics (360) will cease data collection on July 1, 2023 and Universal Analytics on July 1, 2023. You will need to migrate your primary conversions from the legacy Universal Analytics to the new Google Analytics 4. Your primary conversion actions for automated bidding from Universal Analytics will be superseded by Google Analytics 4 conversions. After you save these changes, you should expect potential performance fluctuations over 2 to 3 learning cycles.',
                     status: 'Rejected',
                     decision:
                       'Too technical and lengthy; mixed terminology between different analytics platforms; unclear timeline expectations',
@@ -422,17 +421,15 @@ export function ConversionGoalUpdates() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                While specific metrics remain confidential, the project received
-                enthusiastic feedback from stakeholders for its clarity and
-                usability improvements.
+                We cut the flow from six screens of manual updates to a shorter
+                path: review the recommendation, then approve. Advertisers could
+                see what would change before they committed—instead of flipping
+                each setting themselves.
               </p>
               <p className={`${body} mt-4`}>
-                This project solidified my role as a trusted content design
-                partner and demonstrated my ability to influence product
-                decisions through content strategy. By challenging assumptions
-                and advocating for advertiser needs, I helped transform a
-                potentially disruptive requirement into a smooth transition that
-                set advertisers up for success.
+                Content didn&apos;t just label the chore. It reframed the job from
+                &ldquo;change every conversion&rdquo; to &ldquo;does this look
+                right?&rdquo;
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />
