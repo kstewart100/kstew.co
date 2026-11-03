@@ -61,8 +61,8 @@ export function ExpertScheduling() {
               </p>
               <p className={`${body} mt-4`}>
                 A previous team had built a self-service tool, but it was
-                overwhelming. Too much information, confusing instructions, and
-                experts got stuck on what should have been straightforward.
+                overwhelming. Too much information and confusing instructions left
+                experts stuck on what should have been straightforward.
               </p>
               <p className={`${body} mt-4`}>
                 With a new tax season approaching, I led a content redesign of the
@@ -122,8 +122,8 @@ export function ExpertScheduling() {
               <p className={`${body} mt-4`}>
                 I put together an audit deck and asked teammates to weigh in.
                 Going through everything with fresh eyes revealed many places
-                where we could make the content work harder. Audit slides
-                documented the base schedule creation workflow, compiled from
+                where we could make the content work harder. I compiled audit
+                slides documenting the base-schedule creation workflow, using
                 product screenshots, interface strings, design files, and data.
               </p>
             </CaseStudyLayout>
@@ -141,7 +141,10 @@ export function ExpertScheduling() {
               <h2 className={h2}>Updating the first-time use experience</h2>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Original instructions screen before redesign. Newly hired tax and accounting professionals were expected to read and retain this information while creating their schedule."
+            >
               <img
                 alt="Original onboarding instructions screen"
                 loading="lazy"
@@ -159,11 +162,14 @@ export function ExpertScheduling() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="A mockup splitting the content into smaller chunks to improve readability and surface the most critical information."
+            >
               <img
                 alt="Redesigned instructions screen (first iteration)"
                 loading="lazy"
-                src="/images/case-studies/expert-scheduling/02.jpg"
+                src="/images/case-studies/expert-scheduling/onboarding-first-iteration.png"
                 className={imgShadow}
               />
             </CaseStudyLayout>
@@ -180,7 +186,10 @@ export function ExpertScheduling() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="A refined version of the screen with only the most important information needed to create their schedule."
+            >
               <img
                 alt="Refined onboarding instructions screen"
                 loading="lazy"
@@ -192,7 +201,8 @@ export function ExpertScheduling() {
             <CaseStudyLayout {...layout}>
               <p className={body}>
                 After working with the visual design team, we got much more
-                aggressive about cutting content to reduce overwhelming experts.
+                aggressive about cutting content to keep experts from feeling
+                overwhelmed.
               </p>
               <p className={`${body} mt-4`}>
                 Before launching, we made calls about what really needed to be on
@@ -206,7 +216,7 @@ export function ExpertScheduling() {
               <img
                 alt="Future state concept for the scheduling tool"
                 loading="lazy"
-                src="/images/case-studies/expert-scheduling/04.jpg"
+                src="/images/case-studies/expert-scheduling/future-state.png"
                 className={imgShadow}
               />
             </CaseStudyLayout>
@@ -215,8 +225,8 @@ export function ExpertScheduling() {
               <p className={body}>
                 Even after launch, my visual design partner and I kept refining
                 the experience. This concept shows where we think it could go
-                next—tighter headline, clearer hierarchy, and help that shows up
-                exactly when experts need it.
+                next—a tighter headline, a clearer hierarchy, and help that shows
+                up exactly when experts need it.
               </p>
             </CaseStudyLayout>
 
@@ -264,7 +274,10 @@ export function ExpertScheduling() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="My first iteration of the redesigned error message with directive information."
+            >
               <img
                 alt="First iteration error message"
                 loading="lazy"
@@ -281,7 +294,10 @@ export function ExpertScheduling() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Launched error message that accounts for unseen use cases while providing schedule approval guidance."
+            >
               <img
                 alt="Launched error message"
                 loading="lazy"
@@ -304,7 +320,10 @@ export function ExpertScheduling() {
               <h2 className={h2}>In-product guidance</h2>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="Original schedule screen before redesign."
+            >
               <img
                 alt="Original weekly scheduling interface"
                 loading="lazy"
@@ -322,7 +341,10 @@ export function ExpertScheduling() {
               </p>
             </CaseStudyLayout>
 
-            <CaseStudyLayout {...layout}>
+            <CaseStudyLayout
+              {...layout}
+              caption="The first iteration with requirements content moved from instructions screen to scheduling interface."
+            >
               <img
                 alt="First iteration scheduling interface"
                 loading="lazy"
@@ -358,30 +380,17 @@ export function ExpertScheduling() {
               <hr className="border-0 border-b border-color-border-default my-6" />
               <h2 className={h2}>Learnings</h2>
               <p className={`${body} mt-3`}>
-                It&apos;s hard to separate how much the content changes helped
-                versus other design improvements, but the overall redesign
-                definitely made things better. Now experts get:
-              </p>
-              <ul className={`${list} mt-3`}>
-                <li>Clear guidance that tells them what to do</li>
-                <li>
-                  Information in manageable chunks instead of all at once
-                </li>
-                <li>
-                  Error messages that help them fix problems instead of just
-                  pointing them out
-                </li>
-              </ul>
-              <p className={`${body} mt-4`}>
-                This project reminded me: good content design isn&apos;t about
-                writing perfect copy. It&apos;s about understanding what people
-                need well enough to know what to tell them, when to tell them,
-                and—maybe most importantly—what to leave out.
+                It&apos;s hard to separate content from the rest of the redesign,
+                but the experience experts got was clearer: guidance that told
+                them what to do, information in smaller pieces, and errors that
+                explained how to fix the problem—not just that something was
+                wrong.
               </p>
               <p className={`${body} mt-4`}>
-                The team working on this now has a solid foundation to build
-                from. The approach we took—keeping things clear, contextual, and
-                empowering—is still guiding how the tool evolves.
+                By replacing an upfront wall of instructions with focused
+                guidance at the moment it mattered, we made scheduling
+                easier—and helped experts feel more confident starting their new
+                role.
               </p>
             </CaseStudyLayout>
             <CaseStudyNav />
