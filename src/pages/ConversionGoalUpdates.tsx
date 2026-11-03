@@ -69,9 +69,9 @@ export function ConversionGoalUpdates() {
                 accounts, those errors added up fast.
               </p>
               <p className={`${body} mt-4`}>
-                I led UX content design and messaging strategy to clearly walk
-                advertisers through each step, so they understood exactly how their
-                campaigns would be affected.
+                I led the content design to clearly walk advertisers through each
+                step, so they understood exactly how their campaigns would be
+                affected.
               </p>
             </CaseStudyLayout>
 

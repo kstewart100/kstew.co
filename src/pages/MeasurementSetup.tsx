@@ -113,7 +113,7 @@ export function MeasurementSetup() {
                 I initially added a celebratory message to build momentum, but
                 research discussions revealed a critical issue—this messaging gave
                 the false impression that campaigns had already launched. This led
-                to a complete rethink of our messaging strategy.
+                to a full rethink of the message.
               </p>
             </CaseStudyLayout>
 
@@ -190,11 +190,10 @@ export function MeasurementSetup() {
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Finding and aligning on the CTAs</h2>
               <p className={`${body} mt-3`}>
-                Leveraging prior research, I discovered that &ldquo;Set up&rdquo;
-                and &ldquo;Get event snippet&rdquo; resonated strongly with
-                advertisers. These action-oriented CTAs clearly communicated what
-                someone needed to do while avoiding technical jargon that might
-                cause hesitation.
+                Prior research showed that &ldquo;Set up&rdquo; and &ldquo;Get
+                event snippet&rdquo; resonated strongly with advertisers. These
+                action-oriented CTAs clearly communicated what someone needed to
+                do while avoiding technical jargon that might cause hesitation.
               </p>
             </CaseStudyLayout>
 
