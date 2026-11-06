@@ -35,8 +35,8 @@ export function Footer() {
           <img
             src="/images/logo.png"
             alt=""
-            width={160}
-            height={28}
+            width={514}
+            height={996}
             decoding="async"
             className="block h-8 w-auto brightness-0 invert"
           />
