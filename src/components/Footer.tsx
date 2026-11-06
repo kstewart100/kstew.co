@@ -33,10 +33,10 @@ export function Footer() {
           className="inline-flex items-center mb-4 transition-opacity hover:opacity-80"
         >
           <img
-            src="/images/logo.png"
+            src="/images/logo-navy.png"
             alt=""
-            width={514}
-            height={996}
+            width={545}
+            height={1026}
             decoding="async"
             className="block h-8 w-auto brightness-0 invert"
           />

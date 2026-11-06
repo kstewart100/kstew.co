@@ -34,20 +34,13 @@ export const Header: React.FC<HeaderProps> = ({
           aria-label="Kyle Stewart home"
           className="justify-self-start inline-flex items-center group transition-opacity hover:opacity-80"
         >
-          <span
-            role="img"
-            aria-label="Kyle Stewart home"
-            className={`block h-8 aspect-[257/498] bg-current transition-opacity group-hover:opacity-80 ${
-              isCaseStudy ? '' : 'text-color-accent-hero'
-            }`}
-            style={{
-              maskImage: 'url(/images/logo.png)',
-              WebkitMaskImage: 'url(/images/logo.png)',
-              maskSize: 'contain',
-              WebkitMaskSize: 'contain',
-              maskRepeat: 'no-repeat',
-              WebkitMaskRepeat: 'no-repeat',
-            }}
+          <img
+            src={isCaseStudy ? '/images/logo-navy.png' : '/images/logo-amber.png'}
+            alt=""
+            width={545}
+            height={1026}
+            decoding="async"
+            className="block h-8 w-auto transition-opacity group-hover:opacity-80"
           />
         </Link>
 
