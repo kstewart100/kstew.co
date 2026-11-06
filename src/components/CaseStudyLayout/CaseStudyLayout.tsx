@@ -10,7 +10,7 @@ export interface CaseStudyLayoutProps {
   'data-id'?: string;
 }
 
-/** Case study type styles (fonts: Be Vietnam Pro + Inconsolata). */
+/** Case study type styles (fonts: Hanken Grotesk + Inconsolata). */
 export const documentCaseStudyTitleClassName =
   'font-heading text-color-text-primary text-[36px] sm:text-[45px] font-bold leading-[1.2] tracking-[-0.01em]';
 
