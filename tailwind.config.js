@@ -10,7 +10,7 @@ export default {
       fontFamily: {
         body: ['Inconsolata', 'monospace'],
         mono: ['Inconsolata', 'monospace'],
-        heading: ['Be Vietnam Pro', 'sans-serif'],
+        heading: ['Hanken Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
         hero: ['Hanken Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       colors: {

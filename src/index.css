@@ -1,5 +1,5 @@
 /* --- MANAGED FONT IMPORTS START (do not edit manually) --- */
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;900&family=Hanken+Grotesk:wght@400;500;600&family=Inconsolata:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;900&family=Inconsolata:wght@400;500;600;700&display=swap');
 /* --- MANAGED FONT IMPORTS END --- */
 
 /* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
@@ -99,7 +99,7 @@ body {
     animation: none;
   }
 }
-/* Homepage-scoped typography (case study pages keep Be Vietnam Pro + Inconsolata) */
+/* Homepage-scoped typography (case study pages use Hanken Grotesk + Inconsolata) */
 .home-page {
   font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
 }
