@@ -125,6 +125,64 @@ body {
   min-height: 100dvh;
   background-color: var(--color-bg-canvas);
 }
+/* Material 3 filled button (small / default) */
+.m3-filled-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 40px;
+  min-width: 48px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--color-accent-hero);
+  color: var(--color-text-primary);
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  isolation: isolate;
+}
+
+.m3-filled-button__label {
+  position: relative;
+  z-index: 1;
+}
+
+.m3-filled-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--color-text-primary);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 15ms linear;
+}
+
+@media (hover: hover) {
+  .m3-filled-button:hover::before {
+    opacity: 0.08;
+  }
+}
+
+.m3-filled-button:focus-visible {
+  outline: 3px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.m3-filled-button:focus-visible::before,
+.m3-filled-button:active::before {
+  opacity: 0.1;
+}
+
 .shadow-navy-md {
   box-shadow: 0 12px 40px var(--color-blue-shadow);
 }
