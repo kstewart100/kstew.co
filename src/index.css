@@ -36,15 +36,19 @@
   --color-slate-900: #22313B;
   --color-blue-950: #022036;
   --color-slate-950: #142027;
-  --color-amber-hero: #FF9F43;
-  --color-green-50: #F2FBF5;
-  --color-green-100: #E3F5EA;
-  --color-green-200: #C5E6D1;
-  --color-green-700: #2F6B45;
-  --color-green-800: #245538;
-  --color-white: #FFFFFF;
-  --color-white-a70: rgba(255, 255, 255, 0.70);
+  --color-chartreuse-olive: #B7C75A;
+  --color-chartreuse-olive-hover: #A5B54C;
+  /* Olive wash — same hue family as accent, for status/final UI */
+  --color-olive-50: #F3F6E6;
+  --color-olive-100: #E8EED4;
+  --color-olive-200: #D4DDB0;
+  /* Near-white (avoid pure #FFF); soft variant for text on dark */
+  --color-white: #FEFEFF;
+  --color-white-soft: #F5F8FA;
+  --color-white-a70: rgba(245, 248, 250, 0.70);
   --color-blue-shadow: rgba(19, 74, 112, 0.25);
+  --color-blue-shadow-tight: rgba(19, 74, 112, 0.12);
+  --color-overlay-hero: rgba(2, 32, 54, 0.25);
 
   /* Semantic */
   --color-bg-canvas: var(--color-blue-25);
@@ -55,18 +59,19 @@
   --color-text-body: var(--color-blue-800);
   --color-text-secondary: var(--color-slate-600);
   --color-text-caption: var(--color-slate-500);
-  --color-text-on-dark: var(--color-white);
+  --color-text-on-dark: var(--color-white-soft);
   --color-text-on-dark-muted: var(--color-white-a70);
   --color-interactive: var(--color-blue-800);
   --color-border-default: var(--color-slate-200);
-  --color-accent-hero: var(--color-amber-hero);
-  --color-accent-hero-hover: #F28C28;
-  --color-status-rejected-bg: var(--color-blue-100);
-  --color-status-rejected-border: var(--color-blue-300);
-  --color-status-rejected-text: var(--color-blue-800);
-  --color-status-final-bg: var(--color-green-100);
-  --color-status-final-border: var(--color-green-200);
-  --color-status-final-text: var(--color-green-800);
+  --color-accent-hero: var(--color-chartreuse-olive);
+  --color-accent-hero-hover: var(--color-chartreuse-olive-hover);
+  /* Status: rejected = cool slate; final = chartreuse/olive family + navy type */
+  --color-status-rejected-bg: var(--color-slate-100);
+  --color-status-rejected-border: var(--color-slate-300);
+  --color-status-rejected-text: var(--color-slate-700);
+  --color-status-final-bg: var(--color-olive-100);
+  --color-status-final-border: var(--color-chartreuse-olive);
+  --color-status-final-text: var(--color-blue-800);
 }
 body {
   background-color: var(--color-bg-canvas);
@@ -125,16 +130,84 @@ body {
   min-height: 100dvh;
   background-color: var(--color-bg-canvas);
 }
-.shadow-navy-md {
-  box-shadow: 0 12px 40px var(--color-blue-shadow);
+/* Material 3 filled button (small / default) */
+.m3-filled-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 40px;
+  min-width: 48px;
+  padding: 0 24px;
+  border: none;
+  border-radius: 9999px;
+  background-color: var(--color-accent-hero);
+  color: var(--color-text-primary);
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  isolation: isolate;
 }
 
+.m3-filled-button__label {
+  position: relative;
+  z-index: 1;
+}
+
+.m3-filled-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--color-text-primary);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 15ms linear;
+}
+
+@media (hover: hover) {
+  .m3-filled-button:hover::before {
+    opacity: 0.08;
+  }
+}
+
+.m3-filled-button:focus-visible {
+  outline: 3px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.m3-filled-button:focus-visible::before,
+.m3-filled-button:active::before {
+  opacity: 0.1;
+}
+
+/* Depth language: soft navy only. Blur = 2× Y distance. */
+.shadow-navy-md {
+  box-shadow: 0 12px 24px var(--color-blue-shadow);
+}
+
+.shadow-navy-sm {
+  box-shadow: 0 1px 2px var(--color-blue-shadow-tight);
+}
+
+/* Alias kept for older classnames */
 .shadow-neutral-tight {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px var(--color-blue-shadow-tight);
 }
 
 .drop-shadow-navy-soft {
-  filter: drop-shadow(0 -1px 3px var(--color-blue-shadow));
+  filter: drop-shadow(0 -1px 2px var(--color-blue-shadow));
+}
+
+.hero-scrim {
+  background-color: var(--color-overlay-hero);
 }
 
 /* Work cards */

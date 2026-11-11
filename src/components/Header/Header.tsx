@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header
       data-id={dataId}
       className={`w-full px-6 md:px-12 py-6 ${
-        isCaseStudy ? 'text-color-text-primary' : 'text-white'
+        isCaseStudy ? 'text-color-text-primary' : 'text-color-text-on-dark'
       } ${className}`}
     >
       <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">
@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="justify-self-start inline-flex items-center group transition-opacity hover:opacity-80"
         >
           <img
-            src={isCaseStudy ? '/images/logo-navy.png' : '/images/logo-amber.png'}
+            src={isCaseStudy ? '/images/logo-navy.png' : '/images/logo-chartreuse.png'}
             alt=""
             width={545}
             height={1026}
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className={taglineClassName}>
           Kyle Stewart
           <span className="mx-3 opacity-50">·</span>
-          Content Design
+          Senior Content Designer
         </div>
 
         <div className="justify-self-end">

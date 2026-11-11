@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://kstew.co';
-export const DEFAULT_PAGE_TITLE = 'Kyle Stewart · Content Design';
+export const DEFAULT_PAGE_TITLE = 'Kyle Stewart · Senior Content Designer';
 export const SITE_DESCRIPTION =
   'Content design for products that feel good to use.';
 

@@ -6,6 +6,7 @@ import {
   documentCaseStudyImageClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
+  documentCaseStudyAsideClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
 import { Header } from '../components/Header';
@@ -18,6 +19,7 @@ const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
+const aside = documentCaseStudyAsideClassName;
 
 export function MeasurementSetup() {
   return (
@@ -71,9 +73,7 @@ export function MeasurementSetup() {
                 these new updates, we saw a 25% increase in people setting
                 up these tools.
               </p>
-              <aside
-                className={`${body} mt-4 bg-color-bg-subtle px-5 py-4`}
-              >
+              <aside className={aside}>
                 Along with this update, the product language for conversion
                 measurement also needed changes in three other parts of the
                 product. As a result, I needed stakeholder buy-in from three
@@ -83,7 +83,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-3`}>
+              <ul className={`${list} mt-4`}>
                 <li>Simplify and hide details with progressive disclosure</li>
                 <li>Do the work for them</li>
                 <li>Assume they&apos;re new</li>
@@ -92,7 +92,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Refining content hierarchy</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 My first pass put everything on the page. After exploring that, I
                 cut what didn&apos;t need to live there and revealed detail when
                 people needed it.
@@ -189,7 +189,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Finding and aligning on the CTAs</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 Prior research showed that &ldquo;Set up&rdquo; and &ldquo;Get
                 event snippet&rdquo; resonated strongly with advertisers. These
                 action-oriented CTAs clearly communicated what someone needed to
@@ -218,7 +218,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Working out the jargon</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 While working on this experience, I kept one thing in mind: What
                 did the advertiser need to know to take action? Why did the
                 advertiser even care about taking action?
@@ -336,7 +336,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 The update worked. More people finished measurement setup, and
                 they did it correctly—about 25% more than before.
               </p>

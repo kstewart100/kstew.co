@@ -77,7 +77,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-3`}>
+              <ul className={`${list} mt-4`}>
                 <li>
                   Make statistics human by translating terminology into clear,
                   trustworthy language
@@ -91,7 +91,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Understanding the landscape</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 I was designing for two distinct users: the Stats Expert, who
                 interprets data confidently and serves as the team&apos;s go-to
                 resource, and the Stats Novice, who has limited recent statistics
@@ -106,7 +106,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Exploring the different options for a name</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 The team had explored several naming options before my involvement.
                 After conducting the literature review and consulting design
                 guidelines, I proposed &ldquo;Certainty of lift,&rdquo; though
@@ -154,7 +154,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Testing through research</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 Effective feature names should be self-explanatory. While tooltips
                 and help documentation provide support, the primary terminology
                 should communicate clearly without additional explanation.
@@ -262,7 +262,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Creating an easy-to-read tooltip</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 With the terminology settled, I focused on designing the complete
                 user experience. The goal was to make statistical results both
                 comprehensible and actionable for decision-making.
@@ -321,7 +321,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 Over 50% found brand lift easier to use, and 90% understood
                 &ldquo;Certainty of lift&rdquo; from the name. Research beat
                 internal preference: what felt &ldquo;oversimplified&rdquo; to

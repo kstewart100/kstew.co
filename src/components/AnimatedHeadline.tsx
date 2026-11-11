@@ -62,13 +62,13 @@ export function AnimatedHeadline({
   return (
     <div className={`text-center md:text-right ${className}`}>
       <h1
-        className="font-hero font-semibold text-white leading-[1] md:-mr-[0.04em]"
+        className="font-hero font-semibold text-color-text-on-dark leading-[1] md:-mr-[0.04em]"
         style={{ fontSize: HEADLINE_FONT_SIZE }}
       >
         Get out.
       </h1>
       <div
-        className="font-hero font-semibold text-white leading-[1] whitespace-nowrap md:-mr-[0.04em]"
+        className="font-hero font-semibold text-color-text-on-dark leading-[1] whitespace-nowrap md:-mr-[0.04em]"
         style={{ fontSize: HEADLINE_FONT_SIZE }}
         aria-live="polite"
       >
@@ -96,7 +96,7 @@ export function AnimatedHeadline({
         </span>
       </div>
       <p
-        className="mt-4 md:mt-6 font-mono font-medium text-white leading-snug max-w-[34rem] mx-auto md:mx-0 md:ml-auto"
+        className="mt-4 md:mt-6 font-mono font-medium text-color-text-on-dark leading-snug max-w-[34rem] mx-auto md:mx-0 md:ml-auto"
         style={{ fontSize: 'clamp(1.125rem, 1.6vw, 1.5rem)', textWrap: 'balance' }}
       >
         Content design for products that feel good to use.

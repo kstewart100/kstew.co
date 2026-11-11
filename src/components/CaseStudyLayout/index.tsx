@@ -7,5 +7,6 @@ export {
   documentCaseStudyImageClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
+  documentCaseStudyAsideClassName,
 } from './CaseStudyLayout';
 export { CopyDecisionTable } from './CopyDecisionTable';

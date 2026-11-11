@@ -5,7 +5,7 @@ import { Footer } from '../components/Footer';
 
 export function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-white">
+    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-color-text-on-dark">
       <Header variant="case-study" />
       <main
         id="main-content"
@@ -14,10 +14,10 @@ export function NotFound() {
         <p className="font-mono text-sm text-color-text-secondary mb-4">
           404
         </p>
-        <h1 className="font-heading text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight tracking-[-0.02em] text-color-text-primary mb-6">
+        <h1 className="font-heading text-4xl md:text-5xl lg:text-[40px] font-bold leading-tight tracking-[-0.02em] text-color-text-primary mb-6">
         Looks like this one's off-trail. 
         </h1>
-        <p className="text-base md:text-lg leading-relaxed text-color-text-secondary max-w-xl mb-10">
+        <p className="text-[18px] leading-relaxed text-color-text-secondary max-w-xl mb-8">
           The link may be outdated, or the page may have moved. Head back home to explore recent work.
         </p>
         <Link
