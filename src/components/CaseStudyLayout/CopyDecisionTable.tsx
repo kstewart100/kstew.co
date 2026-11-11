@@ -20,13 +20,14 @@ const cellClassName =
 
 const headerClassName = `${labelClassName} text-left p-4 border border-color-border-default min-w-[7.5rem] bg-color-bg-subtle`;
 
+/** Flat document chrome — same family as case-study asides, no card kit. */
 const cardClassName =
-  'rounded-lg border border-color-border-default bg-color-bg-surface overflow-hidden shadow-navy-sm';
+  'border border-color-border-default bg-color-bg-surface overflow-hidden';
 
 const cardSectionClassName = 'px-4 py-4';
 
 const statusPillBaseClassName =
-  'inline-flex items-center rounded-md border px-2 py-0.5 font-heading text-[14px] font-normal leading-normal';
+  'inline-flex items-center border px-2 py-0.5 font-heading text-[14px] font-normal leading-normal';
 
 const statusPillToneClassName = {
   rejected:

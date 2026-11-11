@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="justify-self-start inline-flex items-center group transition-opacity hover:opacity-80"
         >
           <img
-            src={isCaseStudy ? '/images/logo-navy.png' : '/images/logo-amber.png'}
+            src={isCaseStudy ? '/images/logo-navy.png' : '/images/logo-chartreuse.png'}
             alt=""
             width={545}
             height={1026}
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className={taglineClassName}>
           Kyle Stewart
           <span className="mx-3 opacity-50">·</span>
-          Content Design
+          Senior Content Designer
         </div>
 
         <div className="justify-self-end">
