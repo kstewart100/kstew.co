@@ -77,7 +77,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-3`}>
+              <ul className={`${list} mt-4`}>
                 <li>
                   Be upfront about potential changes—both positive and negative
                 </li>
@@ -184,7 +184,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>From manual guide to automated recommendation</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 Product management initially wanted advertisers to handle updates
                 manually, requiring us to share extensive information upfront. The
                 thinking was that more information would help people feel confident
@@ -329,7 +329,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Challenging language precedent</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 While working on this experience, I kept two things in balance.
                 What did people need to know, and what kind of urgency did we want
                 to create?
@@ -420,7 +420,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 We cut the flow from six screens of manual updates to a shorter
                 path: review the recommendation, then approve. Advertisers could
                 see what would change before they committed—instead of flipping

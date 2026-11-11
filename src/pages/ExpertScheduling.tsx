@@ -73,7 +73,7 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-3`}>
+              <ul className={`${list} mt-4`}>
                 <li>Give people information exactly when they need it</li>
                 <li>Celebrate progress</li>
                 <li>
@@ -85,7 +85,7 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>The expert journey</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 Experts use the scheduling tool to set their weekly availability
                 across a 12-week period before tax season begins, ensuring adequate
                 coverage while respecting their availability.
@@ -113,7 +113,7 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Laying the groundwork with a content audit</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 While my PM and interaction design partners dove into specific
                 problems and screens, I stepped back to look at the bigger
                 picture—what story were we telling experts throughout this entire
@@ -355,7 +355,7 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <p className={body}>We made some key changes to fix this:</p>
-              <ul className={`${list} mt-3`}>
+              <ul className={`${list} mt-4`}>
                 <li>
                   Swapped out cold &ldquo;minimum/maximum&rdquo; language for
                   friendlier ranges
@@ -377,9 +377,8 @@ export function ExpertScheduling() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
-              <hr className="border-0 border-b border-color-border-default my-6" />
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-3`}>
+              <p className={`${body} mt-4`}>
                 It&apos;s hard to separate content from the rest of the redesign,
                 but the experience experts got was clearer: guidance that told
                 them what to do, information in smaller pieces, and errors that

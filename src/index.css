@@ -42,9 +42,13 @@
   --color-green-200: #C5E6D1;
   --color-green-700: #2F6B45;
   --color-green-800: #245538;
-  --color-white: #FFFFFF;
-  --color-white-a70: rgba(255, 255, 255, 0.70);
+  /* Near-white (avoid pure #FFF); soft variant for text on dark */
+  --color-white: #FEFEFF;
+  --color-white-soft: #F5F8FA;
+  --color-white-a70: rgba(245, 248, 250, 0.70);
   --color-blue-shadow: rgba(19, 74, 112, 0.25);
+  --color-blue-shadow-tight: rgba(19, 74, 112, 0.12);
+  --color-overlay-hero: rgba(2, 32, 54, 0.25);
 
   /* Semantic */
   --color-bg-canvas: var(--color-blue-25);
@@ -55,7 +59,7 @@
   --color-text-body: var(--color-blue-800);
   --color-text-secondary: var(--color-slate-600);
   --color-text-caption: var(--color-slate-500);
-  --color-text-on-dark: var(--color-white);
+  --color-text-on-dark: var(--color-white-soft);
   --color-text-on-dark-muted: var(--color-white-a70);
   --color-interactive: var(--color-blue-800);
   --color-border-default: var(--color-slate-200);
@@ -183,16 +187,26 @@ body {
   opacity: 0.1;
 }
 
+/* Depth language: soft navy only. Blur = 2× Y distance. */
 .shadow-navy-md {
-  box-shadow: 0 12px 40px var(--color-blue-shadow);
+  box-shadow: 0 12px 24px var(--color-blue-shadow);
 }
 
+.shadow-navy-sm {
+  box-shadow: 0 1px 2px var(--color-blue-shadow-tight);
+}
+
+/* Alias kept for older classnames */
 .shadow-neutral-tight {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px var(--color-blue-shadow-tight);
 }
 
 .drop-shadow-navy-soft {
-  filter: drop-shadow(0 -1px 3px var(--color-blue-shadow));
+  filter: drop-shadow(0 -1px 2px var(--color-blue-shadow));
+}
+
+.hero-scrim {
+  background-color: var(--color-overlay-hero);
 }
 
 /* Work cards */

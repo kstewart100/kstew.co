@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
     <header
       data-id={dataId}
       className={`w-full px-6 md:px-12 py-6 ${
-        isCaseStudy ? 'text-color-text-primary' : 'text-white'
+        isCaseStudy ? 'text-color-text-primary' : 'text-color-text-on-dark'
       } ${className}`}
     >
       <div className="container mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-[1fr_auto_1fr] items-center">

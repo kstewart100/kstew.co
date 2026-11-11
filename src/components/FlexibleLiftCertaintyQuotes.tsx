@@ -21,13 +21,13 @@ const QUOTES = [
 export function FlexibleLiftCertaintyQuotes() {
   return (
     <div
-      className="my-5 space-y-10 first:mt-0 last:mb-0 sm:space-y-12"
+      className="my-4 space-y-10 first:mt-0 last:mb-0 sm:space-y-12"
       aria-label="Brand marketer quotes on 75% certainty"
     >
       {QUOTES.map((item) => (
         <blockquote
           key={item.id}
-          className="flex items-start gap-5 sm:items-center sm:gap-8"
+          className="flex items-start gap-4 sm:items-center sm:gap-8"
         >
           <img
             src={item.avatar}
@@ -37,10 +37,10 @@ export function FlexibleLiftCertaintyQuotes() {
             className="h-20 w-20 shrink-0 rounded-full sm:h-24 sm:w-24"
           />
           <div>
-            <p className="font-heading text-[18px] font-normal leading-relaxed text-color-text-primary sm:text-[20px]">
+            <p className="font-heading text-[18px] font-normal leading-relaxed text-color-text-primary sm:text-[22px]">
               {item.quote}
             </p>
-            <footer className="mt-2 font-body text-sm italic text-color-text-primary">
+            <footer className="mt-4 font-body text-sm italic text-color-text-primary">
               {item.attribution}
             </footer>
           </div>

@@ -11,26 +11,31 @@ export interface CaseStudyLayoutProps {
 }
 
 /** Case study type styles (fonts: Hanken Grotesk + Inconsolata). */
+/** Type ladder: 12 / 14 / 18 / 22 / 28 / 36 / 40 (+ hero clamp). */
 export const documentCaseStudyTitleClassName =
-  'font-heading text-color-text-primary text-[36px] sm:text-[45px] font-bold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[36px] sm:text-[40px] font-bold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyBodyClassName =
   'font-body text-color-text-body text-[18px] font-normal leading-normal';
 
 export const documentCaseStudyH2ClassName =
-  'font-heading text-color-text-primary text-[27px] font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[28px] font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyH3ClassName =
-  'font-heading text-color-text-primary text-[22.5px] font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[22px] font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyImageClassName =
-  'w-full max-w-full block h-auto my-5 first:mt-0 last:mb-0';
+  'w-full max-w-full block h-auto my-4 first:mt-0 last:mb-0';
 
 export const documentCaseStudyImageShadowClassName =
-  `${documentCaseStudyImageClassName} shadow-neutral-tight`;
+  `${documentCaseStudyImageClassName} shadow-navy-sm`;
 
 export const documentCaseStudyListClassName =
   'font-body text-color-text-body text-[18px] font-normal leading-normal list-disc pl-6 space-y-1';
+
+/** Callout / aside: gap before tint edge, padding on 4/8 scale. */
+export const documentCaseStudyAsideClassName =
+  `${documentCaseStudyBodyClassName} mt-8 bg-color-bg-subtle px-4 py-4`;
 
 const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
 
@@ -49,8 +54,8 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
     <div
       className={`w-full mx-auto relative ${
         isDocument
-          ? 'max-w-[900px] px-8 md:px-8 lg:px-10'
-          : 'max-w-[1024px] px-5 md:px-8 lg:px-10'
+          ? 'max-w-[900px] px-8 md:px-8 lg:px-8'
+          : 'max-w-[1024px] px-4 md:px-8 lg:px-8'
       }`}
       data-id={dataId}
     >
@@ -59,7 +64,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
         {caption && (
           <div className="mt-4 w-full">
             {typeof caption === 'string' ? (
-              <p className="font-body italic text-[13.5px] text-color-text-caption leading-relaxed text-left">
+              <p className="font-body italic text-xs text-color-text-caption leading-relaxed text-left">
                 {caption}
               </p>
             ) : (

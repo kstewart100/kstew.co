@@ -16,7 +16,7 @@ export function WorkCard({ label, title, href, outcome }: WorkCardProps) {
   return (
     <Link
       to={href}
-      className="work-card flex flex-col h-full min-h-[260px] md:min-h-[320px] bg-color-bg-surface p-8 md:p-12 border-2 shadow-navy-md"
+      className="work-card flex flex-col h-full min-h-[260px] md:min-h-[320px] bg-color-bg-surface p-8 md:p-12 border shadow-navy-md"
     >
       <div className="mb-8">
         {hasCompanyWordmark(label) ? (
@@ -27,14 +27,14 @@ export function WorkCard({ label, title, href, outcome }: WorkCardProps) {
             }
           />
         ) : (
-          <span className="font-mono text-[26px] text-current">{label}</span>
+          <span className="font-mono text-[28px] text-current">{label}</span>
         )}
       </div>
-      <h3 className="text-2xl md:text-[28px] font-heading font-semibold text-current leading-snug">
+      <h3 className="text-[22px] md:text-[28px] font-heading font-semibold text-current leading-snug">
         {title}
       </h3>
       {outcome ? (
-        <p className="mt-3 font-body text-base leading-snug text-current/70">
+        <p className="mt-4 font-body text-[18px] leading-snug text-current/70">
           {outcome}
         </p>
       ) : null}

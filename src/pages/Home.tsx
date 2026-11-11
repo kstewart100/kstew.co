@@ -9,7 +9,7 @@ const HERO_IMAGE = 'url("/images/hero-queenstown.jpg")';
 
 export function Home() {
   return (
-    <div className="home-page w-full min-h-screen bg-color-bg-surface text-color-text-primary font-body selection:bg-color-interactive selection:text-white">
+    <div className="home-page w-full min-h-screen bg-color-bg-surface text-color-text-primary font-body selection:bg-color-interactive selection:text-color-text-on-dark">
       <div className="relative h-[80vh] w-full overflow-hidden md:h-[calc(100svh-140px)]">
         <div className="absolute top-0 left-0 right-0 z-20 w-full bg-transparent">
           <Header variant="home" />
@@ -33,7 +33,7 @@ export function Home() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-black/25 pointer-events-none"
+          className="absolute inset-0 hero-scrim pointer-events-none"
         />
 
         <div className="absolute inset-0 z-10 flex items-end md:items-center justify-center md:justify-end pb-20 md:pb-0 pointer-events-none">
@@ -46,22 +46,23 @@ export function Home() {
 
         <div className="absolute inset-x-0 bottom-8 z-20 px-6 md:px-12 pointer-events-none md:bottom-3">
           <div className="container mx-auto max-w-6xl">
-            <p className="font-mono text-[11px] sm:text-xs lg:text-sm text-white/90 text-right">
+            <p className="font-mono text-xs lg:text-sm text-color-text-on-dark-muted text-right">
               Queenstown, New Zealand. April 2025.
             </p>
           </div>
         </div>
       </div>
 
+      {/* Spacing from hero plane (high-contrast edge) to first content */}
       <div className="relative z-10 -mt-8 drop-shadow-navy-soft md:mt-0">
         <main id="main-content" className="relative z-10 w-full">
-          <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-6 md:pt-8 pb-6 md:pb-10">
-            <section aria-label="Case studies" className="mb-6 md:mb-10">
-              <h2 className="text-[32px] md:text-[40px] font-heading font-semibold leading-tight mb-8 text-color-text-primary">
+          <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-8 md:pt-16 pb-8 md:pb-16">
+            <section aria-label="Case studies" className="mb-8 md:mb-16">
+              <h2 className="text-[28px] md:text-[40px] font-heading font-semibold leading-tight mb-8 text-color-text-primary">
                 Here&apos;s the proof
               </h2>
 
-              <div className="work-card-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+              <div className="work-card-grid grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 {caseStudies.map((study) => (
                   <WorkCard
                     key={study.slug}
@@ -75,8 +76,8 @@ export function Home() {
             </section>
 
             <section id="about">
-              <div className="bg-color-bg-surface p-8 md:p-12 w-full border-2 [border-color:var(--color-blue-600)]">
-                <h2 className="text-[32px] md:text-[40px] font-heading font-semibold mb-8 text-color-text-primary leading-tight">
+              <div className="bg-color-bg-surface p-8 md:p-12 w-full border [border-color:var(--color-blue-600)] shadow-navy-md">
+                <h2 className="text-[28px] md:text-[40px] font-heading font-semibold mb-8 text-color-text-primary leading-tight">
                   About me
                 </h2>
                 <div className="space-y-6 max-w-[65ch] font-body text-[18px] leading-relaxed text-color-text-secondary">
