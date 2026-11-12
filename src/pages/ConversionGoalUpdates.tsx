@@ -4,6 +4,7 @@ import {
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
+  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
@@ -16,6 +17,7 @@ const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
+const imgHero = documentCaseStudyImageHeroClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
 
@@ -49,7 +51,7 @@ export function ConversionGoalUpdates() {
                 src="/images/case-studies/conversion-goal-updates/laptop.png"
                 alt="Conversion updates tool on laptop"
                 loading="lazy"
-                className={img}
+                className={imgHero}
               />
             </CaseStudyLayout>
 

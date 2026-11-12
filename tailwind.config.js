@@ -13,6 +13,13 @@ export default {
         heading: ['Hanken Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
         hero: ['Hanken Grotesk', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
+      borderRadius: {
+        control: 'var(--shape-control)',
+        media: 'var(--shape-media)',
+        surface: 'var(--shape-surface)',
+        overlay: 'var(--shape-overlay)',
+        nest: 'var(--shape-nest)',
+      },
       colors: {
         'color-bg-canvas': 'var(--color-bg-canvas)',
         'color-bg-surface': 'var(--color-bg-surface)',
