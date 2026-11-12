@@ -505,16 +505,15 @@ function copyTableSlide({ section, heading, rows, foot }) {
     fill: { color: C.accent },
     line: { color: C.accent },
   });
-  addImageSafe(slide, IMG('logo.png'), {
+  addImageSafe(slide, IMG('k-badge-reversed.png'), {
     x: M,
-    y: 0.45,
-    w: 2.4,
-    h: 0.42,
-    sizing: { type: 'contain', w: 2.4, h: 0.42 },
+    y: 0.4,
+    w: 0.5,
+    h: 0.5,
+    sizing: { type: 'contain', w: 0.5, h: 0.5 },
   });
-  // invert-ish: logo is dark; on navy it may be hard to see — use white wordmark treatment via text fallback
   slide.addText('KYLE STEWART', {
-    x: M,
+    x: M + 0.65,
     y: 0.45,
     w: 6,
     h: 0.4,

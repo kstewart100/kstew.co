@@ -8,7 +8,6 @@ PUBLIC="$ROOT/public"
 
 manifest() {
   cat <<'EOF'
-https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/69321d8f305635d733809f43_Logo%20V3.png|images/logo.png
 https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/61dc9476de20fee46b908c56_Group%203766.png|images/case-studies/expert-scheduling/hero-group-3766.png
 https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/6849d1c8f215334c1dbe8850_image%20293.png|images/case-studies/expert-scheduling/journey-image-293.png
 https://cdn.prod.website-files.com/602f5fbae86a0b9121ed61b1/685c69fcd3e7d190e1cc64b7_Group%20632525.png|images/case-studies/expert-scheduling/group-632525.png

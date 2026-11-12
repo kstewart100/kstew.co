@@ -35,12 +35,12 @@ export const Header: React.FC<HeaderProps> = ({
           className="justify-self-start inline-flex items-center group transition-opacity hover:opacity-80"
         >
           <img
-            src={isCaseStudy ? '/images/logo-navy.png' : '/images/logo-chartreuse.png'}
+            src={isCaseStudy ? '/images/k-badge.svg' : '/images/k-badge-reversed.svg'}
             alt=""
-            width={545}
-            height={1026}
+            width={40}
+            height={40}
             decoding="async"
-            className="block h-8 w-auto transition-opacity group-hover:opacity-80"
+            className="block h-10 w-10 transition-opacity group-hover:opacity-80"
           />
         </Link>
 
