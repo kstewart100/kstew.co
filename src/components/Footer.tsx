@@ -33,12 +33,12 @@ export function Footer() {
           className="inline-flex items-center mb-4 transition-opacity hover:opacity-80"
         >
           <img
-            src="/images/logo-navy.png"
+            src="/images/k-badge-reversed.svg"
             alt=""
-            width={545}
-            height={1026}
+            width={40}
+            height={40}
             decoding="async"
-            className="block h-8 w-auto brightness-0 invert"
+            className="block h-10 w-10"
           />
         </Link>
 

@@ -17,6 +17,8 @@ A Vite + React portfolio with case studies from Google Ads and Intuit. Originall
 - `src/components/` — Header, Footer, CaseStudyLayout
 - `src/index.css` — Global styles, Tailwind, fonts
 - `public/images/case-studies/` — Case study screenshots (served at `/images/case-studies/...`)
-- `public/images/logo.png` — Site logo used in the header
+- `public/images/k-badge.svg` / `k-badge-reversed.svg` — K badge logo (header, footer)
+- `public/favicon.svg`, `favicon.ico`, `apple-touch-icon.png` — Browser icons
+- `public/og-image.png` — Open Graph / Twitter share image
 
 To re-fetch case study images from the legacy Webflow CDN (only needed if restoring from scratch), run `./scripts/download-cdn-images.sh`.
