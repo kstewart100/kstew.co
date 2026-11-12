@@ -76,7 +76,7 @@ export function Home() {
             </section>
 
             <section id="about">
-              <div className="bg-color-bg-surface p-8 md:p-12 w-full border [border-color:var(--color-blue-600)] shadow-navy-md">
+              <div className="bg-color-bg-surface p-8 md:p-12 w-full border rounded-surface [border-color:var(--color-blue-600)] shadow-navy-md">
                 <h2 className="text-[28px] md:text-[40px] font-heading font-semibold mb-8 text-color-text-primary leading-tight">
                   About me
                 </h2>

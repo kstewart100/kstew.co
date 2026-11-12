@@ -25,7 +25,7 @@ export const documentCaseStudyH3ClassName =
   'font-heading text-color-text-primary text-[22px] font-semibold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyImageClassName =
-  'w-full max-w-full block h-auto my-4 first:mt-0 last:mb-0';
+  'w-full max-w-full block h-auto my-4 first:mt-0 last:mb-0 rounded-media';
 
 export const documentCaseStudyImageShadowClassName =
   `${documentCaseStudyImageClassName} shadow-navy-sm`;
@@ -35,7 +35,7 @@ export const documentCaseStudyListClassName =
 
 /** Callout / aside: gap before tint edge, padding on 4/8 scale. */
 export const documentCaseStudyAsideClassName =
-  `${documentCaseStudyBodyClassName} mt-8 bg-color-bg-subtle px-4 py-4`;
+  `${documentCaseStudyBodyClassName} mt-8 bg-color-bg-subtle px-4 py-4 rounded-surface`;
 
 const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
 

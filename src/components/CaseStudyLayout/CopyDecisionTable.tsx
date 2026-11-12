@@ -15,19 +15,24 @@ const labelClassName =
 const contentClassName =
   'font-body text-[18px] font-normal leading-normal text-color-text-body';
 
-const cellClassName =
-  'text-left align-top p-4 border border-color-border-default min-w-[7.5rem] bg-color-bg-surface';
+const cellBaseClassName =
+  'text-left align-top p-4 border-r border-color-border-default min-w-[7.5rem] bg-color-bg-surface last:border-r-0';
 
-const headerClassName = `${labelClassName} text-left p-4 border border-color-border-default min-w-[7.5rem] bg-color-bg-subtle`;
+const cellClassName = `${cellBaseClassName} border-b`;
+
+const headerClassName = `${labelClassName} text-left p-4 border-b border-r border-color-border-default min-w-[7.5rem] bg-color-bg-subtle last:border-r-0`;
 
 /** Flat document chrome — same family as case-study asides, no card kit. */
 const cardClassName =
-  'border border-color-border-default bg-color-bg-surface overflow-hidden';
+  'border border-color-border-default bg-color-bg-surface overflow-hidden rounded-surface';
+
+const tableShellClassName =
+  'overflow-hidden rounded-surface border border-color-border-default bg-color-bg-surface';
 
 const cardSectionClassName = 'px-4 py-4';
 
 const statusPillBaseClassName =
-  'inline-flex items-center border px-2 py-0.5 font-heading text-[14px] font-normal leading-normal';
+  'inline-flex items-center border px-2 py-0.5 font-heading text-[14px] font-normal leading-normal rounded-nest';
 
 const statusPillToneClassName = {
   rejected:
@@ -104,37 +109,44 @@ export function CopyDecisionTable({
         ))}
       </div>
 
-      <div className={`hidden overflow-x-auto md:block ${title ? 'mt-4' : ''}`}>
-        <table className="mt-4 w-full border-collapse">
-          <thead>
-            <tr>
-              <th scope="col" className={headerClassName}>
-                {copyColumnLabel}
-              </th>
-              <th scope="col" className={headerClassName}>
-                Status
-              </th>
-              <th scope="col" className={headerClassName}>
-                Design decision
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((row, index) => (
-              <tr key={index}>
-                <td className={`${contentClassName} ${cellClassName}`}>
-                  {row.copy}
-                </td>
-                <td className={cellClassName}>
-                  <StatusPill status={row.status} />
-                </td>
-                <td className={`${contentClassName} ${cellClassName}`}>
-                  {row.decision}
-                </td>
+      <div className={`hidden md:block ${title ? 'mt-4' : ''}`}>
+        <div className={`mt-4 overflow-x-auto ${tableShellClassName}`}>
+          <table className="w-full border-collapse">
+            <thead>
+              <tr>
+                <th scope="col" className={headerClassName}>
+                  {copyColumnLabel}
+                </th>
+                <th scope="col" className={headerClassName}>
+                  Status
+                </th>
+                <th scope="col" className={headerClassName}>
+                  Design decision
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {rows.map((row, index) => {
+                const rowCellClassName =
+                  index === rows.length - 1 ? cellBaseClassName : cellClassName;
+
+                return (
+                  <tr key={index}>
+                    <td className={`${contentClassName} ${rowCellClassName}`}>
+                      {row.copy}
+                    </td>
+                    <td className={rowCellClassName}>
+                      <StatusPill status={row.status} />
+                    </td>
+                    <td className={`${contentClassName} ${rowCellClassName}`}>
+                      {row.decision}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );
