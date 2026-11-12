@@ -24,8 +24,13 @@ export const documentCaseStudyH2ClassName =
 export const documentCaseStudyH3ClassName =
   'font-heading text-color-text-primary text-[22px] font-semibold leading-[1.2] tracking-[-0.01em]';
 
-export const documentCaseStudyImageClassName =
+/** Opening hero / full-bleed lead image — no frame border. */
+export const documentCaseStudyImageHeroClassName =
   'w-full max-w-full block h-auto my-4 first:mt-0 last:mb-0 rounded-media';
+
+/** In-content case study images — thin border for continuity across screenshots. */
+export const documentCaseStudyImageClassName =
+  `${documentCaseStudyImageHeroClassName} border border-color-border-default`;
 
 export const documentCaseStudyImageShadowClassName =
   `${documentCaseStudyImageClassName} shadow-navy-sm`;

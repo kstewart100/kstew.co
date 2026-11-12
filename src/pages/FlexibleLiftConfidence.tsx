@@ -4,7 +4,7 @@ import {
   documentCaseStudyH2ClassName,
   documentCaseStudyH3ClassName,
   documentCaseStudyImageClassName,
-  documentCaseStudyImageShadowClassName,
+  documentCaseStudyImageHeroClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
@@ -18,7 +18,7 @@ const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const h3 = documentCaseStudyH3ClassName;
 const img = documentCaseStudyImageClassName;
-const imgShadow = documentCaseStudyImageShadowClassName;
+const imgHero = documentCaseStudyImageHeroClassName;
 const list = documentCaseStudyListClassName;
 
 export function FlexibleLiftConfidence() {
@@ -54,7 +54,7 @@ export function FlexibleLiftConfidence() {
                 src="/images/case-studies/flexible-lift-confidence/image.png"
                 alt="Google Ads brand lift metrics showing Certainty of lift"
                 loading="lazy"
-                className={imgShadow}
+                className={`${imgHero} shadow-navy-sm`}
               />
             </CaseStudyLayout>
 

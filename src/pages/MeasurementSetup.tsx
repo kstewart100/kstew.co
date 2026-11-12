@@ -4,6 +4,7 @@ import {
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
+  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyAsideClassName,
@@ -17,6 +18,7 @@ const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
+const imgHero = documentCaseStudyImageHeroClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
 const aside = documentCaseStudyAsideClassName;
@@ -54,7 +56,7 @@ export function MeasurementSetup() {
                 src="/images/case-studies/measurement-setup/image.png"
                 alt="Google Ads new campaign screen with measurement setup steps"
                 loading="lazy"
-                className={img}
+                className={imgHero}
               />
             </CaseStudyLayout>
 

@@ -5,6 +5,7 @@ export {
   documentCaseStudyH2ClassName,
   documentCaseStudyH3ClassName,
   documentCaseStudyImageClassName,
+  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyAsideClassName,

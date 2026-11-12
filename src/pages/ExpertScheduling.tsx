@@ -3,6 +3,7 @@ import {
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
+  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
@@ -15,6 +16,7 @@ const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
+const imgHero = documentCaseStudyImageHeroClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
 
@@ -48,7 +50,7 @@ export function ExpertScheduling() {
                 alt="Future state concept for the scheduling tool"
                 loading="lazy"
                 src="/images/case-studies/expert-scheduling/hero-group-3766.png"
-                className={img}
+                className={imgHero}
               />
             </CaseStudyLayout>
 
