@@ -5,6 +5,7 @@ import {
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
+  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
@@ -88,7 +89,7 @@ export function ExpertScheduling() {
                 alt="Expert journey diagram"
                 loading="lazy"
                 src="/images/case-studies/expert-scheduling/journey-image-293.png"
-                className={img}
+                className={documentCaseStudyImageHeroClassName}
               />
             </CaseStudyLayout>
 
@@ -124,7 +125,7 @@ export function ExpertScheduling() {
                 alt="Audit slides"
                 loading="lazy"
                 src="/images/case-studies/expert-scheduling/group-632525.png"
-                className={img}
+                className={documentCaseStudyImageHeroClassName}
               />
             </CaseStudyLayout>
 
