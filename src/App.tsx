@@ -15,6 +15,7 @@ import { FlexibleLiftConfidence } from './pages/FlexibleLiftConfidence';
 import { MeasurementSetup } from './pages/MeasurementSetup';
 import { NotFound } from './pages/NotFound';
 import { Analytics } from './components/Analytics';
+import { Header } from './components/Header';
 import { PageTransition } from './components/PageTransition';
 
 function ScrollToTop() {
@@ -67,6 +68,7 @@ export default function App() {
       <ScrollToTop />
       <RoutePreviewMeta />
       <Analytics />
+      <Header />
       <PageTransition>
         <Routes>
           <Route path="/" element={<Home />} />

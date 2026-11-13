@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Human or Machine? · Kyle Stewart</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;900&family=Inconsolata:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+/* Layout: kstew.co system. Navy ink on blue-white canvas, chartreuse-olive accent, 8px shapes, navy shadows.
+   Hanken Grotesk for headings, Inconsolata for interface text, Newsreader kept for the content being judged. */
+:root{
+  --bg:#FEFEFF; --surface:#FEFEFF; --subtle:#F0F8FF; --ink:#134A70; --muted:#5A6F7E; --caption:#758B9B; --line:#CEDDE9;
+  --accent:#B7C75A; --accent-hover:#A5B54C; --on-accent:#134A70;
+  --a:#134A70; --a-soft:#DEF0FF; --a-text:#134A70; --on-a:#F5F8FA;
+  --b:#B7C75A; --b-soft:#E8EED4; --b-text:#134A70; --on-b:#134A70;
+  --ok:#4579A2; --warn:#445967; --shadow:rgba(19,74,112,.25); --shadow-tight:rgba(19,74,112,.12);
+  --r:8px;
+  --display:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --ui:"Inconsolata", ui-monospace, Menlo, monospace;
+  --read:"Newsreader", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#022036; --surface:#093451; --subtle:#0C3B5C; --ink:#F5F8FA; --muted:#B1C6D5; --caption:#92A8B9; --line:#2C6088;
+  --accent:#B7C75A; --accent-hover:#C6D46E; --on-accent:#022036;
+  --a:#9DCCF4; --a-soft:#134A70; --a-text:#DEF0FF; --on-a:#022036;
+  --b:#B7C75A; --b-soft:#3B4420; --b-text:#E8EED4; --on-b:#022036;
+  --ok:#9DCCF4; --warn:#D4DDB0; --shadow:rgba(0,0,0,.45); --shadow-tight:rgba(0,0,0,.3); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#022036; --surface:#093451; --subtle:#0C3B5C; --ink:#F5F8FA; --muted:#B1C6D5; --caption:#92A8B9; --line:#2C6088;
+  --accent:#B7C75A; --accent-hover:#C6D46E; --on-accent:#022036;
+  --a:#9DCCF4; --a-soft:#134A70; --a-text:#DEF0FF; --on-a:#022036;
+  --b:#B7C75A; --b-soft:#3B4420; --b-text:#E8EED4; --on-b:#022036;
+  --ok:#9DCCF4; --warn:#D4DDB0; --shadow:rgba(0,0,0,.45); --shadow-tight:rgba(0,0,0,.3); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:1180px;margin:0 auto;padding-block:20px 120px}
+header.top{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.mark{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.mark .dot{display:inline-flex;gap:3px}
+.mark .dot i{width:10px;height:10px;border-radius:50%;display:block}
+.mark .dot i:first-child{background:var(--a)} .mark .dot i:last-child{background:var(--b)}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 6px}
+.steps button{font-family:var(--ui);font-size:14px;font-weight:500;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:5px 14px;cursor:pointer}
+.steps button.cur{color:var(--ink);border-color:var(--ink)}
+.steps button.done::before{content:"✓ ";color:var(--ok)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.02em;color:var(--ink)}
+h1{font-size:clamp(34px,6vw,58px);font-weight:900;line-height:1.02;letter-spacing:-.03em}
+h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;line-height:1.1}
+h3{font-size:20px;font-weight:700}
+.eyebrow{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--caption)}
+.lede{max-width:60ch;color:var(--muted);font-size:18px;margin:0}
+.intro{display:grid;gap:22px;padding-block:48px 24px;max-width:760px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.cats li{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:12px 14px;display:grid;gap:2px}
+.cats b{font-family:var(--display);font-weight:700;letter-spacing:-.02em}
+.cats span{font-size:14px;color:var(--caption)}
+.btn{font-family:var(--ui);font-weight:500;font-size:14px;line-height:20px;letter-spacing:.1px;height:40px;min-width:48px;padding:0 24px;border-radius:var(--r);border:none;background:var(--accent);color:var(--on-accent);cursor:pointer;display:inline-flex;align-items:center;text-decoration:none;transition:box-shadow .15s, background .15s}
+.btn:hover{background:var(--accent-hover);box-shadow:0 1px 2px var(--shadow-tight)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--subtle)}
+.btn:disabled{background:color-mix(in srgb, var(--ink) 12%, transparent);color:color-mix(in srgb, var(--ink) 38%, transparent);box-shadow:none;cursor:not-allowed}
+.btn:focus-visible,.steps button:focus-visible,.pick:focus-visible,.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.roundhead{display:grid;gap:6px;margin:18px 0 18px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+@media (max-width:860px){.pair{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);min-width:0;overflow:hidden;box-shadow:0 12px 24px -12px var(--shadow)}
+.panel .tag{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:700;letter-spacing:-.02em}
+.panel .tag .chip{font-family:var(--ui);font-size:13px;font-weight:600;padding:2px 10px;border-radius:30px;border:1px solid transparent}
+.panel.A .tag .chip{background:var(--a-soft);color:var(--a-text)} .panel.B .tag .chip{background:var(--b-soft);color:var(--b-text);border-color:var(--b)}
+.panel.A.sel{border-color:var(--a);box-shadow:0 0 0 2px var(--a), 0 16px 32px -12px var(--shadow)} .panel.B.sel{border-color:var(--b);box-shadow:0 0 0 2px var(--b), 0 16px 32px -12px var(--shadow)}
+.text{font-family:var(--read);font-size:17px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px 22px 24px;max-width:68ch}
+.panel .frame{aspect-ratio:16/10;max-width:100%;background:var(--subtle);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.panel .frame img{display:block;width:100%;height:100%;object-fit:contain}
+.missing{padding:28px 22px;color:var(--caption);font-style:italic}
+.ballot{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -1px 2px var(--shadow-tight);
+  padding:12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));z-index:5}
+.ballot .in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.ballot .q{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.02em}
+.picks{display:flex;gap:8px}
+.pick{font-family:var(--ui);font-weight:600;font-size:14px;height:40px;padding:0 16px;border-radius:var(--r);cursor:pointer;background:transparent;border:1.5px solid var(--line);color:var(--ink)}
+.pick:hover:not(:disabled){background:var(--subtle)}
+.pick.A[aria-pressed="true"]{background:var(--a);border-color:var(--a);color:var(--on-a)}
+.pick.B[aria-pressed="true"]{background:var(--b);border-color:var(--b);color:var(--on-b)}
+.pick:disabled{opacity:.45;cursor:not-allowed}
+.note{font-family:var(--ui);font-size:14px;color:var(--caption)}
+.note.warn{color:var(--warn);font-weight:600}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:14px;box-shadow:0 1px 2px var(--shadow-tight)}
+.summary{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.summary li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-block:6px}
+.summary li span:last-child{font-weight:600}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>html,body{margin:0} :root{padding-top:env(safe-area-inset-top,0px)} [hidden]{display:none!important} img{max-width:100%}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="/" style="color:inherit;text-decoration:none"><span class="dot"><i></i><i></i></span>Human or Machine?</a>
+  </header>
+  <main id="app">
+    <section class="intro">
+      <div class="eyebrow">Loading the game…</div>
+      <h1>Can you spot the work a machine made?</h1>
+    </section>
+  </main>
+</div>
+<div class="ballot" id="ballot" hidden></div>
+
+<script>
+/* ===== Setup: paste your Google Apps Script web app URL here (see SETUP.md) ===== */
+const SCRIPT_URL = "";
+/* ================================================================================ */
+
+const STORE = "kstew-ai-or-human-v1";
+const S = { pairs:[], step:-1, votes:{}, submitted:false, sending:false, error:"", sessionId:"" };
+const $app = document.getElementById("app"), $ballot = document.getElementById("ballot");
+const el = (tag, attrs={}, ...kids) => { const n=document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)) { if (v==null||v===false) continue;
+    if (k==="class") n.className=v; else if (k==="text") n.textContent=v; else if (k.startsWith("on")) n.addEventListener(k.slice(2),v); else n.setAttribute(k, v===true?"":v); }
+  for (const k of kids.flat()) if (k!=null) n.append(k.nodeType?k:document.createTextNode(k)); return n; };
+const top0 = () => scrollTo({top:0});
+
+function load(){ try{ const d=JSON.parse(localStorage.getItem(STORE)||"{}"); S.votes=d.votes||{}; S.submitted=!!d.submitted; S.sessionId=d.sessionId||""; }catch{} }
+function save(){ try{ localStorage.setItem(STORE, JSON.stringify({votes:S.votes, submitted:S.submitted, sessionId:S.sessionId})); }catch{} }
+function sid(){ if(!S.sessionId){ S.sessionId = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now())+Math.random().toString(16).slice(2)); save(); } return S.sessionId; }
+
+function render(){
+  $ballot.hidden=true; $ballot.replaceChildren();
+  if (!S.pairs.length) return;
+  if (S.submitted) return renderDone();
+  if (S.step<0) return renderIntro();
+  renderRound(S.step);
+}
+
+function steps(){
+  return el("div",{class:"steps",role:"tablist"}, S.pairs.map((c,i)=>el("button",{
+    class:(i===S.step?"cur ":"")+(S.votes[c.key]?"done":""), text:c.label, role:"tab","aria-selected":String(i===S.step),
+    onclick:()=>{S.step=i; render(); top0();}})));
+}
+
+function renderIntro(){
+  const n=S.pairs.length, voted=S.pairs.filter(c=>S.votes[c.key]).length;
+  $app.replaceChildren(el("section",{class:"intro"},
+    el("div",{class:"eyebrow",text:`${n} pairs · about 10 minutes`}),
+    el("h1",{text:"Can you spot the work a machine made?"}),
+    el("p",{class:"lede",text:"Each round puts two versions of the same piece side by side. Read both, then pick the one you think was made with generative AI. There's no score at the end. The answers will be revealed later, together with how everyone voted."}),
+    el("ul",{class:"cats"}, S.pairs.map(c=>el("li",{}, el("b",{text:c.label}), el("span",{text:c.hint||""})))),
+    el("p",{class:"note",text:"Votes are anonymous. No name or email is collected. Your picks are sent once you finish the last pair."}),
+    el("div",{class:"row"}, el("button",{class:"btn",text: voted?"Continue":"Start the first pair",
+      onclick:()=>{ const f=S.pairs.findIndex(c=>!S.votes[c.key]); S.step=f<0?S.pairs.length-1:f; render(); top0(); }}))));
+}
+
+function sideNode(side, w, label){
+  if (side.kind==="image") return el("div",{class:"frame"}, el("img",{src:side.src, alt:side.alt||`${label}, version ${w}`, loading:"lazy"}));
+  return el("div",{class:"text",text:side.text});
+}
+
+function renderRound(i){
+  const c=S.pairs[i], mine=S.votes[c.key], last=i===S.pairs.length-1;
+  const allPicked = S.pairs.every(p=>S.votes[p.key]);
+  $app.replaceChildren(steps(),
+    el("div",{class:"roundhead"}, el("div",{class:"eyebrow",text:`Pair ${i+1} of ${S.pairs.length}`}), el("h2",{text:c.label})),
+    el("div",{class:"pair"}, ["A","B"].map(w=>el("article",{class:`panel ${w}${mine===w?" sel":""}`},
+      el("div",{class:"tag"}, el("span",{text:`Version ${w}`}), el("span",{class:"chip",text:mine===w?"Your pick":w})),
+      sideNode(c[w.toLowerCase()], w, c.label)))));
+  const msg = S.error ? el("span",{class:"note warn",text:S.error})
+    : el("span",{class:"note",text: last && mine && !allPicked ? "Pick a version in every pair to submit." : mine ? `Picked: Version ${mine}` : "Pick one to continue"});
+  const nextBtn = last
+    ? el("button",{class:"btn",text:S.sending?"Sending…":"Submit my picks",disabled:!allPicked||S.sending,onclick:submit})
+    : el("button",{class:"btn",text:"Next pair",disabled:!mine,onclick:()=>{S.step=i+1; S.error=""; render(); top0();}});
+  $ballot.replaceChildren(el("div",{class:"in"},
+    el("div",{}, el("div",{class:"q",text:"Which version was made with AI?"}), msg),
+    el("div",{class:"row"},
+      el("div",{class:"picks"}, ["A","B"].map(w=>el("button",{class:`pick ${w}`,"aria-pressed":String(mine===w),text:`Version ${w}`,
+        onclick:()=>{ S.votes={...S.votes,[c.key]:w}; S.error=""; save(); render(); }}))),
+      el("button",{class:"btn ghost",text:"Back",onclick:()=>{S.step=i-1; S.error=""; render(); top0();}}),
+      nextBtn)));
+  $ballot.hidden=false;
+}
+
+async function submit(){
+  if (!SCRIPT_URL){ S.error="Voting isn't connected yet. Please let the host know."; return render(); }
+  S.sending=true; S.error=""; render();
+  const body = {sessionId:sid()}; S.pairs.forEach(p=>body[p.key]=S.votes[p.key]);
+  try{
+    // text/plain keeps this a "simple" request; Apps Script doesn't answer CORS preflights.
+    await fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(body)});
+    S.submitted=true; save();
+  }catch{ S.error="Your picks couldn't be sent. Check your connection and try again."; }
+  S.sending=false; render(); top0();
+}
+
+function renderDone(){
+  $app.replaceChildren(el("section",{class:"intro"},
+    el("div",{class:"eyebrow",text:"All done"}),
+    el("h1",{text:"Your picks are in."}),
+    el("p",{class:"lede",text:"Thanks for playing. The answers, and how everyone voted, will be revealed later."}),
+    el("div",{class:"card"},
+      el("div",{class:"eyebrow",text:"Your picks for “made with AI”"}),
+      el("ul",{class:"summary"}, S.pairs.map(c=>el("li",{}, el("span",{text:c.label}), el("span",{text:S.votes[c.key]?`Version ${S.votes[c.key]}`:"No pick"})))))));
+}
+
+load();
+fetch("content.json",{cache:"no-cache"}).then(r=>{ if(!r.ok) throw 0; return r.json(); })
+  .then(d=>{ S.pairs=(d.pairs||[]).filter(p=>p.a&&p.b); render(); })
+  .catch(()=>{ $app.replaceChildren(el("section",{class:"intro"}, el("div",{class:"eyebrow",text:"Can't load the game"}),
+    el("h1",{text:"The pairs didn't load."}), el("p",{class:"lede",text:"Refresh the page to try again."}))); });
+</script>
+
+</body>
+</html>

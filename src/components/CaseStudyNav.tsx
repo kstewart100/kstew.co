@@ -21,7 +21,7 @@ export function CaseStudyNav() {
     <CaseStudyLayout variant="document">
       <section
         aria-labelledby="case-study-nav-heading"
-        className="mt-8 pt-8 md:mt-16 md:pt-16"
+        className="mt-12 pt-12 md:mt-20 md:pt-20 border-t border-color-border-default"
       >
         <h2 id="case-study-nav-heading" className={`${documentCaseStudyH2ClassName} mb-8`}>
           Keep exploring

@@ -13,7 +13,7 @@ const labelClassName =
   'font-heading text-[18px] font-semibold leading-normal text-color-text-primary';
 
 const contentClassName =
-  'font-body text-[18px] font-normal leading-normal text-color-text-body';
+  'font-body text-[18px] font-normal leading-relaxed text-color-text-body';
 
 const cellBaseClassName =
   'text-left align-top p-4 border-r border-color-border-default min-w-[7.5rem] bg-color-bg-surface last:border-r-0';

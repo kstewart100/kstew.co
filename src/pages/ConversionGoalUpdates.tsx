@@ -1,15 +1,15 @@
 import {
+  CaseStudyHero,
   CaseStudyLayout,
+  CaseStudyMeta,
   CopyDecisionTable,
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
-  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyNav } from '../components/CaseStudyNav';
 
@@ -17,42 +17,23 @@ const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
-const imgHero = documentCaseStudyImageHeroClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
 
 export function ConversionGoalUpdates() {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas">
-      <Header variant="case-study" />
-      <main id="main-content" className="flex-1 py-8 lg:py-12">
-          <div className="space-y-6 mb-16 lg:mb-24">
+    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas pt-[var(--site-header-height)]">
+      <main id="main-content" className="flex-1 pt-8 pb-16 lg:pt-10 lg:pb-24">
+          <div className="space-y-10 md:space-y-12 mb-24 lg:mb-32">
+            <CaseStudyHero
+              src="/images/case-studies/conversion-goal-updates/laptop.png"
+              alt="Conversion updates tool on laptop"
+            />
+
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
                 Turning a migration chore into a clear yes
               </h1>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
-                <strong>Company:</strong> Google, Google Ads
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Role:</strong> Senior Content Designer
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Team:</strong> UX Designers, Product Managers, Software
-                Engineers, and Program Managers
-              </p>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <img
-                src="/images/case-studies/conversion-goal-updates/laptop.png"
-                alt="Conversion updates tool on laptop"
-                loading="lazy"
-                className={imgHero}
-              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -62,7 +43,7 @@ export function ConversionGoalUpdates() {
                 automated bidding what to optimize for, so they shape how campaigns
                 spend money.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Switching analytics platforms created duplicate conversion actions
                 in Google Ads. Advertisers who didn&apos;t clean them up risked
                 bidding on inaccurate data, which could mean wasted spend and lost
@@ -70,7 +51,7 @@ export function ConversionGoalUpdates() {
                 data on the new platform before the old one shut down. For large
                 accounts, those errors added up fast.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I led the content design to clearly walk advertisers through each
                 step, so they understood exactly how their campaigns would be
                 affected.
@@ -78,8 +59,16 @@ export function ConversionGoalUpdates() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
+              <CaseStudyMeta
+                company="Google, Google Ads"
+                role="Senior Content Designer"
+                team="UX Designers, Product Managers, Software Engineers, and Program Managers"
+              />
+            </CaseStudyLayout>
+
+            <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-4`}>
+              <ul className={`${list} mt-6`}>
                 <li>
                   Be upfront about potential changes—both positive and negative
                 </li>
@@ -116,7 +105,7 @@ export function ConversionGoalUpdates() {
                 understand what we were actually asking advertisers to do and how
                 they thought about it.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The main headline from PM mockups captured the directive:
                 &ldquo;Update your goals from Universal Analytics conversions to
                 Google Analytics 4 conversions.&rdquo; Technically correct, but way
@@ -177,7 +166,7 @@ export function ConversionGoalUpdates() {
                 things up. I cut redundant explanations and focused on what
                 advertisers needed to know.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 As we neared launch, I worked with help content teams to spot
                 remaining knowledge gaps. We added tooltips and consolidated help
                 resources to give people answers without overwhelming them.
@@ -186,7 +175,7 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>From manual guide to automated recommendation</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Product management initially wanted advertisers to handle updates
                 manually, requiring us to share extensive information upfront. The
                 thinking was that more information would help people feel confident
@@ -212,25 +201,25 @@ export function ConversionGoalUpdates() {
                 &ldquo;Secondary&rdquo; settings. It felt comprehensive, but was
                 actually a mess.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 My first iteration replaced generic drop-downs with clearer actions
                 like &ldquo;Switch&rdquo; and &ldquo;Change to primary.&rdquo; I
                 wanted to carry the language we used elsewhere and connect directly
                 to the user&apos;s mental model.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 After putting this iteration in front of advertisers, we heard
                 something different. Clearer CTAs still left them deciding Primary
                 vs. Secondary for every conversion. In roundtables they
                 stalled—more labeled choices didn&apos;t make them more sure.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 So I stopped asking them to make the change row by row. The rule
                 was simple: old conversions become secondary, new ones become
                 primary. Content&apos;s job shifted from &ldquo;pick an
                 action&rdquo; to &ldquo;does this look right?&rdquo;
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I mocked a two-column review: current settings next to recommended
                 changes, so advertisers could see exactly what would change before
                 committing.
@@ -276,7 +265,7 @@ export function ConversionGoalUpdates() {
                 I realized we were asking people to approve changes without seeing
                 their potential impact first.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I made a mockup of how to share performance fluctuations on the
                 review and update page. I shared updates with my design partner,
                 and we presented the proposal to our product and engineering
@@ -301,11 +290,11 @@ export function ConversionGoalUpdates() {
                 and show the performance impact before advertisers made any
                 decisions.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Why were we making people figure this out manually when we could
                 automate it?
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 We flipped the entire approach. Instead of &ldquo;here&apos;s a
                 complex table, and you need to make changes,&rdquo; it became
                 &ldquo;here&apos;s a recommendation—does this look right?&rdquo;
@@ -331,12 +320,12 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Challenging language precedent</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 While working on this experience, I kept two things in balance.
                 What did people need to know, and what kind of urgency did we want
                 to create?
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The in-product notification and sub-header copy became just as
                 important as the flow itself. They had to communicate both urgency
                 and confidence—in a tone that matched advertisers&apos; mental
@@ -422,13 +411,13 @@ export function ConversionGoalUpdates() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 We cut the flow from six screens of manual updates to a shorter
                 path: review the recommendation, then approve. Advertisers could
                 see what would change before they committed—instead of flipping
                 each setting themselves.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Content didn&apos;t just label the chore. It reframed the job from
                 &ldquo;change every conversion&rdquo; to &ldquo;does this look
                 right?&rdquo;

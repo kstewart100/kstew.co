@@ -1,7 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useLocation, type Location } from 'react-router-dom';
 
-const EXIT_MS = 800;
+/** Matches --motion-page-enter-duration (long2 / 500ms); covers exit + enter overlap. */
+const EXIT_MS = 500;
 
 function prefersReducedMotion() {
   return (

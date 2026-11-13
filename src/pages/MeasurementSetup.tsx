@@ -1,16 +1,15 @@
 import {
+  CaseStudyHero,
   CaseStudyLayout,
+  CaseStudyMeta,
   CopyDecisionTable,
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
-  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
-  documentCaseStudyAsideClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyNav } from '../components/CaseStudyNav';
 
@@ -18,46 +17,24 @@ const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
-const imgHero = documentCaseStudyImageHeroClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
-const aside = documentCaseStudyAsideClassName;
 
 export function MeasurementSetup() {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas">
-      <Header variant="case-study" />
-      <main id="main-content" className="flex-1 py-8 lg:py-12">
-          <div className="space-y-6 mb-16 lg:mb-24">
+    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas pt-[var(--site-header-height)]">
+      <main id="main-content" className="flex-1 pt-8 pb-16 lg:pt-10 lg:pb-24">
+          <div className="space-y-10 md:space-y-12 mb-24 lg:mb-32">
+            <CaseStudyHero
+              src="/images/case-studies/measurement-setup/image.png"
+              alt="Google Ads new campaign screen with measurement setup steps"
+              caption="The language guides advertisers through setup in clear, plain terms."
+            />
+
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
                 Making an easy{'\u2011'}to{'\u2011'}skip step worth finishing
               </h1>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
-                <strong>Company:</strong> Google, Google Ads
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Role:</strong> Senior Content Designer
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Team:</strong> UX Designers, Product Managers, Software
-                Engineers, and Program Managers
-              </p>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout
-              {...layout}
-              caption="The language guides advertisers through setup in clear, plain terms."
-            >
-              <img
-                src="/images/case-studies/measurement-setup/image.png"
-                alt="Google Ads new campaign screen with measurement setup steps"
-                loading="lazy"
-                className={imgHero}
-              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -68,24 +45,26 @@ export function MeasurementSetup() {
                 as a result, their campaigns performed poorly and they grew
                 frustrated with Google Ads.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I helped reposition measurement setup inside onboarding with
                 clearer headlines, simpler guidance, and action-oriented copy so
                 more people could complete setup correctly on the first pass. With
                 these new updates, we saw a 25% increase in people setting
                 up these tools.
               </p>
-              <aside className={aside}>
-                Along with this update, the product language for conversion
-                measurement also needed changes in three other parts of the
-                product. As a result, I needed stakeholder buy-in from three
-                other product areas.
-              </aside>
+            </CaseStudyLayout>
+
+            <CaseStudyLayout {...layout}>
+              <CaseStudyMeta
+                company="Google, Google Ads"
+                role="Senior Content Designer"
+                team="UX Designers, Product Managers, Software Engineers, and Program Managers + 3 product partner teams for shared language"
+              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-4`}>
+              <ul className={`${list} mt-6`}>
                 <li>Simplify and hide details with progressive disclosure</li>
                 <li>Do the work for them</li>
                 <li>Assume they&apos;re new</li>
@@ -94,7 +73,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Refining content hierarchy</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 My first pass put everything on the page. After exploring that, I
                 cut what didn&apos;t need to live there and revealed detail when
                 people needed it.
@@ -191,7 +170,7 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Finding and aligning on the CTAs</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Prior research showed that &ldquo;Set up&rdquo; and &ldquo;Get
                 event snippet&rdquo; resonated strongly with advertisers. These
                 action-oriented CTAs clearly communicated what someone needed to
@@ -220,12 +199,12 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Working out the jargon</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 While working on this experience, I kept one thing in mind: What
                 did the advertiser need to know to take action? Why did the
                 advertiser even care about taking action?
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 That question mattered most in the directional copy for tags and
                 snippets. Without setting these up correctly, people wouldn&apos;t
                 see results in their campaign. This approach—explaining the
@@ -338,11 +317,11 @@ export function MeasurementSetup() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The update worked. More people finished measurement setup, and
                 they did it correctly—about 25% more than before.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The useful pressure test was simple: would this help someone
                 who&apos;s never done this before? That question usually settled
                 what stayed on the page and what got cut.
