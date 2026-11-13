@@ -54,7 +54,7 @@ export function Footer() {
             className="flex items-center gap-1 text-color-text-on-dark hover:text-color-text-on-dark-muted transition-colors group min-h-[44px] min-w-[44px]"
           >
             Email{' '}
-            <ArrowUpRight className="w-4 h-4 text-color-text-on-dark-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="w-4 h-4 text-color-text-on-dark-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-[var(--motion-duration-short3)] ease-[var(--motion-easing-standard)]" />
           </a>
           <span className="text-color-text-on-dark-muted">•</span>
           <a
@@ -65,7 +65,7 @@ export function Footer() {
             className="flex items-center gap-1 text-color-text-on-dark hover:text-color-text-on-dark-muted transition-colors group min-h-[44px] min-w-[44px]"
           >
             LinkedIn{' '}
-            <ArrowUpRight className="w-4 h-4 text-color-text-on-dark-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="w-4 h-4 text-color-text-on-dark-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-[var(--motion-duration-short3)] ease-[var(--motion-easing-standard)]" />
           </a>
         </div>
 

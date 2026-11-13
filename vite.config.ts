@@ -99,7 +99,33 @@ function routePreviewHtmlPlugin(): Plugin {
   };
 }
 
+/** Vite SPA fallback serves the React app for /ai-or-human/; rewrite to the static page. */
+function staticPublicPagesPlugin(): Plugin {
+  const rewrite = (
+    req: { url?: string },
+    _res: unknown,
+    next: () => void,
+  ) => {
+    const pathname = req.url?.split('?')[0];
+    if (pathname === '/ai-or-human' || pathname === '/ai-or-human/') {
+      const query = req.url?.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+      req.url = `/ai-or-human/index.html${query}`;
+    }
+    next();
+  };
+
+  return {
+    name: 'static-public-pages',
+    configureServer(server) {
+      server.middlewares.use(rewrite);
+    },
+    configurePreviewServer(server) {
+      server.middlewares.use(rewrite);
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), routePreviewHtmlPlugin()],
+  plugins: [react(), routePreviewHtmlPlugin(), staticPublicPagesPlugin()],
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { AnimatedHeadline } from '../components/AnimatedHeadline';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WorkCard } from '../components/WorkCard';
 import { caseStudies } from '../data/caseStudies';
@@ -10,11 +9,10 @@ const HERO_IMAGE = 'url("/images/hero-queenstown.jpg")';
 export function Home() {
   return (
     <div className="home-page w-full min-h-screen bg-color-bg-surface text-color-text-primary font-body selection:bg-color-interactive selection:text-color-text-on-dark">
-      <div className="relative h-[80vh] w-full overflow-hidden md:h-[calc(100svh-140px)]">
-        <div className="absolute top-0 left-0 right-0 z-20 w-full bg-transparent">
-          <Header variant="home" />
-        </div>
-
+      <div
+        data-home-hero
+        className="relative h-[80vh] w-full overflow-hidden md:h-[calc(100svh-140px)]"
+      >
         <div
           className="hidden md:block absolute right-0 bottom-0 w-full h-full bg-no-repeat"
           style={{

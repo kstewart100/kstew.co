@@ -79,6 +79,34 @@
   --shape-surface: 8px;
   --shape-overlay: 8px;
   --shape-nest: 30px;
+
+  /* Material 3 motion (md.sys.motion from material-web) */
+  --motion-duration-short1: 50ms;
+  --motion-duration-short2: 100ms;
+  --motion-duration-short3: 150ms;
+  --motion-duration-short4: 200ms;
+  --motion-duration-medium1: 250ms;
+  --motion-duration-medium2: 300ms;
+  --motion-duration-medium3: 350ms;
+  --motion-duration-medium4: 400ms;
+  --motion-duration-long1: 450ms;
+  --motion-duration-long2: 500ms;
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+  --motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  /* Page route transition — guided continuity (exit faster, enter settles) */
+  --motion-page-exit-duration: var(--motion-duration-medium2);
+  --motion-page-enter-duration: var(--motion-duration-long2);
+
+  /* Persistent site header — between full and compact */
+  --site-header-height: 4.5rem;
+  --site-header-control: 2.25rem;
+  --header-ink: var(--color-text-on-dark);
+  --header-badge-fill: var(--color-white);
+  --header-badge-stroke: var(--color-blue-800);
 }
 body {
   background-color: var(--color-bg-canvas);
@@ -92,7 +120,8 @@ body {
 .headline-cycle-word {
   display: inline-block;
   width: 100%;
-  animation: headline-cycle-in 0.4s ease-out both;
+  animation: headline-cycle-in var(--motion-duration-long2)
+    var(--motion-easing-emphasized-decelerate) both;
 }
 
 @keyframes headline-cycle-in {
@@ -137,6 +166,84 @@ body {
   min-height: 100dvh;
   background-color: var(--color-bg-canvas);
 }
+
+/* Persistent site header — veil opacity tracks home-hero scroll */
+.site-header {
+  --header-veil: 0;
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  height: var(--site-header-height);
+  display: flex;
+  align-items: center;
+  color: var(--header-ink);
+  /* Surface rises under chrome as you leave the hero photo */
+  background-color: color-mix(
+    in srgb,
+    var(--color-bg-surface) calc(var(--header-veil) * 94%),
+    transparent
+  );
+  -webkit-backdrop-filter: blur(calc(var(--header-veil) * 12px));
+  backdrop-filter: blur(calc(var(--header-veil) * 12px));
+  box-shadow: 0 1px 2px
+    color-mix(
+      in srgb,
+      var(--color-blue-shadow-tight) calc(var(--header-veil) * 100%),
+      transparent
+    );
+  transition:
+    color var(--motion-duration-long1) var(--motion-easing-emphasized-decelerate);
+}
+
+.site-header__inner {
+  width: 100%;
+}
+
+.site-header__brand {
+  color: inherit;
+  transition: opacity var(--motion-duration-short3) var(--motion-easing-standard);
+}
+
+.site-header__brand:hover {
+  opacity: 0.8;
+}
+
+.site-header__title {
+  color: var(--header-ink);
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  transition: color var(--motion-duration-long1) var(--motion-easing-emphasized-decelerate);
+}
+
+.site-header__title-sep {
+  opacity: 0.45;
+  margin-inline: 0.625rem;
+}
+
+.site-header .m3-filled-button {
+  height: var(--site-header-control);
+  min-height: var(--site-header-control);
+  padding: 0 18px;
+  font-size: 13.5px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.site-header circle,
+.site-header path {
+  transition:
+    fill var(--motion-duration-long1) var(--motion-easing-emphasized-decelerate),
+    stroke var(--motion-duration-long1) var(--motion-easing-emphasized-decelerate);
+}
+
+.site-header--scrolled {
+  --header-ink: var(--color-text-primary);
+  --header-badge-fill: var(--color-blue-800);
+  --header-badge-stroke: var(--color-white);
+}
+
 /* Material 3 filled button (small / default)
    States: enabled · hovered · focused · pressed · disabled
    State layer = content/on color @ hover 8% · focus/press 10%
@@ -165,7 +272,10 @@ body {
   -webkit-tap-highlight-color: transparent;
   isolation: isolate;
   box-shadow: none;
-  transition: box-shadow 280ms cubic-bezier(0.2, 0, 0, 1);
+  transform: translate3d(0, 0, 0) scale(1);
+  transition:
+    box-shadow var(--motion-duration-medium2) var(--motion-easing-standard),
+    transform var(--motion-duration-short4) var(--motion-easing-standard);
 }
 
 .m3-filled-button__label {
@@ -181,12 +291,13 @@ body {
   background-color: var(--m3-state-layer);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 15ms linear;
+  transition: opacity var(--motion-duration-short1) linear;
 }
 
 @media (hover: hover) {
   .m3-filled-button:hover {
     box-shadow: 0 1px 2px var(--color-blue-shadow-tight);
+    transform: translate3d(0, -1px, 0) scale(1);
   }
 
   .m3-filled-button:hover::before {
@@ -206,6 +317,7 @@ body {
 
 .m3-filled-button:active {
   box-shadow: none;
+  transform: translate3d(0, 0, 0) scale(0.99);
 }
 
 .m3-filled-button:disabled,
@@ -263,7 +375,10 @@ body {
   box-shadow: 0 12px 24px var(--color-blue-shadow);
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-  transition: box-shadow 280ms cubic-bezier(0.2, 0, 0, 1);
+  transform: translate3d(0, 0, 0) scale(1);
+  transition:
+    box-shadow var(--motion-duration-medium2) var(--motion-easing-standard),
+    transform var(--motion-duration-short4) var(--motion-easing-standard);
 }
 
 .work-card::before {
@@ -275,7 +390,7 @@ body {
   opacity: 0;
   pointer-events: none;
   z-index: 0;
-  transition: opacity 15ms linear;
+  transition: opacity var(--motion-duration-short1) linear;
 }
 
 .work-card > * {
@@ -286,6 +401,7 @@ body {
 @media (hover: hover) {
   .work-card:hover {
     box-shadow: 0 16px 32px var(--color-blue-shadow);
+    transform: translate3d(0, -2px, 0) scale(1);
   }
 
   .work-card:hover::before {
@@ -305,9 +421,10 @@ body {
 
 .work-card:active {
   box-shadow: 0 12px 24px var(--color-blue-shadow);
+  transform: translate3d(0, 0, 0) scale(0.99);
 }
 
-/* Page transitions (Codrops moveToRightEasing) */
+/* Page transitions — MD3 enter/exit pairing */
 .pt-perspective {
   position: relative;
   width: 100%;
@@ -340,13 +457,17 @@ body {
 }
 
 .pt-page-moveToRightEasing {
-  -webkit-animation: moveToRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
-  animation: moveToRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  -webkit-animation: moveToRight var(--motion-page-exit-duration)
+    var(--motion-easing-emphasized-accelerate) both;
+  animation: moveToRight var(--motion-page-exit-duration)
+    var(--motion-easing-emphasized-accelerate) both;
 }
 
 .pt-page-moveFromLeft {
-  -webkit-animation: moveFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
-  animation: moveFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  -webkit-animation: moveFromLeft var(--motion-page-enter-duration)
+    var(--motion-easing-emphasized-decelerate) both;
+  animation: moveFromLeft var(--motion-page-enter-duration)
+    var(--motion-easing-emphasized-decelerate) both;
 }
 
 @-webkit-keyframes moveToRight {
@@ -355,7 +476,7 @@ body {
     opacity: 1;
   }
   to {
-    -webkit-transform: translate3d(28%, 0, 0);
+    -webkit-transform: translate3d(18%, 0, 0);
     opacity: 0;
   }
 }
@@ -366,14 +487,14 @@ body {
     opacity: 1;
   }
   to {
-    transform: translate3d(28%, 0, 0);
+    transform: translate3d(18%, 0, 0);
     opacity: 0;
   }
 }
 
 @-webkit-keyframes moveFromLeft {
   from {
-    -webkit-transform: translate3d(-4%, 0, 0);
+    -webkit-transform: translate3d(-3%, 0, 0);
     opacity: 0;
   }
   to {
@@ -384,7 +505,7 @@ body {
 
 @keyframes moveFromLeft {
   from {
-    transform: translate3d(-4%, 0, 0);
+    transform: translate3d(-3%, 0, 0);
     opacity: 0;
   }
   to {
@@ -402,5 +523,21 @@ html.pt-animating {
   .pt-page-moveFromLeft {
     -webkit-animation: none;
     animation: none;
+  }
+
+  .site-header,
+  .site-header__title,
+  .site-header circle,
+  .site-header path,
+  .m3-filled-button,
+  .work-card {
+    transition: none;
+  }
+
+  .m3-filled-button:hover,
+  .m3-filled-button:active,
+  .work-card:hover,
+  .work-card:active {
+    transform: none;
   }
 }

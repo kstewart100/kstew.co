@@ -12,21 +12,23 @@ export interface CaseStudyLayoutProps {
 
 /** Case study type styles (fonts: Hanken Grotesk + Inconsolata). */
 /** Type ladder: 12 / 14 / 18 / 22 / 28 / 36 / 40 (+ hero clamp). */
+/** Vertical rhythm: stack 40–48 · section +32–48 · figure 40–48 · paragraph 24. */
 export const documentCaseStudyTitleClassName =
   'font-heading text-color-text-primary text-[36px] sm:text-[40px] font-bold leading-[1.2] tracking-[-0.01em]';
 
 export const documentCaseStudyBodyClassName =
-  'font-body text-color-text-body text-[18px] font-normal leading-normal';
+  'font-body text-color-text-body text-[18px] font-normal leading-relaxed';
 
+/** Extra top air for chapter breaks (stacks with page flow gap). */
 export const documentCaseStudyH2ClassName =
-  'font-heading text-color-text-primary text-[28px] font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[28px] font-semibold leading-[1.2] tracking-[-0.01em] mt-8 md:mt-12';
 
 export const documentCaseStudyH3ClassName =
-  'font-heading text-color-text-primary text-[22px] font-semibold leading-[1.2] tracking-[-0.01em]';
+  'font-heading text-color-text-primary text-[22px] font-semibold leading-[1.2] tracking-[-0.01em] mt-6 md:mt-8';
 
 /** Opening hero / full-bleed lead image — no frame border. */
 export const documentCaseStudyImageHeroClassName =
-  'w-full max-w-full block h-auto my-4 first:mt-0 last:mb-0 rounded-media';
+  'w-full max-w-full block h-auto my-10 md:my-12 first:mt-0 last:mb-0 rounded-media';
 
 /** In-content case study images — thin border for continuity across screenshots. */
 export const documentCaseStudyImageClassName =
@@ -36,11 +38,18 @@ export const documentCaseStudyImageShadowClassName =
   `${documentCaseStudyImageClassName} shadow-navy-sm`;
 
 export const documentCaseStudyListClassName =
-  'font-body text-color-text-body text-[18px] font-normal leading-normal list-disc pl-6 space-y-1';
+  'font-body text-color-text-body text-[18px] font-normal leading-relaxed list-disc pl-6 space-y-2';
 
 /** Callout / aside: gap before tint edge, padding on 4/8 scale. */
 export const documentCaseStudyAsideClassName =
-  `${documentCaseStudyBodyClassName} mt-8 bg-color-bg-subtle px-4 py-4 rounded-surface`;
+  `${documentCaseStudyBodyClassName} mt-10 bg-color-bg-subtle px-5 py-5 rounded-surface`;
+
+/** Page flow gap between CaseStudyLayout blocks. */
+export const documentCaseStudyFlowClassName =
+  'space-y-10 md:space-y-12 mb-24 lg:mb-32';
+
+/** Follow-on body paragraph / list under a heading or previous block. */
+export const documentCaseStudyContinueClassName = 'mt-6';
 
 const DOCUMENT_CASE_STUDY_MAX_WIDTH = '900px';
 
@@ -67,7 +76,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({
       <div className="mx-auto" style={{ maxWidth: innerMaxWidth }}>
         <div className={`w-full text-left ${className}`}>{children}</div>
         {caption && (
-          <div className="mt-4 w-full">
+          <div className="mt-3 mb-2 w-full">
             {typeof caption === 'string' ? (
               <p className="font-body italic text-xs text-color-text-caption leading-relaxed text-left">
                 {caption}

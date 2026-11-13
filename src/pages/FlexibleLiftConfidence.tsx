@@ -1,14 +1,14 @@
 import {
+  CaseStudyHero,
   CaseStudyLayout,
+  CaseStudyMeta,
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyH3ClassName,
   documentCaseStudyImageClassName,
-  documentCaseStudyImageHeroClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyNav } from '../components/CaseStudyNav';
 import { FlexibleLiftCertaintyQuotes } from '../components/FlexibleLiftCertaintyQuotes';
@@ -18,44 +18,24 @@ const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const h3 = documentCaseStudyH3ClassName;
 const img = documentCaseStudyImageClassName;
-const imgHero = documentCaseStudyImageHeroClassName;
 const list = documentCaseStudyListClassName;
 
 export function FlexibleLiftConfidence() {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas">
-      <Header variant="case-study" />
-      <main id="main-content" className="flex-1 py-8 lg:py-12">
-          <div className="space-y-6 mb-16 lg:mb-24">
+    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas pt-[var(--site-header-height)]">
+      <main id="main-content" className="flex-1 pt-8 pb-16 lg:pt-10 lg:pb-24">
+          <div className="space-y-10 md:space-y-12 mb-24 lg:mb-32">
+            <CaseStudyHero
+              src="/images/case-studies/flexible-lift-confidence/image.png"
+              alt="Google Ads brand lift metrics showing Certainty of lift"
+              caption="Brand lift results now show how certain we are that the campaign actually drove lift."
+              shadow
+            />
+
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
                 A metric name that works for statisticians and everyone else
               </h1>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
-                <strong>Company:</strong> Google, Google Ads
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Role:</strong> Senior Content Designer
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Team:</strong> UX Designers, Product Managers, Software
-                Engineers, and Program Managers
-              </p>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout
-              {...layout}
-              caption="Brand lift results now show how certain we are that the campaign actually drove lift."
-            >
-              <img
-                src="/images/case-studies/flexible-lift-confidence/image.png"
-                alt="Google Ads brand lift metrics showing Certainty of lift"
-                loading="lazy"
-                className={`${imgHero} shadow-navy-sm`}
-              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -67,7 +47,7 @@ export function FlexibleLiftConfidence() {
                 levels directly in the product. This gave advertisers transparency
                 about result reliability and made more campaigns actionable.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I led the content design and messaging so both novices and
                 experts could understand the concept from the product itself.
                 Among users studied, over 50% found brand lift easier to use, and
@@ -76,8 +56,16 @@ export function FlexibleLiftConfidence() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
+              <CaseStudyMeta
+                company="Google, Google Ads"
+                role="Senior Content Designer"
+                team="UX Designers, Product Managers, Software Engineers, and Program Managers"
+              />
+            </CaseStudyLayout>
+
+            <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-4`}>
+              <ul className={`${list} mt-6`}>
                 <li>
                   Make statistics human by translating terminology into clear,
                   trustworthy language
@@ -91,13 +79,13 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Understanding the landscape</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I was designing for two distinct users: the Stats Expert, who
                 interprets data confidently and serves as the team&apos;s go-to
                 resource, and the Stats Novice, who has limited recent statistics
                 experience and benefits from simplified, educational content.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 To ground the work, I ran a literature review across prior studies,
                 brand and naming conventions, and educational materials — which
                 surfaced useful patterns but no definitive naming solution.
@@ -106,7 +94,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Exploring the different options for a name</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The team had explored several naming options before my involvement.
                 After conducting the literature review and consulting design
                 guidelines, I proposed &ldquo;Certainty of lift,&rdquo; though
@@ -154,18 +142,18 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Testing through research</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Effective feature names should be self-explanatory. While tooltips
                 and help documentation provide support, the primary terminology
                 should communicate clearly without additional explanation.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I partnered with UX researchers to design a study comparing both
                 terminology options. Participants viewed identical interfaces with
                 different terminology, then explained their understanding of the
                 metrics and their implications for campaign decisions.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The drafted research study ensured the in-product content would be
                 thoroughly tested and that both user groups understood the metric
                 from the name alone, without needing tooltips or additional
@@ -189,7 +177,7 @@ export function FlexibleLiftConfidence() {
                 &ldquo;Certainty of lift detection,&rdquo; and both groups would be
                 asked to explain what the term means to them.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Results strongly favored &ldquo;Certainty of lift detection&rdquo;
                 across all user segments. Notably, even statistically sophisticated
                 users found &ldquo;statistical significance&rdquo; ambiguous in this
@@ -200,7 +188,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h3 className={h3}>Research comparison</h3>
-              <div className="mt-4 space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
+              <div className="mt-6 space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-8">
                 <div>
                   <p className={`${body} font-semibold mb-2`}>
                     Statistical significance
@@ -262,12 +250,12 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Creating an easy-to-read tooltip</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 With the terminology settled, I focused on designing the complete
                 user experience. The goal was to make statistical results both
                 comprehensible and actionable for decision-making.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I explored approaches that combined metric definitions with
                 contextual guidance based on confidence levels, moving beyond simple
                 percentage displays to provide meaningful interpretation.
@@ -321,7 +309,7 @@ export function FlexibleLiftConfidence() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Over 50% found brand lift easier to use, and 90% understood
                 &ldquo;Certainty of lift&rdquo; from the name. Research beat
                 internal preference: what felt &ldquo;oversimplified&rdquo; to

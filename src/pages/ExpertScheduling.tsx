@@ -1,14 +1,14 @@
 import {
+  CaseStudyHero,
   CaseStudyLayout,
+  CaseStudyMeta,
   documentCaseStudyBodyClassName,
   documentCaseStudyH2ClassName,
   documentCaseStudyImageClassName,
-  documentCaseStudyImageHeroClassName,
   documentCaseStudyImageShadowClassName,
   documentCaseStudyListClassName,
   documentCaseStudyTitleClassName,
 } from '../components/CaseStudyLayout';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { CaseStudyNav } from '../components/CaseStudyNav';
 
@@ -16,42 +16,23 @@ const layout = { variant: 'document' as const };
 const body = documentCaseStudyBodyClassName;
 const h2 = documentCaseStudyH2ClassName;
 const img = documentCaseStudyImageClassName;
-const imgHero = documentCaseStudyImageHeroClassName;
 const imgShadow = documentCaseStudyImageShadowClassName;
 const list = documentCaseStudyListClassName;
 
 export function ExpertScheduling() {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas">
-      <Header variant="case-study" />
-      <main id="main-content" className="flex-1 py-8 lg:py-12">
-          <div className="space-y-6 mb-16 lg:mb-24">
+    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas pt-[var(--site-header-height)]">
+      <main id="main-content" className="flex-1 pt-8 pb-16 lg:pt-10 lg:pb-24">
+          <div className="space-y-10 md:space-y-12 mb-24 lg:mb-32">
+            <CaseStudyHero
+              src="/images/case-studies/expert-scheduling/hero-group-3766.png"
+              alt="Future state concept for the scheduling tool"
+            />
+
             <CaseStudyLayout {...layout}>
               <h1 className={documentCaseStudyTitleClassName}>
                 Less reading, easier scheduling
               </h1>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <p className={body}>
-                <strong>Company:</strong> Intuit, Virtual Expert Platform
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Role:</strong> Content Designer
-              </p>
-              <p className={`${body} mt-0`}>
-                <strong>Team:</strong> UX Designers, Product Managers, Software
-                Engineers, and Program Managers
-              </p>
-            </CaseStudyLayout>
-
-            <CaseStudyLayout {...layout}>
-              <img
-                alt="Future state concept for the scheduling tool"
-                loading="lazy"
-                src="/images/case-studies/expert-scheduling/hero-group-3766.png"
-                className={imgHero}
-              />
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
@@ -61,12 +42,12 @@ export function ExpertScheduling() {
                 need to set up their base schedule—something both the experts and
                 Intuit&apos;s staffing team depend on.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 A previous team had built a self-service tool, but it was
                 overwhelming. Too much information and confusing instructions left
                 experts stuck on what should have been straightforward.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 With a new tax season approaching, I led a content redesign of the
                 scheduling tool. My goal: turn a frustrating hurdle into something
                 that helped experts feel ready and confident about their new role.
@@ -74,8 +55,16 @@ export function ExpertScheduling() {
             </CaseStudyLayout>
 
             <CaseStudyLayout {...layout}>
+              <CaseStudyMeta
+                company="Intuit, Virtual Expert Platform"
+                role="Content Designer"
+                team="UX Designers, Product Managers, Software Engineers, and Program Managers"
+              />
+            </CaseStudyLayout>
+
+            <CaseStudyLayout {...layout}>
               <h2 className={h2}>Our design principles</h2>
-              <ul className={`${list} mt-4`}>
+              <ul className={`${list} mt-6`}>
                 <li>Give people information exactly when they need it</li>
                 <li>Celebrate progress</li>
                 <li>
@@ -87,7 +76,7 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>The expert journey</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Experts use the scheduling tool to set their weekly availability
                 across a 12-week period before tax season begins, ensuring adequate
                 coverage while respecting their availability.
@@ -115,13 +104,13 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Laying the groundwork with a content audit</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 While my PM and interaction design partners dove into specific
                 problems and screens, I stepped back to look at the bigger
                 picture—what story were we telling experts throughout this entire
                 experience?
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I put together an audit deck and asked teammates to weigh in.
                 Going through everything with fresh eyes revealed many places
                 where we could make the content work harder. I compiled audit
@@ -181,7 +170,7 @@ export function ExpertScheduling() {
                 My first try focused on clear headings and breaking up information
                 into logical chunks. But I still had too much content.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 We put this version in front of experts, and they found it easier
                 to scan and understand than the original—but we knew we could do
                 better.
@@ -206,7 +195,7 @@ export function ExpertScheduling() {
                 aggressive about cutting content to keep experts from feeling
                 overwhelmed.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 Before launching, we made calls about what really needed to be on
                 this screen. Working with stakeholders, we kept only the essentials
                 and moved the rest to places where it would be more helpful—like
@@ -252,7 +241,7 @@ export function ExpertScheduling() {
                 &ldquo;Your hours don&apos;t meet requirements&rdquo;—okay, but
                 what requirements? What should I change?
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 I pushed for a different approach: error messages should help
                 people solve the problem, not just point it out.
               </p>
@@ -357,7 +346,7 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <p className={body}>We made some key changes to fix this:</p>
-              <ul className={`${list} mt-4`}>
+              <ul className={`${list} mt-6`}>
                 <li>
                   Swapped out cold &ldquo;minimum/maximum&rdquo; language for
                   friendlier ranges
@@ -371,7 +360,7 @@ export function ExpertScheduling() {
                   to experts
                 </li>
               </ul>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 The final design focused on what experts really needed—their
                 scheduled hours front and center—with help available when needed,
                 but not in the way.
@@ -380,14 +369,14 @@ export function ExpertScheduling() {
 
             <CaseStudyLayout {...layout}>
               <h2 className={h2}>Learnings</h2>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 It&apos;s hard to separate content from the rest of the redesign,
                 but the experience experts got was clearer: guidance that told
                 them what to do, information in smaller pieces, and errors that
                 explained how to fix the problem—not just that something was
                 wrong.
               </p>
-              <p className={`${body} mt-4`}>
+              <p className={`${body} mt-6`}>
                 By replacing an upfront wall of instructions with focused
                 guidance at the moment it mattered, we made scheduling
                 easier—and helped experts feel more confident starting their new

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-color-text-on-dark">
-      <Header variant="case-study" />
+    <div className="min-h-screen flex flex-col bg-color-bg-surface text-color-text-primary font-mono selection:bg-color-interactive selection:text-color-text-on-dark pt-[var(--site-header-height)]">
       <main
         id="main-content"
         className="flex-1 container mx-auto max-w-6xl px-6 md:px-12 py-24 md:py-32"
