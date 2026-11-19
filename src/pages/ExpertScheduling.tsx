@@ -22,7 +22,7 @@ const list = documentCaseStudyListClassName;
 
 export function ExpertScheduling() {
   return (
-    <div className="w-full min-h-screen flex flex-col bg-color-bg-canvas pt-[var(--site-header-height)]">
+    <div className="surface-grain w-full min-h-screen flex flex-col bg-color-bg-canvas pt-[var(--site-header-height)]">
       <main id="main-content" className="flex-1 pt-8 pb-16 lg:pt-10 lg:pb-24">
           <div className="space-y-10 md:space-y-12 mb-24 lg:mb-32">
             <CaseStudyHero

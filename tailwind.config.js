@@ -23,7 +23,9 @@ export default {
       colors: {
         'color-bg-canvas': 'var(--color-bg-canvas)',
         'color-bg-surface': 'var(--color-bg-surface)',
+        'color-bg-paper': 'var(--color-bg-paper)',
         'color-bg-subtle': 'var(--color-bg-subtle)',
+        'color-bg-card': 'var(--color-bg-card)',
         'color-bg-inverse': 'var(--color-bg-inverse)',
         'color-text-primary': 'var(--color-text-primary)',
         'color-text-secondary': 'var(--color-text-secondary)',

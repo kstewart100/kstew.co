@@ -1,5 +1,5 @@
 /* --- MANAGED FONT IMPORTS START (do not edit manually) --- */
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;900&family=Inconsolata:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;900&family=Inconsolata:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap');
 /* --- MANAGED FONT IMPORTS END --- */
 
 /* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
@@ -13,10 +13,12 @@
 
 :root {
   /* Primitives */
-  --color-blue-25: #FEFEFF;
+  /* Soft cream — lighter haze from the Queenstown hero (cooled ~50% toward #FEFEFF) */
+  --color-blue-25: #FAF8F6;
   --color-blue-50: #F0F8FF;
   --color-slate-50: #EFF8FF;
-  --color-blue-100: #DEF0FF;
+  /* Faded sky — dusty card wash (was saturated #DEF0FF) */
+  --color-blue-100: #E4EAEE;
   --color-slate-100: #E2EEF7;
   --color-blue-200: #BEE1FF;
   --color-slate-200: #CEDDE9;
@@ -36,24 +38,31 @@
   --color-slate-900: #22313B;
   --color-blue-950: #022036;
   --color-slate-950: #142027;
-  --color-chartreuse-olive: #B7C75A;
-  --color-chartreuse-olive-hover: #A5B54C;
+  /* Warmer olive — nudged from lime toward the ad’s olive/mustard family */
+  --color-chartreuse-olive: #C2B851;
+  --color-chartreuse-olive-hover: #AFA43F;
   /* Olive wash — same hue family as accent, for status/final UI */
   --color-olive-50: #F3F6E6;
   --color-olive-100: #E8EED4;
   --color-olive-200: #D4DDB0;
-  /* Near-white (avoid pure #FFF); soft variant for text on dark */
-  --color-white: #FEFEFF;
+  /* Soft cream page wash; cool paper for tables/screenshots */
+  --color-white: #FAF8F6;
+  --color-paper: #FEFEFF;
   --color-white-soft: #F5F8FA;
   --color-white-a70: rgba(245, 248, 250, 0.70);
   --color-blue-shadow: rgba(19, 74, 112, 0.25);
   --color-blue-shadow-tight: rgba(19, 74, 112, 0.12);
   --color-overlay-hero: rgba(2, 32, 54, 0.25);
+  /* Faint film grain — keep ≤ ~4% so it doesn’t read as a filter */
+  --surface-grain-opacity: 0.035;
+  --surface-grain-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
   /* Semantic */
   --color-bg-canvas: var(--color-blue-25);
   --color-bg-surface: var(--color-white);
+  --color-bg-paper: var(--color-paper);
   --color-bg-subtle: var(--color-blue-100);
+  --color-bg-card: var(--color-blue-100);
   --color-bg-inverse: var(--color-blue-800);
   --color-text-primary: var(--color-blue-800);
   --color-text-body: var(--color-blue-800);
@@ -165,6 +174,31 @@ body {
   position: relative;
   min-height: 100dvh;
   background-color: var(--color-bg-canvas);
+}
+
+/* Faint grain on section planes — ties cream pages back to the hero photo */
+.surface-grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.surface-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--surface-grain-opacity);
+  background-image: var(--surface-grain-image);
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  mix-blend-mode: multiply;
+  border-radius: inherit;
+}
+
+.surface-grain > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Persistent site header — veil opacity tracks home-hero scroll */
@@ -546,7 +580,7 @@ body {
   isolation: isolate;
   border-color: var(--card-ink);
   color: var(--card-ink);
-  background-color: var(--color-bg-surface);
+  background-color: var(--color-bg-card);
   box-shadow: 0 12px 24px var(--color-blue-shadow);
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;

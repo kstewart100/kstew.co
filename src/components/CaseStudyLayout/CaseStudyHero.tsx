@@ -29,7 +29,7 @@ export function CaseStudyHero({
         alt={alt}
         loading="eager"
         decoding="async"
-        className={`w-full max-w-full block h-auto rounded-media${
+        className={`w-full max-w-full block h-auto rounded-media bg-color-bg-paper${
           shadow ? ' shadow-navy-sm' : ''
         }`}
       />
