@@ -26,9 +26,9 @@ export const documentCaseStudyH2ClassName =
 export const documentCaseStudyH3ClassName =
   'font-heading text-color-text-primary text-[22px] font-semibold leading-[1.2] tracking-[-0.01em] mt-6 md:mt-8';
 
-/** Opening hero / full-bleed lead image — no frame border. */
+/** Opening hero / full-bleed lead image — cool paper matte, no frame border. */
 export const documentCaseStudyImageHeroClassName =
-  'w-full max-w-full block h-auto my-10 md:my-12 first:mt-0 last:mb-0 rounded-media';
+  'w-full max-w-full block h-auto my-10 md:my-12 first:mt-0 last:mb-0 rounded-media bg-color-bg-paper';
 
 /** In-content case study images — thin border for continuity across screenshots. */
 export const documentCaseStudyImageClassName =

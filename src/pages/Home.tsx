@@ -53,7 +53,7 @@ export function Home() {
 
       {/* Spacing from hero plane (high-contrast edge) to first content */}
       <div className="relative z-10 -mt-8 drop-shadow-navy-soft md:mt-0">
-        <main id="main-content" className="relative z-10 w-full">
+        <main id="main-content" className="surface-grain relative z-10 w-full">
           <div className="relative z-10 container mx-auto max-w-6xl px-6 md:px-12 pt-8 md:pt-16 pb-8 md:pb-16">
             <section aria-label="Case studies" className="mb-8 md:mb-16">
               <h2 className="text-[28px] md:text-[40px] font-heading font-semibold leading-tight mb-8 text-color-text-primary">
@@ -74,7 +74,7 @@ export function Home() {
             </section>
 
             <section id="about">
-              <div className="bg-color-bg-surface p-8 md:p-12 w-full border rounded-surface [border-color:var(--color-blue-600)] shadow-navy-md">
+              <div className="bg-color-bg-surface p-8 md:p-12 w-full border rounded-surface [border-color:var(--color-chartreuse-olive)] shadow-navy-md">
                 <h2 className="text-[28px] md:text-[40px] font-heading font-semibold mb-8 text-color-text-primary leading-tight">
                   About me
                 </h2>

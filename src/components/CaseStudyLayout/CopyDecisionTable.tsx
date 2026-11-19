@@ -16,18 +16,18 @@ const contentClassName =
   'font-body text-[18px] font-normal leading-relaxed text-color-text-body';
 
 const cellBaseClassName =
-  'text-left align-top p-4 border-r border-color-border-default min-w-[7.5rem] bg-color-bg-surface last:border-r-0';
+  'text-left align-top p-4 border-r border-color-border-default min-w-[7.5rem] bg-color-bg-paper last:border-r-0';
 
 const cellClassName = `${cellBaseClassName} border-b`;
 
 const headerClassName = `${labelClassName} text-left p-4 border-b border-r border-color-border-default min-w-[7.5rem] bg-color-bg-subtle last:border-r-0`;
 
-/** Flat document chrome — same family as case-study asides, no card kit. */
+/** Flat document chrome — cool paper white against cream page. */
 const cardClassName =
-  'border border-color-border-default bg-color-bg-surface overflow-hidden rounded-surface';
+  'border border-color-border-default bg-color-bg-paper overflow-hidden rounded-surface';
 
 const tableShellClassName =
-  'overflow-hidden rounded-surface border border-color-border-default bg-color-bg-surface';
+  'overflow-hidden rounded-surface border border-color-border-default bg-color-bg-paper';
 
 const cardSectionClassName = 'px-4 py-4';
 
